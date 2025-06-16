@@ -238,6 +238,19 @@ spr_es_table |>
 ```
 
 ```{r} 
+#| label: fig-es-spr
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated time series of the fishing intensity (1 - SPR), where SPR is the spawning potential ratio, with approximate 95% asymptotic intervals. The horizontal line at 0.5 corresponds to SPR = 0.5, the management reference point. The horizontal line at 1.0 corresponds to SPR = 0 (all spawning fish removed from the population)."
+#| fig-alt: "Estimated time series of the fishing intensity (1 - SPR), where SPR is the spawning potential ratio, with approximate 95% asymptotic intervals. The horizontal line at 0.5 corresponds to SPR = 0.5, the management reference point. The horizontal line at 1.0 corresponds to SPR = 0 (all spawning fish removed from the population)."
+#| fig-pos: H
+
+knitr::include_graphics(file.path(model_dir,"plots/SPR3_ratiointerval.png"))
+
+```
+
+```{r} 
 #| label: fig-es-kobe
 #| echo: false 
 #| warning: false 
@@ -305,6 +318,32 @@ reference_points_table |>
     missing_text = "---"
   ) |>
   gt::as_latex()
+
+```
+
+```{r} 
+#| label: fig-es-kobe
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
+#| fig-alt: "See table @tbl-ts for the values of the fraction unfished and fishing intensity which are related in this figure."
+#| fig-pos: H
+
+knitr::include_graphics(file.path(model_dir,"plots/SPR4_phase.png"))
+
+```
+
+```{r} 
+#| label: fig-es-yield
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Equilibrium yield curve for the base case model. Values are based on the most recent fishery selectivities and retention curves and with steepness fixed at 0.72."
+#| fig-alt: "Equilibrium yield curve for the base case model. Values are based on the most recent fishery selectivities and retention curves and with steepness fixed at 0.72."
+#| fig-pos: H
+
+knitr::include_graphics(file.path(model_dir,"plots/yield2_yield_curve_with_refpoints.png"))
 
 ```
 
