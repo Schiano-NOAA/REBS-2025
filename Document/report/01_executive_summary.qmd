@@ -203,11 +203,10 @@ knitr::include_graphics(file.path(model_dir,"plots/recdevs2_withbars.png"))
 
 ```
 
-
 ## Exploitation Status
 Two measures of exploitation are fishing intensity and exploitation rate. Fishing intensity is defined here as 1 - SPR, where SPR (Spawning Potential Ratio) is the equilibrium spawning output at a given combination of F and selectivity relative to spawning output at unfished equilibrium. Using the units of 1-SPR means that more intense fishing is associated with a higher value. The value of 1-SPR in the absence of fishing is 0 and the maximum is 1.0 if all spawning fish are being killed before spawning. The Pacific Fishery Management Council (PFMC) has chosen an SPR target of 0.5 for `r spp` so harvest which leads to SPR below 0.5, or fishing intensity (1-SPR) greater than 0.5 would be overfishing. Exploitation rate is defined as the catch relative to age 26+ biomass. This metric is included because interpretation is simple, but it is not used as a basis for management.
 
-Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout the entire time series (@tbl-es-spr, @fig-es-kobe).
+Exploitation rates were below the management target of a fishing intensity that leads to a SPR of 0.5 throughout most of the time series except for 1995, when the catch peaked at 744 metric tons (@tbl-es-spr, @fig-es-spr).
 
 ```{r, results = "asis"}
 #| label: tbl-es-spr
@@ -269,9 +268,9 @@ Rockfishes are an important component of the California Current ecosystem along 
 Recruitment is one mechanism by which the ecosystem may directly impact the population dynamics of `r spp`. The specific pathways through which environmental conditions exert influence on `r spp` dynamics are unclear, however, changes in water temperature and currents, distribution of prey and predators, and the amount and timing of upwelling are all possible linkages.  Changes in the environment may also result in changes in age-at-maturity, fecundity, growth, and survival which can affect how the status of the stock and its susceptibility to fishing are determined.  Unfortunately, there are no data for `r spp` that provide insights into these effects.
 
 ## Reference Points
-A list of estimates of the current state of the population, as well as reference points based on 1) a target unfished spawning output of 40%, 2) a spawning potential ratio of 0.5, and 3) the model estimate of maximum sustainable yield, are all listed in @tbl-ref-points-es. 
+A list of estimates of the current state of the population, as well as reference points based on 1) a target unfished spawning output of 40%, 2) a spawning potential ratio of 0.5, and 3) the model estimate of maximum sustainable yield, are all listed in @tbl-ref-points-es. Equilibrium yield curve for the base case model is shown in @fig-es-yield.
 
-Unfished spawning stock output for `r spp` is estimated to be 5,647,660 million eggs (95% confidence interval: ,<1–12,581,189 million eggs). The management biomass target for `r spp` is defined as 40% of the unfished spawning output (𝐵40%), which is estimated by the model to be 2,259,070 million eggs (95% confidence interval: <1–5,032,478 million eggs), which corresponds, in a theoretical equilibrium state, to an exploitation rate (catch / age 26+ biomass) of 0.048. This harvest rate provides an equilibrium yield of 553 mt at 𝐵40% (95% confidence interval: 0–1,224 mt). Catch limits are determined by an SPR = 50% reference point which is associated with equilibrium exploitation rate of 0.040. The model estimate of maximum sustainable yield (MSY) is 592 mt (95% confidence interval: 0–1,311  mt). The estimated spawning stock output at MSY is 1,497,160 million eggs (95% confidence interval: 0–3,337,633 million eggs). The exploitation rate corresponding to the estimated FMSY proxy of SPR = 34% is 0.085.
+Unfished spawning stock output for `r spp` is estimated to be 5,647,660 million eggs (95% confidence interval: ,<1–12,581,189 million eggs). The management biomass target for `r spp` is defined as 40% of the unfished spawning output (𝐵40%), which is estimated by the model to be 2,259,070 million eggs (95% confidence interval: <1–5,032,478 million eggs), which corresponds, in a theoretical equilibrium state, to an exploitation rate (catch / age 26+ biomass) of 0.048 (@@tbl-ref-points-es, @fig-es-yield). This harvest rate provides an equilibrium yield of 553 mt at 𝐵40% (95% confidence interval: 0–1,224 mt). Catch limits are determined by an SPR = 50% reference point which is associated with equilibrium exploitation rate of 0.040. The model estimate of maximum sustainable yield (MSY) is 592 mt (95% confidence interval: 0–1,311  mt). The estimated spawning stock output at MSY is 1,497,160 million eggs (95% confidence interval: 0–3,337,633 million eggs). The exploitation rate corresponding to the estimated FMSY proxy of SPR = 34% is 0.085.
 
 \clearpage
 
