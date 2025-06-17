@@ -809,3 +809,25 @@ reference_points_table |>
 
 ```
 
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-man-timeseries
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) time_series_cap 
+#| tbl-pos: H
+
+time_series_table |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+
+
