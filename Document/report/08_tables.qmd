@@ -758,6 +758,29 @@ cat("\n\\end{landscape}\n")
 
  {{< pagebreak >}} 
 
+```{r}
+#| label: tbl-uncertainty_summary
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of major sources of uncertainty and how they influence the scale and stock status."
+
+Uncertainty_summary <- read.csv(
+  here::here("Document/report/tables_4_doc/Uncertainty_summary.csv"),
+  header = TRUE
+)
+
+Uncertainty_summary |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
 <!-- projections -->
 
 <!-- management-->
