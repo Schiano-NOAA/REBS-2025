@@ -756,6 +756,18 @@ knitr::include_graphics(
 )
 ``` 
 
+```{r} 
+#| label: fig-bimodal-lengths
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
+#| fig-alt: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
+
+knitr::include_graphics(
+  file.path(plot_dir, "Bimodal_lengths_Peter_Frey.png")
+)
+``` 
 
 <!-- Model bridging -->
 
