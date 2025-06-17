@@ -1,7 +1,5 @@
 ## Characterizing uncertainty
-
 ### Sensitivity Analyses {#sec-assmt-sens}
-
 Sensitivity analyses were conducted to evaluate model sensitivity to alternative data treatment and model specifications.
 
 #### Data treatment sensitivities
@@ -65,10 +63,7 @@ Model specifications looked at the treatment of life history parameters selectiv
 		9. Biological maturity at length
 
 	
-Summaries of the model results for these sensitivities are presented in **Table X**, @fig-sensi-LH and @fig-sensi-RE-LH. Additionally, the scale comparisons minus the estimation of $M$ scenario is provided in @fig-sensi-LH-so as that model scenario showed such higher estimates of scale to obscure all other models. Note also that the proportional fecundity scale measure is in metric tons, not millions of eggs, and thus are not comparable in scale to the other models.
-
-None of the sensitivities were found to be outside of the reference model uncertainty for scale or stock status (@fig-sensi-RE-LH). In particular, the stock status was highly conserved over these sensitivities, while both the initial and final stock scales were more sensitive (but still within the uncertainty of the reference model). In general, higher natural mortality assumptions reduced the stock scale when the bottom trawl and non-trawl fisheries were dome-shaped, as did the fixing of growth to the external model estimates. For reproductive biology, scale decreased if either age at maturity of functional length at maturity for Blackspotted Rockfish only was used. But scale increased if either functional maturity for Rougheye Rockfish only or biological maturity was used. The reference model, a mix of both species maturity at length, settled the scale inbetween each individual species-specific functional maturity model. For this long-lived species and future consideration, age may be a more precise determination of maturity (because there is a wide range of lengths per age) than length; however, age data is more limited and further information is encouraged to build this relationship. 
-
+Summaries of the model results for these sensitivities are presented in **Table X**, @fig-sensi-LH and @fig-sensi-RE-LH. Additionally, the scale comparisons minus the estimation of $M$ scenario is provided in @fig-sensi-LH-so as that model scenario showed such higher estimates of scale to obscure all other models. Model output showed that the base model was most sensitive to using maturity at age instead of maturity at length, with a decrease in relative depletion from the 1970’s to 1990’s using maturity at age. For this long-lived species, age may be a more precise determination of maturity (because there is a wide range of lengths per age); however, age data is more limited. The base model was less sensitive to the other changes, with similar output between the base and alternative models.
 
 * Recruitment estimation
 
@@ -82,20 +77,7 @@ None of the sensitivities were found to be outside of the reference model uncert
 	17. Logistic selectivity for bottom trawl fishery
 	18. Logistic selectivity for non-trawl fishery
  
-Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Comparison plots for the results relative to the reference model are in @fig-sensi-SelRec and @fig-sensi-RE-SelRec. Few (starting in 1980) or no recruitment deviation estimation leads to larger stock scale required to make up for the catch history and lack of recruitment compensation. There is a drop in stocks status when starting recruitment deviations in 1940, but more similar to the referece model. Stock status is steady in these scenarios and all uncertainty is included in the reference model uncertainty (@fig-sensi-RE-SelRec).
-
-The model is much more sensitive to the assumption that fishery selectivity for the bottom trawl and/or non-trawl are logistic. These produce the most sensitive of all the explored alternative models scenarios in both scale (lower) and stock status. In all of these instances, the uncertainty is outside that of the reference model @fig-sensi-RE-SelRec. The reason these are less likely scenarios can be seen in the notably degraded fits to the bottom trawl and/or non-trawl length compositions (@fig-sensi-logsel_fits). This supports the choice for the change in the reference model from the previous stock assessment to consider dome-shaped selectivity for those two fisheries. Given the only scenarios to fall below the low uncertainty treat the bottom trawl as logistic selectivity, it is a good candidate for a lower state of nature (and not a risk neutral model).
-
-
-### Likelihood profiles
-
-#### Initial unfished recruitment (lnR0)
-
-
-#### Steepness ($h$)
-
-
-#### Male natural mortality ($M$)
+Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and . None of the sensitivities indicated an overfished stock.
 
 
 ### Unresolved Problems and Major Uncertainties

@@ -2207,7 +2207,7 @@ knitr::include_graphics(
 #| fig-cap: "Comparison of spawning output for models under different natural mortality, growth and reproductive biology scenarios. This comparison excludes the model estimating natural mortality, as the scale goes extremely high."
 #
 knitr::include_graphics(
-    file.path(sens_dir, "model_specs","compare1_spawnbio_MGrRepro.png")
+    file.path(sens_dir, "model_specs","M_Gr_Reproduction.png")
 )
 ```
 
@@ -2232,18 +2232,6 @@ knitr::include_graphics(
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png")
-)
-```
-
-```{r}
-#| label: fig-sensi-logsel_fits
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Aggregate fit to length compositions for the scenario that assume logistic selectivity for all fisheries and time blocks."
-#
-knitr::include_graphics(
-    file.path(sens_dir, "comp_lenfit__aggregated_across_time_logsel.png")
 )
 ```
 
