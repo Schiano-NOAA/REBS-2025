@@ -1,4 +1,4 @@
-## Reference Model Diagnostics and Results
+## Model Diagnostics
 
 
 ### Model Convergence and Acceptability {#model-convergence}
@@ -58,7 +58,8 @@ Marginal age compositions are not fit in the model, but they are included in ord
 The fits to the 4 available indices of abundance demonstrate little information content in the survey indices (@fig-index-tri to @fig-index-wcgbts). The are all mostly flat with large uncertainty. Such lack of contrast and high uncertainty in the abundance measure indicate the indices contribute little influence to the model (see data sensitvities section below for more details).
 
 
-## Reference Model Outputs 
+## Model Results 
+
 
 ### Parameter Estimates
 
