@@ -251,8 +251,9 @@ cat(a, sep = '\n')
 \setcounter{page}{1}
 \setcounter{section}{0}
 \renewcommand{\thefigure}{\arabic{figure}}
+\setcounter{figure}{0}
 \renewcommand{\thetable}{\arabic{table}}
-
+\setcounter{table}{0}
 
 
 ```{r, results='asis'}
