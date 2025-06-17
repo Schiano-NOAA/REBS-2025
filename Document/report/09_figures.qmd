@@ -2287,7 +2287,7 @@ knitr::include_graphics(
 #| fig-pos: H
 
 knitr::include_graphics(
-  file.path(model_dir, "plots", "yield1_yield_curve.png")
+  file.path(model_dir, "plots", "yield2_yield_curve_with_refpoints.png")
 )
 
 ```

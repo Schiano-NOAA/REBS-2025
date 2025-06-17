@@ -15,8 +15,6 @@ Since `r Spp` are a desirable market species, discarding has been low historical
 `r Spp` also has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. In recent years, contribution of the mid-water trawl catches within shoreside trawl landings gradually grew and in most recent year and now they represent majority of the trawl removals. Time series of landings are shown @fig-es-landings, with recent landings detailed in @tbl-es-catches.
 
  
-
-
 ```{r, results = "asis"}
 #| label: tbl-es-catches
 #| warning: false
@@ -257,7 +255,7 @@ Recruitment is one mechanism by which the ecosystem may directly impact the popu
 ## Reference Points
 A list of estimates of the current state of the population, as well as reference points based on 1) a target unfished spawning output of 40%, 2) a spawning potential ratio of 0.5, and 3) the model estimate of maximum sustainable yield, are all listed in @tbl-ref-points-es. Equilibrium yield curve for the base case model is shown in @fig-es-yield.
 
-Unfished spawning stock output for `r spp` is estimated to be 5,647,660 million eggs (95% confidence interval: ,<1–12,581,189 million eggs). The management biomass target for `r spp` is defined as 40% of the unfished spawning output (𝐵40%), which is estimated by the model to be 2,259,070 million eggs (95% confidence interval: <1–5,032,478 million eggs), which corresponds, in a theoretical equilibrium state, to an exploitation rate (catch / age 26+ biomass) of 0.048 (@@tbl-ref-points-es, @fig-es-yield). This harvest rate provides an equilibrium yield of 553 mt at 𝐵40% (95% confidence interval: 0–1,224 mt). Catch limits are determined by an SPR = 50% reference point which is associated with equilibrium exploitation rate of 0.040. The model estimate of maximum sustainable yield (MSY) is 592 mt (95% confidence interval: 0–1,311  mt). The estimated spawning stock output at MSY is 1,497,160 million eggs (95% confidence interval: 0–3,337,633 million eggs). The exploitation rate corresponding to the estimated FMSY proxy of SPR = 34% is 0.085.
+Unfished spawning stock output for `r spp` is estimated to be 5,647,660 million eggs (95% confidence interval: ,<1–12,581,189 million eggs). The management biomass target for `r spp` is defined as 40% of the unfished spawning output (𝐵40%), which is estimated by the model to be 2,259,070 million eggs (95% confidence interval: <1–5,032,478 million eggs), which corresponds, in a theoretical equilibrium state, to an exploitation rate (catch / age 26+ biomass) of 0.048 (@tbl-ref-points-es, @fig-es-yield). This harvest rate provides an equilibrium yield of 553 mt at 𝐵40% (95% confidence interval: 0–1,224 mt). Catch limits are determined by an SPR = 50% reference point which is associated with equilibrium exploitation rate of 0.040. The model estimate of maximum sustainable yield (MSY) is 592 mt (95% confidence interval: 0–1,311  mt). The estimated spawning stock output at MSY is 1,497,160 million eggs (95% confidence interval: 0–3,337,633 million eggs). The exploitation rate corresponding to the estimated FMSY proxy of SPR = 34% is 0.085.
 
 \clearpage
 
@@ -374,11 +372,11 @@ recent_management_table_es
 ## Unresolved problems and major uncertainties
 `r spp` are one of the longest lived species of rockfish on the West Coast and therefore natural mortality is likely to be lower than for other rockfish species. This assessment attempts to capture that uncertainty by estimating natural mortality for females and integrating that uncertainty into the derived biomass estimates, but also balance it with using meta-analytical prior of maximum age-based natural mortality by fixing the male natural mortality .
 
-Shape of the selectivity curves in bottom trawl and non-trawl gears. 
+**Shape of the selectivity curves in bottom trawl and non-trawl gears.** 
 
 
 ## Harvest Projections and Decision Tables
-Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a P* of 0.45 and a log-space standard deviation of the overfishing limit of 0.5 are included in @tbl-es-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
+Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a $P^*$ of 0.45 and a log-space standard deviation of the overfishing limit ($\sigma$) of 0.5 are included in @tbl-es-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
 
 No decision table needed in draft assessments undergoing review.
 
