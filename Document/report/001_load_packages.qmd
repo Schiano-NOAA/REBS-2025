@@ -1,4 +1,4 @@
-```{r load-packages, echo = FALSE}
+```{r load-packages, echo = FALSE, message=FALSE, warning=FALSE}
 
 # To avoid an RGL warning while loading rgl and other packages
 options(rgl.useNULL = TRUE)
@@ -13,7 +13,7 @@ pacman::p_load(
   # whereas the original code cannot deal with automated projects with 
   # general paths
   adnuts,
-  asar,
+ # asar,
   cli, 
   cowplot, 
   dplyr,
