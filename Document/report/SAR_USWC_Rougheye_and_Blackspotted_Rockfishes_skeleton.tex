@@ -7549,16 +7549,18 @@ Label & Base & - bottom trawl & - non-trawl & - mid-water trawl & - ASHOP & - WG
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rllrrrr}
 
 \caption{\label{tbl-sensitivities-data-weighting}Likelihood values and
 estimates of key parameters and derived quantities from each data
 weighting sensitivity.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrr}
 \toprule
 X & Label & Type & Reference & X1.No.data.weighting & X2.McAllister...Ianelli & X3.Dirichlet \\ 
 \midrule\addlinespace[2.5pt]
@@ -7696,24 +7698,27 @@ X & Label & Type & Reference & X1.No.data.weighting & X2.McAllister...Ianelli & 
 350 & NA & MSY\_SPR & 5.26164e+02 & 2.60020e+02 & 2.61954e+02 & 2.54011e+02 \\ 
 351 & NA & F\_SPR & 3.98202e-02 & 3.95739e-02 & 4.07627e-02 & 3.97470e-02 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rllrrrrrrr}
 
 \caption{\label{tbl-sensitivities-age-error}Likelihood values and
 estimates of key parameters and derived quantities from each ageing
 error sensitivity.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrrrrr}
 \toprule
 X & Label & Type & Reference & X1.No.ageing.error & X2..trawl.AE & X3..non.trawl.AE & X4..midwater.AE & X5..ASHOP.AE & X6..WCGBTS.AE \\ 
 \midrule\addlinespace[2.5pt]
@@ -7851,23 +7856,26 @@ X & Label & Type & Reference & X1.No.ageing.error & X2..trawl.AE & X3..non.trawl
 336 & NA & MSY\_SPR & 5.26164e+02 & 2.99773e+02 & 4.25158e+02 & 3.99875e+02 & 5.17037e+02 & 5.01962e+02 & 3.40374e+02 \\ 
 337 & NA & F\_SPR & 3.98202e-02 & 4.14400e-02 & 3.96245e-02 & 3.95683e-02 & 3.98602e-02 & 4.19244e-02 & 4.01456e-02 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rllrrrrrrrrrr}
 
 \caption{\label{tbl-sensitivities-life-history}Summaries of the model
 results for life history parameter sensitivities.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrrrrrrrr}
 \toprule
 X & Label & Type & Reference & X1..Est.female.M & X2..Fixed\_M\_2013 & X3..Lorenzen\_M & X4..Fixed\_Growth\_ext & X5..Prop.fecund & X6..Fxn.mat.age & X7..Fxn.mat.Bspot & X8..Fxn.mat.Reye & X9..Biological.mat \\ 
 \midrule\addlinespace[2.5pt]
@@ -8017,24 +8025,27 @@ X & Label & Type & Reference & X1..Est.female.M & X2..Fixed\_M\_2013 & X3..Loren
 340 & NA & MSY\_SPR & 5.261640e+02 & 2.322870e+04 & 4.502880e+02 & 3.133640e+02 & 4.182060e+02 & 5.39525e+02 & 4.84712e+02 & 5.018160e+02 & 5.40144e+02 & 5.40460e+02 \\ 
 341 & NA & F\_SPR & 3.982020e-02 & 4.589250e-02 & 4.368180e-02 & 3.611480e-02 & 4.264370e-02 & 4.24951e-02 & 3.28012e-02 & 3.540130e-02 & 4.26550e-02 & 4.27462e-02 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rllrrrrrrr}
 
 \caption{\label{tbl-sensitivities-sel-rec}Likelihood values and
 estimates of key parameters and derived quantities from each recruitment
 and selectivity sensitivity.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrrrrr}
 \toprule
 X & Label & Type & Reference & X13.No.rec.devs & X14.1940.recdevs & X15.1980.recdevs & X16.Logistic.fisheries & X17.Logistic.btrawl & X18.Logistic.nontrawl \\ 
 \midrule\addlinespace[2.5pt]
@@ -8179,11 +8190,12 @@ X & Label & Type & Reference & X13.No.rec.devs & X14.1940.recdevs & X15.1980.rec
 340 & NA & MSY\_SPR & 5.261640e+02 & 1.906710e+03 & 3.943150e+02 & 1.309060e+03 & 2.066320e+02 & 2.39026e+02 & 2.03051e+02 \\ 
 341 & NA & F\_SPR & 3.982020e-02 & 3.994820e-02 & 2.160980e-02 & 2.158870e-02 & 4.547840e-02 & 4.21119e-02 & 4.52165e-02 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
