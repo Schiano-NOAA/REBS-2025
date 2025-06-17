@@ -1982,7 +1982,67 @@ knitr::include_graphics(
 
 \pagebreak
 
+```{r} 
+#| label: fig-spr
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated time series of fishing intensity for the base model."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
 
+knitr::include_graphics(
+  file.path(model_dir, "plots", "SPR3_ratiointerval.png")
+)
+
+```
+
+
+```{r} 
+#| label: fig-spr-phase
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Phase plot of fishing intensity versus fraction unfished for the base model."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "SPR4_phase.png")
+)
+
+```
+
+
+```{r} 
+#| label: fig-yield
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Estimated yield curve with reference points for the base model."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "yield2_yield_curve_with_refpoints.png")
+)
+
+```
+
+```{r} 
+#| label: fig-dyn-b0
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Dynamic B0 plot. The lower line shows the time series of estimated spawning output in the presence of fishing mortality. The upper line shows the time series that could occur under the same dynamics (including deviations in recruitment), but without fishing. The point at the left represents the unfished equilibrium."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "plots", "ts_DynamicB0.png")
+)
+
+```
 
 ```{r} 
 #| label: fig-retro-so
@@ -2144,7 +2204,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in data weighting treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in data weighting treatment for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
 #
 knitr::include_graphics(
     file.path(sens_dir, "data_sensitivities","Sensi_logREplot_SB_Dep_F_Yield_DataWt.png")
@@ -2168,7 +2228,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in ageing error scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in ageing error scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
 #
 knitr::include_graphics(
     file.path(sens_dir, "data_sensitivities","Sensi_logREplot_SB_Dep_F_Yield_AE.png")
@@ -2192,7 +2252,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in natural mortality, growth and reproductive biology scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in natural mortality, growth and reproductive biology scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png")
@@ -2207,7 +2267,7 @@ knitr::include_graphics(
 #| fig-cap: "Comparison of spawning output for models under different natural mortality, growth and reproductive biology scenarios. This comparison excludes the model estimating natural mortality, as the scale goes extremely high."
 #
 knitr::include_graphics(
-    file.path(sens_dir, "model_specs","compare1_spawnbio_MGrRepro.png")
+    file.path(sens_dir, "model_specs","M_Gr_Reproduction.png")
 )
 ```
 
@@ -2216,7 +2276,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different recruitment and selectivity scenarios."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different recruitment and selectivity scenarios. The reference model uses ageing error matrices for all age sources."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","Sel_Rec.png")
@@ -2228,22 +2288,10 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in recruitment and selectivity scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in recruitment and selectivity scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png")
-)
-```
-
-```{r}
-#| label: fig-sensi-logsel_fits
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Aggregate fit to length compositions for the scenario that assume logistic selectivity for all fisheries and time blocks."
-#
-knitr::include_graphics(
-    file.path(sens_dir, "comp_lenfit__aggregated_across_time_logsel.png")
 )
 ```
 
@@ -2320,32 +2368,3 @@ knitr::include_graphics(
 ```
 
 
-```{r} 
-#| label: fig-spr
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Estimated time series of fishing intensity for the base model."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(model_dir, "plots", "SPR3_ratiointerval.png")
-)
-
-```
-
-```{r} 
-#| label: fig-dyn-b0
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Dynamic B0 plot. The lower line shows the time series of estimated spawning output in the presence of fishing mortality. The upper line shows the time series that could occur under the same dynamics (including deviations in recruitment), but without fishing. The point at the left represents the unfished equilibrium."
-#| fig-alt: "Values are provided in the Report.sso file."
-#| fig-pos: H
-
-knitr::include_graphics(
-  file.path(model_dir, "plots", "ts_DynamicB0.png")
-)
-
-```
