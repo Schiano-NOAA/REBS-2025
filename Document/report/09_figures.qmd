@@ -2235,6 +2235,54 @@ knitr::include_graphics(
 )
 ```
 
+```{r}
+#| label: fig-sensi-LH
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different natural mortality, growth and reproductive biology scenarios. The reference model uses ageing error matrices for all age sources."
+#
+knitr::include_graphics(
+    file.path(sens_dir, "model_specs","M_Gr_Reproduction.png")
+)
+```
+
+```{r}
+#| label: fig-sensi-RE-LH
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in natural mortality, growth and reproductive biology scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#
+knitr::include_graphics(
+    file.path(sens_dir, "model_specs","Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png")
+)
+```
+
+```{r}
+#| label: fig-sensi-SelRec
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different recruitment and selectivity scenarios. The reference model uses ageing error matrices for all age sources."
+#
+knitr::include_graphics(
+    file.path(sens_dir, "model_specs","Sel_Rec.png")
+)
+```
+
+```{r}
+#| label: fig-sensi-RE-SelRec
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Log relative change (log((Model\\_sensi-Model\\_ref)/Model\\_ref)) in recruitment and selectivity scenarios for 5 derived quantities. Colored boxes indicate 95 percent confidence interval of the reference model. See 'Sensitivity Analysis' section for more details on each scenario."
+#
+knitr::include_graphics(
+    file.path(sens_dir, "model_specs","Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png")
+)
+```
+
 \newpage
 
 <!-- Likelihood Profiles -->
