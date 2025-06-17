@@ -2312,18 +2312,6 @@ knitr::include_graphics(
 ```
 
 ```{r}
-#| label: fig-likeprof-M-sex
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Likelihood differences by natural mortality ($M$) by sex."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Male_M", "M_sex.png")
-)
-```
-
-```{r}
 #| label: fig-likeprof-M-components
 #| echo: false
 #| warning: false
@@ -2332,6 +2320,18 @@ knitr::include_graphics(
 #
 knitr::include_graphics(
     file.path(like_dir,"Male_M", "piner_panel_NatM_uniform_Mal_GP_1.png")
+)
+```
+
+```{r}
+#| label: fig-likeprof-M-sex
+#| echo: false
+#| warning: false
+#| eval: true
+#| fig-cap: "Likelihood differences by natural mortality ($M$) by sex."
+#
+knitr::include_graphics(
+    file.path(like_dir,"Male_M", "M_sex.png")
 )
 ```
 

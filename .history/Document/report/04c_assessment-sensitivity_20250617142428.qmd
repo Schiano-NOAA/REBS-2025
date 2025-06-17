@@ -93,19 +93,15 @@ Likelihood profiles were conducted for the the log of initial recruitment (ln($R
 
 #### Initial unfished recruitment ($lnR_0$)
 
-The profile on the assumption of $lnR_0$ (that sets the initial scale of the population) demonstrates the data and current model specification support value of $lnR_0$ greater than 6.25, with a steep increase in likelihood difference as $lnR_0$ goes lower (@fig-likeprof-lnR0-parm). The is the expectant increase in scale across increasing $lnR_0$ values for both initial and ending spawning output. The final spawning output goes down quicker than the initial spawning output, leading to a lower stock status. Even at very low $lnR_0$ values, the stock does not drop below the target reference stock status.
+The profile on the assumption of $lnR_0$, which sets the initial scale of the population) demonstrates the data and current model specification support value of $lnR_0$ greater than 6.25, with a steep increase in likelihood difference as $lnR_0$ goes lower (@fig-likeprof-lnR0-parm). The is the expectant increase in scale across increasing $lnR_0$ values for both initial and ending spawning output. The final spawning output goes down quicker than the initial spawning output, leading to a lower stock status. Even at very low $lnR_0$ values, the stock does not drop below the target reference stock status.
 
 The component likelihoods show a clear conflict in the length and age data, with lengths pulling for lower $lnR_0$ values and ages for higher $lnR_0$ values (@fig-likeprof-lnR0-components). While this is a consistent signal in the ages, the individual length sources also show conflict, with the bottom trawl length data pulling for higher $lnR_0$ values. 
 
 #### Steepness ($h$)
 
-The profile on the assumption of $h$ (defining productivity of the stock) demonstrates the data and current model specification do not demonstrate support for a particular steepness value (@fig-likeprof-h-parm). The change in scale and stock status is small and mostly flat through a large range of $h$ values. The lack of information on $h$ is seen across the data likelihood components  (@fig-likeprof-h-components). Given the strong signal of a health stock with little contrast in historical population trajectory, these are expected results. This strongly supports the pre-specifying of this value, but also demonstrates the low sensitivity to pre-specifying this value.
 
 #### Male natural mortality ($M$)
 
-The profile on the assumption of male $M$ (while still estimating female $M$) demonstrates the data and current model specification support a higher value of male $M$ than what is being used in the reference model (@fig-likeprof-M-parm). This uncertainty has a much larger expression in the scale than in the stock status, and one major reason the model estimated uncertainty in scale is so large. It is also a reason why only female $M$ was estimated. Comparing the sex-specific values of $M$, females are always higher than males (@fig-likeprof-M-sex). Regarding stock status, there were no explored $M$ values that caused the stock to go below the target reference point.
-
-The component likelihoods show a some conflict in the length and age data, with lengths (mostly the non-trawl lengths; most of the other length contain no information) pulling for higher $M$ values and ages for lower $M$ values (@piner_panel_NatM_uniform_Mal_GP_1). As noted when building the reference model, ages are believed to contain more information on natural mortality than lengths. Consider that component likelihood profile, the reference model value for male $M$ is the lowest support by the age data, and was chosen to avoid the fast increasing scale estimates. The integrated assessment approach does not allow for ages only to define the estimation of $M$, and thus the choice to pre-specify one $M$ value and estimate the other in order to anchor to compensate for the incursion of the length data signal in the estimation of $M$.
 
 ### Unresolved Problems and Major Uncertainties
 
