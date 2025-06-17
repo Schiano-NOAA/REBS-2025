@@ -50,7 +50,7 @@ The last full assessment of `r Spp` was conducted in 2013. The 2013 assessment m
 
 The list above documents only the most important changes made to this assessment relative to the previous one. 
 
-Bridging analysis was conducted to illustrate the impact of incremental changes. With new fecundity parameters, the model produces spawning output rather that spawning biomass, and 2013 model 2025 spawning outputs are no longer comparable. However, we ran 2013 model with new fecundity parameters to allow for comparison of the results from the bridging runs. The bridging analysis, with most influential change done sequentially is shown in @fig-SO_Bridging and @fig-Bratio_Bridging. 
+Bridging analysis was conducted to illustrate the impact of incremental changes. With new fecundity parameters, the model produces spawning output rather that spawning biomass, and 2013 model 2025 spawning outputs are no longer comparable. However, we ran 2013 model with new fecundity parameters to allow for direct comparison of the results from the bridging runs. The bridging analysis, with most influential change done sequentially is shown in @fig-SO_Bridging and @fig-Bratio_Bridging. 
 
 This assessment (compared to 2013 assessment) estimates higher stock scale, primarily due to change in treatment of fishery selectivity parameters. Change in selectivity assumptions allow to substantially improve fits to length and age composition data in fisheries and surveys, while changes in life history parameters (specifically, natural mortality) allowed for model to anchor the model on natural mortality values consistent with maximum ages observed.    
 
