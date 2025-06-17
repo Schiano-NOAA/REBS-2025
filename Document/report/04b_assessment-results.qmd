@@ -59,7 +59,7 @@ The fits to the 4 available indices of abundance demonstrate little information 
 
 
 ## Model Results 
-
+As a supplement to the model results figures included in this report and described below, a full set of diagnostic plots created by the {r4ss} package [@taylor_beyond_2021] is available at https://github.com/shcaba/REBS-2025 along with the Stock Synthesis input files.
 
 ### Parameter Estimates
 
