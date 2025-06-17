@@ -2283,7 +2283,7 @@ knitr::include_graphics(
 #| fig-cap: "Steepness ($h$) likelihood profile (change in the negative log-likelihood across a range of $h$ values) and derived quantities. Red line in the top left figure indicates the significance level in likelihood difference."
 #
 knitr::include_graphics(
-    file.path(like_dir,"Steepness", "SR_BH_steep_trajectories_compare3_Bratio.png")
+    file.path(like_dir,"Steepness", "SR_LN(R0)_trajectories_compare3_Bratio.png")
 )
 ```
 
@@ -2307,7 +2307,7 @@ knitr::include_graphics(
 #| fig-cap: "Male natural mortality ($M$) likelihood profile (change in the negative log-likelihood across a range of male $M$ values) and derived quantities. Red line in the top left figure indicates the significance level in likelihood difference."
 #
 knitr::include_graphics(
-    file.path(like_dir,"Male_M", "NatM_uniform_Mal_GP_1_trajectories_compare3_Bratio.png")
+    file.path(like_dir,"Male M", "SR_LN(R0)_trajectories_compare3_Bratio.png")
 )
 ```
 
@@ -2319,7 +2319,7 @@ knitr::include_graphics(
 #| fig-cap: "Male natural mortality ($M$) likelihood profile for each of the likelihood components."
 #
 knitr::include_graphics(
-    file.path(like_dir,"Male_M", "piner_panel_NatM_uniform_Mal_GP_1.png")
+    file.path(like_dir,"Male M", "piner_panel_NatM_uniform_Mal_GP_1.png")
 )
 ```
 \newpage
