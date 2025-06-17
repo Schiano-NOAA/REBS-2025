@@ -3566,8 +3566,9 @@ The following data weighting sensitivities were explored:
 \end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
-from each data weighting sensitivity are available in . Comparison plots
-for the results relative to the reference model are in
+from each data weighting sensitivity are available in
+Table~\ref{tbl-sensitivities-data-weighting}. Comparison plots for the
+results relative to the reference model are in
 Figure~\ref{fig-sensi-data-wt} and Figure~\ref{fig-sensi-RE-data-wt}.
 Each data weighting scenario up-weighted the influence of the length
 data relative to the age data. This resulted in a large drop in the
@@ -3588,9 +3589,9 @@ The following ageing error sensitivities were explored:
 \end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
-from each ageing error sensitivity are available in . Comparison plots
-for the results relative to the reference model are in
-Figure~\ref{fig-sensi-ageing-error} and
+from each ageing error sensitivity are available in \textbf{AGING ERROR
+TABLE}. Comparison plots for the results relative to the reference model
+are in Figure~\ref{fig-sensi-ageing-error} and
 Figure~\ref{fig-sensi-RE-ageing-error}. A drop in both stock scale and
 stock status is generally observed when the ageing error is removed. One
 notable observation is that the recruitment events become less resolved
@@ -3661,7 +3662,7 @@ stated.
 \end{itemize}
 
 Summaries of the model results for these sensitivities are presented in
-\textbf{Table X}, Figure~\ref{fig-sensi-LH} and
+\textbf{LIFE HISTORY PARAMETERS TABLE}, Figure~\ref{fig-sensi-LH} and
 Figure~\ref{fig-sensi-RE-LH}. Additionally, the scale comparisons minus
 the estimation of \(M\) scenario is provided in
 Figure~\ref{fig-sensi-LH-so} as that model scenario showed such higher
@@ -3720,16 +3721,16 @@ further information is encouraged to build this relationship.
 \end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
-from each sensitivity are available in Table . Comparison plots for the
-results relative to the reference model are in
-Figure~\ref{fig-sensi-SelRec} and Figure~\ref{fig-sensi-RE-SelRec}. Few
-(starting in 1980) or no recruitment deviation estimation leads to
-larger stock scale required to make up for the catch history and lack of
-recruitment compensation. There is a drop in stocks status when starting
-recruitment deviations in 1940, but more similar to the referece model.
-Stock status is steady in these scenarios and all uncertainty is
-included in the reference model uncertainty
-(Figure~\ref{fig-sensi-RE-SelRec}).
+from each sensitivity are available in \textbf{RECRUITMENT AND
+SELECTIVITY TABLE}. Comparison plots for the results relative to the
+reference model are in Figure~\ref{fig-sensi-SelRec} and
+Figure~\ref{fig-sensi-RE-SelRec}. Few (starting in 1980) or no
+recruitment deviation estimation leads to larger stock scale required to
+make up for the catch history and lack of recruitment compensation.
+There is a drop in stocks status when starting recruitment deviations in
+1940, but more similar to the referece model. Stock status is steady in
+these scenarios and all uncertainty is included in the reference model
+uncertainty (Figure~\ref{fig-sensi-RE-SelRec}).
 
 The model is much more sensitive to the assumption that fishery
 selectivity for the bottom trawl and/or non-trawl are logistic. These
@@ -3748,14 +3749,84 @@ logistic selectivity, it is a good candidate for a lower state of nature
 
 \subsubsection{Likelihood profiles}\label{likelihood-profiles-1}
 
-\paragraph{Initial unfished recruitment
-(lnR0)}\label{initial-unfished-recruitment-lnr0}
+Likelihood profiles were conducted for the the log of initial
+recruitment (ln(\(R_0\))), steepness (\(h\)), and female male natural
+mortality (\(M\)) with female natural mortality estimated. Likelihood
+profiles were conducted by fixing the featured parameter(s) at specific
+values across a range of values and estimating all remaining parameters.
+A likelihood profile offers insight into model sensitivity to changing
+model parameter values, while providing an additional way to describe
+uncertainty in the parameter by identifying the range of parameters
+within 1.96 likelihood units of the reference model.
+
+\paragraph{\texorpdfstring{Initial unfished recruitment
+(\(lnR_0\))}{Initial unfished recruitment (lnR\_0)}}\label{initial-unfished-recruitment-lnr_0}
+
+The profile on the assumption of \(lnR_0\) (that sets the initial scale
+of the population) demonstrates the data and current model specification
+support value of \(lnR_0\) greater than 6.25, with a steep increase in
+likelihood difference as \(lnR_0\) goes lower
+(Figure~\ref{fig-likeprof-lnR0-parm}). The is the expectant increase in
+scale across increasing \(lnR_0\) values for both initial and ending
+spawning output. The final spawning output goes down quicker than the
+initial spawning output, leading to a lower stock status. Even at very
+low \(lnR_0\) values, the stock does not drop below the target reference
+stock status.
+
+The component likelihoods show a clear conflict in the length and age
+data, with lengths pulling for lower \(lnR_0\) values and ages for
+higher \(lnR_0\) values (Figure~\ref{fig-likeprof-lnR0-components}).
+While this is a consistent signal in the ages, the individual length
+sources also show conflict, with the bottom trawl length data pulling
+for higher \(lnR_0\) values.
 
 \paragraph{\texorpdfstring{Steepness
 (\(h\))}{Steepness (h)}}\label{steepness-h}
 
+The profile on the assumption of \(h\) (defining productivity of the
+stock) demonstrates the data and current model specification do not
+demonstrate support for a particular steepness value
+(Figure~\ref{fig-likeprof-h-parm}). The change in scale and stock status
+is small and mostly flat through a large range of \(h\) values. The lack
+of information on \(h\) is seen across the data likelihood components
+(Figure~\ref{fig-likeprof-h-components}). Given the strong signal of a
+health stock with little contrast in historical population trajectory,
+these are expected results. This strongly supports the pre-specifying of
+this value, but also demonstrates the low sensitivity to pre-specifying
+this value.
+
 \paragraph{\texorpdfstring{Male natural mortality
 (\(M\))}{Male natural mortality (M)}}\label{male-natural-mortality-m}
+
+The profile on the assumption of male \(M\) (while still estimating
+female \(M\)) demonstrates the data and current model specification
+support a higher value of male \(M\) than what is being used in the
+reference model (Figure~\ref{fig-likeprof-M-parm}). This uncertainty has
+a much larger expression in the scale than in the stock status, and one
+major reason the model estimated uncertainty in scale is so large. It is
+also a reason why only female \(M\) was estimated. Comparing the
+sex-specific values of \(M\), females are always higher than males
+(Figure~\ref{fig-likeprof-M-sex}). Regarding stock status, there were no
+explored \(M\) values that caused the stock to go below the target
+reference point.
+
+The component likelihoods show a some conflict in the length and age
+data, with lengths (mostly the non-trawl lengths; most of the other
+length contain no information) pulling for higher \(M\) values and ages
+for lower \(M\) values
+((\citeproc{ref-piner_panel_NatM_uniform_Mal_GP_1}{\textbf{piner\_panel\_NatM\_uniform\_Mal\_GP\_1?}})).
+As noted when building the reference model, ages are believed to contain
+more information on natural mortality than lengths. Consider that
+component likelihood profile, the reference model value for male \(M\)
+is the lowest support by the age data, and was chosen to avoid the fast
+increasing scale estimates. The integrated assessment approach does not
+allow for ages only to define the estimation of \(M\), and thus the
+choice to pre-specify one \(M\) value and estimate the other in order to
+anchor to compensate for the incursion of the length data signal in the
+estimation of \(M\).
+
+\subsubsection{Summary of Uncertainty source and states of
+nature}\label{summary-of-uncertainty-source-and-states-of-nature}
 
 \subsubsection{Unresolved Problems and Major
 Uncertainties}\label{unresolved-problems-and-major-uncertainties-1}
@@ -3814,7 +3885,7 @@ spawning output (\(\text{SO}_{40\%}\)) calculated using the SPR target
 of eggs.
 
 The 2025 spawning biomass relative to unfished equilibrium spawning
-biomass, based on the 2024 fishing year, is 0.87\%, above the management
+biomass, based on the 2024 fishing year, is 87\%, above the management
 target of 40\% of unfished spawning output. The relative biomass and the
 ratio of the estimated SPR to the management target
 (\(\text{SPR}_{50\%}\)) across all model years are shown in
@@ -3836,7 +3907,8 @@ annual catch limits (ACLs) are shown in Table~\ref{tbl-man-management}.
 Tables}\label{harvest-projections-and-decision-tables-1}
 
 The Rougheye/Blackspotted Rockfishes assessment is being considered as a
-category 1 assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.50 and a
+category 1 assessment with a \(P^*\) = 0.45, \(\sigma\) = 0.68
+(estimated within the model, see Section~\ref{sec-uncertainty}) and a
 time-varying buffer applied to set the ABC below the OFL. These
 multipliers are also combined with the rockfish MSY proxy of
 SPR\textsubscript{50} and the 40-10 harvest control rule to calculate
@@ -3850,8 +3922,7 @@ attainment of the acceptable biological catch.
 
 No decision table needed in draft assessments undergoing review.
 
-\subsection{Evaluation of Scientific
-Uncertainty}\label{evaluation-of-scientific-uncertainty}
+\subsection{Evaluation of Scientific Uncertainty}\label{sec-uncertainty}
 
 The model estimated uncertainty around the 2025 spawning output for is
 \(\sigma\) = 0.6836465. The uncertainty around the OFL is\(\sigma\) =
@@ -7443,6 +7514,22 @@ Label & Base & - bottom trawl & - non-trawl & - mid-water trawl & - ASHOP & - WG
 
 \newpage{}
 
+\begin{table}
+
+\caption{\label{tbl-sensitivities-data-weighting}Likelihood values and
+estimates of key parameters and derived quantities from each data
+weighting sensitivity.}
+
+\centering{
+
+\begin{landscape}
+
+\end{landscape}
+
+}
+
+\end{table}%
+
 \begingroup
 \fontsize{9.0pt}{10.8pt}\selectfont
 
@@ -10098,7 +10185,7 @@ fisheries and time blocks.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/SR_LN(R0)_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}}
 
 }
 
@@ -10126,7 +10213,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/SR_BH_steep_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}}
 
 }
 
@@ -10154,7 +10241,7 @@ profile for each of the likelihood components.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/NatM_uniform_Mal_GP_1_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}}
 
 }
 
@@ -10162,6 +10249,19 @@ profile for each of the likelihood components.}
 likelihood profile (change in the negative log-likelihood across a range
 of male \(M\) values) and derived quantities. Red line in the top left
 figure indicates the significance level in likelihood difference.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/M_sex.png}}
+
+}
+
+\caption{\label{fig-likeprof-M-sex}Likelihood differences by natural
+mortality (\(M\)) by sex.}
 
 \end{figure}%
 

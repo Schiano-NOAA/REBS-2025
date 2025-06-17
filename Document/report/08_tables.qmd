@@ -778,6 +778,9 @@ data_weighting <- read.csv(here::here("Document","report", "Sensis", "data_sensi
 
 #table_sens(ages)
 
+data_weighting |>
+  gt::gt()
+
 cat("\n\\end{landscape}\n") 
 
 ```
