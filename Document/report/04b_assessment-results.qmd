@@ -9,9 +9,12 @@ Model efficiency was explored by doing a short run Bayesian analysis using the R
 
 An extra effort was given to ensure the model did not rest on a local likelihood minimum. This was done by starting the minimization process from dispersed parameter values away from the maximum likelihood estimates to determine if the approach found a better model fit (i.e., minimum negative log-likelihood value). Starting parameters used a jitter shift value of 0.01 and 0.05. Both jitter scenarios were repeated 100 times with 78 out of 100 (jitter 0.01) and 49 out of 100 (jitter 0.05) runs returned to the reference model likelihood (@fig-jitter001 and @fig-jitter005). Out of the combined 200 jitter runs, a better fit, lower negative log-likelihood model was not found in any of the remaining runs. The reference model did not experience convergence issues when provided reasonable starting values. Through the jittering and likelihood profiles, the present reference model represents the best fit to the data given the assumptions. 
 
+### Likelihood Profiles
+
 ### Retrospective Analysis
 
 A five-year retrospective analysis was conducted by running the model and sequentially removing one year of data up through minus 5 years. Retrospective spawning output (@fig-retro-so) and relatives stock status (@fig-retro-status) show a distinct sensitivity to the removal of the lastest data. Both the scale and status drop when missing the latest model. Once two years are removed, the model returns to something more similar to the reference model. After several additional model runs to explore why this sensitivity is occuring, it was clear that removal of the most recent age data in all fleets causes this pattern. Looking at each of the fisheries mean age data time series, all 4 sources of age data, which have different selectivities, but all of which to some degree include bigger and older individuals, show the consistent pattern of decreasing mean age from 2022 to 2023, and an increase in 2024. These changes, except for the large increase in scale for the -4 and -5, are within the uncertainty of the reference model. The Mohn's rho evaluation of the degree of retrospective pattern in given in Table  and shown in Figure . The relative error in the data peels are below significant levels. 
+
 
 
 ### Fits to the Data
@@ -59,7 +62,7 @@ The fits to the 4 available indices of abundance demonstrate little information 
 
 
 ## Model Results 
-As a supplement to the model results figures included in this report and described below, a full set of diagnostic plots created by the {r4ss} package [@taylor_beyond_2021] is available at https://github.com/shcaba/REBS-2025 along with the Stock Synthesis input files.
+As a supplement to the model results figures included in this report and described below, a full set of diagnostic plots created by the {r4ss} package is available at https://github.com/shcaba/REBS-2025 along with the Stock Synthesis input files.
 
 ### Parameter Estimates
 

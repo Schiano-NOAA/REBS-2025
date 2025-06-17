@@ -38,7 +38,7 @@ The following ageing error sensitivities were explored:
 Likelihood values and estimates of key parameters and derived quantities from each ageing error sensitivity are available in . Comparison plots for the results relative to the reference model are in @fig-sensi-ageing-error and @fig-sensi-RE-ageing-error. A drop in both stock scale and stock status is generally observed when the ageing error is removed. One notable observation is that the recruitment events become less resolved and variance increases in lengths at age when ages are assumed biased and precise. When the ages are taken as true, all variation between lengths and ages are interpreted in the lengths, while the recruitment must interpret the age composition precisely, thus assigning positive recruitment deviations to years adjacent to strong recruitment years seen in the reference model. Having more positive recruitment can compensate for a lower initial stock size, causing the initial stock size to decrease. All in stock scale and status changes were within the uncertainty of the base model.
 
 
-#### Model Specification Sensitivities {#senstivities}
+#### Sensitivities to Model Specification  {#senstivities}
 
 Model specifications looked at the treatment of life history parameters selectivity and the estimation of recruitment. All scenarios match the reference model specifications in all other aspects unless otherwise stated.
 
@@ -78,9 +78,6 @@ Summaries of the model results for these sensitivities are presented in **Table 
 	18. Logistic selectivity for non-trawl fishery
  
 Likelihood values and estimates of key parameters and derived quantities from each sensitivity are available in Table . Derived quantities relative to the reference model are provided in Figure . Time series of spawning output and relative spawning output are shown in Figures  and . None of the sensitivities indicated an overfished stock.
- 
-### Likelihood Profiles
-
 
 
 ### Unresolved Problems and Major Uncertainties
