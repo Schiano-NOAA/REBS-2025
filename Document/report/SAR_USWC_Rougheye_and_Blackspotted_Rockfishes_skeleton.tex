@@ -529,6 +529,14 @@ the Department of Commerce.
 
 \newpage{}
 
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\renewcommand{\thetable}{\roman{table}}
+\renewcommand{\thefigure}{\roman{figure}}
+
+\setlength\parskip{0.5em plus 0.1em minus 0.2em}
+
 \section{Executive Summary}\label{executive-summary}
 
 \subsection{Stock}\label{stock}
@@ -3296,8 +3304,7 @@ uncertainty'' section.
 
 \newpage{}
 
-\subsection{Reference Model Diagnostics and
-Results}\label{reference-model-diagnostics-and-results}
+\subsection{Model Diagnostics}\label{model-diagnostics}
 
 \subsubsection{Model Convergence and
 Acceptability}\label{model-convergence}
@@ -3331,6 +3338,8 @@ did not experience convergence issues when provided reasonable starting
 values. Through the jittering and likelihood profiles, the present
 reference model represents the best fit to the data given the
 assumptions.
+
+\subsubsection{Likelihood Profiles}\label{likelihood-profiles}
 
 \subsubsection{Retrospective Analysis}\label{retrospective-analysis}
 
@@ -3467,7 +3476,12 @@ uncertainty. Such lack of contrast and high uncertainty in the abundance
 measure indicate the indices contribute little influence to the model
 (see data sensitvities section below for more details).
 
-\subsection{Reference Model Outputs}\label{reference-model-outputs}
+\subsection{Model Results}\label{model-results}
+
+As a supplement to the model results figures included in this report and
+described below, a full set of diagnostic plots created by the \{r4ss\}
+package is available at https://github.com/shcaba/REBS-2025 along with
+the Stock Synthesis input files.
 
 \subsubsection{Parameter Estimates}\label{parameter-estimates}
 
@@ -3677,7 +3691,7 @@ compensate for a lower initial stock size, causing the initial stock
 size to decrease. All in stock scale and status changes were within the
 uncertainty of the base model.
 
-\paragraph{Model Specification Sensitivities}\label{senstivities}
+\paragraph{Sensitivities to Model Specification}\label{senstivities}
 
 Model specifications looked at the treatment of life history parameters
 selectivity and the estimation of recruitment. All scenarios match the
@@ -3779,8 +3793,6 @@ from each sensitivity are available in Table . Derived quantities
 relative to the reference model are provided in Figure . Time series of
 spawning output and relative spawning output are shown in Figures and .
 None of the sensitivities indicated an overfished stock.
-
-\subsubsection{Likelihood Profiles}\label{likelihood-profiles}
 
 \subsubsection{Unresolved Problems and Major
 Uncertainties}\label{unresolved-problems-and-major-uncertainties-1}

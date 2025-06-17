@@ -370,7 +370,7 @@ recent_management_table_es
 
 
 ## Unresolved problems and major uncertainties
-`r spp` are one of the longest lived species of rockfish on the West Coast and therefore natural mortality is likely to be lower than for other rockfish species. This assessment attempts to capture that uncertainty by estimating natural mortality for females and integrating that uncertainty into the derived biomass estimates, but also balance it with using meta-analytical prior of maximum age-based natural mortality by fixing the male natural mortality .
+`r spp` are one of the longest lived species of rockfish on the West Coast and therefore natural mortality is likely to be lower than for other rockfish species. This assessment attempts to capture uncertainty by estimating natural mortality for females and integrating that uncertainty into the derived biomass estimates, but also balance it with using meta-analytical prior of maximum age-based natural mortality by fixing the male natural mortality .
 
 **Shape of the selectivity curves in bottom trawl and non-trawl gears.** 
 
