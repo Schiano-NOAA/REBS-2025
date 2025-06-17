@@ -2243,7 +2243,7 @@ knitr::include_graphics(
 #| fig-cap: "Aggregate fit to length compositions for the scenario that assume logistic selectivity for all fisheries and time blocks."
 #
 knitr::include_graphics(
-    file.path(sens_dir, "model_specs","comp_lenfit__aggregated_across_time_logsel.png")
+    file.path(sens_dir, "comp_lenfit__aggregated_across_time_logsel.png")
 )
 ```
 
@@ -2263,65 +2263,7 @@ knitr::include_graphics(
 )
 ```
 
-```{r}
-#| label: fig-likeprof-lnR0-components
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Initial recruitment ($ln(R0)$) likelihood profile for each of the likelihood components."
-#
-knitr::include_graphics(
-    file.path(like_dir,"lnR0", "piner_panel_SR_LN(R0).png")
-)
-```
 
-```{r}
-#| label: fig-likeprof-h-parm
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Steepness ($h$) likelihood profile (change in the negative log-likelihood across a range of $h$ values) and derived quantities. Red line in the top left figure indicates the significance level in likelihood difference."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Steepness", "parameter_panel_SR_BH_steep.png")
-)
-```
-
-```{r}
-#| label: fig-likeprof-h-components
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Steepness ($h$) likelihood profile for each of the likelihood components."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Steepness", "piner_panel_SR_BH_steep.png")
-)
-```
-
-```{r}
-#| label: fig-likeprof-M-parm
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Male natural mortality ($M$) likelihood profile (change in the negative log-likelihood across a range of male $M$ values) and derived quantities. Red line in the top left figure indicates the significance level in likelihood difference."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Male M", "parameter_panel_NatM_uniform_Mal_GP_1.png")
-)
-```
-
-```{r}
-#| label: fig-likeprof-M-components
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Male natural mortality ($M$) likelihood profile for each of the likelihood components."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Male M", "piner_panel_NatM_uniform_Mal_GP_1.png")
-)
-```
 \newpage
 
 <!-- Reference Points and Forecasts -->

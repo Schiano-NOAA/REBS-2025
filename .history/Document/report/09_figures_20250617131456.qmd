@@ -2243,7 +2243,7 @@ knitr::include_graphics(
 #| fig-cap: "Aggregate fit to length compositions for the scenario that assume logistic selectivity for all fisheries and time blocks."
 #
 knitr::include_graphics(
-    file.path(sens_dir, "model_specs","comp_lenfit__aggregated_across_time_logsel.png")
+    file.path(sens_dir, "comp_lenfit__aggregated_across_time_logsel.png")
 )
 ```
 

@@ -98,6 +98,8 @@ model_dir <- file.path(here::here('Document','report','ref_model'))
 plot_dir<- file.path(here::here('Document','report','plots_4_doc'))
 sens_dir <- file.path(here::here('Document','report','Sensis'))
 retro_dir <- file.path(here::here('Document','report','Retros'))
+like_dir <- file.path(here::here('Document','report','Like_profiles'))
+
 #Table directory
 table_dir <- file.path(model_dir, "tables")
 
