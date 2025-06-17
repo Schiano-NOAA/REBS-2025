@@ -43,11 +43,10 @@ The last full assessment of `r Spp` was conducted in 2013. The 2013 assessment m
 - Added more biological compositions, mainly in years since 2013, but also some historical ages. Adding more composition data resulted in sight increase in stock scale (@fig-SO_Bridging).
 - Updated input sample sizes associated with fisheries and survey length composition data to using a function of number of trips and number and fish (rather than number of trips and number of hauls, as in previous assessment), to follow current best practices and ensure a consistent treatment of fishery and survey input data.
 - Updated ageing error matrices.
-- Updated weight-length, maturity and fecundity parameters, to include most up to date and improved information. Updating weight-length parameters did not produce a noticeable change. Model with new maturity parameters had slightly lower scale as length at 50% maturity now is slightly higher. 
+- Updated weight-length, maturity and fecundity parameters, to include most up to date and improved information. 
 - Updated spawn-recruit parameters with Beverton-Holt steepness fixed at 0.72, and recruitment variability at 0.5 for consistency with the calculated recruitment variability in the model.
-- Provided flexibility to bottom trawl and non-trawl fleets to have some amount of dome-shaped selectivity. This change resulted in the increase of stock scale.
-- Fixing natural mortality for male at the value informed by @hamel_development_2022 based on maximum ages observed for `r Spp`, while estimating female natural mortality using @hamel_development_2022 prior, to allow natural mortality values in light with maximum ages observed.
-
+- Assumed natural mortality for male consistent with maximum ages of observed for `r Spp`, while estimating female natural mortality using @hamel_development_2022 prior. Previously natural mortality for both sexes was  estimated within the model, but estimated values were higher that expected for maximum ages observed for this stock. This change reduced the natural mortality values for both sexes, ehich resulted in decrease of the stock scale. 
+- Provided flexibility to bottom trawl and non-trawl fleets to allow for dome-shaped selectivity. This change resulted in the increase of stock scale.
 The list above documents only the most important changes made to this assessment relative to the previous one. 
 
 Bridging analysis was conducted to illustrate the impact of incremental changes. With new fecundity parameters, the model produces spawning output rather that spawning biomass, and 2013 model 2025 spawning outputs are no longer comparable. However, we ran 2013 model with new fecundity parameters to allow for comparison of the results from the bridging runs. The bridging analysis, when each change was done sequentially, with most impactful changes are shown in @fig-SO_Bridging and @fig-Bratio_Bridging. 
