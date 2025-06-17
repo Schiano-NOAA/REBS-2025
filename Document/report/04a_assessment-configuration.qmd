@@ -45,7 +45,7 @@ The last full assessment of `r Spp` was conducted in 2013. The 2013 assessment m
 - Updated ageing error matrices.
 - Updated weight-length, maturity and fecundity parameters, to include most up to date and improved information. 
 - Updated spawn-recruit parameters with Beverton-Holt steepness fixed at 0.72, and recruitment variability at 0.5 for consistency with the calculated recruitment variability in the model.
-- Assumed natural mortality for male consistent with maximum ages of observed for `r Spp`, while estimating female natural mortality using @hamel_development_2022 prior. Previously natural mortality for both sexes was  estimated within the model, but estimated values were higher that expected for maximum ages observed for this stock. This change reduced the natural mortality values for both sexes, ehich resulted in decrease of the stock scale. 
+- Assumed natural mortality for male consistent with maximum ages of observed for `r Spp`, while estimating female natural mortality using @hamel_development_2022 prior. Previously natural mortality for both sexes was  estimated within the model, but estimated values were higher that expected for maximum ages observed for this stock. This change reduced the natural mortality values for both sexes, which resulted in decreased scale of the stock. 
 - Provided flexibility to bottom trawl and non-trawl fleets to allow for dome-shaped selectivity. This change resulted in the increase of stock scale.
 The list above documents only the most important changes made to this assessment relative to the previous one. 
 
