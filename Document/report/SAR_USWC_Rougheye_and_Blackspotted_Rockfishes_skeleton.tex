@@ -3473,11 +3473,19 @@ treatment.
 
 \subparagraph{Removal of data sources}\label{removal-of-data-sources}
 
-The following data source sensitivities were explored: - Remove a single
-index of abundance (Triennial, Alaska slope, NW slope, WCGBTS, all
-indices) - For each fleet and index, including discard fleets, removal
-of length composition data - For each fleet and the WCGBTS, removal of
-age composition data
+The following data source sensitivities were explored:
+
+\begin{itemize}
+\tightlist
+\item
+  Remove a single index of abundance (Triennial, Alaska slope, NW slope,
+  WCGBTS, all indices)
+\item
+  For each fleet and index, including discard fleets, removal of length
+  composition data
+\item
+  For each fleet and the WCGBTS, removal of age composition data
+\end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
 from each data source removal sensitivity are available in
@@ -3511,9 +3519,17 @@ most influential of the data sources with age composition information.
 
 \subparagraph{Data weighting}\label{data-weighting-1}
 
-The following data weighting sensitivities were explored: - No
-data-weighting - Dirichlet data-weighting - McAllister-Ianelli data
-weighting
+The following data weighting sensitivities were explored:
+
+\begin{itemize}
+\tightlist
+\item
+  No data-weighting
+\item
+  Dirichlet data-weighting
+\item
+  McAllister-Ianelli data weighting
+\end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
 from each data weighting sensitivity are available in . Comparison plots
@@ -3527,9 +3543,15 @@ the stock scale.
 
 \subparagraph{Ageing error}\label{ageing-error}
 
-The following ageing error sensitivities were explored: - No Ageing
-error for all sources (unbiased and precise ages) - No ageing error for
-each source at a time
+The following ageing error sensitivities were explored:
+
+\begin{itemize}
+\tightlist
+\item
+  No Ageing error for all sources (unbiased and precise ages)
+\item
+  No ageing error for each source at a time
+\end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
 from each ageing error sensitivity are available in . Comparison plots
@@ -3556,12 +3578,10 @@ reference model specifications in all other aspects unless otherwise
 stated.
 
 \begin{itemize}
-\tightlist
 \item
   Life history parameters
 
   \begin{itemize}
-  \tightlist
   \item
     Natural mortality (\(M\))
 
@@ -3616,15 +3636,36 @@ range of lengths per age); however, age data is more limited. The base
 model was less sensitive to the other changes, with similar output
 between the base and alternative models.
 
-\begin{verbatim}
-- Recruitment estimation
-    13. No recruitment estimation
-    14. Estimate from 1940 onward
-    15. Estimate from 1980 onward
+\begin{itemize}
+\item
+  Recruitment estimation
 
-- Selectivity
-    16. 
-\end{verbatim}
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{12}
+  \tightlist
+  \item
+    No recruitment estimation
+  \item
+    Estimate from 1940 onward
+  \item
+    Estimate from 1980 onward
+  \end{enumerate}
+\item
+  Selectivity
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \setcounter{enumi}{15}
+  \tightlist
+  \item
+    Logistic selectivity for all fisheries and time blocks
+  \item
+    Logistic selectivity for bottom trawl fishery
+  \item
+    Logistic selectivity for non-trawl fishery
+  \end{enumerate}
+\end{itemize}
 
 Likelihood values and estimates of key parameters and derived quantities
 from each sensitivity are available in Table . Derived quantities
@@ -3667,13 +3708,13 @@ output is above the Rougheye/Blackspotted Rockfishes relative biomass
 target of 40 percent (Figure~\ref{fig-management-depletion}). The
 fishing intensity, \(1-SPR\), was below or just slightly above harvest
 rate limit (\(SPR_{50\%}\)) from the mid-1980s through the 1990s. Recent
-years show below target fishing levels (\textbf{Table timeseries} and
-Figure~\ref{fig-one-minus-spr}). Table~\ref{tbl-man-ref-points} shows
-the full suite of estimated reference points for the base model and
-Figure~\ref{fig-management-yield} shows the equilibrium curve based on a
-steepness value fixed at 0.72. Figure~\ref{fig-management-phase} shows
-the time series of biomass and fishing intensity relative to reference
-points.
+years show below target fishing levels (Table~\ref{tbl-man-timeseries}
+and Figure~\ref{fig-one-minus-spr}). Table~\ref{tbl-man-ref-points}
+shows the full suite of estimated reference points for the base model
+and Figure~\ref{fig-management-yield} shows the equilibrium curve based
+on a steepness value fixed at 0.72. Figure~\ref{fig-management-phase}
+shows the time series of biomass and fishing intensity relative to
+reference points.
 
 Reference points were based on the rockfish \(\text{F}_{MSY\%}\) proxy
 (\(\text{SPR}_{50\%}\)), target relative biomass (40\%), and estimated
@@ -7348,6 +7389,172 @@ MSY (mt) & 592 & -127 & 1,311 \\
 
 \newpage{}
 
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{rrrrrrrrr}
+
+\caption{\label{tbl-man-timeseries}Time series of population estimates
+from the base model.}
+
+\tabularnewline
+
+\toprule
+Year & Total Biomass (mt) & Spawning output & Total Biomass 26+ (mt) & Fraction Unfished & Age-0 Recruits (1,000s) & Total Mortality (mt) & 1-SPR & Exploitation Rate \\ 
+\midrule\addlinespace[2.5pt]
+1892 & 47710.2 & 5647660 & 33630.8 & 1.000 & 1008 & 19 & 0.018 & 0.001 \\ 
+1893 & 47688.3 & 5645320 & 33617.4 & 1.000 & 1006 & 19 & 0.018 & 0.001 \\ 
+1894 & 47665.5 & 5642940 & 33603.6 & 0.999 & 1005 & 19 & 0.018 & 0.001 \\ 
+1895 & 47640.8 & 5640520 & 33589.4 & 0.999 & 1003 & 5 & 0.005 & 0.000 \\ 
+1896 & 47629.3 & 5639830 & 33584.7 & 0.999 & 1001 & 1 & 0.001 & 0.000 \\ 
+1897 & 47618.4 & 5639600 & 33582.5 & 0.999 & 1000 & 1 & 0.001 & 0.000 \\ 
+1898 & 47603.0 & 5639400 & 33580.1 & 0.999 & 998 & 1 & 0.001 & 0.000 \\ 
+1899 & 47583.2 & 5639270 & 33578.0 & 0.999 & 997 & 1 & 0.001 & 0.000 \\ 
+1900 & 47557.4 & 5639090 & 33575.6 & 0.998 & 995 & 2 & 0.002 & 0.000 \\ 
+1901 & 47525.6 & 5638830 & 33573.0 & 0.998 & 994 & 2 & 0.002 & 0.000 \\ 
+1902 & 47487.5 & 5638430 & 33570.1 & 0.998 & 993 & 3 & 0.002 & 0.000 \\ 
+1903 & 47443.2 & 5637810 & 33567.2 & 0.998 & 992 & 3 & 0.003 & 0.000 \\ 
+1904 & 47392.9 & 5636860 & 33564.3 & 0.998 & 991 & 4 & 0.003 & 0.000 \\ 
+1905 & 47336.8 & 5635430 & 33561.4 & 0.998 & 990 & 4 & 0.004 & 0.000 \\ 
+1906 & 47275.2 & 5633390 & 33558.6 & 0.997 & 989 & 4 & 0.004 & 0.000 \\ 
+1907 & 47208.5 & 5630620 & 33555.8 & 0.997 & 989 & 5 & 0.005 & 0.000 \\ 
+1908 & 47137.1 & 5627030 & 33552.9 & 0.996 & 988 & 8 & 0.007 & 0.000 \\ 
+1909 & 47058.4 & 5622250 & 33548.0 & 0.996 & 988 & 6 & 0.006 & 0.000 \\ 
+1910 & 46978.8 & 5616880 & 33544.5 & 0.995 & 988 & 6 & 0.006 & 0.000 \\ 
+1911 & 46895.7 & 5610630 & 33540.6 & 0.993 & 988 & 7 & 0.006 & 0.000 \\ 
+1912 & 46809.6 & 5603550 & 33536.3 & 0.992 & 988 & 7 & 0.007 & 0.000 \\ 
+1913 & 46721.0 & 5595680 & 33531.5 & 0.991 & 989 & 8 & 0.007 & 0.000 \\ 
+1914 & 46630.1 & 5587080 & 33526.3 & 0.989 & 990 & 8 & 0.008 & 0.000 \\ 
+1915 & 46537.5 & 5577840 & 33520.6 & 0.988 & 991 & 10 & 0.010 & 0.000 \\ 
+1916 & 46441.7 & 5567800 & 33513.4 & 0.986 & 992 & 9 & 0.009 & 0.000 \\ 
+1917 & 46346.8 & 5557440 & 33506.8 & 0.984 & 993 & 10 & 0.010 & 0.000 \\ 
+1918 & 46251.2 & 5546620 & 33427.6 & 0.982 & 995 & 55 & 0.052 & 0.002 \\ 
+1919 & 46105.0 & 5529880 & 33314.6 & 0.979 & 997 & 26 & 0.025 & 0.001 \\ 
+1920 & 45992.7 & 5516410 & 33221.0 & 0.977 & 1000 & 23 & 0.023 & 0.001 \\ 
+1921 & 45884.7 & 5503050 & 33128.3 & 0.974 & 1002 & 23 & 0.022 & 0.001 \\ 
+1922 & 45778.7 & 5489600 & 33035.1 & 0.972 & 1005 & 18 & 0.018 & 0.001 \\ 
+1923 & 45680.4 & 5476690 & 32945.1 & 0.970 & 1008 & 20 & 0.020 & 0.001 \\ 
+1924 & 45581.8 & 5463490 & 32853.2 & 0.967 & 1012 & 32 & 0.031 & 0.001 \\ 
+1925 & 45472.7 & 5448900 & 32753.1 & 0.965 & 1015 & 38 & 0.037 & 0.001 \\ 
+1926 & 45359.8 & 5433600 & 32648.5 & 0.962 & 1019 & 54 & 0.052 & 0.002 \\ 
+1927 & 45231.7 & 5416370 & 32532.4 & 0.959 & 1023 & 69 & 0.066 & 0.002 \\ 
+1928 & 45091.2 & 5397470 & 32406.1 & 0.956 & 1026 & 72 & 0.069 & 0.002 \\ 
+1929 & 44951.6 & 5378350 & 32277.8 & 0.952 & 1029 & 66 & 0.064 & 0.002 \\ 
+1930 & 44823.2 & 5360150 & 32154.1 & 0.949 & 1032 & 67 & 0.065 & 0.002 \\ 
+1931 & 44698.8 & 5342120 & 32030.4 & 0.946 & 1035 & 44 & 0.043 & 0.001 \\ 
+1932 & 44605.6 & 5327280 & 31924.0 & 0.943 & 1037 & 25 & 0.025 & 0.001 \\ 
+1933 & 44538.6 & 5315160 & 31832.4 & 0.941 & 1039 & 35 & 0.035 & 0.001 \\ 
+1934 & 44465.7 & 5302340 & 31735.7 & 0.939 & 1041 & 42 & 0.042 & 0.001 \\ 
+1935 & 44389.6 & 5289100 & 31635.9 & 0.937 & 1042 & 34 & 0.034 & 0.001 \\ 
+1936 & 44328.0 & 5277410 & 31544.1 & 0.934 & 1044 & 61 & 0.060 & 0.002 \\ 
+1937 & 44241.5 & 5263000 & 31436.4 & 0.932 & 1046 & 53 & 0.052 & 0.002 \\ 
+1938 & 44169.0 & 5250090 & 31337.0 & 0.930 & 1048 & 56 & 0.055 & 0.002 \\ 
+1939 & 44099.2 & 5237500 & 31239.5 & 0.927 & 1050 & 28 & 0.029 & 0.001 \\ 
+1940 & 44064.8 & 5228830 & 31164.5 & 0.926 & 1054 & 59 & 0.058 & 0.002 \\ 
+1941 & 44000.9 & 5217110 & 31072.6 & 0.924 & 1059 & 102 & 0.097 & 0.003 \\ 
+1942 & 43894.8 & 5200880 & 30955.3 & 0.921 & 1065 & 125 & 0.119 & 0.004 \\ 
+1943 & 43767.7 & 5182350 & 30824.8 & 0.918 & 1073 & 257 & 0.227 & 0.008 \\ 
+1944 & 43499.0 & 5148360 & 30606.1 & 0.912 & 1083 & 85 & 0.085 & 0.003 \\ 
+1945 & 43429.1 & 5135700 & 30507.4 & 0.909 & 1095 & 50 & 0.053 & 0.002 \\ 
+1946 & 43404.5 & 5128140 & 30437.4 & 0.908 & 1111 & 69 & 0.070 & 0.002 \\ 
+1947 & 43364.4 & 5118950 & 30357.0 & 0.906 & 1129 & 41 & 0.042 & 0.001 \\ 
+1948 & 43361.5 & 5113770 & 30299.0 & 0.905 & 1151 & 44 & 0.045 & 0.001 \\ 
+1949 & 43362.1 & 5109000 & 30243.6 & 0.905 & 1176 & 31 & 0.031 & 0.001 \\ 
+1950 & 43384.9 & 5106600 & 30202.5 & 0.904 & 1204 & 53 & 0.053 & 0.002 \\ 
+1951 & 43391.2 & 5102310 & 30152.6 & 0.903 & 1235 & 59 & 0.059 & 0.002 \\ 
+1952 & 43400.0 & 5097980 & 30104.7 & 0.903 & 1268 & 38 & 0.039 & 0.001 \\ 
+1953 & 43441.9 & 5096790 & 30077.0 & 0.902 & 1302 & 20 & 0.021 & 0.001 \\ 
+1954 & 43514.7 & 5098400 & 30068.1 & 0.903 & 1334 & 36 & 0.037 & 0.001 \\ 
+1955 & 43583.0 & 5098920 & 30056.3 & 0.903 & 1363 & 32 & 0.032 & 0.001 \\ 
+1956 & 43670.2 & 5100670 & 30054.0 & 0.903 & 1385 & 20 & 0.022 & 0.001 \\ 
+1957 & 43785.6 & 5104600 & 30065.6 & 0.904 & 1400 & 35 & 0.035 & 0.001 \\ 
+1958 & 43902.1 & 5107720 & 30072.9 & 0.904 & 1406 & 15 & 0.016 & 0.000 \\ 
+1959 & 44058.5 & 5114130 & 30097.2 & 0.906 & 1405 & 22 & 0.023 & 0.001 \\ 
+1960 & 44224.8 & 5120710 & 30119.6 & 0.907 & 1397 & 23 & 0.024 & 0.001 \\ 
+1961 & 44409.1 & 5128470 & 30144.8 & 0.908 & 1383 & 26 & 0.027 & 0.001 \\ 
+1962 & 44608.3 & 5137250 & 30170.7 & 0.910 & 1363 & 32 & 0.033 & 0.001 \\ 
+1963 & 44818.6 & 5146940 & 30195.7 & 0.911 & 1337 & 23 & 0.024 & 0.001 \\ 
+1964 & 45054.3 & 5159350 & 30228.7 & 0.914 & 1303 & 32 & 0.032 & 0.001 \\ 
+1965 & 45294.7 & 5172670 & 30259.0 & 0.916 & 1265 & 31 & 0.032 & 0.001 \\ 
+1966 & 45547.4 & 5188380 & 30294.9 & 0.919 & 1227 & 117 & 0.116 & 0.004 \\ 
+1967 & 45714.7 & 5197650 & 30292.7 & 0.920 & 1192 & 108 & 0.107 & 0.004 \\ 
+1968 & 45895.1 & 5209750 & 30298.3 & 0.922 & 1166 & 172 & 0.164 & 0.006 \\ 
+1969 & 46006.1 & 5217520 & 30278.2 & 0.924 & 1149 & 51 & 0.049 & 0.002 \\ 
+1970 & 46246.5 & 5239120 & 30319.7 & 0.928 & 1138 & 22 & 0.023 & 0.001 \\ 
+1971 & 46513.5 & 5266170 & 30386.6 & 0.932 & 1130 & 68 & 0.067 & 0.002 \\ 
+1972 & 46724.0 & 5290930 & 30443.6 & 0.937 & 1124 & 76 & 0.074 & 0.003 \\ 
+1973 & 46914.3 & 5316580 & 30509.0 & 0.941 & 1124 & 75 & 0.072 & 0.002 \\ 
+1974 & 47093.3 & 5343690 & 30589.4 & 0.946 & 1130 & 77 & 0.072 & 0.003 \\ 
+1975 & 47256.2 & 5371460 & 30684.4 & 0.951 & 1133 & 43 & 0.041 & 0.001 \\ 
+1976 & 47441.9 & 5403410 & 30816.0 & 0.957 & 1149 & 19 & 0.018 & 0.001 \\ 
+1977 & 47638.7 & 5438200 & 30982.2 & 0.963 & 1173 & 166 & 0.133 & 0.005 \\ 
+1978 & 47658.4 & 5455390 & 31079.2 & 0.966 & 1211 & 69 & 0.062 & 0.002 \\ 
+1979 & 47771.8 & 5483400 & 31261.7 & 0.971 & 1212 & 185 & 0.154 & 0.006 \\ 
+1980 & 47744.7 & 5496990 & 31398.0 & 0.973 & 1198 & 99 & 0.089 & 0.003 \\ 
+1981 & 47801.2 & 5518720 & 31603.4 & 0.977 & 1178 & 131 & 0.115 & 0.004 \\ 
+1982 & 47811.6 & 5534650 & 31801.3 & 0.980 & 1101 & 167 & 0.147 & 0.005 \\ 
+1983 & 47773.3 & 5544570 & 31986.9 & 0.982 & 1104 & 126 & 0.111 & 0.004 \\ 
+1984 & 47771.2 & 5556220 & 32190.5 & 0.984 & 1280 & 144 & 0.128 & 0.004 \\ 
+1985 & 47741.9 & 5563640 & 32377.3 & 0.985 & 1260 & 299 & 0.245 & 0.009 \\ 
+1986 & 47534.8 & 5550950 & 32456.5 & 0.983 & 1038 & 428 & 0.326 & 0.013 \\ 
+1987 & 47179.8 & 5520160 & 32427.3 & 0.977 & 1194 & 571 & 0.409 & 0.018 \\ 
+1988 & 46663.4 & 5469750 & 32273.5 & 0.968 & 2024 & 351 & 0.289 & 0.011 \\ 
+1989 & 46393.1 & 5442960 & 32226.8 & 0.964 & 1304 & 418 & 0.345 & 0.013 \\ 
+1990 & 46055.2 & 5408190 & 32114.1 & 0.958 & 928 & 244 & 0.223 & 0.008 \\ 
+1991 & 45918.0 & 5391230 & 32063.4 & 0.955 & 1071 & 299 & 0.269 & 0.009 \\ 
+1992 & 45729.2 & 5367750 & 31946.5 & 0.950 & 1199 & 306 & 0.269 & 0.010 \\ 
+1993 & 45538.7 & 5341860 & 31782.7 & 0.946 & 1389 & 327 & 0.283 & 0.010 \\ 
+1994 & 45329.8 & 5312700 & 31575.5 & 0.941 & 1044 & 306 & 0.265 & 0.010 \\ 
+1995 & 45151.1 & 5285130 & 31357.4 & 0.936 & 625 & 745 & 0.507 & 0.024 \\ 
+1996 & 44488.3 & 5204800 & 30828.8 & 0.922 & 549 & 339 & 0.292 & 0.011 \\ 
+1997 & 44276.9 & 5172560 & 30560.3 & 0.916 & 555 & 303 & 0.266 & 0.010 \\ 
+1998 & 44097.2 & 5145180 & 30307.8 & 0.911 & 775 & 441 & 0.355 & 0.015 \\ 
+1999 & 43751.8 & 5102470 & 29962.0 & 0.903 & 1756 & 256 & 0.231 & 0.009 \\ 
+2000 & 43593.4 & 5083200 & 29743.4 & 0.900 & 1223 & 183 & 0.164 & 0.006 \\ 
+2001 & 43514.5 & 5074260 & 29571.9 & 0.898 & 1132 & 114 & 0.112 & 0.004 \\ 
+2002 & 43495.5 & 5076370 & 29469.7 & 0.899 & 816 & 74 & 0.072 & 0.003 \\ 
+2003 & 43510.9 & 5084420 & 29410.7 & 0.900 & 600 & 99 & 0.093 & 0.003 \\ 
+2004 & 43492.5 & 5091010 & 29371.1 & 0.901 & 965 & 115 & 0.103 & 0.004 \\ 
+2005 & 43449.0 & 5096290 & 29332.2 & 0.902 & 1054 & 138 & 0.119 & 0.005 \\ 
+2006 & 43373.1 & 5098680 & 29280.7 & 0.903 & 820 & 127 & 0.115 & 0.004 \\ 
+2007 & 43295.7 & 5101820 & 29242.7 & 0.903 & 1268 & 187 & 0.162 & 0.006 \\ 
+2008 & 43148.5 & 5095830 & 29123.2 & 0.902 & 1807 & 218 & 0.183 & 0.007 \\ 
+2009 & 42967.1 & 5083190 & 28996.3 & 0.900 & 1102 & 228 & 0.202 & 0.008 \\ 
+2010 & 42771.1 & 5067410 & 29021.5 & 0.897 & 1938 & 261 & 0.226 & 0.009 \\ 
+2011 & 42551.8 & 5044980 & 29015.5 & 0.893 & 1061 & 210 & 0.168 & 0.007 \\ 
+2012 & 42420.7 & 5025490 & 28861.4 & 0.890 & 2857 & 244 & 0.192 & 0.008 \\ 
+2013 & 42280.3 & 5000810 & 28812.1 & 0.885 & 977 & 156 & 0.134 & 0.005 \\ 
+2014 & 42263.9 & 4986990 & 29488.9 & 0.883 & 711 & 91 & 0.082 & 0.003 \\ 
+2015 & 42349.8 & 4980880 & 29647.0 & 0.882 & 659 & 132 & 0.114 & 0.004 \\ 
+2016 & 42423.6 & 4969040 & 29475.5 & 0.880 & 870 & 149 & 0.127 & 0.005 \\ 
+2017 & 42501.9 & 4954860 & 29408.5 & 0.877 & 2172 & 156 & 0.133 & 0.005 \\ 
+2018 & 42587.3 & 4939980 & 29441.6 & 0.875 & 1341 & 242 & 0.188 & 0.008 \\ 
+2019 & 42610.7 & 4914880 & 29559.3 & 0.870 & 1197 & 227 & 0.180 & 0.008 \\ 
+2020 & 42665.4 & 4893940 & 29413.2 & 0.867 & 846 & 106 & 0.090 & 0.004 \\ 
+2021 & 42856.7 & 4891640 & 29028.0 & 0.866 & 923 & 93 & 0.079 & 0.003 \\ 
+2022 & 43067.4 & 4895270 & 28596.7 & 0.867 & 1017 & 117 & 0.098 & 0.004 \\ 
+2023 & 43254.9 & 4900640 & 28157.9 & 0.868 & 1067 & 98 & 0.083 & 0.003 \\ 
+2024 & 43457.8 & 4913820 & 27923.0 & 0.870 & 1076 & 119 & 0.098 & 0.004 \\ 
+2025 & 43632.4 & 4929120 & 28487.4 & 0.873 & 1076 & 968 & 0.500 & 0.034 \\ 
+2026 & 42972.7 & 4841850 & 27968.3 & 0.857 & 1074 & 955 & 0.500 & 0.034 \\ 
+2027 & 42327.6 & 4760140 & 27390.1 & 0.843 & 1072 & 880 & 0.481 & 0.032 \\ 
+2028 & 41755.2 & 4690410 & 26627.0 & 0.831 & 1070 & 865 & 0.480 & 0.032 \\ 
+2029 & 41196.8 & 4624410 & 25726.5 & 0.819 & 1069 & 851 & 0.478 & 0.033 \\ 
+2030 & 40651.3 & 4561470 & 25136.9 & 0.808 & 1067 & 837 & 0.477 & 0.033 \\ 
+2031 & 40118.7 & 4501170 & 24635.1 & 0.797 & 1065 & 823 & 0.476 & 0.033 \\ 
+2032 & 39600.1 & 4443180 & 23981.3 & 0.787 & 1064 & 809 & 0.474 & 0.034 \\ 
+2033 & 39095.0 & 4386880 & 23677.4 & 0.777 & 1062 & 796 & 0.473 & 0.034 \\ 
+2034 & 38603.9 & 4331770 & 23771.1 & 0.767 & 1060 & 782 & 0.472 & 0.033 \\ 
+2035 & 38128.4 & 4277630 & 23363.6 & 0.757 & 1059 & 769 & 0.470 & 0.033 \\ 
+2036 & 37668.2 & 4224160 & 23558.5 & 0.748 & 1057 & 756 & 0.469 & 0.032 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\newpage{}
+
 \section{Figures}\label{figures}
 
 \begin{figure}[H]
@@ -9666,6 +9873,70 @@ sources.}
 for 5 derived quantities. Colored boxes indicate 95 percent confidence
 interval of the reference model. See `Sensitivity Analysis' section for
 more details on each scenario.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{Sensis/model_specs/M_Gr_Reproduction.png}
+
+}
+
+\caption{\label{fig-sensi-LH}Comparison of spawning output (left panel),
+relative stock status (middle panel) and recruitment estimation (right
+panel) for models under different natural mortality, growth and
+reproductive biology scenarios. The reference model uses ageing error
+matrices for all age sources.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png}
+
+}
+
+\caption{\label{fig-sensi-RE-LH}Log relative change
+(log((Model\_sensi-Model\_ref)/Model\_ref)) in natural mortality, growth
+and reproductive biology scenarios for 5 derived quantities. Colored
+boxes indicate 95 percent confidence interval of the reference model.
+See `Sensitivity Analysis' section for more details on each scenario.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{Sensis/model_specs/Sel_Rec.png}
+
+}
+
+\caption{\label{fig-sensi-SelRec}Comparison of spawning output (left
+panel), relative stock status (middle panel) and recruitment estimation
+(right panel) for models under different recruitment and selectivity
+scenarios. The reference model uses ageing error matrices for all age
+sources.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png}
+
+}
+
+\caption{\label{fig-sensi-RE-SelRec}Log relative change
+(log((Model\_sensi-Model\_ref)/Model\_ref)) in recruitment and
+selectivity scenarios for 5 derived quantities. Colored boxes indicate
+95 percent confidence interval of the reference model. See `Sensitivity
+Analysis' section for more details on each scenario.}
 
 \end{figure}%
 

@@ -31,6 +31,7 @@ Likelihood values and estimates of key parameters and derived quantities from ea
 ##### Ageing error
 
 The following ageing error sensitivities were explored:
+
   * No Ageing error for all sources (unbiased and precise ages)
   * No ageing error for each source at a time
 
@@ -42,15 +43,19 @@ Likelihood values and estimates of key parameters and derived quantities from ea
 Model specifications looked at the treatment of life history parameters selectivity and the estimation of recruitment. All scenarios match the reference model specifications in all other aspects unless otherwise stated.
 
 * Life history parameters
+
 	* Natural mortality ($M$)
+
 		1. Estimate female $M$
 		2. Fix $M$ to 2013 value		
 		3. Lorenzen age varying $M$
 	
 	* Growth parameters
+
 	 	4. Fix all growth parameters to external values
 
 	* Reproductive Biology
+
 		5. Proportional fecundity to weight
 		6. Functional maturity at age
 		7. Functional maturity at length for Blackspotted Rockfish
@@ -61,11 +66,13 @@ Model specifications looked at the treatment of life history parameters selectiv
 Summaries of the model results for these sensitivities are presented in **Table X** and **Figure X**. Model output showed that the base model was most sensitive to using maturity at age instead of maturity at length, with a decrease in relative depletion from the 1970’s to 1990’s using maturity at age. For this long-lived species, age may be a more precise determination of maturity (because there is a wide range of lengths per age); however, age data is more limited. The base model was less sensitive to the other changes, with similar output between the base and alternative models.
 
 * Recruitment estimation
+
  	13. No recruitment estimation
  	14. Estimate from 1940 onward
 	15. Estimate from 1980 onward
 	
 * Selectivity
+
 	16. Logistic selectivity for all fisheries and time blocks
 	17. Logistic selectivity for bottom trawl fishery
 	18. Logistic selectivity for non-trawl fishery
