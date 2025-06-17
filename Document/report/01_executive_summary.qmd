@@ -65,7 +65,7 @@ knitr::include_graphics(file.path(model_dir,"plots/catch2_landings_stacked.png")
 
 ```
 
-### Data and Assessments
+## Data and Assessments
 The only previous stock assessment for `r spp` for the U.S. West Coast area was done in 2013 [@hicks_status_2013]. It was conducted with Stock Synthesis statistical catch-at-age modelling framework [@MethotWetzel2013].
 
 This 2025 assessment also uses Stock Synthesis, version 3.30.23.1. The modeling period begins in 1892, and the stock prior to that is assumed to be in an unfished equilibrium condition.
@@ -74,7 +74,7 @@ This 2025 assessment also uses Stock Synthesis, version 3.30.23.1. The modeling 
 
 This is a sex-specific model. Females and males have separate growth curves and sex-specific weight-at-length parameters. Growth is assumed to follow the von Bertalanffy growth model, and the assessment explicitly estimates all parameters describing somatic growth. The natural mortality for females is estimated in the assessment and natural mortality for males is fixed an the value generated from meta-analytical study.  Externally estimated life history parameters, including those defining the length-weight relationship, female fecundity and maturity schedule were revised for this assessment to incorporate new information. Recruitment dynamics are assumed to follow the Beverton-Holt stock-recruit function, and recruitment deviations are estimated. Stock-recruitment steepness is fixed at the value generated from meta-analytical study. The base model estimates parameters for selectivity based on length data, and estimated selectivity curves are a mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water gears).
 
-### Stock Output and Dynamics
+## Stock Output and Dynamics
 The model estimates that the stock complex currently is in a healthy state, well above management target (@fig-es-sb, @fig-es-depl). Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
 
 Fraction unfished shows slight decline between 1940s and the 1960s, also also gradual decline since early-1980s, which correspond to catch history. 
@@ -420,7 +420,7 @@ cat("\n\\end{landscape}\n")
 
 ```
 
-# Scientific Uncertainty
+## Scientific Uncertainty
 The model estimated uncertainty around the 2025 spawning output for is 𝜎 = 0.6836465. The uncertainty around the OFL is 𝜎 = 0.6713586. These 𝜎 values underestimate the overall uncertainty as they do not incorporate the model structural uncertainty and do not account for any time-varying dynamics other than recruitment. The estimated uncertainty values are higher than the Category 1 default 𝜎=0.5, so all projections will use the estimated 𝜎.
 
 ## Research and Data Needs
