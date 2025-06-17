@@ -16,7 +16,7 @@ In the last ten years total dead catches of `r Spp` have been below the annual c
 
 ## Harvest Projections and Decision Tables
 
-The `r Spp` assessment is being considered as a category 1 assessment with a $P^*$ = 0.45, $\sigma$ = 0.50, and a time-varying buffer applied to set the ABC below the OFL. These multipliers are also combined with the rockfish MSY proxy of SPR\textsubscript{50} and the 40-10 harvest control rule to calculate OFLs and ACLs. Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a $P^*$ of 0.45 and a log-space standard deviation of the overfishing limit ($\sigma$) of 0.50 are included in @tbl-man-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
+The `r Spp` assessment is being considered as a category 1 assessment with a $P^*$ = 0.45, $\sigma$ = 0.50 and a time-varying buffer applied to set the ABC below the OFL. These multipliers are also combined with the rockfish MSY proxy of SPR\textsubscript{50} and the 40-10 harvest control rule to calculate OFLs and ACLs. Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a $P^*$ of 0.45 and a log-space standard deviation of the overfishing limit ($\sigma$) of 0.50 are included in @tbl-man-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
 
 No decision table needed in draft assessments undergoing review.
 
