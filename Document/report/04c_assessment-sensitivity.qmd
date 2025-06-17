@@ -27,7 +27,7 @@ The following data weighting sensitivities were explored:
 * Dirichlet data-weighting
 * McAllister-Ianelli data weighting
 
-Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity are available in **DATA WEIGHTING TABLE**. Comparison plots for the results relative to the reference model are in @fig-sensi-data-wt and @fig-sensi-RE-data-wt. Each data weighting scenario up-weighted the influence of the length data relative to the age data. This resulted in a large drop in the stock scale, but little change in the high stock status. These changes were within the uncertainty of the base model, though at the low end for the stock scale.
+Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity are available in @tbl-sensitivities-data-weighting. Comparison plots for the results relative to the reference model are in @fig-sensi-data-wt and @fig-sensi-RE-data-wt. Each data weighting scenario up-weighted the influence of the length data relative to the age data. This resulted in a large drop in the stock scale, but little change in the high stock status. These changes were within the uncertainty of the base model, though at the low end for the stock scale.
 
 
 ##### Ageing error

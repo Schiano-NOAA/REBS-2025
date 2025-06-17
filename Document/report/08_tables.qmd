@@ -757,6 +757,35 @@ cat("\n\\end{landscape}\n")
 ```
 
  {{< pagebreak >}} 
+ 
+<!-- ADD JASON'S SENSTIVITY TABLES HERE -->
+
+
+```{r}
+#| label: tbl-sensitivities-data-weighting
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity."
+
+cat("\\begin{landscape}\n")
+
+#source(here::here("Rcode/table_sens.R"))
+data_weighting <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_DATAWT.csv"))
+
+#names(ages) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- WGCBTS","- fishery","no ages")
+
+#table_sens(ages)
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+
+
+
+
 
 <!-- projections -->
 
