@@ -6,7 +6,7 @@ Rougheye rockfish are a long-lived rockfish named after a series of 2-10 spines 
 
 It has only been from recent genetic studies that these two separate species have been identified [@gharrett_genetically_2006, @hawkins_genetic_2005] and have had phenotypic characteristics useful for identifying the species in the field identified [@gharrett_genetically_2006, @orr_species_2008].  Before then, data are available for one species called Rougheye Rockfish which included Rougheye Rockfish and Blackspotted Rockfish.  Due to the difficulty in distinguishing these two species and the lack of historical separation of the species in all of the data, this assessment combines any data for Blackspotted Rockfish with Rougheye Rockfish into `r Spp` and provides management advice for the two species combined. These species are also closely related to Shortraker Rockfish (*Sebastes borealis*) and are sometimes difficult to distinguish from Shortraker Rockfish without looking at the gill rakers.  
 
-## Stock Structure
+## Stock Structure {#sec-stock_structure}
 
 There are at least two questions to think about when considering stock structure for `r Spp` when doing a stock assessment.
 

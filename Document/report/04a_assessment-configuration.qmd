@@ -14,8 +14,8 @@ There were several recommendations from the 2013 STAR panel, broken into two cat
 
 ### General recommendations
 
-1. *Investigate data-weighting options.* This has been an ongoing research topic in stock assessments over the last several decades, and several options are now available for consideration (Francis 2011, Punt 2017, Thorson 2017). In this assessment, we use Francis (2011) method, and explores other methods of data weighting within sensitivity analysis described in @sec-assmt-sens.
-2. *A workshop for constructing abundance indices from survey GLMMs.* This is another topic that has developed greatly since this time. Our use of spatio-temporal models are described in the data section on abundance indices.
+1. *Investigate data-weighting options.* This has been an ongoing research topic in stock assessments over the last several decades, and several options are now available for consideration [@francis_data_2011, @thorson_model-based_2017 Punt 2017]. In this assessment, we use @francis_data_2011 method, and explores other methods of data weighting within sensitivity analysis described in @sec-assmt-sens.
+2. *A workshop for constructing abundance indices from survey GLMMs.* This is another topic that has developed greatly since this time. Our use of spatio-temporal models are described in the data section on abundance indices [@thorson_geostatistical_2015, @Anderson:2022:SRP].
 3. *Continue collection of ages.* This had been done, and this assessment benefits from several more years of age data.
 4. *Exploring historical catches.* This again has been an ongoing topic and addressed for many of our groundfishes. We use the latest estimates in this assessment.
 5. *SSC guidance on decision tables.* Decision table discussion evolve after every stock assessment cycle, and we are using the latest approaches to decision tables in this assessment.
