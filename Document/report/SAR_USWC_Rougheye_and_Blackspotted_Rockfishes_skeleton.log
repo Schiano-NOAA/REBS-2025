@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.6.13)  16 JUN 2025 16:21
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2025.6.13)  16 JUN 2025 17:28
  restricted system commands enabled.
 **SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton.tex
 (./SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton.tex
@@ -1929,131 +1929,156 @@ Package luatex.def Info: ref_model/plots/recdevs2_withbars.png  used on input li
 
 <./ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png>]
 
-LaTeX Warning: Reference `tbl-es-spr' on page 12 undefined on input line 835.
+LaTeX Warning: Reference `tbl-es-spr' on page 12 undefined on input line 836.
 
 
-LaTeX Warning: Reference `fig-es-kobe' on page 12 undefined on input line 835.
+LaTeX Warning: Reference `fig-es-spr' on page 12 undefined on input line 836.
+
+
 
 [12<./ref_model/plots/recdevs2_withbars.png>]
-<ref_model/plots/SPR4_phase.png, id=93, 469.755pt x 469.755pt>
+<ref_model/plots/SPR3_ratiointerval.png, id=92, 469.755pt x 289.08pt>
+File: ref_model/plots/SPR3_ratiointerval.png Graphic file (type png)
+<use ref_model/plots/SPR3_ratiointerval.png>
+Package luatex.def Info: ref_model/plots/SPR3_ratiointerval.png  used on input line 873.
+(luatex.def)             Requested size: 469.75386pt x 289.07928pt.
+
+
+[13<./ref_model/plots/SPR3_ratiointerval.png>]
+
+LaTeX Warning: Reference `tbl-ref-points-es' on page 14 undefined on input line 917.
+
+
+LaTeX Warning: Reference `fig-es-yield' on page 14 undefined on input line 918.
+
+
+LaTeX Warning: Reference `tbl-ref-points-es' on page 14 undefined on input line 928.
+
+
+LaTeX Warning: Reference `fig-es-yield' on page 14 undefined on input line 928.
+
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+
+
+[14
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
+]
+<ref_model/plots/SPR4_phase.png, id=106, 469.755pt x 469.755pt>
 File: ref_model/plots/SPR4_phase.png Graphic file (type png)
 <use ref_model/plots/SPR4_phase.png>
-Package luatex.def Info: ref_model/plots/SPR4_phase.png  used on input line 872.
+Package luatex.def Info: ref_model/plots/SPR4_phase.png  used on input line 985.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
-[13]
-
-[14<./ref_model/plots/SPR4_phase.png>]
-
-LaTeX Warning: Reference `tbl-ref-points-es' on page 15 undefined on input line 912.
-
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-
-
 [15
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝐵 (U+1D435) in font [lmroman10-regular]:+tlig;!
-]
-
-LaTeX Warning: Reference `tbl-es-management' on page 16 undefined on input line 980.
-
-[16
 
 ]
+<ref_model/plots/yield2_yield_curve_with_refpoints.png, id=112, 469.755pt x 289.08pt>
+File: ref_model/plots/yield2_yield_curve_with_refpoints.png Graphic file (type png)
+<use ref_model/plots/yield2_yield_curve_with_refpoints.png>
+Package luatex.def Info: ref_model/plots/yield2_yield_curve_with_refpoints.png  used on input line 998.
+(luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
-LaTeX Warning: Reference `tbl-es-projections' on page 17 undefined on input line 1032.
+
+[16<./ref_model/plots/SPR4_phase.png>]
+
+LaTeX Warning: Reference `tbl-es-management' on page 17 undefined on input line 1014.
+
+[17<./ref_model/plots/yield2_yield_curve_with_refpoints.png>]
+
+LaTeX Warning: Reference `tbl-es-projections' on page 18 undefined on input line 1066.
 
 
 
-[17]
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1055--1055
+[18]
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1089--1089
  []|\TU/lmr/m/n/9 4,929,120.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1056--1056
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1090--1090
  []|\TU/lmr/m/n/9 4,841,850.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1057--1057
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1091--1091
  []|\TU/lmr/m/n/9 4,760,140.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1058--1058
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1092--1092
  []|\TU/lmr/m/n/9 4,690,410.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1059--1059
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1093--1093
  []|\TU/lmr/m/n/9 4,624,410.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1060--1060
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1094--1094
  []|\TU/lmr/m/n/9 4,561,470.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1061--1061
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1095--1095
  []|\TU/lmr/m/n/9 4,501,170.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1062--1062
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1096--1096
  []|\TU/lmr/m/n/9 4,443,180.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1063--1063
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1097--1097
  []|\TU/lmr/m/n/9 4,386,880.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1064--1064
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1098--1098
  []|\TU/lmr/m/n/9 4,331,770.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1065--1065
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1099--1099
  []|\TU/lmr/m/n/9 4,277,630.000| 
  []
 
 
-Overfull \hbox (9.25249pt too wide) in paragraph at lines 1066--1066
+Overfull \hbox (9.25249pt too wide) in paragraph at lines 1100--1100
  []|\TU/lmr/m/n/9 4,224,160.000| 
  []
 
 
 
-[18
-
-]
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
-
-
 [19
 
+]
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
+
+
+[20
+
 Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
 Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
@@ -2061,83 +2086,84 @@ Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;
 Missing character: There is no 𝜎 (U+1D70E) in font [lmroman10-regular]:+tlig;!
 ]
 
-[20]
+[21]
 warning  (pdf backend): ignoring duplicate destination with the name 'section.1'
 
-LaTeX Warning: Citation `ref-love_certainly_2011' on page 1 undefined on input line 1158.
+LaTeX Warning: Citation `ref-love_certainly_2011' on page 1 undefined on input line 1192.
 
 
-LaTeX Warning: Citation `ref-love_certainly_2011' on page 1 undefined on input line 1161.
+LaTeX Warning: Citation `ref-love_certainly_2011' on page 1 undefined on input line 1195.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 1 undefined on input line 1165.
+LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 1 undefined on input line 1199.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1167.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1201.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.1'
 
-LaTeX Warning: Citation `ref-jordan_fishes_1898' on page 1 undefined on input line 1194.
+LaTeX Warning: Citation `ref-jordan_fishes_1898' on page 1 undefined on input line 1228.
 
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 1 undefined on input line 1197.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 1 undefined on input line 1231.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1202.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1236.
 
 
-LaTeX Warning: Citation `ref-tsuyuki_contribution_1968' on page 1 undefined on input line 1204.
+LaTeX Warning: Citation `ref-tsuyuki_contribution_1968' on page 1 undefined on input line 1238.
 
 
-LaTeX Warning: Citation `ref-tsuyuki_analyses_1970' on page 1 undefined on input line 1205.
+LaTeX Warning: Citation `ref-tsuyuki_analyses_1970' on page 1 undefined on input line 1239.
 
 
-LaTeX Warning: Citation `ref-seeb_biochemical_1986' on page 1 undefined on input line 1208.
+LaTeX Warning: Citation `ref-seeb_biochemical_1986' on page 1 undefined on input line 1242.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_1997' on page 1 undefined on input line 1209.
+LaTeX Warning: Citation `ref-hawkins_genetic_1997' on page 1 undefined on input line 1243.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 1 undefined on input line 1209.
+LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 1 undefined on input line 1243.
 
 
-LaTeX Warning: Citation `ref-gharrett_two_2005' on page 1 undefined on input line 1215.
+LaTeX Warning: Citation `ref-gharrett_two_2005' on page 1 undefined on input line 1249.
 
 
-LaTeX Warning: Citation `ref-gharrett_genetically_2006' on page 1 undefined on input line 1221.
+LaTeX Warning: Citation `ref-gharrett_genetically_2006' on page 1 undefined on input line 1255.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1222.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 1 undefined on input line 1256.
 
 
-LaTeX Warning: Citation `ref-matsubara_1934' on page 1 undefined on input line 1228.
+LaTeX Warning: Citation `ref-matsubara_1934' on page 1 undefined on input line 1262.
 
 
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1]
+Package marginnote Info: Using workaround for absolute page number on input line 1263.
 
-LaTeX Warning: Citation `ref-harris_using_2019' on page 2 undefined on input line 1237.
-
-
-LaTeX Warning: Citation `ref-gharrett_two_2005' on page 2 undefined on input line 1257.
+LaTeX Warning: Citation `ref-harris_using_2019' on page 2 undefined on input line 1271.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 2 undefined on input line 1258.
+LaTeX Warning: Citation `ref-gharrett_two_2005' on page 2 undefined on input line 1291.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 2 undefined on input line 1259.
+LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 2 undefined on input line 1292.
 
 
-LaTeX Warning: Citation `ref-hicks_status_2013' on page 2 undefined on input line 1282.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 2 undefined on input line 1293.
 
 
-LaTeX Warning: Reference `fig-SO_comp' on page 2 undefined on input line 1287.
+LaTeX Warning: Citation `ref-hicks_status_2013' on page 2 undefined on input line 1316.
 
 
-LaTeX Warning: Reference `fig-RSS_comp' on page 2 undefined on input line 1290.
+LaTeX Warning: Reference `fig-SO_comp' on page 2 undefined on input line 1321.
+
+
+LaTeX Warning: Reference `fig-RSS_comp' on page 2 undefined on input line 1324.
 
 
 
@@ -2146,30 +2172,30 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 [2]
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.2'
 
-LaTeX Warning: Citation `ref-gharrett_two_2005' on page 3 undefined on input line 1298.
+LaTeX Warning: Citation `ref-gharrett_two_2005' on page 3 undefined on input line 1332.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 3 undefined on input line 1299.
+LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 3 undefined on input line 1333.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 3 undefined on input line 1300.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 3 undefined on input line 1334.
 
 
-LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 3 undefined on input line 1310.
+LaTeX Warning: Citation `ref-hawkins_genetic_2005' on page 3 undefined on input line 1344.
 
 
-LaTeX Warning: Citation `ref-orr_species_2008' on page 3 undefined on input line 1310.
+LaTeX Warning: Citation `ref-orr_species_2008' on page 3 undefined on input line 1344.
 
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 3 undefined on input line 1316.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 3 undefined on input line 1350.
 
 
-LaTeX Warning: Citation `ref-love_certainly_2011' on page 3 undefined on input line 1321.
+LaTeX Warning: Citation `ref-love_certainly_2011' on page 3 undefined on input line 1355.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.3'
 
-LaTeX Warning: Reference `fig-map' on page 3 undefined on input line 1333.
+LaTeX Warning: Reference `fig-map' on page 3 undefined on input line 1367.
 
 
 
@@ -2178,38 +2204,38 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.3'
 [3]
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.4'
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1345.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1379.
 
 
-LaTeX Warning: Citation `ref-dick_meta-analysis_2017' on page 4 undefined on input line 1345.
+LaTeX Warning: Citation `ref-dick_meta-analysis_2017' on page 4 undefined on input line 1379.
 
 
-LaTeX Warning: Citation `ref-love_certainly_2011' on page 4 undefined on input line 1357.
+LaTeX Warning: Citation `ref-love_certainly_2011' on page 4 undefined on input line 1391.
 
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1360.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1394.
 
 
-LaTeX Warning: Citation `ref-love_certainly_2011' on page 4 undefined on input line 1360.
+LaTeX Warning: Citation `ref-love_certainly_2011' on page 4 undefined on input line 1394.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.5'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.6'
 
-LaTeX Warning: Citation `ref-douglas_species_1998' on page 4 undefined on input line 1380.
+LaTeX Warning: Citation `ref-douglas_species_1998' on page 4 undefined on input line 1414.
 
 
-LaTeX Warning: Citation `ref-jones_oregon_1961' on page 4 undefined on input line 1383.
+LaTeX Warning: Citation `ref-jones_oregon_1961' on page 4 undefined on input line 1417.
 
 
-LaTeX Warning: Citation `ref-niska_species_1976' on page 4 undefined on input line 1385.
+LaTeX Warning: Citation `ref-niska_species_1976' on page 4 undefined on input line 1419.
 
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1391.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 4 undefined on input line 1425.
 
 
-LaTeX Warning: Citation `ref-rogers_species_2003' on page 4 undefined on input line 1392.
+LaTeX Warning: Citation `ref-rogers_species_2003' on page 4 undefined on input line 1426.
 
 
 
@@ -2217,21 +2243,21 @@ LaTeX Warning: Citation `ref-rogers_species_2003' on page 4 undefined on input l
 warning  (pdf backend): ignoring duplicate destination with the name 'page.4'
 [4]
 
-LaTeX Warning: Reference `sec-fishery_data' on page 5 undefined on input line 1409.
+LaTeX Warning: Reference `sec-fishery_data' on page 5 undefined on input line 1443.
 
 
-LaTeX Warning: Reference `fig-landings' on page 5 undefined on input line 1411.
+LaTeX Warning: Reference `fig-landings' on page 5 undefined on input line 1445.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.7'
 
-LaTeX Warning: Citation `ref-rogers_status_1996' on page 5 undefined on input line 1430.
+LaTeX Warning: Citation `ref-rogers_status_1996' on page 5 undefined on input line 1464.
 
 
-LaTeX Warning: Citation `ref-rogers_status_1996' on page 5 undefined on input line 1433.
+LaTeX Warning: Citation `ref-rogers_status_1996' on page 5 undefined on input line 1467.
 
 
-LaTeX Warning: Reference `tbl-management_summary' on page 5 undefined on input line 1446.
+LaTeX Warning: Reference `tbl-management_summary' on page 5 undefined on input line 1480.
 
 
 
@@ -2239,36 +2265,36 @@ LaTeX Warning: Reference `tbl-management_summary' on page 5 undefined on input l
 warning  (pdf backend): ignoring duplicate destination with the name 'page.5'
 [5]
 
-LaTeX Warning: Citation `ref-hicks_status_2013' on page 6 undefined on input line 1463.
+LaTeX Warning: Citation `ref-hicks_status_2013' on page 6 undefined on input line 1497.
 
 
-LaTeX Warning: Reference `tbl-management-performance' on page 6 undefined on input line 1465.
+LaTeX Warning: Reference `tbl-management-performance' on page 6 undefined on input line 1499.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.1.8'
 
-LaTeX Warning: Citation `ref-spencer_assessment_2023' on page 6 undefined on input line 1477.
+LaTeX Warning: Citation `ref-spencer_assessment_2023' on page 6 undefined on input line 1511.
 
 
-LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1478.
+LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1512.
 
 
-LaTeX Warning: Citation `ref-starr_rougheyeblackspotted_2020' on page 6 undefined on input line 1480.
+LaTeX Warning: Citation `ref-starr_rougheyeblackspotted_2020' on page 6 undefined on input line 1514.
 
 
-LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1486.
+LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1520.
 
 
-LaTeX Warning: Citation `ref-spencer_assessment_2023' on page 6 undefined on input line 1497.
+LaTeX Warning: Citation `ref-spencer_assessment_2023' on page 6 undefined on input line 1531.
 
 
-LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1498.
+LaTeX Warning: Citation `ref-sullivan_assessment_2023' on page 6 undefined on input line 1532.
 
 
-LaTeX Warning: Citation `ref-cosewic_2007' on page 6 undefined on input line 1505.
+LaTeX Warning: Citation `ref-cosewic_2007' on page 6 undefined on input line 1539.
 
 
-LaTeX Warning: Citation `ref-fisheries_and_oceans_canada_management_2012' on page 6 undefined on input line 1517.
+LaTeX Warning: Citation `ref-fisheries_and_oceans_canada_management_2012' on page 6 undefined on input line 1551.
 
 
 
@@ -2281,27 +2307,27 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.7'
 [7]
 warning  (pdf backend): ignoring duplicate destination with the name 'section.2'
 
-LaTeX Warning: Reference `fig-data' on page 8 undefined on input line 1535.
+LaTeX Warning: Reference `fig-data' on page 8 undefined on input line 1569.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subsection.2.1'
 
-LaTeX Warning: Reference `sec-fleet' on page 8 undefined on input line 1568.
+LaTeX Warning: Reference `sec-fleet' on page 8 undefined on input line 1602.
 
 
-LaTeX Warning: Reference `tbl-landings' on page 8 undefined on input line 1575.
+LaTeX Warning: Reference `tbl-landings' on page 8 undefined on input line 1609.
 
 
-LaTeX Warning: Reference `fig-landings' on page 8 undefined on input line 1576.
+LaTeX Warning: Reference `fig-landings' on page 8 undefined on input line 1610.
 
 
-LaTeX Warning: Reference `tbl-BT_landings' on page 8 undefined on input line 1577.
+LaTeX Warning: Reference `tbl-BT_landings' on page 8 undefined on input line 1611.
 
 
-LaTeX Warning: Reference `tbl-NT_landings' on page 8 undefined on input line 1578.
+LaTeX Warning: Reference `tbl-NT_landings' on page 8 undefined on input line 1612.
 
 
-LaTeX Warning: Reference `tbl-MDT_landings' on page 8 undefined on input line 1579.
+LaTeX Warning: Reference `tbl-MDT_landings' on page 8 undefined on input line 1613.
 
 
 
@@ -2309,25 +2335,25 @@ LaTeX Warning: Reference `tbl-MDT_landings' on page 8 undefined on input line 15
 warning  (pdf backend): ignoring duplicate destination with the name 'page.8'
 [8]
 
-LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 9 undefined on input line 1616.
+LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 9 undefined on input line 1650.
 
 
-LaTeX Warning: Citation `ref-ODFW_URCK_POP_recon' on page 9 undefined on input line 1622.
+LaTeX Warning: Citation `ref-ODFW_URCK_POP_recon' on page 9 undefined on input line 1656.
 
 
-LaTeX Warning: Citation `ref-ralston_documentation_2010' on page 9 undefined on input line 1630.
+LaTeX Warning: Citation `ref-ralston_documentation_2010' on page 9 undefined on input line 1664.
 
 
-LaTeX Warning: Reference `fig-Ct_All' on page 9 undefined on input line 1634.
+LaTeX Warning: Reference `fig-Ct_All' on page 9 undefined on input line 1668.
 
 
-LaTeX Warning: Reference `fig-Ct_WA' on page 9 undefined on input line 1635.
+LaTeX Warning: Reference `fig-Ct_WA' on page 9 undefined on input line 1669.
 
 
-LaTeX Warning: Reference `fig-Ct_CA' on page 9 undefined on input line 1641.
+LaTeX Warning: Reference `fig-Ct_CA' on page 9 undefined on input line 1675.
 
 
-LaTeX Warning: Reference `fig-Ct_OR' on page 9 undefined on input line 1641.
+LaTeX Warning: Reference `fig-Ct_OR' on page 9 undefined on input line 1675.
 
 
 
@@ -2335,22 +2361,22 @@ LaTeX Warning: Reference `fig-Ct_OR' on page 9 undefined on input line 1641.
 warning  (pdf backend): ignoring duplicate destination with the name 'page.9'
 [9]
 
-LaTeX Warning: Reference `fig-Ct_compsSO' on page 10 undefined on input line 1652.
+LaTeX Warning: Reference `fig-Ct_compsSO' on page 10 undefined on input line 1686.
 
 
-LaTeX Warning: Reference `fig-Ct_compsRSS' on page 10 undefined on input line 1652.
+LaTeX Warning: Reference `fig-Ct_compsRSS' on page 10 undefined on input line 1686.
 
 
-LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 10 undefined on input line 1662.
+LaTeX Warning: Citation `ref-love_rockfishes_2002' on page 10 undefined on input line 1696.
 
 
-LaTeX Warning: Citation `ref-rogers_species_2003' on page 10 undefined on input line 1662.
+LaTeX Warning: Citation `ref-rogers_species_2003' on page 10 undefined on input line 1696.
 
 
-LaTeX Warning: Citation `ref-rogers_species_2003' on page 10 undefined on input line 1667.
+LaTeX Warning: Citation `ref-rogers_species_2003' on page 10 undefined on input line 1701.
 
 
-LaTeX Warning: Reference `tbl-BT_landings' on page 10 undefined on input line 1696.
+LaTeX Warning: Reference `tbl-BT_landings' on page 10 undefined on input line 1730.
 
 
 
@@ -2358,13 +2384,13 @@ LaTeX Warning: Reference `tbl-BT_landings' on page 10 undefined on input line 16
 warning  (pdf backend): ignoring duplicate destination with the name 'page.10'
 [10]
 
-LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1706.
+LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1740.
 
 
-LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1711.
+LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1745.
 
 
-LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1719.
+LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on input line 1753.
 
 
 
@@ -2372,22 +2398,22 @@ LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 11 undefined on in
 warning  (pdf backend): ignoring duplicate destination with the name 'page.11'
 [11]
 
-LaTeX Warning: Reference `tbl-landings' on page 12 undefined on input line 1759.
+LaTeX Warning: Reference `tbl-landings' on page 12 undefined on input line 1793.
 
 
-LaTeX Warning: Reference `fig-landings' on page 12 undefined on input line 1759.
+LaTeX Warning: Reference `fig-landings' on page 12 undefined on input line 1793.
 
 
-LaTeX Warning: Reference `tbl-landings' on page 12 undefined on input line 1771.
+LaTeX Warning: Reference `tbl-landings' on page 12 undefined on input line 1805.
 
 
-LaTeX Warning: Reference `fig-landings' on page 12 undefined on input line 1771.
+LaTeX Warning: Reference `fig-landings' on page 12 undefined on input line 1805.
 
 
-LaTeX Warning: Reference `tbl-BT_lengths_sample_sizes' on page 12 undefined on input line 1798.
+LaTeX Warning: Reference `tbl-BT_lengths_sample_sizes' on page 12 undefined on input line 1832.
 
 
-LaTeX Warning: Reference `tbl-Fishery_age_sample_sizes' on page 12 undefined on input line 1799.
+LaTeX Warning: Reference `tbl-Fishery_age_sample_sizes' on page 12 undefined on input line 1833.
 
 
 
@@ -2395,19 +2421,19 @@ LaTeX Warning: Reference `tbl-Fishery_age_sample_sizes' on page 12 undefined on 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.12'
 [12]
 
-LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 13 undefined on input line 1849.
+LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 13 undefined on input line 1883.
 
 
-LaTeX Warning: Reference `fig-length_flt1_1' on page 13 undefined on input line 1852.
+LaTeX Warning: Reference `fig-length_flt1_1' on page 13 undefined on input line 1886.
 
 
-LaTeX Warning: Reference `fig-length_flt5' on page 13 undefined on input line 1852.
+LaTeX Warning: Reference `fig-length_flt5' on page 13 undefined on input line 1886.
 
 
-LaTeX Warning: Reference `fig-caal_flt1_1' on page 13 undefined on input line 1854.
+LaTeX Warning: Reference `fig-caal_flt1_1' on page 13 undefined on input line 1888.
 
 
-LaTeX Warning: Reference `fig-caal_flt5' on page 13 undefined on input line 1855.
+LaTeX Warning: Reference `fig-caal_flt5' on page 13 undefined on input line 1889.
 
 
 
@@ -2415,52 +2441,52 @@ LaTeX Warning: Reference `fig-caal_flt5' on page 13 undefined on input line 1855
 warning  (pdf backend): ignoring duplicate destination with the name 'page.13'
 [13]
 
-LaTeX Warning: Reference `tbl-discard_sample_sizes' on page 14 undefined on input line 1885.
+LaTeX Warning: Reference `tbl-discard_sample_sizes' on page 14 undefined on input line 1919.
 
 
-LaTeX Warning: Reference `fig-length_flt2' on page 14 undefined on input line 1889.
+LaTeX Warning: Reference `fig-length_flt2' on page 14 undefined on input line 1923.
 
 
-LaTeX Warning: Reference `fig-length_flt4' on page 14 undefined on input line 1890.
+LaTeX Warning: Reference `fig-length_flt4' on page 14 undefined on input line 1924.
 
 
-LaTeX Warning: Reference `fig-length_flt2' on page 14 undefined on input line 1902.
+LaTeX Warning: Reference `fig-length_flt2' on page 14 undefined on input line 1936.
 
 
-LaTeX Warning: Reference `fig-length_flt4' on page 14 undefined on input line 1903.
+LaTeX Warning: Reference `fig-length_flt4' on page 14 undefined on input line 1937.
 
 
-LaTeX Warning: Reference `fig-caal_flt6_1' on page 14 undefined on input line 1905.
+LaTeX Warning: Reference `fig-caal_flt6_1' on page 14 undefined on input line 1939.
 
 
-LaTeX Warning: Reference `fig-caal_flt6_2' on page 14 undefined on input line 1906.
+LaTeX Warning: Reference `fig-caal_flt6_2' on page 14 undefined on input line 1940.
 
 
-LaTeX Warning: Reference `tbl-ashop_sample_sizes' on page 14 undefined on input line 1910.
+LaTeX Warning: Reference `tbl-ashop_sample_sizes' on page 14 undefined on input line 1944.
 
 
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.14'
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 1930--1932
+Underfull \hbox (badness 10000) in paragraph at lines 1964--1966
 
  []
 
 
-LaTeX Warning: Reference `tbl-survey_coverage' on page 15 undefined on input line 1940.
+LaTeX Warning: Reference `tbl-survey_coverage' on page 15 undefined on input line 1974.
 
 
-LaTeX Warning: Citation `ref-Anderson:2022:SRP' on page 15 undefined on input line 1951.
+LaTeX Warning: Citation `ref-Anderson:2022:SRP' on page 15 undefined on input line 1985.
 
 
-LaTeX Warning: Citation `ref-thorson_geostatistical_2015' on page 15 undefined on input line 1955.
+LaTeX Warning: Citation `ref-thorson_geostatistical_2015' on page 15 undefined on input line 1989.
 
 
-LaTeX Warning: Citation `ref-johnson_indexwc_2025' on page 15 undefined on input line 1963.
+LaTeX Warning: Citation `ref-johnson_indexwc_2025' on page 15 undefined on input line 1997.
 
 
-LaTeX Warning: Reference `fig-All_indices' on page 15 undefined on input line 1968.
+LaTeX Warning: Reference `fig-All_indices' on page 15 undefined on input line 2002.
 
 
 
@@ -2468,16 +2494,16 @@ LaTeX Warning: Reference `fig-All_indices' on page 15 undefined on input line 19
 warning  (pdf backend): ignoring duplicate destination with the name 'page.15'
 [15]
 
-LaTeX Warning: Reference `tbl-survey_coverage' on page 16 undefined on input line 1980.
+LaTeX Warning: Reference `tbl-survey_coverage' on page 16 undefined on input line 2014.
 
 
-LaTeX Warning: Citation `ref-keller2017' on page 16 undefined on input line 1982.
+LaTeX Warning: Citation `ref-keller2017' on page 16 undefined on input line 2016.
 
 
-LaTeX Warning: Citation `ref-helser_generalized_2004' on page 16 undefined on input line 2013.
+LaTeX Warning: Citation `ref-helser_generalized_2004' on page 16 undefined on input line 2047.
 
 
-LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 16 undefined on input line 2014.
+LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 16 undefined on input line 2048.
 
 
 
@@ -2485,34 +2511,34 @@ LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 16 undefined on in
 warning  (pdf backend): ignoring duplicate destination with the name 'page.16'
 [16]
 
-LaTeX Warning: Reference `fig-WCGBTS_comparison' on page 17 undefined on input line 2024.
+LaTeX Warning: Reference `fig-WCGBTS_comparison' on page 17 undefined on input line 2058.
 
 
-LaTeX Warning: Reference `fig-WCGBTS_index' on page 17 undefined on input line 2025.
+LaTeX Warning: Reference `fig-WCGBTS_index' on page 17 undefined on input line 2059.
 
 
-LaTeX Warning: Reference `tbl-survey_length_samples' on page 17 undefined on input line 2032.
+LaTeX Warning: Reference `tbl-survey_length_samples' on page 17 undefined on input line 2066.
 
 
-LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 17 undefined on input line 2040.
+LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 17 undefined on input line 2074.
 
 
-LaTeX Warning: Reference `tbl-survey_strata' on page 17 undefined on input line 2041.
+LaTeX Warning: Reference `tbl-survey_strata' on page 17 undefined on input line 2075.
 
 
-LaTeX Warning: Reference `tbl-survey_age_samples' on page 17 undefined on input line 2044.
+LaTeX Warning: Reference `tbl-survey_age_samples' on page 17 undefined on input line 2078.
 
 
-LaTeX Warning: Reference `fig-length_flt10' on page 17 undefined on input line 2051.
+LaTeX Warning: Reference `fig-length_flt10' on page 17 undefined on input line 2085.
 
 
-LaTeX Warning: Reference `fig-caal_flt10_1' on page 17 undefined on input line 2052.
+LaTeX Warning: Reference `fig-caal_flt10_1' on page 17 undefined on input line 2086.
 
 
-LaTeX Warning: Reference `fig-caal_flt10_3' on page 17 undefined on input line 2052.
+LaTeX Warning: Reference `fig-caal_flt10_3' on page 17 undefined on input line 2086.
 
 
-LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 17 undefined on input line 2056.
+LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 17 undefined on input line 2090.
 
 
 
@@ -2520,16 +2546,16 @@ LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 17 undefined on
 warning  (pdf backend): ignoring duplicate destination with the name 'page.17'
 [17]
 
-LaTeX Warning: Reference `tbl-survey_coverage' on page 18 undefined on input line 2075.
+LaTeX Warning: Reference `tbl-survey_coverage' on page 18 undefined on input line 2109.
 
 
-LaTeX Warning: Citation `ref-zimmermann2001' on page 18 undefined on input line 2095.
+LaTeX Warning: Citation `ref-zimmermann2001' on page 18 undefined on input line 2129.
 
 
-LaTeX Warning: Citation `ref-helser_generalized_2004' on page 18 undefined on input line 2129.
+LaTeX Warning: Citation `ref-helser_generalized_2004' on page 18 undefined on input line 2163.
 
 
-LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 18 undefined on input line 2130.
+LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 18 undefined on input line 2164.
 
 
 
@@ -2537,22 +2563,22 @@ LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 18 undefined on in
 warning  (pdf backend): ignoring duplicate destination with the name 'page.18'
 [18]
 
-LaTeX Warning: Reference `fig-Triennial_index' on page 19 undefined on input line 2138.
+LaTeX Warning: Reference `fig-Triennial_index' on page 19 undefined on input line 2172.
 
 
-LaTeX Warning: Reference `tbl-survey_coverage' on page 19 undefined on input line 2141.
+LaTeX Warning: Reference `tbl-survey_coverage' on page 19 undefined on input line 2175.
 
 
-LaTeX Warning: Reference `tbl-survey_length_samples' on page 19 undefined on input line 2147.
+LaTeX Warning: Reference `tbl-survey_length_samples' on page 19 undefined on input line 2181.
 
 
-LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 19 undefined on input line 2155.
+LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 19 undefined on input line 2189.
 
 
-LaTeX Warning: Reference `fig-length_flt7' on page 19 undefined on input line 2156.
+LaTeX Warning: Reference `fig-length_flt7' on page 19 undefined on input line 2190.
 
 
-LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 19 undefined on input line 2161.
+LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 19 undefined on input line 2195.
 
 
 
@@ -2560,25 +2586,25 @@ LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 19 undefined on
 warning  (pdf backend): ignoring duplicate destination with the name 'page.19'
 [19]
 
-LaTeX Warning: Citation `ref-helser_generalized_2004' on page 20 undefined on input line 2196.
+LaTeX Warning: Citation `ref-helser_generalized_2004' on page 20 undefined on input line 2230.
 
 
-LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 20 undefined on input line 2197.
+LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 20 undefined on input line 2231.
 
 
-LaTeX Warning: Reference `fig-AFSC_Slope_index' on page 20 undefined on input line 2206.
+LaTeX Warning: Reference `fig-AFSC_Slope_index' on page 20 undefined on input line 2240.
 
 
-LaTeX Warning: Reference `tbl-survey_length_samples' on page 20 undefined on input line 2213.
+LaTeX Warning: Reference `tbl-survey_length_samples' on page 20 undefined on input line 2247.
 
 
-LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 20 undefined on input line 2221.
+LaTeX Warning: Citation `ref-nwfscSurvey_package_2025' on page 20 undefined on input line 2255.
 
 
-LaTeX Warning: Reference `fig-length_flt8' on page 20 undefined on input line 2222.
+LaTeX Warning: Reference `fig-length_flt8' on page 20 undefined on input line 2256.
 
 
-LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 20 undefined on input line 2227.
+LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 20 undefined on input line 2261.
 
 
 
@@ -2586,152 +2612,154 @@ LaTeX Warning: Citation `ref-stewart_bootstrapping_2014' on page 20 undefined on
 warning  (pdf backend): ignoring duplicate destination with the name 'page.20'
 [20]
 
-LaTeX Warning: Citation `ref-helser_generalized_2004' on page 21 undefined on input line 2262.
+LaTeX Warning: Citation `ref-helser_generalized_2004' on page 21 undefined on input line 2296.
 
 
-LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 21 undefined on input line 2263.
+LaTeX Warning: Citation `ref-thorson_accounting_2014' on page 21 undefined on input line 2297.
 
 
-LaTeX Warning: Reference `fig-NWFSC_Slope_index' on page 21 undefined on input line 2272.
+LaTeX Warning: Reference `fig-NWFSC_Slope_index' on page 21 undefined on input line 2306.
 
 
-LaTeX Warning: Reference `fig-Sex1vs2_SO' on page 21 undefined on input line 2297.
+LaTeX Warning: Reference `fig-Sex1vs2_SO' on page 21 undefined on input line 2331.
 
 
-LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 21 undefined on input line 2297.
+LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 21 undefined on input line 2331.
 
 
-LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 21 undefined on input line 2302.
+LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 21 undefined on input line 2336.
 
 
 
+
+warning  (pdf backend): ignoring duplicate destination with the name 'page.21'
 [21]
 
-LaTeX Warning: Citation `ref-cope_upgrading_2022' on page 22 undefined on input line 2314.
+LaTeX Warning: Citation `ref-cope_upgrading_2022' on page 22 undefined on input line 2348.
 
 
-LaTeX Warning: Citation `ref-hamel_development_2022' on page 22 undefined on input line 2315.
+LaTeX Warning: Citation `ref-hamel_development_2022' on page 22 undefined on input line 2349.
 
 
-LaTeX Warning: Citation `ref-maunder_review_2023' on page 22 undefined on input line 2316.
+LaTeX Warning: Citation `ref-maunder_review_2023' on page 22 undefined on input line 2350.
 
 
-LaTeX Warning: Citation `ref-cope_upgrading_2022' on page 22 undefined on input line 2321.
+LaTeX Warning: Citation `ref-cope_upgrading_2022' on page 22 undefined on input line 2355.
 
 
 
 [22]
 
-LaTeX Warning: Reference `fig-Mcurves' on page 23 undefined on input line 2357.
+LaTeX Warning: Reference `fig-Mcurves' on page 23 undefined on input line 2391.
 
 
-LaTeX Warning: Citation `ref-hamel_development_2022' on page 23 undefined on input line 2364.
+LaTeX Warning: Citation `ref-hamel_development_2022' on page 23 undefined on input line 2398.
 
 
-LaTeX Warning: Reference `fig-CC_Z' on page 23 undefined on input line 2380.
+LaTeX Warning: Reference `fig-CC_Z' on page 23 undefined on input line 2414.
 
 
-LaTeX Warning: Reference `fig-CC_Z_100' on page 23 undefined on input line 2386.
+LaTeX Warning: Reference `fig-CC_Z_100' on page 23 undefined on input line 2420.
 
 
-LaTeX Warning: Reference `fig-CC_Z_80' on page 23 undefined on input line 2386.
+LaTeX Warning: Reference `fig-CC_Z_80' on page 23 undefined on input line 2420.
 
 
 
 [23]
 
-LaTeX Warning: Reference `fig-AL_1' on page 24 undefined on input line 2406.
+LaTeX Warning: Reference `fig-AL_1' on page 24 undefined on input line 2440.
 
 
-LaTeX Warning: Reference `fig-AL_1' on page 24 undefined on input line 2408.
+LaTeX Warning: Reference `fig-AL_1' on page 24 undefined on input line 2442.
 
-LaTeX Font Info:    Calculating math sizes for size <7.665> on input line 2414.
+LaTeX Font Info:    Calculating math sizes for size <7.665> on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.36546pt on input line 2414.
+(Font)              scaled to size 5.36546pt on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 3.83249pt on input line 2414.
+(Font)              scaled to size 3.83249pt on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.36546pt on input line 2414.
+(Font)              scaled to size 5.36546pt on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 3.83249pt on input line 2414.
+(Font)              scaled to size 3.83249pt on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.36546pt on input line 2414.
+(Font)              scaled to size 5.36546pt on input line 2448.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 3.83249pt on input line 2414.
+(Font)              scaled to size 3.83249pt on input line 2448.
 
-LaTeX Warning: Reference `fig-AL_2' on page 24 undefined on input line 2428.
+LaTeX Warning: Reference `fig-AL_2' on page 24 undefined on input line 2462.
 
 
 
 [24]
 
-LaTeX Warning: Reference `fig-AE_matrices' on page 25 undefined on input line 2467.
+LaTeX Warning: Reference `fig-AE_matrices' on page 25 undefined on input line 2501.
 
 
-LaTeX Warning: Citation `ref-punt_quantifying_2008' on page 25 undefined on input line 2473.
+LaTeX Warning: Citation `ref-punt_quantifying_2008' on page 25 undefined on input line 2507.
 
 
-LaTeX Warning: Citation `ref-thorson_nwfscageingerror:_2012' on page 25 undefined on input line 2477.
+LaTeX Warning: Citation `ref-thorson_nwfscageingerror:_2012' on page 25 undefined on input line 2511.
 
 
-LaTeX Warning: Reference `fig-AE_bias' on page 25 undefined on input line 2503.
+LaTeX Warning: Reference `fig-AE_bias' on page 25 undefined on input line 2537.
 
 
-LaTeX Warning: Reference `fig-AE_SD' on page 25 undefined on input line 2504.
+LaTeX Warning: Reference `fig-AE_SD' on page 25 undefined on input line 2538.
 
 
-LaTeX Warning: Reference `fig-LW1' on page 25 undefined on input line 2514.
+LaTeX Warning: Reference `fig-LW1' on page 25 undefined on input line 2548.
 
 
 
 [25]
 
-LaTeX Warning: Reference `fig-LW2' on page 26 undefined on input line 2517.
+LaTeX Warning: Reference `fig-LW2' on page 26 undefined on input line 2551.
 
 
-LaTeX Warning: Reference `fig-LW2' on page 26 undefined on input line 2528.
+LaTeX Warning: Reference `fig-LW2' on page 26 undefined on input line 2562.
 
 
-LaTeX Warning: Reference `tbl-maturity_estimates' on page 26 undefined on input line 2555.
+LaTeX Warning: Reference `tbl-maturity_estimates' on page 26 undefined on input line 2589.
 
 
-LaTeX Warning: Reference `fig-maturity_bio_fxn' on page 26 undefined on input line 2556.
+LaTeX Warning: Reference `fig-maturity_bio_fxn' on page 26 undefined on input line 2590.
 
 
 
 [26]
 
-LaTeX Warning: Reference `tbl-maturity_estimates' on page 27 undefined on input line 2568.
+LaTeX Warning: Reference `tbl-maturity_estimates' on page 27 undefined on input line 2602.
 
 
-LaTeX Warning: Reference `fig-maturity_length_both' on page 27 undefined on input line 2569.
+LaTeX Warning: Reference `fig-maturity_length_both' on page 27 undefined on input line 2603.
 
 
-LaTeX Warning: Reference `tbl-maturity_estimates' on page 27 undefined on input line 2577.
+LaTeX Warning: Reference `tbl-maturity_estimates' on page 27 undefined on input line 2611.
 
 
-LaTeX Warning: Reference `fig-maturity_age_both' on page 27 undefined on input line 2578.
+LaTeX Warning: Reference `fig-maturity_age_both' on page 27 undefined on input line 2612.
 
 
 
 [27]
 
-LaTeX Warning: Citation `ref-McClure:2023:VCC' on page 28 undefined on input line 2622.
+LaTeX Warning: Citation `ref-McClure:2023:VCC' on page 28 undefined on input line 2656.
 
 
 
 [28]
 
-LaTeX Warning: Citation `ref-dick_estimates_2010' on page 29 undefined on input line 2646.
+LaTeX Warning: Citation `ref-dick_estimates_2010' on page 29 undefined on input line 2680.
 
 
-LaTeX Warning: Citation `ref-hicks_status_2013' on page 29 undefined on input line 2654.
+LaTeX Warning: Citation `ref-hicks_status_2013' on page 29 undefined on input line 2688.
 
 
-LaTeX Warning: Citation `ref-hicks_status_2013' on page 29 undefined on input line 2674.
+LaTeX Warning: Citation `ref-hicks_status_2013' on page 29 undefined on input line 2708.
 
 
-LaTeX Warning: Reference `sec-bridging' on page 29 undefined on input line 2679.
+LaTeX Warning: Reference `sec-bridging' on page 29 undefined on input line 2713.
 
 
 
@@ -2739,91 +2767,91 @@ LaTeX Warning: Reference `sec-bridging' on page 29 undefined on input line 2679.
 
 [30]
 
-LaTeX Warning: Reference `fig-RSS_2013' on page 31 undefined on input line 2770.
+LaTeX Warning: Reference `fig-RSS_2013' on page 31 undefined on input line 2804.
 
 
-LaTeX Warning: Reference `fig-SO_2013' on page 31 undefined on input line 2770.
+LaTeX Warning: Reference `fig-SO_2013' on page 31 undefined on input line 2804.
 
 
-LaTeX Warning: Reference `fig-Sex1vs2_SO' on page 31 undefined on input line 2777.
+LaTeX Warning: Reference `fig-Sex1vs2_SO' on page 31 undefined on input line 2811.
 
 
-LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 31 undefined on input line 2777.
+LaTeX Warning: Reference `fig-Sex1vs2_Bratio' on page 31 undefined on input line 2811.
 
 
-LaTeX Warning: Reference `sec-fleet' on page 31 undefined on input line 2780.
+LaTeX Warning: Reference `sec-fleet' on page 31 undefined on input line 2814.
 
 
-LaTeX Warning: Reference `fig-Discard_comp_SO' on page 31 undefined on input line 2782.
+LaTeX Warning: Reference `fig-Discard_comp_SO' on page 31 undefined on input line 2816.
 
 
-LaTeX Warning: Reference `fig-Discard_comp_RSS' on page 31 undefined on input line 2783.
+LaTeX Warning: Reference `fig-Discard_comp_RSS' on page 31 undefined on input line 2817.
 
 
-LaTeX Warning: Reference `fig-SO_Bridging' on page 31 undefined on input line 2803.
+LaTeX Warning: Reference `fig-SO_Bridging' on page 31 undefined on input line 2837.
 
 
 
 [31]
 
-LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2828.
+LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2862.
 
 
-LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2831.
+LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2865.
 
 
-LaTeX Warning: Reference `fig-SO_Bridging' on page 32 undefined on input line 2843.
+LaTeX Warning: Reference `fig-SO_Bridging' on page 32 undefined on input line 2877.
 
 
-LaTeX Warning: Reference `fig-Bratio_Bridging' on page 32 undefined on input line 2844.
+LaTeX Warning: Reference `fig-Bratio_Bridging' on page 32 undefined on input line 2878.
 
 
-LaTeX Warning: Citation `ref-MethotWetzel2013' on page 32 undefined on input line 2860.
+LaTeX Warning: Citation `ref-MethotWetzel2013' on page 32 undefined on input line 2894.
 
 
-LaTeX Warning: Reference `fig-map' on page 32 undefined on input line 2874.
+LaTeX Warning: Reference `fig-map' on page 32 undefined on input line 2908.
 
 
-LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2884.
+LaTeX Warning: Citation `ref-hamel_development_2022' on page 32 undefined on input line 2918.
 
 
 
 [32]
 
-LaTeX Warning: Citation `ref-hicks_status_2013' on page 33 undefined on input line 2922.
+LaTeX Warning: Citation `ref-hicks_status_2013' on page 33 undefined on input line 2956.
 
 
 
 [33]
 
-LaTeX Warning: Reference `fig-Discard_comp_SO' on page 34 undefined on input line 2956.
+LaTeX Warning: Reference `fig-Discard_comp_SO' on page 34 undefined on input line 2990.
 
 
-LaTeX Warning: Reference `fig-Discard_comp_RSS' on page 34 undefined on input line 2957.
+LaTeX Warning: Reference `fig-Discard_comp_RSS' on page 34 undefined on input line 2991.
 
 
-LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 34 undefined on input line 2961.
+LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 34 undefined on input line 2995.
 
 
-LaTeX Warning: Reference `sec-historical_discard' on page 34 undefined on input line 2961.
+LaTeX Warning: Reference `sec-historical_discard' on page 34 undefined on input line 2995.
 
 
-LaTeX Warning: Reference `fig-landings' on page 34 undefined on input line 2971.
+LaTeX Warning: Reference `fig-landings' on page 34 undefined on input line 3005.
 
 
-LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 34 undefined on input line 2974.
+LaTeX Warning: Citation `ref-pikitch_evaluation_1988' on page 34 undefined on input line 3008.
 
 
-LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 34 undefined on input line 2978.
+LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 34 undefined on input line 3012.
 
 
-LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 34 undefined on input line 2982.
+LaTeX Warning: Citation `ref-karnowski_historical_2014' on page 34 undefined on input line 3016.
 
 
-LaTeX Warning: Reference `sec-surveys' on page 34 undefined on input line 2987.
+LaTeX Warning: Reference `sec-surveys' on page 34 undefined on input line 3021.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2996--2998
+Underfull \hbox (badness 10000) in paragraph at lines 3030--3032
 
  []
 
@@ -2831,22 +2859,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 2996--2998
 
 [34]
 
-LaTeX Warning: Citation `ref-francis_data_2011' on page 35 undefined on input line 3043.
+LaTeX Warning: Citation `ref-francis_data_2011' on page 35 undefined on input line 3077.
 
 
-LaTeX Warning: Citation `ref-thorson_model-based_2017' on page 35 undefined on input line 3056.
+LaTeX Warning: Citation `ref-thorson_model-based_2017' on page 35 undefined on input line 3090.
 
 
-LaTeX Warning: Citation `ref-mcallister_bayesian_1997' on page 35 undefined on input line 3057.
+LaTeX Warning: Citation `ref-mcallister_bayesian_1997' on page 35 undefined on input line 3091.
 
 
-LaTeX Warning: Reference `tbl-param' on page 35 undefined on input line 3074.
+LaTeX Warning: Reference `tbl-param' on page 35 undefined on input line 3108.
 
 
 
 [35]
 
-LaTeX Warning: Reference `fig-M-profile-explore' on page 36 undefined on input line 3087.
+LaTeX Warning: Reference `fig-M-profile-explore' on page 36 undefined on input line 3121.
 
 
 
@@ -2856,223 +2884,223 @@ LaTeX Warning: Reference `fig-M-profile-explore' on page 36 undefined on input l
 
 [38]
 
-LaTeX Warning: Citation `ref-monnahan_overcoming_2019' on page 39 undefined on input line 3252.
+LaTeX Warning: Citation `ref-monnahan_overcoming_2019' on page 39 undefined on input line 3286.
 
 
-LaTeX Warning: Reference `fig-pairs_plot_fast' on page 39 undefined on input line 3254.
+LaTeX Warning: Reference `fig-pairs_plot_fast' on page 39 undefined on input line 3288.
 
 
-LaTeX Warning: Reference `fig-jitter001' on page 39 undefined on input line 3264.
+LaTeX Warning: Reference `fig-jitter001' on page 39 undefined on input line 3298.
 
 
-LaTeX Warning: Reference `fig-jitter005' on page 39 undefined on input line 3264.
+LaTeX Warning: Reference `fig-jitter005' on page 39 undefined on input line 3298.
 
 
-LaTeX Warning: Reference `fig-retro-so' on page 39 undefined on input line 3276.
+LaTeX Warning: Reference `fig-retro-so' on page 39 undefined on input line 3310.
 
 
-LaTeX Warning: Reference `fig-retro-status' on page 39 undefined on input line 3277.
+LaTeX Warning: Reference `fig-retro-status' on page 39 undefined on input line 3311.
 
 
 
 [39]
 
-LaTeX Warning: Reference `fig-agg-len-fit' on page 40 undefined on input line 3301.
+LaTeX Warning: Reference `fig-agg-len-fit' on page 40 undefined on input line 3335.
 
 
-LaTeX Warning: Reference `fig-len-fit-bt-1' on page 40 undefined on input line 3315.
+LaTeX Warning: Reference `fig-len-fit-bt-1' on page 40 undefined on input line 3349.
 
 
-LaTeX Warning: Reference `fig-len-fit-bt-2' on page 40 undefined on input line 3316.
+LaTeX Warning: Reference `fig-len-fit-bt-2' on page 40 undefined on input line 3350.
 
 
-LaTeX Warning: Reference `fig-len-fit-btdis' on page 40 undefined on input line 3318.
+LaTeX Warning: Reference `fig-len-fit-btdis' on page 40 undefined on input line 3352.
 
 
-LaTeX Warning: Reference `fig-len-fit-nt-1' on page 40 undefined on input line 3320.
+LaTeX Warning: Reference `fig-len-fit-nt-1' on page 40 undefined on input line 3354.
 
 
-LaTeX Warning: Reference `fig-len-fit-nt-2' on page 40 undefined on input line 3321.
+LaTeX Warning: Reference `fig-len-fit-nt-2' on page 40 undefined on input line 3355.
 
 
-LaTeX Warning: Reference `fig-len-fit-ntdis' on page 40 undefined on input line 3323.
+LaTeX Warning: Reference `fig-len-fit-ntdis' on page 40 undefined on input line 3357.
 
 
-LaTeX Warning: Reference `fig-len-fit-midt' on page 40 undefined on input line 3325.
+LaTeX Warning: Reference `fig-len-fit-midt' on page 40 undefined on input line 3359.
 
 
-LaTeX Warning: Reference `fig-len-fit-ashop' on page 40 undefined on input line 3327.
+LaTeX Warning: Reference `fig-len-fit-ashop' on page 40 undefined on input line 3361.
 
 
-LaTeX Warning: Reference `fig-len-fit-tri' on page 40 undefined on input line 3335.
+LaTeX Warning: Reference `fig-len-fit-tri' on page 40 undefined on input line 3369.
 
 
-LaTeX Warning: Reference `fig-len-fit-akslope' on page 40 undefined on input line 3337.
+LaTeX Warning: Reference `fig-len-fit-akslope' on page 40 undefined on input line 3371.
 
 
-LaTeX Warning: Reference `fig-len-fit-wcgbts' on page 40 undefined on input line 3339.
+LaTeX Warning: Reference `fig-len-fit-wcgbts' on page 40 undefined on input line 3373.
 
 
-LaTeX Warning: Reference `fig-peasrson-resids-fishery' on page 40 undefined on input line 3343.
+LaTeX Warning: Reference `fig-peasrson-resids-fishery' on page 40 undefined on input line 3377.
 
 
-LaTeX Warning: Reference `fig-peasrson-resids-survey' on page 40 undefined on input line 3344.
+LaTeX Warning: Reference `fig-peasrson-resids-survey' on page 40 undefined on input line 3378.
 
 
-LaTeX Warning: Reference `fig-meanlt-bt' on page 40 undefined on input line 3349.
+LaTeX Warning: Reference `fig-meanlt-bt' on page 40 undefined on input line 3383.
 
 
-LaTeX Warning: Reference `fig-meanlt-wcgbts' on page 40 undefined on input line 3350.
+LaTeX Warning: Reference `fig-meanlt-wcgbts' on page 40 undefined on input line 3384.
 
 
 
 [40]
 
-LaTeX Warning: Reference `fig-peasrson-resids-age-bt1' on page 41 undefined on input line 3365.
+LaTeX Warning: Reference `fig-peasrson-resids-age-bt1' on page 41 undefined on input line 3399.
 
 
-LaTeX Warning: Reference `fig-peasrson-resids-age-wcgbts3' on page 41 undefined on input line 3366.
+LaTeX Warning: Reference `fig-peasrson-resids-age-wcgbts3' on page 41 undefined on input line 3400.
 
 
-LaTeX Warning: Reference `fig-trawl-mean-caal' on page 41 undefined on input line 3369.
+LaTeX Warning: Reference `fig-trawl-mean-caal' on page 41 undefined on input line 3403.
 
 
-LaTeX Warning: Reference `fig-wcgbts-mean-caal' on page 41 undefined on input line 3370.
+LaTeX Warning: Reference `fig-wcgbts-mean-caal' on page 41 undefined on input line 3404.
 
 
-LaTeX Warning: Reference `fig-call-plot-bt1' on page 41 undefined on input line 3381.
+LaTeX Warning: Reference `fig-call-plot-bt1' on page 41 undefined on input line 3415.
 
 
-LaTeX Warning: Reference `fig-call-plot-wcgbts6' on page 41 undefined on input line 3381.
+LaTeX Warning: Reference `fig-call-plot-wcgbts6' on page 41 undefined on input line 3415.
 
 
-LaTeX Warning: Reference `fig-marage_bt' on page 41 undefined on input line 3387.
+LaTeX Warning: Reference `fig-marage_bt' on page 41 undefined on input line 3421.
 
 
-LaTeX Warning: Reference `fig-marage_wcgbts' on page 41 undefined on input line 3388.
+LaTeX Warning: Reference `fig-marage_wcgbts' on page 41 undefined on input line 3422.
 
 
-LaTeX Warning: Reference `fig-index-tri' on page 41 undefined on input line 3401.
+LaTeX Warning: Reference `fig-index-tri' on page 41 undefined on input line 3435.
 
 
-LaTeX Warning: Reference `fig-index-wcgbts' on page 41 undefined on input line 3402.
+LaTeX Warning: Reference `fig-index-wcgbts' on page 41 undefined on input line 3436.
 
 
-LaTeX Warning: Reference `tbl-n-param' on page 41 undefined on input line 3411.
+LaTeX Warning: Reference `tbl-n-param' on page 41 undefined on input line 3445.
 
 
-LaTeX Warning: Reference `tbl-param' on page 41 undefined on input line 3413.
+LaTeX Warning: Reference `tbl-param' on page 41 undefined on input line 3447.
 
 
-LaTeX Warning: Reference `tbl-likes' on page 41 undefined on input line 3414.
+LaTeX Warning: Reference `tbl-likes' on page 41 undefined on input line 3448.
 
 
-LaTeX Warning: Reference `tbl-ref-points' on page 41 undefined on input line 3416.
+LaTeX Warning: Reference `tbl-ref-points' on page 41 undefined on input line 3450.
 
 
 
 [41]
 
-LaTeX Warning: Reference `tbl-param' on page 42 undefined on input line 3424.
+LaTeX Warning: Reference `tbl-param' on page 42 undefined on input line 3458.
 
 
-LaTeX Warning: Reference `fig-vbgf' on page 42 undefined on input line 3424.
+LaTeX Warning: Reference `fig-vbgf' on page 42 undefined on input line 3458.
 
 
-LaTeX Warning: Reference `fig-sel-all' on page 42 undefined on input line 3435.
+LaTeX Warning: Reference `fig-sel-all' on page 42 undefined on input line 3469.
 
 
-LaTeX Warning: Reference `fig-sel-tv-comp' on page 42 undefined on input line 3444.
+LaTeX Warning: Reference `fig-sel-tv-comp' on page 42 undefined on input line 3478.
 
 
-LaTeX Warning: Reference `fig-sel-all-age' on page 42 undefined on input line 3447.
+LaTeX Warning: Reference `fig-sel-all-age' on page 42 undefined on input line 3481.
 
 
-LaTeX Warning: Reference `tbl-param' on page 42 undefined on input line 3448.
+LaTeX Warning: Reference `tbl-param' on page 42 undefined on input line 3482.
 
 
-LaTeX Warning: Reference `fig-lnR0' on page 42 undefined on input line 3455.
+LaTeX Warning: Reference `fig-lnR0' on page 42 undefined on input line 3489.
 
 
-LaTeX Warning: Reference `tbl-ts' on page 42 undefined on input line 3464.
+LaTeX Warning: Reference `tbl-ts' on page 42 undefined on input line 3498.
 
 
-LaTeX Warning: Reference `fig-spawnout' on page 42 undefined on input line 3464.
+LaTeX Warning: Reference `fig-spawnout' on page 42 undefined on input line 3498.
 
 
 
 [42]
 
-LaTeX Warning: Reference `fig-depl' on page 43 undefined on input line 3475.
+LaTeX Warning: Reference `fig-depl' on page 43 undefined on input line 3509.
 
 
-LaTeX Warning: Reference `fig-recdevs' on page 43 undefined on input line 3483.
+LaTeX Warning: Reference `fig-recdevs' on page 43 undefined on input line 3517.
 
 
-LaTeX Warning: Reference `fig-biasramp' on page 43 undefined on input line 3484.
+LaTeX Warning: Reference `fig-biasramp' on page 43 undefined on input line 3518.
 
 
-LaTeX Warning: Reference `fig-recruits' on page 43 undefined on input line 3494.
+LaTeX Warning: Reference `fig-recruits' on page 43 undefined on input line 3528.
 
 
-LaTeX Warning: Reference `fig-SR' on page 43 undefined on input line 3495.
+LaTeX Warning: Reference `fig-SR' on page 43 undefined on input line 3529.
 
 
 
 [43]
 
-LaTeX Warning: Reference `tbl-sensitivities-like-indices' on page 44 undefined on input line 3528.
+LaTeX Warning: Reference `tbl-sensitivities-like-indices' on page 44 undefined on input line 3562.
 
 
-LaTeX Warning: Reference `tbl-sensitivities-like-age' on page 44 undefined on input line 3529.
+LaTeX Warning: Reference `tbl-sensitivities-like-age' on page 44 undefined on input line 3563.
 
 
-LaTeX Warning: Reference `fig-sens_indices_spout' on page 44 undefined on input line 3531.
+LaTeX Warning: Reference `fig-sens_indices_spout' on page 44 undefined on input line 3565.
 
 
-LaTeX Warning: Reference `fig-sens_age_relsp' on page 44 undefined on input line 3531.
+LaTeX Warning: Reference `fig-sens_age_relsp' on page 44 undefined on input line 3565.
 
 
-LaTeX Warning: Reference `fig-sens_sum_data' on page 44 undefined on input line 3533.
+LaTeX Warning: Reference `fig-sens_sum_data' on page 44 undefined on input line 3567.
 
 
-LaTeX Warning: Reference `fig-sens_indices_spout' on page 44 undefined on input line 3536.
+LaTeX Warning: Reference `fig-sens_indices_spout' on page 44 undefined on input line 3570.
 
 
-LaTeX Warning: Reference `fig-sens_indices_relsp' on page 44 undefined on input line 3537.
+LaTeX Warning: Reference `fig-sens_indices_relsp' on page 44 undefined on input line 3571.
 
 
-LaTeX Warning: Reference `fig-sens_lens1_spout' on page 44 undefined on input line 3543.
+LaTeX Warning: Reference `fig-sens_lens1_spout' on page 44 undefined on input line 3577.
 
 
-LaTeX Warning: Reference `fig-sens_lens1_relsp' on page 44 undefined on input line 3544.
+LaTeX Warning: Reference `fig-sens_lens1_relsp' on page 44 undefined on input line 3578.
 
 
-LaTeX Warning: Reference `fig-sens_lens2_spout' on page 44 undefined on input line 3548.
+LaTeX Warning: Reference `fig-sens_lens2_spout' on page 44 undefined on input line 3582.
 
 
-LaTeX Warning: Reference `fig-sens_lens2_relsp' on page 44 undefined on input line 3549.
+LaTeX Warning: Reference `fig-sens_lens2_relsp' on page 44 undefined on input line 3583.
 
 
-LaTeX Warning: Reference `fig-sens_age_spout' on page 44 undefined on input line 3552.
+LaTeX Warning: Reference `fig-sens_age_spout' on page 44 undefined on input line 3586.
 
 
-LaTeX Warning: Reference `fig-sens_age_relsp' on page 44 undefined on input line 3553.
+LaTeX Warning: Reference `fig-sens_age_relsp' on page 44 undefined on input line 3587.
 
 
 
 [44]
 
-LaTeX Warning: Reference `fig-sensi-data-wt' on page 45 undefined on input line 3565.
+LaTeX Warning: Reference `fig-sensi-data-wt' on page 45 undefined on input line 3599.
 
 
-LaTeX Warning: Reference `fig-sensi-RE-data-wt' on page 45 undefined on input line 3565.
+LaTeX Warning: Reference `fig-sensi-RE-data-wt' on page 45 undefined on input line 3599.
 
 
-LaTeX Warning: Reference `fig-sensi-ageing-error' on page 45 undefined on input line 3581.
+LaTeX Warning: Reference `fig-sensi-ageing-error' on page 45 undefined on input line 3615.
 
 
-LaTeX Warning: Reference `fig-sensi-RE-ageing-error' on page 45 undefined on input line 3582.
+LaTeX Warning: Reference `fig-sensi-RE-ageing-error' on page 45 undefined on input line 3616.
 
 
 
@@ -3082,28 +3110,28 @@ LaTeX Warning: Reference `fig-sensi-RE-ageing-error' on page 45 undefined on inp
 
 [47]
 
-LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3708.
+LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3742.
 
 
-LaTeX Warning: Reference `fig-management-depletion' on page 48 undefined on input line 3715.
+LaTeX Warning: Reference `fig-management-depletion' on page 48 undefined on input line 3749.
 
 
-LaTeX Warning: Reference `fig-one-minus-spr' on page 48 undefined on input line 3719.
+LaTeX Warning: Reference `fig-one-minus-spr' on page 48 undefined on input line 3753.
 
 
-LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3719.
+LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3753.
 
 
-LaTeX Warning: Reference `fig-management-yield' on page 48 undefined on input line 3721.
+LaTeX Warning: Reference `fig-management-yield' on page 48 undefined on input line 3755.
 
 
-LaTeX Warning: Reference `fig-management-phase' on page 48 undefined on input line 3722.
+LaTeX Warning: Reference `fig-management-phase' on page 48 undefined on input line 3756.
 
 
-LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3728.
+LaTeX Warning: Reference `tbl-man-ref-points' on page 48 undefined on input line 3762.
 
 
-LaTeX Warning: Reference `fig-management-phase' on page 48 undefined on input line 3762.
+LaTeX Warning: Reference `fig-management-phase' on page 48 undefined on input line 3796.
 
 
 
@@ -3141,33 +3169,33 @@ Missing character: There is no  (U+0092) in font [lmroman9-regular]:+tlig;!
 [57
 
 ]
-Overfull \hbox (131.33824pt too wide) in alignment at lines 4233--4244
+Overfull \hbox (131.33824pt too wide) in alignment at lines 4267--4278
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (131.33824pt too wide) in alignment at lines 4244--4249
+Overfull \hbox (131.33824pt too wide) in alignment at lines 4278--4283
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (131.33824pt too wide) in alignment at lines 4249--4251
+Overfull \hbox (131.33824pt too wide) in alignment at lines 4283--4285
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (131.33824pt too wide) in alignment at lines 4251--4253
+Overfull \hbox (131.33824pt too wide) in alignment at lines 4285--4287
  [][][][][][][][] 
  []
 
 
-Overfull \hbox (131.33826pt too wide) in alignment at lines 4253--4389
+Overfull \hbox (131.33826pt too wide) in alignment at lines 4287--4423
  [][][][][][][][] 
  []
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 10 on input line 4389.
+(longtable)                in table 10 on input line 4423.
 
 [58
 
@@ -3175,17 +3203,17 @@ Package longtable Warning: Column widths have changed
 
 [60]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 4404.
+(Font)              scaled to size 9.0pt on input line 4438.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 4404.
+(Font)              scaled to size 6.0pt on input line 4438.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 4404.
+(Font)              scaled to size 9.0pt on input line 4438.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 4404.
+(Font)              scaled to size 6.0pt on input line 4438.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 4404.
+(Font)              scaled to size 9.0pt on input line 4438.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 4404.
+(Font)              scaled to size 6.0pt on input line 4438.
 
 
 [61] [62]
@@ -3195,14 +3223,14 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 [66]
 
 [67]
-Overfull \hbox (58.29324pt too wide) in alignment at lines 4761--4804
+Overfull \hbox (58.29324pt too wide) in alignment at lines 4795--4838
  [][][][][][][][] 
  []
 
 
 
 [68]
-Overfull \hbox (58.29324pt too wide) in alignment at lines 4813--4854
+Overfull \hbox (58.29324pt too wide) in alignment at lines 4847--4888
  [][][][][][][][] 
  []
 
@@ -3225,7 +3253,7 @@ Overfull \hbox (58.29324pt too wide) in alignment at lines 4813--4854
 [76]
 
 [77]
-Overfull \hbox (37.83379pt too wide) in alignment at lines 5234--5253
+Overfull \hbox (37.83379pt too wide) in alignment at lines 5268--5287
  [][][][][][][] 
  []
 
@@ -3314,7 +3342,7 @@ Package fontspec Info:
 (fontspec)             <->s*[1]"name:Arial/BI:mode=node;script=latn;language=dflt;+tlig;"
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 11.0pt on input line 5360.
+(Font)              scaled to size 11.0pt on input line 5394.
 
 Package fontspec Info: 
 (fontspec)             Arial scale = 0.9999973249515148.
@@ -3365,11 +3393,11 @@ Package fontspec Info:
 (fontspec)             <->s*[0.9999973249515148]"name:Arial/BI:mode=base;script=latn;language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  TU/lmr/m/n --> TU/Arial(1)/m/n on input line 5360.
+(Font)                  TU/lmr/m/n --> TU/Arial(1)/m/n on input line 5394.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/lmr/m/it --> TU/Arial(1)/m/it on input line 5360.
+(Font)                  TU/lmr/m/it --> TU/Arial(1)/m/it on input line 5394.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/lmr/bx/n --> TU/Arial(1)/b/n on input line 5360.
+(Font)                  TU/lmr/bx/n --> TU/Arial(1)/b/n on input line 5394.
 
 Package fontspec Info: 
 (fontspec)             Arial scale = 0.8311536146592658.
@@ -3419,7 +3447,7 @@ Package fontspec Info:
 (fontspec)             Arial scale = 1.
 
 
-Overfull \hbox (187.90623pt too wide) in alignment at lines 5350--5362
+Overfull \hbox (187.90623pt too wide) in alignment at lines 5384--5396
  [][][][][][][] 
  []
 
@@ -3480,7 +3508,7 @@ Package fontspec Info:
 (fontspec)             Arial scale = 1.
 
 
-Overfull \hbox (187.90623pt too wide) in alignment at lines 5362--5368
+Overfull \hbox (187.90623pt too wide) in alignment at lines 5396--5402
  [][][][][][][] 
  []
 
@@ -3493,7 +3521,7 @@ Package fontspec Info:
 (fontspec)             Arial scale = 1.
 
 LaTeX Font Info:    Font shape `TU/Arial(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 5372.
+(Font)              scaled to size 8.0pt on input line 5406.
 
 Package fontspec Info: 
 (fontspec)             Arial scale = 0.8311527808940205.
@@ -14687,7 +14715,7 @@ Package fontspec Info:
 (fontspec)             Arial scale = 1.
 
 
-Overfull \hbox (187.90623pt too wide) in alignment at lines 5368--6567
+Overfull \hbox (187.90623pt too wide) in alignment at lines 5402--6601
  [][][][][][][] 
  []
 
@@ -17772,7 +17800,7 @@ Package fontspec Info:
 (fontspec)             Arial scale = 1.
 
 
-Overfull \hbox (187.90623pt too wide) in alignment at lines 6567--6901
+Overfull \hbox (187.90623pt too wide) in alignment at lines 6601--6935
  [][][][][][][] 
  []
 
@@ -17783,27 +17811,27 @@ Overfull \hbox (187.90623pt too wide) in alignment at lines 6567--6901
 [92]
 
 [93]
-Overfull \hbox (14.96123pt too wide) in alignment at lines 6991--7002
+Overfull \hbox (14.96123pt too wide) in alignment at lines 7025--7036
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.96123pt too wide) in alignment at lines 7002--7007
+Overfull \hbox (14.96123pt too wide) in alignment at lines 7036--7041
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.96123pt too wide) in alignment at lines 7007--7009
+Overfull \hbox (14.96123pt too wide) in alignment at lines 7041--7043
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.96123pt too wide) in alignment at lines 7009--7011
+Overfull \hbox (14.96123pt too wide) in alignment at lines 7043--7045
  [][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.96123pt too wide) in alignment at lines 7011--7158
+Overfull \hbox (14.96123pt too wide) in alignment at lines 7045--7192
  [][][][][][][][][] 
  []
 
@@ -17824,7 +17852,7 @@ Overfull \hbox (14.96123pt too wide) in alignment at lines 7011--7158
 
 
 ]
-Overfull \hbox (4.23448pt too wide) in paragraph at lines 7319--7319
+Overfull \hbox (4.23448pt too wide) in paragraph at lines 7353--7353
 \TU/lmr/m/n/9 WGCBTS|  
  []
 
@@ -17838,683 +17866,683 @@ Overfull \hbox (4.23448pt too wide) in paragraph at lines 7319--7319
 [101
 
 ]
-<SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf, id=800, 338.26375pt x 486.81876pt>
+<SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf, id=809, 338.26375pt x 486.81876pt>
 File: SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf Graphic file (type pdf)
 <use SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf>
-Package luatex.def Info: SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf  used on input line 7405.
+Package luatex.def Info: SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf  used on input line 7439.
 (luatex.def)             Requested size: 338.26291pt x 486.81757pt.
-<plots_4_doc/SB_comps.png, id=801, 500.62032pt x 379.4175pt>
+<plots_4_doc/SB_comps.png, id=810, 500.62032pt x 379.4175pt>
 File: plots_4_doc/SB_comps.png Graphic file (type png)
 <use plots_4_doc/SB_comps.png>
-Package luatex.def Info: plots_4_doc/SB_comps.png  used on input line 7417.
+Package luatex.def Info: plots_4_doc/SB_comps.png  used on input line 7451.
 (luatex.def)             Requested size: 500.6191pt x 379.41656pt.
 
 
 [102<./SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf>]
-<plots_4_doc/Status_comp.png, id=814, 500.62032pt x 379.4175pt>
+<plots_4_doc/Status_comp.png, id=823, 500.62032pt x 379.4175pt>
 File: plots_4_doc/Status_comp.png Graphic file (type png)
 <use plots_4_doc/Status_comp.png>
-Package luatex.def Info: plots_4_doc/Status_comp.png  used on input line 7433.
+Package luatex.def Info: plots_4_doc/Status_comp.png  used on input line 7467.
 (luatex.def)             Requested size: 500.6191pt x 379.41656pt.
 
 
 [103<./plots_4_doc/SB_comps.png>]
 
 [104<./plots_4_doc/Status_comp.png>]
-<ref_model/plots/data_plot.png, id=827, 469.755pt x 469.755pt>
+<ref_model/plots/data_plot.png, id=836, 469.755pt x 469.755pt>
 File: ref_model/plots/data_plot.png Graphic file (type png)
 <use ref_model/plots/data_plot.png>
-Package luatex.def Info: ref_model/plots/data_plot.png  used on input line 7452.
+Package luatex.def Info: ref_model/plots/data_plot.png  used on input line 7486.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 File: ref_model/plots/catch2_landings_stacked.png Graphic file (type png)
 <use ref_model/plots/catch2_landings_stacked.png>
-Package luatex.def Info: ref_model/plots/catch2_landings_stacked.png  used on input line 7464.
+Package luatex.def Info: ref_model/plots/catch2_landings_stacked.png  used on input line 7498.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [105<./ref_model/plots/data_plot.png>]
-<plots_4_doc/Catch_comp_all.png, id=834, 500.62032pt x 353.06906pt>
+<plots_4_doc/Catch_comp_all.png, id=843, 500.62032pt x 353.06906pt>
 File: plots_4_doc/Catch_comp_all.png Graphic file (type png)
 <use plots_4_doc/Catch_comp_all.png>
-Package luatex.def Info: plots_4_doc/Catch_comp_all.png  used on input line 7476.
+Package luatex.def Info: plots_4_doc/Catch_comp_all.png  used on input line 7510.
 (luatex.def)             Requested size: 500.6191pt x 353.06819pt.
 
 
 [106]
-<plots_4_doc/Catch_comp_CA.png, id=840, 500.62032pt x 357.58594pt>
+<plots_4_doc/Catch_comp_CA.png, id=849, 500.62032pt x 357.58594pt>
 File: plots_4_doc/Catch_comp_CA.png Graphic file (type png)
 <use plots_4_doc/Catch_comp_CA.png>
-Package luatex.def Info: plots_4_doc/Catch_comp_CA.png  used on input line 7490.
+Package luatex.def Info: plots_4_doc/Catch_comp_CA.png  used on input line 7524.
 (luatex.def)             Requested size: 500.6191pt x 357.58505pt.
 
 
 [107<./plots_4_doc/Catch_comp_all.png>]
-<plots_4_doc/Catch_comp_OR.png, id=847, 500.62032pt x 357.58594pt>
+<plots_4_doc/Catch_comp_OR.png, id=856, 500.62032pt x 357.58594pt>
 File: plots_4_doc/Catch_comp_OR.png Graphic file (type png)
 <use plots_4_doc/Catch_comp_OR.png>
-Package luatex.def Info: plots_4_doc/Catch_comp_OR.png  used on input line 7504.
+Package luatex.def Info: plots_4_doc/Catch_comp_OR.png  used on input line 7538.
 (luatex.def)             Requested size: 500.6191pt x 357.58505pt.
 
 
 [108<./plots_4_doc/Catch_comp_CA.png>]
-<plots_4_doc/Catch_comp_WA.png, id=854, 500.62032pt x 353.06906pt>
+<plots_4_doc/Catch_comp_WA.png, id=863, 500.62032pt x 353.06906pt>
 File: plots_4_doc/Catch_comp_WA.png Graphic file (type png)
 <use plots_4_doc/Catch_comp_WA.png>
-Package luatex.def Info: plots_4_doc/Catch_comp_WA.png  used on input line 7518.
+Package luatex.def Info: plots_4_doc/Catch_comp_WA.png  used on input line 7552.
 (luatex.def)             Requested size: 500.6191pt x 353.06819pt.
 
 
 [109<./plots_4_doc/Catch_comp_OR.png>]
-<ref_model/plots/comp_lendat_flt1mkt0_page1.png, id=861, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt1mkt0_page1.png, id=870, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt1mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt1mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt1mkt0_page1.png  used on input line 7532.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt1mkt0_page1.png  used on input line 7566.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [110<./plots_4_doc/Catch_comp_WA.png>]
-<ref_model/plots/comp_lendat_flt1mkt0_page2.png, id=868, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt1mkt0_page2.png, id=878, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt1mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt1mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt1mkt0_page2.png  used on input line 7545.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt1mkt0_page2.png  used on input line 7579.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [111<./ref_model/plots/comp_lendat_flt1mkt0_page1.png>]
-<ref_model/plots/comp_lendat_flt2mkt0.png, id=876, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt2mkt0.png, id=885, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt2mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt2mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt2mkt0.png  used on input line 7558.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt2mkt0.png  used on input line 7592.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [112<./ref_model/plots/comp_lendat_flt1mkt0_page2.png>]
-<ref_model/plots/comp_lendat_flt3mkt0_page1.png, id=883, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt3mkt0_page1.png, id=892, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt3mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt3mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt3mkt0_page1.png  used on input line 7571.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt3mkt0_page1.png  used on input line 7605.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [113<./ref_model/plots/comp_lendat_flt2mkt0.png>]
-<ref_model/plots/comp_lendat_flt3mkt0_page2.png, id=890, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt3mkt0_page2.png, id=899, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt3mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt3mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt3mkt0_page2.png  used on input line 7584.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt3mkt0_page2.png  used on input line 7618.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [114<./ref_model/plots/comp_lendat_flt3mkt0_page1.png>]
-<ref_model/plots/comp_lendat_flt4mkt0.png, id=897, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt4mkt0.png, id=906, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt4mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt4mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt4mkt0.png  used on input line 7597.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt4mkt0.png  used on input line 7631.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [115<./ref_model/plots/comp_lendat_flt3mkt0_page2.png>]
-<ref_model/plots/comp_lendat_flt5mkt0.png, id=904, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt5mkt0.png, id=913, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt5mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt5mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt5mkt0.png  used on input line 7610.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt5mkt0.png  used on input line 7644.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [116<./ref_model/plots/comp_lendat_flt4mkt0.png>]
-<ref_model/plots/comp_lendat_flt6mkt0.png, id=911, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt6mkt0.png, id=920, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt6mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt6mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt6mkt0.png  used on input line 7623.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt6mkt0.png  used on input line 7657.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [117<./ref_model/plots/comp_lendat_flt5mkt0.png>]
-<ref_model/plots/comp_lendat_flt10mkt0.png, id=918, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt10mkt0.png, id=928, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt10mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt10mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt10mkt0.png  used on input line 7636.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt10mkt0.png  used on input line 7670.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [118<./ref_model/plots/comp_lendat_flt6mkt0.png>]
-<ref_model/plots/comp_lendat_flt7mkt0.png, id=926, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt7mkt0.png, id=935, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt7mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt7mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt7mkt0.png  used on input line 7648.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt7mkt0.png  used on input line 7682.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [119<./ref_model/plots/comp_lendat_flt10mkt0.png>]
-<ref_model/plots/comp_lendat_flt8mkt0.png, id=933, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lendat_flt8mkt0.png, id=942, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lendat_flt8mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lendat_flt8mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lendat_flt8mkt0.png  used on input line 7661.
+Package luatex.def Info: ref_model/plots/comp_lendat_flt8mkt0.png  used on input line 7695.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [120<./ref_model/plots/comp_lendat_flt7mkt0.png>]
-<ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png, id=940, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png, id=950, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png  used on input line 7674.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png  used on input line 7708.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [121<./ref_model/plots/comp_lendat_flt8mkt0.png>]
-<ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png, id=948, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png, id=957, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png  used on input line 7687.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png  used on input line 7721.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [122<./ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png>]
-<ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png, id=954, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png, id=963, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png  used on input line 7700.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png  used on input line 7734.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [123<./ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png>]
-<ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png, id=960, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png, id=969, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png  used on input line 7713.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png  used on input line 7747.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [124<./ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png>]
-<ref_model/plots/comp_condAALdat_bubflt5mkt0.png, id=967, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt5mkt0.png, id=976, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt5mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt5mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt5mkt0.png  used on input line 7726.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt5mkt0.png  used on input line 7760.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [125<./ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png>]
-<ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png, id=974, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png, id=983, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png  used on input line 7739.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png  used on input line 7773.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [126<./ref_model/plots/comp_condAALdat_bubflt5mkt0.png>]
-<ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png, id=981, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png, id=990, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png  used on input line 7752.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png  used on input line 7786.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [127<./ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png>]
-<ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png, id=988, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png, id=997, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png  used on input line 7765.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png  used on input line 7799.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [128<./ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png>]
-<ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png, id=995, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png, id=1004, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png  used on input line 7778.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png  used on input line 7812.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [129<./ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png>]
-<ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png, id=1001, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png, id=1010, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png  used on input line 7791.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png  used on input line 7825.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [130<./ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png>]
-<ref_model/plots/index9_standcpueall.png, id=1007, 469.755pt x 289.08pt>
+<ref_model/plots/index9_standcpueall.png, id=1017, 469.755pt x 289.08pt>
 File: ref_model/plots/index9_standcpueall.png Graphic file (type png)
 <use ref_model/plots/index9_standcpueall.png>
-Package luatex.def Info: ref_model/plots/index9_standcpueall.png  used on input line 7804.
+Package luatex.def Info: ref_model/plots/index9_standcpueall.png  used on input line 7838.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [131<./ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png>]
-<plots_4_doc/WCGBTS_comps.png, id=1014, 500.62032pt x 357.58594pt>
+<plots_4_doc/WCGBTS_comps.png, id=1023, 500.62032pt x 357.58594pt>
 File: plots_4_doc/WCGBTS_comps.png Graphic file (type png)
 <use plots_4_doc/WCGBTS_comps.png>
-Package luatex.def Info: plots_4_doc/WCGBTS_comps.png  used on input line 7816.
+Package luatex.def Info: plots_4_doc/WCGBTS_comps.png  used on input line 7850.
 (luatex.def)             Requested size: 500.6191pt x 357.58505pt.
 
 
 [132<./ref_model/plots/index9_standcpueall.png>]
-<ref_model/plots/index1_cpuedata_WCGBTS.png, id=1021, 469.755pt x 289.08pt>
+<ref_model/plots/index1_cpuedata_WCGBTS.png, id=1030, 469.755pt x 289.08pt>
 File: ref_model/plots/index1_cpuedata_WCGBTS.png Graphic file (type png)
 <use ref_model/plots/index1_cpuedata_WCGBTS.png>
-Package luatex.def Info: ref_model/plots/index1_cpuedata_WCGBTS.png  used on input line 7831.
+Package luatex.def Info: ref_model/plots/index1_cpuedata_WCGBTS.png  used on input line 7865.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [133<./plots_4_doc/WCGBTS_comps.png>]
-<ref_model/plots/index1_cpuedata_TRIENNIAL.png, id=1028, 469.755pt x 289.08pt>
+<ref_model/plots/index1_cpuedata_TRIENNIAL.png, id=1037, 469.755pt x 289.08pt>
 File: ref_model/plots/index1_cpuedata_TRIENNIAL.png Graphic file (type png)
 <use ref_model/plots/index1_cpuedata_TRIENNIAL.png>
-Package luatex.def Info: ref_model/plots/index1_cpuedata_TRIENNIAL.png  used on input line 7843.
+Package luatex.def Info: ref_model/plots/index1_cpuedata_TRIENNIAL.png  used on input line 7877.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
-<ref_model/plots/index1_cpuedata_AK_SLOPE.png, id=1029, 469.755pt x 289.08pt>
+<ref_model/plots/index1_cpuedata_AK_SLOPE.png, id=1038, 469.755pt x 289.08pt>
 File: ref_model/plots/index1_cpuedata_AK_SLOPE.png Graphic file (type png)
 <use ref_model/plots/index1_cpuedata_AK_SLOPE.png>
-Package luatex.def Info: ref_model/plots/index1_cpuedata_AK_SLOPE.png  used on input line 7855.
+Package luatex.def Info: ref_model/plots/index1_cpuedata_AK_SLOPE.png  used on input line 7889.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [134<./ref_model/plots/index1_cpuedata_WCGBTS.png><./ref_model/plots/index1_cpuedata_TRIENNIAL.png>]
-<ref_model/plots/index1_cpuedata_NW_SLOPE.png, id=1038, 469.755pt x 289.08pt>
+<ref_model/plots/index1_cpuedata_NW_SLOPE.png, id=1047, 469.755pt x 289.08pt>
 File: ref_model/plots/index1_cpuedata_NW_SLOPE.png Graphic file (type png)
 <use ref_model/plots/index1_cpuedata_NW_SLOPE.png>
-Package luatex.def Info: ref_model/plots/index1_cpuedata_NW_SLOPE.png  used on input line 7867.
+Package luatex.def Info: ref_model/plots/index1_cpuedata_NW_SLOPE.png  used on input line 7901.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
-<plots_4_doc/compare1_spawnbio_updatedCt.png, id=1039, 469.755pt x 361.35pt>
+<plots_4_doc/compare1_spawnbio_updatedCt.png, id=1048, 469.755pt x 361.35pt>
 File: plots_4_doc/compare1_spawnbio_updatedCt.png Graphic file (type png)
 <use plots_4_doc/compare1_spawnbio_updatedCt.png>
-Package luatex.def Info: plots_4_doc/compare1_spawnbio_updatedCt.png  used on input line 7879.
+Package luatex.def Info: plots_4_doc/compare1_spawnbio_updatedCt.png  used on input line 7913.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [135<./ref_model/plots/index1_cpuedata_AK_SLOPE.png><./ref_model/plots/index1_cpuedata_NW_SLOPE.png>]
-<plots_4_doc/compare3_Bratio_updatedCt.png, id=1048, 469.755pt x 361.35pt>
+<plots_4_doc/compare3_Bratio_updatedCt.png, id=1057, 469.755pt x 361.35pt>
 File: plots_4_doc/compare3_Bratio_updatedCt.png Graphic file (type png)
 <use plots_4_doc/compare3_Bratio_updatedCt.png>
-Package luatex.def Info: plots_4_doc/compare3_Bratio_updatedCt.png  used on input line 7893.
+Package luatex.def Info: plots_4_doc/compare3_Bratio_updatedCt.png  used on input line 7927.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [136<./plots_4_doc/compare1_spawnbio_updatedCt.png>]
 
 [137<./plots_4_doc/compare3_Bratio_updatedCt.png>]
-<plots_4_doc/1v2sex_spawnbio.png, id=1061, 469.755pt x 361.35pt>
+<plots_4_doc/1v2sex_spawnbio.png, id=1070, 469.755pt x 361.35pt>
 File: plots_4_doc/1v2sex_spawnbio.png Graphic file (type png)
 <use plots_4_doc/1v2sex_spawnbio.png>
-Package luatex.def Info: plots_4_doc/1v2sex_spawnbio.png  used on input line 7909.
+Package luatex.def Info: plots_4_doc/1v2sex_spawnbio.png  used on input line 7943.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
-<plots_4_doc/1v2sex_Bratio_uncertainty.png, id=1062, 469.755pt x 361.35pt>
+<plots_4_doc/1v2sex_Bratio_uncertainty.png, id=1071, 469.755pt x 361.35pt>
 File: plots_4_doc/1v2sex_Bratio_uncertainty.png Graphic file (type png)
 <use plots_4_doc/1v2sex_Bratio_uncertainty.png>
-Package luatex.def Info: plots_4_doc/1v2sex_Bratio_uncertainty.png  used on input line 7924.
+Package luatex.def Info: plots_4_doc/1v2sex_Bratio_uncertainty.png  used on input line 7958.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [138<./plots_4_doc/1v2sex_spawnbio.png>]
-<plots_4_doc/M_values.png, id=1069, 500.62032pt x 357.58594pt>
+<plots_4_doc/M_values.png, id=1078, 500.62032pt x 357.58594pt>
 File: plots_4_doc/M_values.png Graphic file (type png)
 <use plots_4_doc/M_values.png>
-Package luatex.def Info: plots_4_doc/M_values.png  used on input line 7938.
+Package luatex.def Info: plots_4_doc/M_values.png  used on input line 7972.
 (luatex.def)             Requested size: 500.6191pt x 357.58505pt.
 
 
 [139<./plots_4_doc/1v2sex_Bratio_uncertainty.png>]
-<plots_4_doc/Catch_curve_plot_FM.png, id=1076, 398.6895pt x 271.61475pt>
+<plots_4_doc/Catch_curve_plot_FM.png, id=1085, 398.6895pt x 271.61475pt>
 File: plots_4_doc/Catch_curve_plot_FM.png Graphic file (type png)
 <use plots_4_doc/Catch_curve_plot_FM.png>
-Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM.png  used on input line 7953.
+Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM.png  used on input line 7987.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [140<./plots_4_doc/M_values.png>]
-<plots_4_doc/Catch_curve_plot_FM_21_100.png, id=1083, 398.6895pt x 271.61475pt>
+<plots_4_doc/Catch_curve_plot_FM_21_100.png, id=1093, 398.6895pt x 271.61475pt>
 File: plots_4_doc/Catch_curve_plot_FM_21_100.png Graphic file (type png)
 <use plots_4_doc/Catch_curve_plot_FM_21_100.png>
-Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM_21_100.png  used on input line 7969.
+Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM_21_100.png  used on input line 8003.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [141<./plots_4_doc/Catch_curve_plot_FM.png>]
-<plots_4_doc/Catch_curve_plot_FM_21_80.png, id=1091, 398.6895pt x 271.61475pt>
+<plots_4_doc/Catch_curve_plot_FM_21_80.png, id=1101, 398.6895pt x 271.61475pt>
 File: plots_4_doc/Catch_curve_plot_FM_21_80.png Graphic file (type png)
 <use plots_4_doc/Catch_curve_plot_FM_21_80.png>
-Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM_21_80.png  used on input line 7986.
+Package luatex.def Info: plots_4_doc/Catch_curve_plot_FM_21_80.png  used on input line 8020.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [142<./plots_4_doc/Catch_curve_plot_FM_21_100.png>]
-<plots_4_doc/Age_length_plot.png, id=1099, 398.6895pt x 271.61475pt>
+<plots_4_doc/Age_length_plot.png, id=1108, 398.6895pt x 271.61475pt>
 File: plots_4_doc/Age_length_plot.png Graphic file (type png)
 <use plots_4_doc/Age_length_plot.png>
-Package luatex.def Info: plots_4_doc/Age_length_plot.png  used on input line 8003.
+Package luatex.def Info: plots_4_doc/Age_length_plot.png  used on input line 8037.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [143<./plots_4_doc/Catch_curve_plot_FM_21_80.png>]
-<plots_4_doc/Lt_age_CV_FM.png, id=1106, 398.6895pt x 271.61475pt>
+<plots_4_doc/Lt_age_CV_FM.png, id=1115, 398.6895pt x 271.61475pt>
 File: plots_4_doc/Lt_age_CV_FM.png Graphic file (type png)
 <use plots_4_doc/Lt_age_CV_FM.png>
-Package luatex.def Info: plots_4_doc/Lt_age_CV_FM.png  used on input line 8018.
+Package luatex.def Info: plots_4_doc/Lt_age_CV_FM.png  used on input line 8052.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [144<./plots_4_doc/Age_length_plot.png>]
-<plots_4_doc/AE_matrix_plot.png, id=1113, 398.6895pt x 271.61475pt>
+<plots_4_doc/AE_matrix_plot.png, id=1122, 398.6895pt x 271.61475pt>
 File: plots_4_doc/AE_matrix_plot.png Graphic file (type png)
 <use plots_4_doc/AE_matrix_plot.png>
-Package luatex.def Info: plots_4_doc/AE_matrix_plot.png  used on input line 8033.
+Package luatex.def Info: plots_4_doc/AE_matrix_plot.png  used on input line 8067.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [145<./plots_4_doc/Lt_age_CV_FM.png>]
-<plots_4_doc/AE_Bias.png, id=1120, 398.6895pt x 271.61475pt>
+<plots_4_doc/AE_Bias.png, id=1129, 398.6895pt x 271.61475pt>
 File: plots_4_doc/AE_Bias.png Graphic file (type png)
 <use plots_4_doc/AE_Bias.png>
-Package luatex.def Info: plots_4_doc/AE_Bias.png  used on input line 8048.
+Package luatex.def Info: plots_4_doc/AE_Bias.png  used on input line 8082.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [146<./plots_4_doc/AE_matrix_plot.png>]
-<plots_4_doc/AE_SD.png, id=1127, 398.6895pt x 271.61475pt>
+<plots_4_doc/AE_SD.png, id=1136, 398.6895pt x 271.61475pt>
 File: plots_4_doc/AE_SD.png Graphic file (type png)
 <use plots_4_doc/AE_SD.png>
-Package luatex.def Info: plots_4_doc/AE_SD.png  used on input line 8061.
+Package luatex.def Info: plots_4_doc/AE_SD.png  used on input line 8095.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [147<./plots_4_doc/AE_Bias.png>]
 
 [148<./plots_4_doc/AE_SD.png>]
-<plots_4_doc/L_W_plots.png, id=1140, 398.6895pt x 271.61475pt>
+<plots_4_doc/L_W_plots.png, id=1149, 398.6895pt x 271.61475pt>
 File: plots_4_doc/L_W_plots.png Graphic file (type png)
 <use plots_4_doc/L_W_plots.png>
-Package luatex.def Info: plots_4_doc/L_W_plots.png  used on input line 8076.
+Package luatex.def Info: plots_4_doc/L_W_plots.png  used on input line 8110.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
-<plots_4_doc/F_M_ltwt_plot.png, id=1141, 398.6895pt x 271.61475pt>
+<plots_4_doc/F_M_ltwt_plot.png, id=1150, 398.6895pt x 271.61475pt>
 File: plots_4_doc/F_M_ltwt_plot.png Graphic file (type png)
 <use plots_4_doc/F_M_ltwt_plot.png>
-Package luatex.def Info: plots_4_doc/F_M_ltwt_plot.png  used on input line 8089.
+Package luatex.def Info: plots_4_doc/F_M_ltwt_plot.png  used on input line 8123.
 (luatex.def)             Requested size: 398.68852pt x 271.61407pt.
 
 
 [149<./plots_4_doc/L_W_plots.png>]
 
 [150<./plots_4_doc/F_M_ltwt_plot.png>]
-<plots_4_doc/bio_fxn_maturity.png, id=1154, 417.81094pt x 289.08pt>
+<plots_4_doc/bio_fxn_maturity.png, id=1164, 417.81094pt x 289.08pt>
 File: plots_4_doc/bio_fxn_maturity.png Graphic file (type png)
 <use plots_4_doc/bio_fxn_maturity.png>
-Package luatex.def Info: plots_4_doc/bio_fxn_maturity.png  used on input line 8104.
+Package luatex.def Info: plots_4_doc/bio_fxn_maturity.png  used on input line 8138.
 (luatex.def)             Requested size: 417.80992pt x 289.07928pt.
-<plots_4_doc/l50_both_species.png, id=1155, 417.81094pt x 289.08pt>
+<plots_4_doc/l50_both_species.png, id=1165, 417.81094pt x 289.08pt>
 File: plots_4_doc/l50_both_species.png Graphic file (type png)
 <use plots_4_doc/l50_both_species.png>
-Package luatex.def Info: plots_4_doc/l50_both_species.png  used on input line 8116.
+Package luatex.def Info: plots_4_doc/l50_both_species.png  used on input line 8150.
 (luatex.def)             Requested size: 417.80992pt x 289.07928pt.
 
 
 [151<./plots_4_doc/bio_fxn_maturity.png>]
-<plots_4_doc/a50_both_species.png, id=1163, 417.81094pt x 289.08pt>
+<plots_4_doc/a50_both_species.png, id=1172, 417.81094pt x 289.08pt>
 File: plots_4_doc/a50_both_species.png Graphic file (type png)
 <use plots_4_doc/a50_both_species.png>
-Package luatex.def Info: plots_4_doc/a50_both_species.png  used on input line 8128.
+Package luatex.def Info: plots_4_doc/a50_both_species.png  used on input line 8162.
 (luatex.def)             Requested size: 417.80992pt x 289.07928pt.
 
 
 [152<./plots_4_doc/l50_both_species.png>]
-<plots_4_doc/compare4_Bratio_uncertainty.png, id=1170, 469.755pt x 361.35pt>
+<plots_4_doc/compare4_Bratio_uncertainty.png, id=1179, 469.755pt x 361.35pt>
 File: plots_4_doc/compare4_Bratio_uncertainty.png Graphic file (type png)
 <use plots_4_doc/compare4_Bratio_uncertainty.png>
-Package luatex.def Info: plots_4_doc/compare4_Bratio_uncertainty.png  used on input line 8140.
+Package luatex.def Info: plots_4_doc/compare4_Bratio_uncertainty.png  used on input line 8174.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [153<./plots_4_doc/a50_both_species.png>]
-<plots_4_doc/compare2_spawnbio_uncertainty.png, id=1177, 469.755pt x 361.35pt>
+<plots_4_doc/compare2_spawnbio_uncertainty.png, id=1186, 469.755pt x 361.35pt>
 File: plots_4_doc/compare2_spawnbio_uncertainty.png Graphic file (type png)
 <use plots_4_doc/compare2_spawnbio_uncertainty.png>
-Package luatex.def Info: plots_4_doc/compare2_spawnbio_uncertainty.png  used on input line 8156.
+Package luatex.def Info: plots_4_doc/compare2_spawnbio_uncertainty.png  used on input line 8190.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [154<./plots_4_doc/compare4_Bratio_uncertainty.png>]
-<plots_4_doc/compare1_spawnbio__discard_fleets.png, id=1184, 469.755pt x 361.35pt>
+<plots_4_doc/compare1_spawnbio__discard_fleets.png, id=1193, 469.755pt x 361.35pt>
 File: plots_4_doc/compare1_spawnbio__discard_fleets.png Graphic file (type png)
 <use plots_4_doc/compare1_spawnbio__discard_fleets.png>
-Package luatex.def Info: plots_4_doc/compare1_spawnbio__discard_fleets.png  used on input line 8172.
+Package luatex.def Info: plots_4_doc/compare1_spawnbio__discard_fleets.png  used on input line 8206.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [155<./plots_4_doc/compare2_spawnbio_uncertainty.png>]
-<plots_4_doc/compare3_Bratio_discard_fleets.png, id=1191, 469.755pt x 361.35pt>
+<plots_4_doc/compare3_Bratio_discard_fleets.png, id=1200, 469.755pt x 361.35pt>
 File: plots_4_doc/compare3_Bratio_discard_fleets.png Graphic file (type png)
 <use plots_4_doc/compare3_Bratio_discard_fleets.png>
-Package luatex.def Info: plots_4_doc/compare3_Bratio_discard_fleets.png  used on input line 8186.
+Package luatex.def Info: plots_4_doc/compare3_Bratio_discard_fleets.png  used on input line 8220.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [156<./plots_4_doc/compare1_spawnbio__discard_fleets.png>]
-<plots_4_doc/bridging_compare2_spawnbio_uncertainty.png, id=1198, 469.755pt x 361.35pt>
+<plots_4_doc/bridging_compare2_spawnbio_uncertainty.png, id=1207, 469.755pt x 361.35pt>
 File: plots_4_doc/bridging_compare2_spawnbio_uncertainty.png Graphic file (type png)
 <use plots_4_doc/bridging_compare2_spawnbio_uncertainty.png>
-Package luatex.def Info: plots_4_doc/bridging_compare2_spawnbio_uncertainty.png  used on input line 8200.
+Package luatex.def Info: plots_4_doc/bridging_compare2_spawnbio_uncertainty.png  used on input line 8234.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [157<./plots_4_doc/compare3_Bratio_discard_fleets.png>]
-<plots_4_doc/bridging_compare4_Bratio_uncertainty.png, id=1205, 469.755pt x 361.35pt>
+<plots_4_doc/bridging_compare4_Bratio_uncertainty.png, id=1214, 469.755pt x 361.35pt>
 File: plots_4_doc/bridging_compare4_Bratio_uncertainty.png Graphic file (type png)
 <use plots_4_doc/bridging_compare4_Bratio_uncertainty.png>
-Package luatex.def Info: plots_4_doc/bridging_compare4_Bratio_uncertainty.png  used on input line 8213.
+Package luatex.def Info: plots_4_doc/bridging_compare4_Bratio_uncertainty.png  used on input line 8247.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [158<./plots_4_doc/bridging_compare2_spawnbio_uncertainty.png>]
 
 [159<./plots_4_doc/bridging_compare4_Bratio_uncertainty.png>]
-<plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png, id=1218, 505.89pt x 505.89pt>
+<plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png, id=1227, 505.89pt x 505.89pt>
 File: plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png Graphic file (type png)
 <use plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png>
-Package luatex.def Info: plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png  used on input line 8228.
+Package luatex.def Info: plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png  used on input line 8262.
 (luatex.def)             Requested size: 505.88875pt x 505.88875pt.
 
 
 [160<./plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png>]
-<plots_4_doc/pairs_plot_fast.png, id=1225, 602.25pt x 351.3125pt>
+<plots_4_doc/pairs_plot_fast.png, id=1235, 602.25pt x 351.3125pt>
 File: plots_4_doc/pairs_plot_fast.png Graphic file (type png)
 <use plots_4_doc/pairs_plot_fast.png>
-Package luatex.def Info: plots_4_doc/pairs_plot_fast.png  used on input line 8243.
+Package luatex.def Info: plots_4_doc/pairs_plot_fast.png  used on input line 8277.
 (luatex.def)             Requested size: 602.24852pt x 351.31163pt.
-<ref_model/Jitter Results_0.01/jitterplot.png, id=1226, 481.8pt x 481.8pt>
+<ref_model/Jitter Results_0.01/jitterplot.png, id=1236, 481.8pt x 481.8pt>
 File: ref_model/Jitter Results_0.01/jitterplot.png Graphic file (type png)
 <use ref_model/Jitter Results_0.01/jitterplot.png>
-Package luatex.def Info: ref_model/Jitter Results_0.01/jitterplot.png  used on input line 8259.
+Package luatex.def Info: ref_model/Jitter Results_0.01/jitterplot.png  used on input line 8293.
 (luatex.def)             Requested size: 481.79881pt x 481.79881pt.
 
 
 [161<./plots_4_doc/pairs_plot_fast.png>]
-<ref_model/Jitter Results_0.05/jitterplot.png, id=1233, 481.8pt x 481.8pt>
+<ref_model/Jitter Results_0.05/jitterplot.png, id=1242, 481.8pt x 481.8pt>
 File: ref_model/Jitter Results_0.05/jitterplot.png Graphic file (type png)
 <use ref_model/Jitter Results_0.05/jitterplot.png>
-Package luatex.def Info: ref_model/Jitter Results_0.05/jitterplot.png  used on input line 8276.
+Package luatex.def Info: ref_model/Jitter Results_0.05/jitterplot.png  used on input line 8310.
 (luatex.def)             Requested size: 481.79881pt x 481.79881pt.
 
 
 [162<./ref_model/Jitter Results_0.01/jitterplot.png>]
-<ref_model/plots/comp_lenfit__aggregated_across_time.png, id=1240, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit__aggregated_across_time.png, id=1249, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit__aggregated_across_time.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit__aggregated_across_time.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit__aggregated_across_time.png  used on input line 8293.
+Package luatex.def Info: ref_model/plots/comp_lenfit__aggregated_across_time.png  used on input line 8327.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [163<./ref_model/Jitter Results_0.05/jitterplot.png>]
-<ref_model/plots/comp_lenfit_flt1mkt0_page1.png, id=1247, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt1mkt0_page1.png, id=1256, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt1mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt1mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt1mkt0_page1.png  used on input line 8306.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt1mkt0_page1.png  used on input line 8340.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [164<./ref_model/plots/comp_lenfit__aggregated_across_time.png>]
-<ref_model/plots/comp_lenfit_flt1mkt0_page2.png, id=1254, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt1mkt0_page2.png, id=1263, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt1mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt1mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt1mkt0_page2.png  used on input line 8323.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt1mkt0_page2.png  used on input line 8357.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [165<./ref_model/plots/comp_lenfit_flt1mkt0_page1.png>]
-<ref_model/plots/comp_lenfit_flt2mkt0.png, id=1261, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt2mkt0.png, id=1270, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt2mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt2mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt2mkt0.png  used on input line 8340.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt2mkt0.png  used on input line 8374.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [166<./ref_model/plots/comp_lenfit_flt1mkt0_page2.png>]
-<ref_model/plots/comp_lenfit_flt3mkt0_page1.png, id=1268, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt3mkt0_page1.png, id=1278, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt3mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt3mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt3mkt0_page1.png  used on input line 8357.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt3mkt0_page1.png  used on input line 8391.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [167<./ref_model/plots/comp_lenfit_flt2mkt0.png>]
-<ref_model/plots/comp_lenfit_flt3mkt0_page2.png, id=1276, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt3mkt0_page2.png, id=1285, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt3mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt3mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt3mkt0_page2.png  used on input line 8374.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt3mkt0_page2.png  used on input line 8408.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [168<./ref_model/plots/comp_lenfit_flt3mkt0_page1.png>]
-<ref_model/plots/comp_lenfit_flt4mkt0.png, id=1283, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt4mkt0.png, id=1292, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt4mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt4mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt4mkt0.png  used on input line 8391.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt4mkt0.png  used on input line 8425.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [169<./ref_model/plots/comp_lenfit_flt3mkt0_page2.png>]
-<ref_model/plots/comp_lenfit_flt5mkt0.png, id=1290, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt5mkt0.png, id=1299, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt5mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt5mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt5mkt0.png  used on input line 8407.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt5mkt0.png  used on input line 8441.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [170<./ref_model/plots/comp_lenfit_flt4mkt0.png>]
-<ref_model/plots/comp_lenfit_flt6mkt0.png, id=1297, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt6mkt0.png, id=1307, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt6mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt6mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt6mkt0.png  used on input line 8424.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt6mkt0.png  used on input line 8458.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [171<./ref_model/plots/comp_lenfit_flt5mkt0.png>]
-<ref_model/plots/comp_lenfit_flt7mkt0.png, id=1305, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt7mkt0.png, id=1314, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt7mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt7mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt7mkt0.png  used on input line 8441.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt7mkt0.png  used on input line 8475.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [172<./ref_model/plots/comp_lenfit_flt6mkt0.png>]
-<ref_model/plots/comp_lenfit_flt8mkt0.png, id=1312, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt8mkt0.png, id=1321, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt8mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt8mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt8mkt0.png  used on input line 8458.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt8mkt0.png  used on input line 8492.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [173<./ref_model/plots/comp_lenfit_flt7mkt0.png>]
-<ref_model/plots/comp_lenfit_flt10mkt0.png, id=1319, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_flt10mkt0.png, id=1328, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_flt10mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_flt10mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_flt10mkt0.png  used on input line 8475.
+Package luatex.def Info: ref_model/plots/comp_lenfit_flt10mkt0.png  used on input line 8509.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [174<./ref_model/plots/comp_lenfit_flt8mkt0.png>]
-<ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png, id=1326, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png, id=1335, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png  used on input line 8492.
+Package luatex.def Info: ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png  used on input line 8526.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [175<./ref_model/plots/comp_lenfit_flt10mkt0.png>]
-<ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png, id=1333, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png, id=1342, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png  used on input line 8507.
+Package luatex.def Info: ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png  used on input line 8541.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [176<./ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png, id=1339, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png, id=1348, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png  used on input line 8522.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png  used on input line 8556.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [177<./ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png, id=1345, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png, id=1354, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png  used on input line 8536.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png  used on input line 8570.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [178<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png, id=1352, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png, id=1361, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png  used on input line 8550.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png  used on input line 8584.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [179<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png, id=1359, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png, id=1368, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png  used on input line 8564.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png  used on input line 8598.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [180<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png, id=1366, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png, id=1376, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png  used on input line 8578.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png  used on input line 8612.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [181<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png, id=1374, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png, id=1383, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png  used on input line 8592.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png  used on input line 8626.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [182<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png, id=1381, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png, id=1390, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png  used on input line 8606.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png  used on input line 8640.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [183<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png, id=1388, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png, id=1397, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png  used on input line 8620.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png  used on input line 8654.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [184<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png>]
-<ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png, id=1395, 469.755pt x 469.755pt>
+<ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png, id=1404, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png Graphic file (type png)
 <use ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png>
-Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png  used on input line 8634.
+Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png  used on input line 8668.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
@@ -18523,530 +18551,528 @@ Package luatex.def Info: ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS
 [186<./ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png>]
 File: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png  used on input line 8650.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png  used on input line 8684.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 File: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png  used on input line 8666.
+Package luatex.def Info: ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png  used on input line 8700.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [187]
-<ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png, id=1413, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png, id=1422, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png  used on input line 8682.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png  used on input line 8716.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [188]
-<ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png, id=1419, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png, id=1428, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png  used on input line 8698.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png  used on input line 8732.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [189<./ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_residsflt5mkt0.png, id=1426, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt5mkt0.png, id=1435, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt5mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt5mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt5mkt0.png  used on input line 8714.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt5mkt0.png  used on input line 8748.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [190<./ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png, id=1433, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png, id=1443, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png  used on input line 8729.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png  used on input line 8763.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [191<./ref_model/plots/comp_condAALfit_residsflt5mkt0.png>]
-<ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png, id=1441, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png, id=1451, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png  used on input line 8745.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png  used on input line 8779.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [192<./ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png, id=1448, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png, id=1457, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png  used on input line 8761.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png  used on input line 8795.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [193<./ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png, id=1454, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png, id=1463, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png  used on input line 8777.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png  used on input line 8811.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [194<./ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png, id=1460, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png, id=1469, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png  used on input line 8793.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png  used on input line 8827.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [195<./ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png, id=1466, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png, id=1475, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png  used on input line 8809.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png  used on input line 8843.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [196<./ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png>]
-<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png, id=1472, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png, id=1481, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png  used on input line 8823.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png  used on input line 8857.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [197<./ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png>]
-<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png, id=1479, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png, id=1488, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png  used on input line 8837.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png  used on input line 8871.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [198<./ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png>]
-<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png, id=1486, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png, id=1495, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png  used on input line 8851.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png  used on input line 8885.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [199<./ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png>]
-<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png, id=1493, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png, id=1502, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png  used on input line 8865.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png  used on input line 8899.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [200<./ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png, id=1500, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png, id=1510, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png  used on input line 8880.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png  used on input line 8914.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [201<./ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png, id=1508, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png, id=1517, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png  used on input line 8897.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png  used on input line 8931.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [202<./ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png, id=1515, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png, id=1524, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png  used on input line 8914.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png  used on input line 8948.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [203<./ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png, id=1522, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png, id=1531, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png  used on input line 8931.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png  used on input line 8965.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [204<./ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png, id=1529, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png, id=1538, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png  used on input line 8948.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png  used on input line 8982.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [205<./ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png, id=1536, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png, id=1545, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png  used on input line 8965.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png  used on input line 8999.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [206<./ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png, id=1543, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png, id=1552, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png  used on input line 8982.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png  used on input line 9016.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [207<./ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png, id=1550, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png, id=1559, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png  used on input line 8999.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png  used on input line 9033.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [208<./ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png, id=1557, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png, id=1566, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png  used on input line 9016.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png  used on input line 9050.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [209<./ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png, id=1564, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png, id=1573, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png  used on input line 9033.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png  used on input line 9067.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [210<./ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png, id=1571, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png, id=1581, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png  used on input line 9050.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png  used on input line 9084.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [211<./ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png, id=1579, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png, id=1588, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png  used on input line 9067.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png  used on input line 9101.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [212<./ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png, id=1586, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png, id=1595, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png  used on input line 9084.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png  used on input line 9118.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [213<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png, id=1593, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png, id=1602, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png  used on input line 9101.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png  used on input line 9135.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [214<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png, id=1600, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png, id=1609, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png  used on input line 9118.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png  used on input line 9152.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [215<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png, id=1607, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png, id=1616, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png  used on input line 9135.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png  used on input line 9169.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [216<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png>]
-<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png, id=1614, 469.755pt x 469.755pt>
+<ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png, id=1624, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png Graphic file (type png)
 <use ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png>
-Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png  used on input line 9152.
+Package luatex.def Info: ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png  used on input line 9186.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [217<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png>]
-<ref_model/plots/comp_gstagefit_flt1mkt0.png, id=1622, 469.755pt x 469.755pt>
+<ref_model/plots/comp_gstagefit_flt1mkt0.png, id=1631, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_gstagefit_flt1mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_gstagefit_flt1mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_gstagefit_flt1mkt0.png  used on input line 9169.
+Package luatex.def Info: ref_model/plots/comp_gstagefit_flt1mkt0.png  used on input line 9203.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [218<./ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png>]
-<ref_model/plots/comp_gstagefit_flt3mkt0.png, id=1629, 469.755pt x 469.755pt>
+<ref_model/plots/comp_gstagefit_flt3mkt0.png, id=1638, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_gstagefit_flt3mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_gstagefit_flt3mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_gstagefit_flt3mkt0.png  used on input line 9182.
+Package luatex.def Info: ref_model/plots/comp_gstagefit_flt3mkt0.png  used on input line 9216.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [219<./ref_model/plots/comp_gstagefit_flt1mkt0.png>]
-<ref_model/plots/comp_gstagefit_flt5mkt0.png, id=1636, 469.755pt x 469.755pt>
+<ref_model/plots/comp_gstagefit_flt5mkt0.png, id=1645, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_gstagefit_flt5mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_gstagefit_flt5mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_gstagefit_flt5mkt0.png  used on input line 9195.
+Package luatex.def Info: ref_model/plots/comp_gstagefit_flt5mkt0.png  used on input line 9229.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [220<./ref_model/plots/comp_gstagefit_flt3mkt0.png>]
-<ref_model/plots/comp_gstagefit_flt6mkt0.png, id=1643, 469.755pt x 469.755pt>
+<ref_model/plots/comp_gstagefit_flt6mkt0.png, id=1653, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_gstagefit_flt6mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_gstagefit_flt6mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_gstagefit_flt6mkt0.png  used on input line 9208.
+Package luatex.def Info: ref_model/plots/comp_gstagefit_flt6mkt0.png  used on input line 9242.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [221<./ref_model/plots/comp_gstagefit_flt5mkt0.png>]
-<ref_model/plots/comp_gstagefit_flt10mkt0.png, id=1651, 469.755pt x 469.755pt>
+<ref_model/plots/comp_gstagefit_flt10mkt0.png, id=1660, 469.755pt x 469.755pt>
 File: ref_model/plots/comp_gstagefit_flt10mkt0.png Graphic file (type png)
 <use ref_model/plots/comp_gstagefit_flt10mkt0.png>
-Package luatex.def Info: ref_model/plots/comp_gstagefit_flt10mkt0.png  used on input line 9221.
+Package luatex.def Info: ref_model/plots/comp_gstagefit_flt10mkt0.png  used on input line 9255.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [222<./ref_model/plots/comp_gstagefit_flt6mkt0.png>]
-<ref_model/plots/index2_cpuefit_TRIENNIAL.png, id=1658, 469.755pt x 289.08pt>
+<ref_model/plots/index2_cpuefit_TRIENNIAL.png, id=1667, 469.755pt x 289.08pt>
 File: ref_model/plots/index2_cpuefit_TRIENNIAL.png Graphic file (type png)
 <use ref_model/plots/index2_cpuefit_TRIENNIAL.png>
-Package luatex.def Info: ref_model/plots/index2_cpuefit_TRIENNIAL.png  used on input line 9235.
+Package luatex.def Info: ref_model/plots/index2_cpuefit_TRIENNIAL.png  used on input line 9269.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [223<./ref_model/plots/comp_gstagefit_flt10mkt0.png>]
-<ref_model/plots/index2_cpuefit_AK_SLOPE.png, id=1665, 469.755pt x 289.08pt>
+<ref_model/plots/index2_cpuefit_AK_SLOPE.png, id=1674, 469.755pt x 289.08pt>
 File: ref_model/plots/index2_cpuefit_AK_SLOPE.png Graphic file (type png)
 <use ref_model/plots/index2_cpuefit_AK_SLOPE.png>
-Package luatex.def Info: ref_model/plots/index2_cpuefit_AK_SLOPE.png  used on input line 9249.
+Package luatex.def Info: ref_model/plots/index2_cpuefit_AK_SLOPE.png  used on input line 9283.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [224<./ref_model/plots/index2_cpuefit_TRIENNIAL.png>]
-<ref_model/plots/index2_cpuefit_NW_SLOPE.png, id=1672, 469.755pt x 289.08pt>
+<ref_model/plots/index2_cpuefit_NW_SLOPE.png, id=1681, 469.755pt x 289.08pt>
 File: ref_model/plots/index2_cpuefit_NW_SLOPE.png Graphic file (type png)
 <use ref_model/plots/index2_cpuefit_NW_SLOPE.png>
-Package luatex.def Info: ref_model/plots/index2_cpuefit_NW_SLOPE.png  used on input line 9263.
+Package luatex.def Info: ref_model/plots/index2_cpuefit_NW_SLOPE.png  used on input line 9297.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [225<./ref_model/plots/index2_cpuefit_AK_SLOPE.png>]
-<ref_model/plots/index2_cpuefit_WCGBTS.png, id=1679, 469.755pt x 289.08pt>
+<ref_model/plots/index2_cpuefit_WCGBTS.png, id=1688, 469.755pt x 289.08pt>
 File: ref_model/plots/index2_cpuefit_WCGBTS.png Graphic file (type png)
 <use ref_model/plots/index2_cpuefit_WCGBTS.png>
-Package luatex.def Info: ref_model/plots/index2_cpuefit_WCGBTS.png  used on input line 9278.
+Package luatex.def Info: ref_model/plots/index2_cpuefit_WCGBTS.png  used on input line 9312.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [226<./ref_model/plots/index2_cpuefit_NW_SLOPE.png>]
-<ref_model/plots/bio1_sizeatage.png, id=1686, 469.755pt x 289.08pt>
+<ref_model/plots/bio1_sizeatage.png, id=1695, 469.755pt x 289.08pt>
 File: ref_model/plots/bio1_sizeatage.png Graphic file (type png)
 <use ref_model/plots/bio1_sizeatage.png>
-Package luatex.def Info: ref_model/plots/bio1_sizeatage.png  used on input line 9292.
+Package luatex.def Info: ref_model/plots/bio1_sizeatage.png  used on input line 9326.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [227<./ref_model/plots/index2_cpuefit_WCGBTS.png>]
-<ref_model/plots/sel01_multiple_fleets_length1.png, id=1693, 469.755pt x 289.08pt>
+<ref_model/plots/sel01_multiple_fleets_length1.png, id=1702, 469.755pt x 289.08pt>
 File: ref_model/plots/sel01_multiple_fleets_length1.png Graphic file (type png)
 <use ref_model/plots/sel01_multiple_fleets_length1.png>
-Package luatex.def Info: ref_model/plots/sel01_multiple_fleets_length1.png  used on input line 9306.
+Package luatex.def Info: ref_model/plots/sel01_multiple_fleets_length1.png  used on input line 9340.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [228<./ref_model/plots/bio1_sizeatage.png>]
-<ref_model/plots/All_selectivityPlot.png, id=1700, 469.755pt x 469.755pt>
+<ref_model/plots/All_selectivityPlot.png, id=1709, 469.755pt x 469.755pt>
 File: ref_model/plots/All_selectivityPlot.png Graphic file (type png)
 <use ref_model/plots/All_selectivityPlot.png>
-Package luatex.def Info: ref_model/plots/All_selectivityPlot.png  used on input line 9319.
+Package luatex.def Info: ref_model/plots/All_selectivityPlot.png  used on input line 9353.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [229<./ref_model/plots/sel01_multiple_fleets_length1.png>]
-<ref_model/plots/sel02_multiple_fleets_age2.png, id=1707, 469.755pt x 289.08pt>
+<ref_model/plots/sel02_multiple_fleets_age2.png, id=1716, 469.755pt x 289.08pt>
 File: ref_model/plots/sel02_multiple_fleets_age2.png Graphic file (type png)
 <use ref_model/plots/sel02_multiple_fleets_age2.png>
-Package luatex.def Info: ref_model/plots/sel02_multiple_fleets_age2.png  used on input line 9332.
+Package luatex.def Info: ref_model/plots/sel02_multiple_fleets_age2.png  used on input line 9366.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [230<./ref_model/plots/All_selectivityPlot.png>]
-<plots_4_doc/lnR0.png, id=1713, 398.6895pt x 310.761pt>
+<plots_4_doc/lnR0.png, id=1723, 398.6895pt x 310.761pt>
 File: plots_4_doc/lnR0.png Graphic file (type png)
 <use plots_4_doc/lnR0.png>
-Package luatex.def Info: plots_4_doc/lnR0.png  used on input line 9345.
+Package luatex.def Info: plots_4_doc/lnR0.png  used on input line 9379.
 (luatex.def)             Requested size: 398.68852pt x 310.76024pt.
 
 
 [231<./ref_model/plots/sel02_multiple_fleets_age2.png>]
 File: ref_model/plots/ts7_Spawning_output_with_95_intervals.png Graphic file (type png)
 <use ref_model/plots/ts7_Spawning_output_with_95_intervals.png>
-Package luatex.def Info: ref_model/plots/ts7_Spawning_output_with_95_intervals.png  used on input line 9358.
+Package luatex.def Info: ref_model/plots/ts7_Spawning_output_with_95_intervals.png  used on input line 9392.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [232<./plots_4_doc/lnR0.png>]
 File: ref_model/plots/ts9_Relative_spawning_output_intervals.png Graphic file (type png)
 <use ref_model/plots/ts9_Relative_spawning_output_intervals.png>
-Package luatex.def Info: ref_model/plots/ts9_Relative_spawning_output_intervals.png  used on input line 9371.
+Package luatex.def Info: ref_model/plots/ts9_Relative_spawning_output_intervals.png  used on input line 9405.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [233]
 File: ref_model/plots/recdevs2_withbars.png Graphic file (type png)
 <use ref_model/plots/recdevs2_withbars.png>
-Package luatex.def Info: ref_model/plots/recdevs2_withbars.png  used on input line 9384.
+Package luatex.def Info: ref_model/plots/recdevs2_withbars.png  used on input line 9418.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [234]
-<ref_model/plots/recruit_fit_bias_adjust.png, id=1736, 469.755pt x 289.08pt>
+<ref_model/plots/recruit_fit_bias_adjust.png, id=1745, 469.755pt x 289.08pt>
 File: ref_model/plots/recruit_fit_bias_adjust.png Graphic file (type png)
 <use ref_model/plots/recruit_fit_bias_adjust.png>
-Package luatex.def Info: ref_model/plots/recruit_fit_bias_adjust.png  used on input line 9397.
+Package luatex.def Info: ref_model/plots/recruit_fit_bias_adjust.png  used on input line 9431.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [235]
 File: ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png Graphic file (type png)
 <use ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png>
-Package luatex.def Info: ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png  used on input line 9411.
+Package luatex.def Info: ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png  used on input line 9445.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [236<./ref_model/plots/recruit_fit_bias_adjust.png>]
-<ref_model/plots/SR_curve2.png, id=1748, 469.755pt x 469.755pt>
+<ref_model/plots/SR_curve2.png, id=1757, 469.755pt x 469.755pt>
 File: ref_model/plots/SR_curve2.png Graphic file (type png)
 <use ref_model/plots/SR_curve2.png>
-Package luatex.def Info: ref_model/plots/SR_curve2.png  used on input line 9424.
+Package luatex.def Info: ref_model/plots/SR_curve2.png  used on input line 9458.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
 [237]
 
 [238<./ref_model/plots/SR_curve2.png>]
-<ref_model/plots/SPR3_ratiointerval.png, id=1759, 469.755pt x 289.08pt>
 File: ref_model/plots/SPR3_ratiointerval.png Graphic file (type png)
 <use ref_model/plots/SPR3_ratiointerval.png>
-Package luatex.def Info: ref_model/plots/SPR3_ratiointerval.png  used on input line 9441.
+Package luatex.def Info: ref_model/plots/SPR3_ratiointerval.png  used on input line 9475.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 File: ref_model/plots/SPR4_phase.png Graphic file (type png)
 <use ref_model/plots/SPR4_phase.png>
-Package luatex.def Info: ref_model/plots/SPR4_phase.png  used on input line 9454.
+Package luatex.def Info: ref_model/plots/SPR4_phase.png  used on input line 9488.
 (luatex.def)             Requested size: 469.75386pt x 469.75386pt.
 
 
-[239<./ref_model/plots/SPR3_ratiointerval.png>]
-<ref_model/plots/yield2_yield_curve_with_refpoints.png, id=1766, 469.755pt x 289.08pt>
+[239]
 File: ref_model/plots/yield2_yield_curve_with_refpoints.png Graphic file (type png)
 <use ref_model/plots/yield2_yield_curve_with_refpoints.png>
-Package luatex.def Info: ref_model/plots/yield2_yield_curve_with_refpoints.png  used on input line 9467.
+Package luatex.def Info: ref_model/plots/yield2_yield_curve_with_refpoints.png  used on input line 9501.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
 [240]
-<ref_model/plots/ts_DynamicB0.png, id=1772, 469.755pt x 289.08pt>
+<ref_model/plots/ts_DynamicB0.png, id=1779, 469.755pt x 289.08pt>
 File: ref_model/plots/ts_DynamicB0.png Graphic file (type png)
 <use ref_model/plots/ts_DynamicB0.png>
-Package luatex.def Info: ref_model/plots/ts_DynamicB0.png  used on input line 9480.
+Package luatex.def Info: ref_model/plots/ts_DynamicB0.png  used on input line 9514.
 (luatex.def)             Requested size: 469.75386pt x 289.07928pt.
 
 
-[241<./ref_model/plots/yield2_yield_curve_with_refpoints.png>]
-<Retros/compare2_spawnbio_uncertainty.png, id=1780, 469.755pt x 361.35pt>
+[241]
+<Retros/compare2_spawnbio_uncertainty.png, id=1786, 469.755pt x 361.35pt>
 File: Retros/compare2_spawnbio_uncertainty.png Graphic file (type png)
 <use Retros/compare2_spawnbio_uncertainty.png>
-Package luatex.def Info: Retros/compare2_spawnbio_uncertainty.png  used on input line 9496.
+Package luatex.def Info: Retros/compare2_spawnbio_uncertainty.png  used on input line 9530.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [242<./ref_model/plots/ts_DynamicB0.png>]
-<Retros/compare4_Bratio_uncertainty.png, id=1788, 469.755pt x 361.35pt>
+<Retros/compare4_Bratio_uncertainty.png, id=1793, 469.755pt x 361.35pt>
 File: Retros/compare4_Bratio_uncertainty.png Graphic file (type png)
 <use Retros/compare4_Bratio_uncertainty.png>
-Package luatex.def Info: Retros/compare4_Bratio_uncertainty.png  used on input line 9510.
+Package luatex.def Info: Retros/compare4_Bratio_uncertainty.png  used on input line 9544.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [243<./Retros/compare2_spawnbio_uncertainty.png>]
 
 [244<./Retros/compare4_Bratio_uncertainty.png>]
-<Sensis/output/indicescompare2_spawnbio_uncertainty.png, id=1801, 469.755pt x 361.35pt>
+<Sensis/output/indicescompare2_spawnbio_uncertainty.png, id=1806, 469.755pt x 361.35pt>
 File: Sensis/output/indicescompare2_spawnbio_uncertainty.png Graphic file (type png)
 <use Sensis/output/indicescompare2_spawnbio_uncertainty.png>
-Package luatex.def Info: Sensis/output/indicescompare2_spawnbio_uncertainty.png  used on input line 9526.
+Package luatex.def Info: Sensis/output/indicescompare2_spawnbio_uncertainty.png  used on input line 9560.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
-<Sensis/output/indicescompare4_Bratio_uncertainty.png, id=1802, 469.755pt x 361.35pt>
+<Sensis/output/indicescompare4_Bratio_uncertainty.png, id=1807, 469.755pt x 361.35pt>
 File: Sensis/output/indicescompare4_Bratio_uncertainty.png Graphic file (type png)
 <use Sensis/output/indicescompare4_Bratio_uncertainty.png>
-Package luatex.def Info: Sensis/output/indicescompare4_Bratio_uncertainty.png  used on input line 9539.
+Package luatex.def Info: Sensis/output/indicescompare4_Bratio_uncertainty.png  used on input line 9573.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [245<./Sensis/output/indicescompare2_spawnbio_uncertainty.png>]
-<Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png, id=1809, 469.755pt x 361.35pt>
+<Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png, id=1814, 469.755pt x 361.35pt>
 File: Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png Graphic file (type png)
 <use Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png>
-Package luatex.def Info: Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png  used on input line 9552.
+Package luatex.def Info: Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png  used on input line 9586.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [246<./Sensis/output/indicescompare4_Bratio_uncertainty.png>]
-<Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png, id=1816, 469.755pt x 361.35pt>
+<Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png, id=1821, 469.755pt x 361.35pt>
 File: Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png Graphic file (type png)
 <use Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png>
-Package luatex.def Info: Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png  used on input line 9565.
+Package luatex.def Info: Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png  used on input line 9599.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [247<./Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png>]
-<Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png, id=1823, 469.755pt x 361.35pt>
+<Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png, id=1828, 469.755pt x 361.35pt>
 File: Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png Graphic file (type png)
 <use Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png>
-Package luatex.def Info: Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png  used on input line 9579.
+Package luatex.def Info: Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png  used on input line 9613.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [248<./Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png>]
-<Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png, id=1829, 469.755pt x 361.35pt>
+<Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png, id=1834, 469.755pt x 361.35pt>
 File: Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png Graphic file (type png)
 <use Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png>
-Package luatex.def Info: Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png  used on input line 9592.
+Package luatex.def Info: Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png  used on input line 9626.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [249<./Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png>]
-<Sensis/output/age_compscompare2_spawnbio_uncertainty.png, id=1836, 469.755pt x 361.35pt>
+<Sensis/output/age_compscompare2_spawnbio_uncertainty.png, id=1841, 469.755pt x 361.35pt>
 File: Sensis/output/age_compscompare2_spawnbio_uncertainty.png Graphic file (type png)
 <use Sensis/output/age_compscompare2_spawnbio_uncertainty.png>
-Package luatex.def Info: Sensis/output/age_compscompare2_spawnbio_uncertainty.png  used on input line 9606.
+Package luatex.def Info: Sensis/output/age_compscompare2_spawnbio_uncertainty.png  used on input line 9640.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [250<./Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png>]
-<Sensis/output/age_compscompare4_Bratio_uncertainty.png, id=1843, 469.755pt x 361.35pt>
+<Sensis/output/age_compscompare4_Bratio_uncertainty.png, id=1849, 469.755pt x 361.35pt>
 File: Sensis/output/age_compscompare4_Bratio_uncertainty.png Graphic file (type png)
 <use Sensis/output/age_compscompare4_Bratio_uncertainty.png>
-Package luatex.def Info: Sensis/output/age_compscompare4_Bratio_uncertainty.png  used on input line 9619.
+Package luatex.def Info: Sensis/output/age_compscompare4_Bratio_uncertainty.png  used on input line 9653.
 (luatex.def)             Requested size: 469.75386pt x 361.34912pt.
 
 
 [251<./Sensis/output/age_compscompare2_spawnbio_uncertainty.png>]
-<Sensis/output/sens_summary.png, id=1851, 433.62pt x 469.755pt>
+<Sensis/output/sens_summary.png, id=1856, 433.62pt x 469.755pt>
 File: Sensis/output/sens_summary.png Graphic file (type png)
 <use Sensis/output/sens_summary.png>
-Package luatex.def Info: Sensis/output/sens_summary.png  used on input line 9633.
+Package luatex.def Info: Sensis/output/sens_summary.png  used on input line 9667.
 (luatex.def)             Requested size: 433.61894pt x 469.75386pt.
 
 
 [252<./Sensis/output/age_compscompare4_Bratio_uncertainty.png>]
 
-LaTeX Warning: File `Sensis/output/data_sensitivities.png' not found on input line 9647.
+LaTeX Warning: File `Sensis/output/data_sensitivities.png' not found on input line 9681.
 
 
 ! Package luatex.def Error: File `Sensis/output/data_sensitivities.png' not found: using draft setting.
@@ -19055,16 +19081,16 @@ See the luatex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9647 ...io]{Sensis/output/data_sensitivities.png}}
+l.9681 ...io]{Sensis/output/data_sensitivities.png}}
                                                   
 
 Here is how much of LuaTeX's memory you used:
- 49961 strings out of 470203
- 1164312,2373549 words of node,token memory allocated
- 96083 words of node memory still in use:
-   27 hlist, 5 vlist, 11 rule, 14 disc, 4 local_par, 4 dir, 50 glue, 13 kern, 14 penalty, 1 margin_kern, 124 glyph, 35043 attribute, 94 glue_spec, 11687 attribute_list, 3 temp, 7 if_stack, 2 write, 1 user_defined, 2 pdf_dest, 10 pdf_action, 14 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:17,2:189033,3:7653,4:5635,5:2206,6:2816,7:44631,8:118,9:28632,10:26,11:2316,12:1
- 76437 multiletter control sequences out of 65536+600000
- 127 fonts using 44814203 bytes
+ 49970 strings out of 470203
+ 1164299,2373549 words of node,token memory allocated
+ 96315 words of node memory still in use:
+   27 hlist, 5 vlist, 11 rule, 14 disc, 4 local_par, 4 dir, 50 glue, 13 kern, 14 penalty, 1 margin_kern, 124 glyph, 35130 attribute, 94 glue_spec, 11716 attribute_list, 3 temp, 7 if_stack, 2 write, 1 user_defined, 2 pdf_dest, 10 pdf_action, 14 pdf_colorstack, 1 pdf_setmatrix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 1:18,2:189033,3:7653,4:5635,5:2205,6:2816,7:44631,8:118,9:28632,10:26,11:2316,12:1
+ 76438 multiletter control sequences out of 65536+600000
+ 127 fonts using 44814823 bytes
  108i,21n,122p,10948b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
 !  ==> Fatal error occurred, no output PDF file produced!

@@ -249,19 +249,6 @@ knitr::include_graphics(file.path(model_dir,"plots/SPR3_ratiointerval.png"))
 
 ```
 
-```{r} 
-#| label: fig-es-kobe
-#| echo: false 
-#| warning: false 
-#| eval: true 
-#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
-#| fig-alt: "See table @tbl-ts for the values of the fraction unfished and fishing intensity which are related in this figure."
-#| fig-pos: H
-
-knitr::include_graphics(file.path(model_dir,"plots/SPR4_phase.png"))
-
-```
-
 ## Ecosysystem Consideration
 Rockfishes are an important component of the California Current ecosystem along the U.S. West Coast, with its many dozens of species filling various niches in both soft and hard bottom habitats from the nearshore to the continental slope. `r spp` are one of the larger species of rockfishes and occupy shelf areas when they are young and move into deeper slope waters with age.  As they age, they tend to become more solitary, but may form aggregations during the spawning season.  Due to a paucity of life-history data for `r spp`, most ecosystem considerations are implied from the understanding of rockfishes in general.
 

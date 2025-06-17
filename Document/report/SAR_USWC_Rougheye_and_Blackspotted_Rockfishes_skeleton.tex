@@ -831,8 +831,9 @@ the catch relative to age 26+ biomass. This metric is included because
 interpretation is simple, but it is not used as a basis for management.
 
 Exploitation rates were below the management target of a fishing
-intensity that leads to a SPR of 0.5 throughout the entire time series
-(Table~\ref{tbl-es-spr}, Figure~\ref{fig-es-kobe}).
+intensity that leads to a SPR of 0.5 throughout most of the time series
+except for 1995, when the catch peaked at 744 metric tons
+(Table~\ref{tbl-es-spr}, Figure~\ref{fig-es-spr}).
 
 \begingroup
 \fontsize{9.0pt}{10.8pt}\selectfont
@@ -869,12 +870,16 @@ Year & 1-SPR & Lower Interval (SPR) & Upper Interval (SPR) & Exploitation Rate &
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
 
 }
 
-\caption{\label{fig-es-kobe}Phase plot of fishing intensity versus
-fraction unfished.}
+\caption{\label{fig-es-spr}Estimated time series of the fishing
+intensity (1 - SPR), where SPR is the spawning potential ratio, with
+approximate 95\% asymptotic intervals. The horizontal line at 0.5
+corresponds to SPR = 0.5, the management reference point. The horizontal
+line at 1.0 corresponds to SPR = 0 (all spawning fish removed from the
+population).}
 
 \end{figure}%
 
@@ -909,7 +914,8 @@ A list of estimates of the current state of the population, as well as
 reference points based on 1) a target unfished spawning output of 40\%,
 2) a spawning potential ratio of 0.5, and 3) the model estimate of
 maximum sustainable yield, are all listed in
-Table~\ref{tbl-ref-points-es}.
+Table~\ref{tbl-ref-points-es}. Equilibrium yield curve for the base case
+model is shown in Figure~\ref{fig-es-yield}.
 
 Unfished spawning stock output for Rougheye/Blackspotted Rockfishes is
 estimated to be 5,647,660 million eggs (95\% confidence interval:
@@ -918,13 +924,14 @@ Rougheye/Blackspotted Rockfishes is defined as 40\% of the unfished
 spawning output (𝐵40\%), which is estimated by the model to be 2,259,070
 million eggs (95\% confidence interval: \textless1--5,032,478 million
 eggs), which corresponds, in a theoretical equilibrium state, to an
-exploitation rate (catch / age 26+ biomass) of 0.048. This harvest rate
-provides an equilibrium yield of 553 mt at 𝐵40\% (95\% confidence
-interval: 0--1,224 mt). Catch limits are determined by an SPR = 50\%
-reference point which is associated with equilibrium exploitation rate
-of 0.040. The model estimate of maximum sustainable yield (MSY) is 592
-mt (95\% confidence interval: 0--1,311 mt). The estimated spawning stock
-output at MSY is 1,497,160 million eggs (95\% confidence interval:
+exploitation rate (catch / age 26+ biomass) of 0.048
+(@Table~\ref{tbl-ref-points-es}, Figure~\ref{fig-es-yield}). This
+harvest rate provides an equilibrium yield of 553 mt at 𝐵40\% (95\%
+confidence interval: 0--1,224 mt). Catch limits are determined by an SPR
+= 50\% reference point which is associated with equilibrium exploitation
+rate of 0.040. The model estimate of maximum sustainable yield (MSY) is
+592 mt (95\% confidence interval: 0--1,311 mt). The estimated spawning
+stock output at MSY is 1,497,160 million eggs (95\% confidence interval:
 0--3,337,633 million eggs). The exploitation rate corresponding to the
 estimated FMSY proxy of SPR = 34\% is 0.085.
 
@@ -970,6 +977,33 @@ MSY (mt) & 592 & -127 & 1,311 \\
 \end{longtable}
 
 \endgroup
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
+
+}
+
+\caption{\label{fig-es-kobe}Phase plot of fishing intensity versus
+fraction unfished.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/yield2_yield_curve_with_refpoints.png}}
+
+}
+
+\caption{\label{fig-es-yield}Equilibrium yield curve for the base case
+model. Values are based on the most recent fishery selectivities and
+retention curves and with steepness fixed at 0.72.}
+
+\end{figure}%
 
 \subsection{Management Performance}\label{management-performance}
 
