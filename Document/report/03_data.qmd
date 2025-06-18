@@ -136,7 +136,7 @@ Data from four fishery-independent surveys were used in this assessment:
 
 The surveys temporal and spatial coverage is summarized in @tbl-survey_coverage. 
 
-Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age-frequency distributions (WCGBTS). 
+Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age frequency distributions (WCGBTS). 
 
 Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. 
 
