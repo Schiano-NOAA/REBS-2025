@@ -770,8 +770,12 @@ cat("\\begin{landscape}\n")
 
 data_weighting_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_DATAWT.csv"))
 
+data_weighting_sens <- data_weighting_sens[, -1]
+
 data_weighting_sens |>
   gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
   tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE
