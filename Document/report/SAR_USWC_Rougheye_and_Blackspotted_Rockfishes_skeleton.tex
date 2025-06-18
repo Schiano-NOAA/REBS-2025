@@ -847,8 +847,8 @@ estimated FMSY proxy of SPR = 34\% is 0.085.
 
 \caption{\label{tbl-ref-points-es}Summary of reference points and
 management quantities, including estimates of the 95 percent confidence
-intervals. SO is spawning output, SPR is the spawning potential ratio,
-and MSY is maximum sustainable yield.}
+intervals. SO is spawning output (in millions of eggs), SPR is the
+spawning potential ratio, and MSY is maximum sustainable yield.}
 
 \tabularnewline
 
@@ -1011,7 +1011,7 @@ Tables}\label{harvest-projections-and-decision-tables}
 
 Projections of the overfishing limit, acceptable biological catch, and
 annual catch limit, all based on a \(P^*\) of 0.45 and a log-space
-standard deviation of the overfishing limit (\(\sigma\)) of 0.68 (as
+standard deviation of the overfishing limit (\(\sigma\)) of 0.67 (as
 estimated in this model) are included in Table~\ref{tbl-es-projections}.
 Assumed catches for 2025 and 2026 for this projection were provided by
 the PFMC Groundfish Management Team, and catches from 2027 onward assume
@@ -1035,8 +1035,8 @@ first two years of the projection period.}
 \toprule
 Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buffer & ABC (mt) & ACL (mt) & Spawning output & Fraction Unfished \\ 
 \midrule\addlinespace[2.5pt]
-2025 & — & — & 141 & — & — & — & — & 4,929,140.000 & 0.873 \\ 
-2026 & — & — & 174 & — & — & — & — & 4,945,630.000 & 0.876 \\ 
+2025 & 238 & 189 & 141 & — & — & — & — & 4,929,140.000 & 0.873 \\ 
+2026 & 237 & 187 & 174 & — & — & — & — & 4,945,630.000 & 0.876 \\ 
 2027 & — & — & — & 980 & 0.913 & 894 & 894 & 4,960,900.000 & 0.878 \\ 
 2028 & — & — & — & 968 & 0.908 & 878 & 878 & 4,888,090.000 & 0.866 \\ 
 2029 & — & — & — & 955 & 0.902 & 862 & 862 & 4,818,790.000 & 0.853 \\ 
@@ -1405,7 +1405,7 @@ conditions which could inform patterns in recruitment for species that
 are rarley caught in juvenile surveys, such as Rougheye/Blackspotted
 Rockfishes. For species that are primarily located north of Cape
 Mendocino 2021 and 2023 indicate good recruitment
-(\citeproc{ref-gasbarro_2025}{Gasbarro et al. 2025}), although it is
+(\citeproc{ref-gasbarro_2025}{\textbf{gasbarro\_2025?}}), although it is
 uncertain how well this trend applies to Rougheye/Blackspotted
 Rockfishes. The specific pathways through which environmental conditions
 exert influence on Rougheye/Blackspotted Rockfishes dynamics are
@@ -2672,8 +2672,8 @@ interactions, habitat factors or environmental factors into the
 assessment model. More predation, diet and habitat work, and mechanistic
 linkages to environmental conditions would be needed to incorporate
 these elements into the stock assessment and should remain a priority.
-(\citeproc{ref-McClure:2023:VCC}{\textbf{McClure:2023:VCC?}}) report the
-climate vulnerability for several west coast groundfishes, including
+McClure et al. (\citeproc{ref-mcclure2023}{2023}) report the climate
+vulnerability for several west coast groundfishes, including
 Rougheye/Blackspotted Rockfishes. Rougheye/Blackspotted Rockfishes
 demonstrated both high biological sensitivity and high climate exposure
 risk, to give it an overall high vulnerability score to climate change.
@@ -3952,30 +3952,47 @@ the uncertainty range can be expressed as one model output
 \subsubsection{Unresolved Problems and Major
 Uncertainties}\label{unresolved-problems-and-major-uncertainties-1}
 
-Rougheye/Blackspotted Rockfishes are one of the longest lived species of
-rockfish on the West Coast, with maximum ages of 169 years in this
-assessment, Individual as old as 205 years are reported in literature.
-It is, therefore, likely that natural mortality for
-Rougheye/Blackspotted Rockfishes is lower than for other rockfish
-species. With length and age data available only for years after 1994,
-there is limited ability to monitor the long-term changes of aging
-cohorts. Therefore, estimates of natural mortality are uncertain. This
-assessment attempts to capture uncertainty in this parameters and
-integrate it into the derived biomass estimates by estimating natural
-mortality for females, while fixing the male natural mortality at the
-value from meta-analytical study. Model sensitivities and profiles over
-M showed that current stock status was sensitive to the assumption about
-natural mortality.
+Rougheye/Blackspotted Rockfishes is relatively lightly exploited stock.
+The maximum annual catch amount over the entire time period of
+exploitation was 744 metric tons observed in 1995, and the average
+removals is slightly over 100 metric tons. For comparison, Widow
+Rockfish catches in recent years have over 12,000 metric tons, and in
+the early 1980s they were exceeding 28,000 metric tons a year.
 
-Model is also sensitive to assumptions about shape of the selectivity
-curves, especially for the bottom trawl and non-trawl fleet. In the
-previous assessment all fleets (except for Triennial Survey) were
-assumed asymptotic. In this assessment, we provided flexibility for the
-bottom trawl fleet and bottom trawl surveys to estimate dome-shaped
-selectivity curves. Changes in selectivity assumptions allow to
-substantially improve fits to length and age composition data in
-fisheries and surveys, but also resulted in a substantial increase of
-stock scale.
+Most likely, catches of Rougheye/Blackspotted Rockfishes were not
+substantial because Rougheye/Blackspotted Rockfishes is associated with
+steep slopes and boulder habitats, difficult to access with bottom trawl
+gears. Plus, it occurs in the northern part of the assessed area (off
+Oregon and Washington), and is only rarely taken by fisheries in
+California. Given this relatively light exploitation, the scale of
+Rougheye/Blackspotted Rockfishes is uncertain, as we did not observe
+large contrasts in the stock dynamics. Such contrasts between periods of
+depletion, followed by recovery (a.k.a. ``two-way trips'') provide more
+about carrying capacity, the intrinsic growth rate as well as scale of
+the population.
+
+Through extensive explorations, we found that stock scale is sensitive
+to assumptions about shape of the selectivity curves, especially for the
+bottom trawl. In the previous assessment all fleets (except for
+Triennial Survey) were assumed asymptotic. In this assessment, we
+provide flexibility for the bottom trawl and non-trawl fleets and bottom
+trawl surveys to estimate dome-shaped selectivity curves. Changes in
+selectivity assumptions enabled substantially improved fits to length
+and age composition data in fisheries and surveys, but also resulted in
+a substantial increase of stock scale.
+
+Stock scale is also sensitive to assumptions about natural mortality.
+Rougheye/Blackspotted Rockfishes is one of the longest lived species of
+rockfish on the West Coast, with maximum ages of 169 years in this
+assessment. Individuals as old as 205 years are reported in literature.
+It is therefore likely that natural mortality for Rougheye/Blackspotted
+Rockfishes is lower than for other rockfish species. With length and age
+data available only for years after 1994, there is limited ability to
+monitor the long-term changes of aging cohorts. Therefore, estimates of
+natural mortality are uncertain. This assessment attempts to capture
+uncertainty in this parameter and integrate it into the derived biomass
+estimates by estimating natural mortality for females, while fixing the
+male natural mortality at the value from meta-analytical study.
 
 \newpage{}
 
@@ -4130,11 +4147,11 @@ Further work focused on conditions north of Cape Mendocino would be
 required to assess the relevance of these studies for
 rougheye/blackspotted. In general, there may also be value in
 considering other more common rockfish as `proxies' that signal good
-recruitment for rarer Rougheye/Blackspotted. Gasbarro et al.
-(\citeproc{ref-gasbarro_2025}{2025}) found common trends in
-young-of-the-year rockfish within assemblages of similar species.
-However, it is unclear what other species might be used as proxies for
-rougheye, or might exhibit similar recruitment patterns.
+recruitment for rarer Rougheye/Blackspotted.
+(\citeproc{ref-gasbarro_2025}{\textbf{gasbarro\_2025?}}) found common
+trends in young-of-the-year rockfish within assemblages of similar
+species. However, it is unclear what other species might be used as
+proxies for rougheye, or might exhibit similar recruitment patterns.
 
 Annual variation in the abundance and distribution of
 Rougheye/Blackspotted rockfish north of 42 °N was estimated from species
@@ -4371,14 +4388,6 @@ Francis, R. I. C. Chris. 2011. {``Data Weighting in Statistical
 Fisheries Stock Assessment Models.''} \emph{Canadian Journal of
 Fisheries and Aquatic Sciences} 68 (6): 1124--38.
 \url{https://doi.org/10.1139/f2011-025}.
-
-\bibitem[\citeproctext]{ref-gasbarro_2025}
-Gasbarro, R., J. A. Santora, M. Cimino, A. Schonfeld, S. J. Bograd, E.
-L. Hazen, B. K. Wells, and J. C. Field. 2025. {``Spatiotemporal Patterns
-of Variability in the Abundance and Distribution of Winter-Spawned
-Pelagic Juvenile Rockfish in the {C}alifornia {C}urrent.''}
-\emph{Journal of Bioegeography} 52.
-\url{https://doi.org/10.1371/journal.pone.0251638}.
 
 \bibitem[\citeproctext]{ref-gharrett_genetically_2006}
 Gharrett, A. J., C. W. Mecklenburg, L. W. Seeb, Z. Li, A. P. Matala, A.
@@ -6132,8 +6141,8 @@ Crash Pen & 0.0 \\
 
 \caption{\label{tbl-ref-points}Summary of reference points and
 management quantities, including estimates of the 95 percent confidence
-intervals. SO is spawning output, SPR is the spawning potential ratio,
-and MSY is maximum sustainable yield.}
+intervals. SO is spawning output (in millions of eggs), SPR is the
+spawning potential ratio, and MSY is maximum sustainable yield.}
 
 \tabularnewline
 
@@ -7417,8 +7426,8 @@ first two years of the projection period.}
 \toprule
 Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buffer & ABC (mt) & ACL (mt) & Spawning output & Fraction Unfished \\ 
 \midrule\addlinespace[2.5pt]
-2025 & — & — & 141 & — & — & — & — & 4,929,140.000 & 0.873 \\ 
-2026 & — & — & 174 & — & — & — & — & 4,945,630.000 & 0.876 \\ 
+2025 & 238 & 189 & 141 & — & — & — & — & 4,929,140.000 & 0.873 \\ 
+2026 & 237 & 187 & 174 & — & — & — & — & 4,945,630.000 & 0.876 \\ 
 2027 & — & — & — & 980 & 0.913 & 894 & 894 & 4,960,900.000 & 0.878 \\ 
 2028 & — & — & — & 968 & 0.908 & 878 & 878 & 4,888,090.000 & 0.866 \\ 
 2029 & — & — & — & 955 & 0.902 & 862 & 862 & 4,818,790.000 & 0.853 \\ 
