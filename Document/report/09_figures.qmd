@@ -756,6 +756,8 @@ knitr::include_graphics(
 )
 ``` 
 
+\newpage
+
 ```{r} 
 #| label: fig-bimodal-lengths
 #| echo: false 
