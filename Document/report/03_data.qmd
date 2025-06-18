@@ -236,7 +236,7 @@ There are no `r spp` age data from the AFSC Slope Survey.
 ### NWFSC Slope Survey
 
 #### Survey Description
-The NWFSC slope survey was conducted annually from 1999 to 2002. The survey’s design and sampling methods are described in Keller et al.(2007). The surveyed area ranged between 34°50’ and 48°07’ N. latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey INPFC areas, and a portion of the Conception area, and consistently covered depths from 100 to 700 fm (183-1280 m) (Table XX).
+The NWFSC slope survey was conducted annually from 1999 to 2002. The survey’s design and sampling methods are described in Keller et al.(2007). The surveyed area ranged between 34°50’ and 48°07’ N. latitude, encompassing the U.S. Vancouver, Columbia, Eureka, Monterey INPFC areas, and a portion of the Conception area, and consistently covered depths from 100 to 700 fm (183-1280 m) (@tbl-survey_strata).
 
 #### Abundance Index
 The prediction grid was truncated to only include available survey locations in depths deeper than 183 to limit extrapolating beyond the data and edge effects. 
