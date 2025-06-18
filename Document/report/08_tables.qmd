@@ -535,7 +535,7 @@ parcount_table |>
 
  {{< pagebreak >}} 
  
-```{r}
+```{r, results = "asis"}
 #| label: tbl-param
 #| warning: false
 #| echo: false
@@ -562,6 +562,8 @@ par_table |>
     align = "left"
   ) |>
   gt::cols_width(
+    1 ~ px(200),
+    7 ~ px(150),
     everything() ~ px(75)  
   ) |>
   gt::as_latex()
