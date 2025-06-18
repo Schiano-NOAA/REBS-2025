@@ -63,7 +63,7 @@ In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on t
 
 The discard amounts of `r Spp` for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl), for both the catch share and the non-catch share sector. The discarding amounts of `r Spp` within bottom trawl and non-trawl fleets were included in the model as separate fleets. 
 
-Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard amounts averaging to 10kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
+Mid-water trawl discard was not present in non-catch share sector and was extremely minimal (virtually non-existing) in catch-share sector, with discard amounts averaging to 10 kg per year. Therefore, in the model, no discard was assumed for mid-water trawl fleet. 
 
 ##### Bottom Trawl Discard
 Bottom trawl discard amounts by year are provided in @tbl-landings and shown in @fig-landings. Prior to 2011, before the start of the catch share program, the discard of `r Spp` ranged between 1 metric ton and 60 metric tons, averaging at 23 metric tons a year. After 2011, the discard has been very low, not exceeding 0.5 metric ton a year. No discard data were available for 2024, and we used the average discard amount for 2019 - 2023 period to approximate 2024 discards for bottom trawl discard fleet.
