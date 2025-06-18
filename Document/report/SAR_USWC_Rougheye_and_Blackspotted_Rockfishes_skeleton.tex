@@ -1106,11 +1106,13 @@ complex.
 
 Rougheye rockfish are a long-lived rockfish named after a series of 2-10
 spines along the lower rim of their eyes. They have also been called
-blackthroat or blacktip rockfish Love
-(\citeproc{ref-love_certainly_2011}{2011}). Blackspotted rockfish are
-distributed in similar locations as rougheye rockfish and it is very
-difficult to visually distinguish the two species. These two species may
-hybridize on occasion (\citeproc{ref-love_certainly_2011}{Love 2011}).
+blackthroat or blacktip rockfish
+(\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+2002}; \citeproc{ref-love_certainly_2011}{Love 2011}). Blackspotted
+rockfish are distributed in similar locations as rougheye rockfish and
+it is very difficult to visually distinguish the two species. These two
+species may hybridize on occasion
+(\citeproc{ref-love_certainly_2011}{Love 2011}).
 
 It has only been from recent genetic studies that these two separate
 species have been identified
@@ -3748,8 +3750,26 @@ logistic selectivity, it is a good candidate for a lower state of nature
 
 \subsubsection{Likelihood profiles}\label{likelihood-profiles-1}
 
+Likelihood profiles were conducted for the the log of initial
+recruitment (ln(\(R_0\))), steepness (\(h\)), and female male natural
+mortality (\(M\)) with female natural mortality estimated. Likelihood
+profiles were conducted by fixing the featured parameter(s) at specific
+values across a range of values and estimating all remaining parameters.
+A likelihood profile offers insight into model sensitivity to changing
+model parameter values, while providing an additional way to describe
+uncertainty in the parameter by identifying the range of parameters
+within 1.96 likelihood units of the reference model.
+
 \paragraph{Initial unfished recruitment
 (lnR0)}\label{initial-unfished-recruitment-lnr0}
+
+The profile on the assumption of \(lnR_0\), which sets the initial scale
+of the population) demonstrates the data and current model specification
+support value of \(lnR_0\) greater than 6.25, with a steep increase in
+likelihood difference as \(lnR_0\) goes lower. The is the expectant
+increase in scale across increasing \(lnR_0\) values for both initial
+and ending spawning output. The final spawning output goes down quicker
+than the initial spawning output, leading to a lower stock status.
 
 \paragraph{\texorpdfstring{Steepness
 (\(h\))}{Steepness (h)}}\label{steepness-h}
@@ -10098,7 +10118,7 @@ fisheries and time blocks.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/SR_LN(R0)_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}}
 
 }
 
@@ -10126,7 +10146,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/SR_BH_steep_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}}
 
 }
 
@@ -10154,7 +10174,7 @@ profile for each of the likelihood components.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/NatM_uniform_Mal_GP_1_trajectories_compare3_Bratio.png}}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}}
 
 }
 
