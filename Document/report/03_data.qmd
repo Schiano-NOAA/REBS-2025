@@ -38,7 +38,7 @@ Historical California and Oregon landings did not change substantially (@fig-Ct_
 The update in historical changes shows only minor differences in model outputs (@fig-Ct_compsSO; @fig-Ct_compsRSS).
 
 #### Bycatch in the foreign POP fishery
-Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast [@love_rockfishes_2002]. @rogers_species_2003 estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by @rogers_species_2003 were added to commercial bottom trawl fleet.
+Between mid-1960s and mid-1970s, foreign trawl fleets from the former Soviet Union, Japan, Poland, Bulgaria and East Germany targeted aggregations of Pacific ocean perch in the Northeast Pacific Ocean, in the waters off the U.S. West Coast [@love_rockfishes_2002]. @rogers_species_2003 estimated removals of rockfish species caught within this foreign POP fishery, including removals of `r Spp`. In the assessment, `r Spp` bycatch in the foreign POP fishery between 1966 and 1976 as estimated by @rogers_species_2003 were added to commercial bottom trawl fleet (@tbl-BT_landings).
 
 #### At-Sea Hake Catches
 `r Spp` has long been bycaught in the fishery for the coastal population of Pacific hake, which is almost exclusively conducted with mid-water trawls. 
