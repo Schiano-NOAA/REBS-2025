@@ -202,7 +202,7 @@ Spatial and spatiotemporal variation were included in the encounter probability 
 The estimated index is shown in @fig-Triennial_index. The index exhibits an increase in biomass from 1995 forward, that corresponds to a change in Triennial Survey depth coverage, when the survey extended to the deeper area @tbl-survey_coverage.
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
+ @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
@@ -225,7 +225,7 @@ Spatial and spatiotemporal variation were not included in either the encounter p
 The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is short, and does not exhibits significant change over the four year period. 
 
 #### Length Compositions
-Length bins from 10 to 80 cm in 2 cm increments were used to summarize the length frequency of the survey catches in each year. @tbl-survey_length_samples shows the number of lengths taken by the survey. 
+@tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
