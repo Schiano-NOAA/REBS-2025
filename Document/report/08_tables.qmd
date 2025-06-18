@@ -879,6 +879,30 @@ cat("\n\\end{landscape}\n")
 
  {{< pagebreak >}}  
  
+```{r}
+#| label: tbl-uncertainty_summary
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "PLACEHOLDER."
+
+uncertainty_sum <- read.csv(here::here("Document","report", "tables_4_doc", "Uncertainty_summary.csv"))
+
+uncertainty_sum |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}}  
+ 
  <!-- projections -->
 
 <!-- management-->
