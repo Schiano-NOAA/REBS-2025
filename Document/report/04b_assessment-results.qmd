@@ -46,13 +46,13 @@ Pearson residuals of fits to the fishery (@fig-peasrson-resids-fishery) and surv
 Model fits to the mean lengths, assuming Francis data-weighting of 1 and blocking patterns, demonstrate fits within the error bars of most years and no strong residual patterns (@fig-meanlt-bt to @fig-meanlt-wcgbts). A notable observation in the means lengths within blocks generally show a lack of trend, not surprising given how many years an individual may be at its maximum size. This is in contrast with the age data that do show more nuances in age structure trend (see next section on age fits for more detail). This demonstrates the general lack of contrast in the length data.
 
 
-### Ages
+#### Ages
 
-#### Conditional Age at Length
+##### Conditional Age at Length
 
 Fits to the sex-specific conditional age at length data are examined based on the age-at-length Pearson residuals, the annual mean ages, and mean age at length by year for the four fishery and one survey source. Pearson residuals were of reasonable size with no distinct patterns (@fig-peasrson-resids-age-bt1 to @fig-peasrson-resids-age-wcgbts3), as most of the residuals were small and not noteworthy and demonstrate the expected shape of the growth curve. There is more contrast in the age data compared to the length data (@fig-trawl-mean-caal to @fig-wcgbts-mean-caal). While the mean age for fisheries varied by gear selectivity (25-35 years for bottom trawl; 30-40 years for non-trawl; ~40 for midwater trawl; 40-50 years for the at-sea-hake fishery), one commonality was the increase in mean age in the last year of the model. This consistent increase in mean age across fisheries with different selectivities is important to remember when interpreting the retrospective pattern of the model. Mean age for the West Coast Groundfish Bottom Trawl survey, which catch much smaller and less larger individuals, fluctuated around 20 and did not show an mean age increase in the final year. Fits to the mean ages by length bins show acceptable fits consistent with model expectations (@fig-call-plot-bt1 to @fig-call-plot-wcgbts6).
 
-#### Marginal Age
+##### Marginal Age
 
 Marginal age compositions are not fit in the model, but they are included in order to see how well they fit the reference model without influencing the likelihood (@fig-marage_bt to @fig-marage_wcgbts). Marginal length and age composition cannot be used in the same model because of the overlap of fish in both samples. This is why ages conditioned on lengths are often used with the length compositions. But it still stands that age compositions, instead of lengths, could be used. So adding the marginal age compositions passively (i.e., not contributing to the overall likelihood of the model) can offer insight into how consistent they are with the current model fit. Overall the realized fits are good.  
 
