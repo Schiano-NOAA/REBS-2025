@@ -48,8 +48,8 @@ Model specifications looked at the treatment of life history parameters selectiv
 
 	* Natural mortality ($M$)
 
-		1. Estimate female $M$
-		2. Fix $M$ to 2013 value		
+		1. Estimate male $M$
+		2. Fix $M$ to 2013 value
 		3. Lorenzen age varying $M$
 	
 	* Growth parameters
