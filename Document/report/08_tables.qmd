@@ -152,34 +152,6 @@ kableExtra::kable(
 
 \pagebreak
 
-```{r, results = "asis"}
-#| label: tbl-management
-#| warning: false
-#| echo: false
-#| eval: !expr eval_tables 
-#| tbl-cap: !expr if(eval_tables) recent_management_cap 
-#| tbl-pos: H
-
-recent_management_table |>
-  gt::gt() |>
-  gt::fmt_number(
-    columns = 2:5,
-    decimals = 0
-  ) |>
-  gt::tab_options(
-    table.font.size = 12 
-  ) |>
-  gt::cols_align(
-    align = "center"
-  ) |>
-  gt::cols_width(
-    tidyselect::everything() ~ px(75)
-  ) |>
-  gt::as_latex()
-
-```
-
-\pagebreak
 
 <!-- data-->
 
