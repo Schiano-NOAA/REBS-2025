@@ -78,15 +78,17 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -243,7 +245,7 @@
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 \ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
+  \usepackage[english]{selnolig} % disable illegal ligatures
 \fi
 \usepackage{bookmark}
 
@@ -522,7 +524,7 @@ Year & Trawl & Trawl
 
 \centering{
 
-\includegraphics{ref_model/plots/catch2_landings_stacked.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/catch2_landings_stacked.png}}
 
 }
 
@@ -533,8 +535,8 @@ each fleet.}
 
 \subsection{Data and Assessments}\label{data-and-assessments}
 
-The only previous stock assessment for Rougheye/Blackspotted Rockfishes
-for the U.S. West Coast area was done in 2013
+The only previous benchmark stock assessment for Rougheye/Blackspotted
+Rockfishes for the U.S. West Coast area was done in 2013
 (\citeproc{ref-hicks_status_2013}{Hicks, Wetzel, and Harms 2013}). It
 was conducted with Stock Synthesis statistical catch-at-age modelling
 framework (\citeproc{ref-MethotWetzel2013}{Methot and Wetzel 2013}).
@@ -571,7 +573,7 @@ estimated. Stock-recruitment steepness is fixed at the value generated
 from meta-analytical study. The base model estimates parameters for
 selectivity based on length data, and estimated selectivity curves are a
 mix of dome-shaped (for bottom trawl gears) and logistic (for mid-water
-gears).
+trawl).
 
 \subsection{Stock Output and Dynamics}\label{stock-output-and-dynamics}
 
@@ -620,7 +622,7 @@ Year & Spawning output & Lower Interval (mt) & Upper Interval (mt) & Fraction Un
 
 \centering{
 
-\includegraphics{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}}
 
 }
 
@@ -633,7 +635,7 @@ Year & Spawning output & Lower Interval (mt) & Upper Interval (mt) & Fraction Un
 
 \centering{
 
-\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
 
 }
 
@@ -692,7 +694,7 @@ Year & Recruitment (1,000s) & Lower Interval (1,000s) & Upper Interval (1,000s) 
 
 \centering{
 
-\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}}
 
 }
 
@@ -705,7 +707,7 @@ for the base model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/recdevs2_withbars.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recdevs2_withbars.png}}
 
 }
 
@@ -770,7 +772,7 @@ Year & 1-SPR & Lower Interval (SPR) & Upper Interval (SPR) & Exploitation Rate &
 
 \centering{
 
-\includegraphics{ref_model/plots/SPR3_ratiointerval.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
 
 }
 
@@ -810,12 +812,12 @@ Rockfishes that provide insights into these effects.
 
 \subsection{Reference Points}\label{reference-points}
 
-A list of estimates of the current state of the population, as well as
-reference points based on 1) a target unfished spawning output of 40\%,
-2) a spawning potential ratio of 0.5, and 3) the model estimate of
-maximum sustainable yield, are all listed in
-Table~\ref{tbl-ref-points-es}. Equilibrium yield curve for the base case
-model is shown in Figure~\ref{fig-es-yield}.
+Estimates of the current state of the population, as well as reference
+points based on 1) a target unfished spawning output of 40\%, 2) a
+spawning potential ratio of 0.5, and 3) the model estimate of maximum
+sustainable yield, are all listed in Table~\ref{tbl-ref-points-es}.
+Equilibrium yield curve for the base case model is shown in
+Figure~\ref{fig-es-yield}.
 
 Unfished spawning stock output for Rougheye/Blackspotted Rockfishes is
 estimated to be 5,647,660 million eggs (95\% confidence interval:
@@ -882,7 +884,7 @@ MSY (mt) & 592 & -127 & 1,311 \\
 
 \centering{
 
-\includegraphics{ref_model/plots/SPR4_phase.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
 
 }
 
@@ -895,7 +897,7 @@ fraction unfished.}
 
 \centering{
 
-\includegraphics{ref_model/plots/yield2_yield_curve_with_refpoints.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/yield2_yield_curve_with_refpoints.png}}
 
 }
 
@@ -909,7 +911,7 @@ retention curves and with steepness fixed at 0.72.}
 
 In the last ten years total dead catches of Rougheye/Blackspotted
 Rockfishes have been below the annual catch limit. The last ten years
-total dead catches for Rougheye/Blackspotted Rockfishes against he
+total dead catches for Rougheye/Blackspotted Rockfishes against the
 overfishing limits (OFLs), the acceptable biological catches (ABCs), the
 annual catch limits (ACLs) are shown in Table~\ref{tbl-es-management}.
 
@@ -949,39 +951,47 @@ uncertainties}\label{unresolved-problems-and-major-uncertainties}
 
 Rougheye/Blackspotted Rockfishes are one of the longest lived species of
 rockfish on the West Coast, with maximum ages of 169 years in this
-assessment, Individual as old as 205 years are reported in literature.
+assessment. Individual as old as 205 years are reported in literature.
 It is, therefore, likely that natural mortality for
 Rougheye/Blackspotted Rockfishes is lower than for other rockfish
 species. With length and age data available only for years after 1994,
 there is limited ability to monitor the long-term changes of aging
 cohorts. Therefore, estimates of natural mortality are uncertain. This
-assessment attempts to capture uncertainty in this parameters and
+assessment attempts to capture uncertainty in this parameter and
 integrate it into the derived biomass estimates by estimating natural
 mortality for females, while fixing the male natural mortality at the
-value from meta-analytical study. Model sensitivities and profiles over
-M showed that current stock status was sensitive to the assumption about
-natural mortality.
+value from meta-analytical study.
 
 Model is also sensitive to assumptions about shape of the selectivity
 curves, especially for the bottom trawl and non-trawl fleet. In the
 previous assessment all fleets (except for Triennial Survey) were
-assumed asymptotic. In this assessment, we provided flexibility for the
+assumed asymptotic. In this assessment, we provide flexibility for the
 bottom trawl fleet and bottom trawl surveys to estimate dome-shaped
 selectivity curves. Changes in selectivity assumptions allow to
 substantially improve fits to length and age composition data in
 fisheries and surveys, but also resulted in a substantial increase of
 stock scale.
 
+\subsection{Scientific Uncertainty}\label{scientific-uncertainty}
+
+The model estimated uncertainty (\(\sigma\)) around the 2025 spawning
+output for is 0.6836465. The uncertainty around the OFL is 0.6713586.
+These values underestimate the overall uncertainty as they do not
+incorporate the model structural uncertainty and do not account for any
+time-varying dynamics other than recruitment. The estimated uncertainty
+values are higher than the Category 1 default of 0.5, so all projections
+will use the estimated (\(\sigma\)).
+
 \subsection{Harvest Projections and Decision
 Tables}\label{harvest-projections-and-decision-tables}
 
 Projections of the overfishing limit, acceptable biological catch, and
 annual catch limit, all based on a \(P^*\) of 0.45 and a log-space
-standard deviation of the overfishing limit (\(\sigma\)) of 0.5 are
-included in Table~\ref{tbl-es-projections}. Assumed catches for 2025 and
-2026 for this projection were provided by the PFMC Groundfish Management
-Team, and catches from 2027 onward assume full attainment of the
-acceptable biological catch.
+standard deviation of the overfishing limit (\(\sigma\)) of 0.68 (as
+estimated in this model) are included in Table~\ref{tbl-es-projections}.
+Assumed catches for 2025 and 2026 for this projection were provided by
+the PFMC Groundfish Management Team, and catches from 2027 onward assume
+full attainment of the acceptable biological catch.
 
 No decision table needed in draft assessments undergoing review.
 
@@ -1021,21 +1031,11 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \end{landscape}
 
-\subsection{Scientific Uncertainty}\label{scientific-uncertainty}
-
-The model estimated uncertainty around the 2025 spawning output for is 𝜎
-= 0.6836465. The uncertainty around the OFL is 𝜎 = 0.6713586. These 𝜎
-values underestimate the overall uncertainty as they do not incorporate
-the model structural uncertainty and do not account for any time-varying
-dynamics other than recruitment. The estimated uncertainty values are
-higher than the Category 1 default 𝜎=0.5, so all projections will use
-the estimated 𝜎.
-
 \subsection{Research and Data Needs}\label{research-and-data-needs}
 
-There are many areas of research that could be improved to benefit the
-understanding and assessment of Rougheye/Blackspotted Rockfishes. Below,
-we identify several of them that we consider particularly important.
+There are many areas of research that would benefit the understanding
+and assessment of Rougheye/Blackspotted Rockfishes. Below, we identify
+several of them that we consider particularly important.
 
 \begin{itemize}
 \item
@@ -1066,15 +1066,12 @@ we identify several of them that we consider particularly important.
 \item
   Natural mortality: Uncertainty in natural mortality translates into
   uncertain estimates of status and sustainable fishing levels for
-  Rougheye/Blackspotted Rockfishes. Rougheye/Blackspotted Rockfishes are
-  one of the longest lived species of rockfish (with maximum age as old
-  as 205 years reported in the literature). Assessment model was able to
+  Rougheye/Blackspotted Rockfishes. Assessment model was able to
   estimate female natural mortality, consistent with maximum age based
-  meta-analytical prior, but with male natural mortality fixed at the
-  median of the prior. The collection of additional age data and further
-  research of the life-history of Rougheye/Blackspotted Rockfishes may
-  improve our understanding of Rougheye/Blackspotted Rockfishes natural
-  mortality.
+  meta-analytical prior, but male natural mortality was fixed in the
+  model. The collection of additional age data and further research of
+  the life-history of Rougheye/Blackspotted Rockfishes may improve our
+  understanding of Rougheye/Blackspotted Rockfishes natural mortality.
 \item
   Historical landings and discards, including investigation of fisheries
   selectivity: The substantial progress has been made in reconstructing
@@ -1105,11 +1102,13 @@ complex.
 
 Rougheye rockfish are a long-lived rockfish named after a series of 2-10
 spines along the lower rim of their eyes. They have also been called
-blackthroat or blacktip rockfish Love
-(\citeproc{ref-love_certainly_2011}{2011}). Blackspotted rockfish are
-distributed in similar locations as rougheye rockfish and it is very
-difficult to visually distinguish the two species. These two species may
-hybridize on occasion (\citeproc{ref-love_certainly_2011}{Love 2011}).
+blackthroat or blacktip rockfish
+(\citeproc{ref-love_rockfishes_2002}{Love, Yoklavich, and Thorsteinson
+2002}; \citeproc{ref-love_certainly_2011}{Love 2011}). Blackspotted
+rockfish are distributed in similar locations as rougheye rockfish and
+it is very difficult to visually distinguish the two species. These two
+species may hybridize on occasion
+(\citeproc{ref-love_certainly_2011}{Love 2011}).
 
 It has only been from recent genetic studies that these two separate
 species have been identified
@@ -2422,9 +2421,9 @@ which reader assignments are given to each year of ages by data source.
 Reader 7 is the mix of two readers that shared reading duties within
 years.
 
-Estimation of ageing error matrices used the approach of -A. E. Punt et
-al. (\citeproc{ref-punt_quantifying_2008}{2008}) in two different forms:
-one developed in AD Model Builder
+Estimation of ageing error matrices used the approach of
+(\citeproc{ref-punt_quantifying_2008}{2008}) in two different forms: one
+developed in AD Model Builder
 (\href{https://github.com/pfmc-assessments/nwfscAgeingError}{nwfscAgeingError}
 (\citeproc{ref-thorson_nwfscageingerror:_2012}{J. T. Thorson, Stewart,
 and Punt 2012})) and one adapted to Template Model Builder framework
@@ -2803,7 +2802,7 @@ most important changes made since the last assessment:
 \item
   Provided flexibility for the bottom trawl fleet and bottom trawl
   surveys to estimate dome-shaped selectivity
-  (Figure~\ref{fig-sel-tv-comp}), previously assumed asymptotic. This
+  (\textbf{?@fig-sel-tv-comp}), previously assumed asymptotic. This
   change was prompted by the lack of fit to length compositions data.
   Also, the examination of mean fish lengths by fleet indicated that the
   bottom trawl fleet capture smaller fish than mid-water trawl and
@@ -3430,9 +3429,10 @@ at least some of the larger individuals. Time-varying selectivity showed
 mostly the same functional form for each fleet, despite changes in the
 selectivity, except for the non-trawl fishery, which changed from
 dome-shaped in the earlier blocks to logistic in the most recent time
-period (Figure~\ref{fig-sel-tv-comp}). The realized age selectivity
-based on the length-based selectivity show even more truncated sampling
-of older individuals in some of the dome-shaped fleets
+period (Figure~\ref{fig-sel-tv-fisheries} and
+Figure~\ref{fig-sel-tv-surveys}). The realized age selectivity based on
+the length-based selectivity show even more truncated sampling of older
+individuals in some of the dome-shaped fleets
 (Figure~\ref{fig-sel-all-age}). Values for the estimated selectivity
 parameters are in Table~\ref{tbl-param}.
 
@@ -3589,7 +3589,7 @@ The following ageing error sensitivities were explored:
 
 Likelihood values and estimates of key parameters and derived quantities
 from each ageing error sensitivity are available in
-\textbf{?@tbl-sensitivities-age\_error}. Comparison plots for the
+Table~\ref{tbl-sensitivities-age-error}. Comparison plots for the
 results relative to the reference model are in
 Figure~\ref{fig-sensi-ageing-error} and
 Figure~\ref{fig-sensi-RE-ageing-error}. A drop in both stock scale and
@@ -3829,7 +3829,7 @@ nature}\label{summary-of-uncertainty-source-and-states-of-nature}
 
 Over the many different sources of potential uncertainty, patterns in
 how the these sources affect scale and status emerge
-(\textbf{?@tbl-uncertainty\_summary}). These sources highlight conflicts
+(Table~\ref{tbl-uncertainty_summary}). These sources highlight conflicts
 in data and selectivity assumptions, while also highlighting key
 uncertainty in natural mortality. Specifically, there are many ways to
 make the reference model at a higher or lower scale and/or stock status.
@@ -3884,48 +3884,41 @@ stock scale.
 
 Reference points were calculated using the estimated fishery selectivity
 and removals in the most recent year of the model (2024,
-Table~\ref{tbl-man-ref-points}). Sustainable total yields were 526.16 mt
-when using an \(SPR_{50\%}\) reference harvest rate. The spawning output
-equivalent to 40 percent of the unfished spawning output (\(SB_{40\%}\))
-was \ensuremath{2.51973\times 10^{6}} millions of eggs.
-
-The 2025 spawning output relative to unfished equilibrium spawning
-output is above the Rougheye/Blackspotted Rockfishes relative biomass
-target of 40 percent (Figure~\ref{fig-management-depletion}). The
-fishing intensity, \(1-SPR\), was below or just slightly above harvest
-rate limit (\(SPR_{50\%}\)) from the mid-1980s through the 1990s.
-Removals since 2000 have been below the point estimate of potential
-long-term yields calculated using an \(\text{SPR}_{50\%}\) reference
-point (Table~\ref{tbl-man-timeseries} and
-Figure~\ref{fig-one-minus-spr}). The equilibrium estimates of yield
-relative to biomass based on a steepness value fixed at 0.72 are
-provided in Figure~\ref{fig-management-yield}, where vertical dashed
-lines indicate the estimate of fraction unfished at the start of 2025
-(current) and the estimated management targets calculated based on the
-relative target biomass (B target), the SPR target, and the maximum
-sustainable yield (MSY).
-
-Reference points were based on the rockfish \(\text{F}_{MSY\%}\) proxy
-(\(\text{SPR}_{50\%}\)), target relative biomass (40\%), and estimated
-selectivity and catch for each fleet (Table~\ref{tbl-man-ref-points}).
-The proxy MSY values of management quantities are by definition more
-conservative compared to the estimated MSY and MSY relative to 40\% of
-unfished spawning output because of the assumed steepness value.
-Sustainable total yield, removals, using the proxy \(\text{SPR}_{50\%}\)
-is 526.16 mt. The spawning output equivalent to 40\% of the unfished
-spawning output (\(\text{SO}_{40\%}\)) calculated using the SPR target
+Table~\ref{tbl-man-ref-points}). Reference points were based on the
+rockfish \(\text{F}_{MSY\%}\) proxy (\(\text{SPR}_{50\%}\)), target
+relative biomass (40\%), and estimated selectivity and catch for each
+fleet (Table~\ref{tbl-man-ref-points}). The proxy MSY values of
+management quantities are by definition more conservative compared to
+the estimated MSY and MSY relative to 40\% of unfished spawning output
+because of the assumed steepness value. Sustainable total yield,
+removals, using the proxy \(\text{SPR}_{50\%}\) is 526.16 mt. The
+spawning output equivalent to 40\% of the unfished spawning output
+(\(\text{SO}_{40\%}\)) calculated using the SPR target
 (\(\text{SPR}_{50\%}\)) was \ensuremath{2.51973\times 10^{6}} millions
 of eggs.
 
 The 2025 spawning biomass relative to unfished equilibrium spawning
 biomass, based on the 2024 fishing year, is 87\%, above the management
-target of 40\% of unfished spawning output. The relative biomass and the
-ratio of the estimated SPR to the management target
-(\(\text{SPR}_{50\%}\)) across all model years are shown in
-Figure~\ref{fig-management-phase} where cooler colors (purple) represent
-early years and warmer colors (yellow) represent recent years. The stock
-staus has not decreased below the target relative biomass, and fishing
-intensity (except for in 1995) has been below the target fishing
+target of 40\% of unfished spawning output
+(Figure~\ref{fig-management-depletion}). The fishing intensity,
+\(1-SPR\), was below or just slightly above harvest rate limit
+(\(SPR_{50\%}\)) from the mid-1980s through the 1990s. Removals since
+2000 have been below the point estimate of potential long-term yields
+calculated using an \(\text{SPR}_{50\%}\) reference point
+(Table~\ref{tbl-man-timeseries} and Figure~\ref{fig-one-minus-spr}). The
+equilibrium estimates of yield relative to biomass based on a steepness
+value fixed at 0.72 are provided in Figure~\ref{fig-management-yield},
+where vertical dashed lines indicate the estimate of fraction unfished
+at the start of 2025 (current) and the estimated management targets
+calculated based on the relative target biomass (B target), the SPR
+target, and the maximum sustainable yield (MSY).
+
+The relative biomass and the ratio of the estimated SPR to the
+management target (\(\text{SPR}_{50\%}\)) across all model years are
+shown in Figure~\ref{fig-management-phase} where cooler colors (purple)
+represent early years and warmer colors (yellow) represent recent years.
+The stock staus has not decreased below the target relative biomass, and
+fishing intensity (except for in 1995) has been below the target fishing
 intensity based on \(\text{SPR}_{50\%}\).
 
 \subsection{Management performance}\label{management-performance-1}
@@ -7547,486 +7540,683 @@ Label & Base & - bottom trawl & - non-trawl & - mid-water trawl & - ASHOP & - WG
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{llrrrr}
 
 \caption{\label{tbl-sensitivities-data-weighting}Likelihood values and
 estimates of key parameters and derived quantities from each data
 weighting sensitivity.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrr}
 \toprule
-X & Label & Type & Reference & X1.No.data.weighting & X2.McAllister...Ianelli & X3.Dirichlet \\ 
+Label & Type & Reference & X1.No.data.weighting & X2.McAllister...Ianelli & X3.Dirichlet \\ 
 \midrule\addlinespace[2.5pt]
-4 & Survey\_likelihood &  & NA & NA & NA & NA \\ 
-5 & NA & ALL & -2.68136e+01 & -2.72965e+01 & -2.74403e+01 & -2.72762e+01 \\ 
-12 & NA & TRIENNIAL & -7.76338e+00 & -7.97325e+00 & -8.14908e+00 & -7.94511e+00 \\ 
-13 & NA & AK\_SLOPE & -5.29726e-01 & -5.57642e-01 & -5.52310e-01 & -5.59168e-01 \\ 
-14 & NA & NW\_SLOPE & -1.03030e+00 & -1.03496e+00 & -1.03644e+00 & -1.03456e+00 \\ 
-15 & NA & WCGBTS & -1.74902e+01 & -1.77307e+01 & -1.77025e+01 & -1.77373e+01 \\ 
-28 & Lt\_likelihood &  & NA & NA & NA & NA \\ 
-29 & NA & ALL & 5.74836e+02 & 3.39072e+03 & 1.91136e+03 & 9.92411e+03 \\ 
-30 & NA & BOTTOM\_TRAWL & 7.91012e+01 & 6.03667e+02 & 3.16539e+02 & 2.08361e+03 \\ 
-31 & NA & BOTTOM\_TRAWL\_DISCARD & 2.71471e+01 & 3.10709e+02 & 4.82673e+01 & 5.78487e+02 \\ 
-32 & NA & NON\_TRAWL & 1.79666e+02 & 5.80149e+02 & 3.01850e+02 & 1.99314e+03 \\ 
-33 & NA & NON\_TRAWL\_DISCARD & 4.66248e+01 & 1.88121e+02 & 1.16176e+02 & 4.63257e+02 \\ 
-34 & NA & MIDWATER\_TRAWL & 5.89520e+01 & 1.47403e+02 & 1.18795e+02 & 4.92880e+02 \\ 
-35 & NA & AT\_SEA\_HAKE & 2.54240e+01 & 6.70549e+02 & 3.23729e+02 & 2.15788e+03 \\ 
-36 & NA & TRIENNIAL & 2.24248e+01 & 1.35037e+02 & 8.55260e+01 & 4.51187e+02 \\ 
-37 & NA & AK\_SLOPE & 5.23049e+01 & 5.24885e+01 & 5.24839e+01 & 1.38448e+02 \\ 
-38 & NA & NW\_SLOPE & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-39 & NA & WCGBTS & 8.31915e+01 & 7.02595e+02 & 5.47999e+02 & 1.56523e+03 \\ 
-52 & Age\_likelihood &  & NA & NA & NA & NA \\ 
-53 & NA & ALL & 6.78349e+03 & 1.80522e+04 & 6.72698e+03 & 2.56560e+04 \\ 
-54 & NA & BOTTOM\_TRAWL & 4.64254e+02 & 4.11695e+03 & 1.27470e+03 & 5.97462e+03 \\ 
-55 & NA & BOTTOM\_TRAWL\_DISCARD & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-56 & NA & NON\_TRAWL & 3.31377e+02 & 4.01375e+03 & 1.08914e+03 & 5.92232e+03 \\ 
-57 & NA & NON\_TRAWL\_DISCARD & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-58 & NA & MIDWATER\_TRAWL & 1.82472e+02 & 1.18638e+03 & 5.59077e+02 & 1.53806e+03 \\ 
-59 & NA & AT\_SEA\_HAKE & 3.84750e+03 & 5.31771e+03 & 1.59741e+03 & 8.04653e+03 \\ 
-60 & NA & TRIENNIAL & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-61 & NA & AK\_SLOPE & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-62 & NA & NW\_SLOPE & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-63 & NA & WCGBTS & 1.95788e+03 & 3.41740e+03 & 2.20666e+03 & 4.17446e+03 \\ 
-76 & Parameters &  & NA & NA & NA & NA \\ 
-77 & NA & NatM\_uniform\_Fem\_GP\_1 & 3.91032e-02 & 3.89580e-02 & 3.87832e-02 & 3.90180e-02 \\ 
-78 & NA & L\_at\_Amin\_Fem\_GP\_1 & -3.09740e+00 & -1.87835e+00 & -3.26759e+00 & -1.76851e+00 \\ 
-79 & NA & L\_at\_Amax\_Fem\_GP\_1 & 6.00800e+01 & 5.98159e+01 & 5.92327e+01 & 5.97621e+01 \\ 
-80 & NA & VonBert\_K\_Fem\_GP\_1 & 7.85507e-02 & 7.63084e-02 & 8.01852e-02 & 7.61730e-02 \\ 
-81 & NA & CV\_young\_Fem\_GP\_1 & 5.12973e-02 & 8.35483e-02 & 4.12629e-02 & 8.31540e-02 \\ 
-82 & NA & CV\_old\_Fem\_GP\_1 & 9.35536e-02 & 9.64043e-02 & 1.04452e-01 & 9.69710e-02 \\ 
-89 & NA & NatM\_uniform\_Mal\_GP\_1 & 3.60000e-02 & 3.60000e-02 & 3.60000e-02 & 3.60000e-02 \\ 
-90 & NA & L\_at\_Amin\_Mal\_GP\_1 & -2.67562e+00 & -9.82131e-01 & -2.80332e+00 & -8.62772e-01 \\ 
-91 & NA & L\_at\_Amax\_Mal\_GP\_1 & 5.78292e+01 & 5.78108e+01 & 5.73477e+01 & 5.77629e+01 \\ 
-92 & NA & VonBert\_K\_Mal\_GP\_1 & 8.37409e-02 & 8.03467e-02 & 8.51218e-02 & 8.01641e-02 \\ 
-93 & NA & CV\_young\_Mal\_GP\_1 & 9.11429e-02 & 1.11359e-01 & 6.53170e-02 & 1.11490e-01 \\ 
-94 & NA & CV\_old\_Mal\_GP\_1 & 8.49749e-02 & 8.63215e-02 & 9.30239e-02 & 8.65696e-02 \\ 
-99 & NA & SR\_LN(R0) & 6.99538e+00 & 6.30180e+00 & 6.29218e+00 & 6.27862e+00 \\ 
-249 & NA & LnQ\_base\_TRIENNIAL(7) & -1.48608e+00 & -1.09299e+00 & -9.00391e-01 & -1.07986e+00 \\ 
-250 & NA & LnQ\_base\_AK\_SLOPE(8) & -3.10952e+00 & -2.80067e+00 & -2.73728e+00 & -2.78881e+00 \\ 
-251 & NA & LnQ\_base\_NW\_SLOPE(9) & -2.04322e+00 & -1.74391e+00 & -1.67832e+00 & -1.73265e+00 \\ 
-252 & NA & LnQ\_base\_WCGBTS(10) & -2.60905e+00 & -1.84537e+00 & -1.73494e+00 & -1.83133e+00 \\ 
-253 & NA & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.26932e+00 & -2.06132e+00 & -1.94102e+00 & -2.05686e+00 \\ 
-254 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 4.93376e+01 & 4.94893e+01 & 4.96191e+01 & 4.96224e+01 \\ 
-255 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -1.15244e+01 & -1.15244e+01 & -1.15244e+01 & -1.15244e+01 \\ 
-256 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.56674e+00 & 4.75411e+00 & 4.76068e+00 & 4.76364e+00 \\ 
-257 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.95095e+00 & 2.87442e+00 & 2.92696e+00 & 2.83908e+00 \\ 
-258 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-259 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -6.39163e-01 & -2.24203e-01 & -1.56592e-01 & -1.65389e-01 \\ 
-260 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 2.52600e+01 & 2.46459e+01 & 2.48212e+01 & 2.47143e+01 \\ 
-261 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-262 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.88781e+00 & 4.74653e+00 & 4.78342e+00 & 4.66040e+00 \\ 
-263 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.84009e+00 & 3.79718e+00 & 3.80003e+00 & 3.74579e+00 \\ 
-264 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-265 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.81624e+00 & -4.13108e+00 & -4.09509e+00 & -3.73337e+00 \\ 
-266 & NA & Size\_DblN\_peak\_NON\_TRAWL(3) & 5.02719e+01 & 5.02600e+01 & 5.07255e+01 & 5.04637e+01 \\ 
-267 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-268 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.85865e+00 & 4.01088e+00 & 4.03983e+00 & 4.03560e+00 \\ 
-269 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-270 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-271 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.60291e+00 & 4.60291e+00 & 4.60291e+00 & 4.60291e+00 \\ 
-272 & NA & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 4.99448e+01 & 5.13269e+01 & 5.14339e+01 & 5.16203e+01 \\ 
-273 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-274 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.74795e+00 & 4.07861e+00 & 4.10169e+00 & 4.15407e+00 \\ 
-275 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.66224e+00 & 1.88027e+00 & 1.85625e+00 & 1.61833e+00 \\ 
-276 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-277 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -1.91827e-01 & 3.34955e-01 & 4.48199e-01 & 3.94537e-01 \\ 
-278 & NA & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 5.21718e+01 & 5.40386e+01 & 5.47128e+01 & 5.45359e+01 \\ 
-279 & NA & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-280 & NA & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.56739e+00 & 4.86710e+00 & 4.91626e+00 & 4.91781e+00 \\ 
-281 & NA & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-282 & NA & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-283 & NA & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-284 & NA & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 4.97080e+01 & 5.12870e+01 & 5.17085e+01 & 5.14527e+01 \\ 
-285 & NA & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-286 & NA & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.59193e+00 & 3.84973e+00 & 3.92679e+00 & 3.86888e+00 \\ 
-287 & NA & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-288 & NA & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-289 & NA & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-290 & NA & Size\_DblN\_peak\_TRIENNIAL(7) & 2.17845e+01 & 2.17936e+01 & 2.14614e+01 & 2.18467e+01 \\ 
-291 & NA & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.60373e+00 & -8.60373e+00 & -8.60373e+00 & -8.60373e+00 \\ 
-292 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.52488e+00 & 3.55789e+00 & 3.45608e+00 & 3.57356e+00 \\ 
-293 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.94890e+00 & 3.78867e+00 & 3.82199e+00 & 3.77471e+00 \\ 
-294 & NA & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-295 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.58379e+00 & -2.27168e+00 & -2.37575e+00 & -2.24008e+00 \\ 
-296 & NA & Size\_DblN\_peak\_AK\_SLOPE(8) & 3.72893e+01 & 3.80378e+01 & 3.73963e+01 & 3.82528e+01 \\ 
-297 & NA & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-298 & NA & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.94301e+00 & 5.02002e+00 & 5.03537e+00 & 5.04828e+00 \\ 
-299 & NA & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.63156e+00 & 4.75055e+00 & 4.87434e+00 & 4.69653e+00 \\ 
-300 & NA & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-301 & NA & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -1.04865e+01 & -1.01501e+01 & -1.00514e+01 & -4.10251e+00 \\ 
-302 & NA & Size\_DblN\_peak\_WCGBTS(10) & 2.10847e+01 & 2.14544e+01 & 2.15564e+01 & 2.15029e+01 \\ 
-303 & NA & Size\_DblN\_top\_logit\_WCGBTS(10) & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-304 & NA & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.39031e+00 & 3.55886e+00 & 3.54622e+00 & 3.57179e+00 \\ 
-305 & NA & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.64700e+00 & 4.42027e+00 & 4.41235e+00 & 4.38366e+00 \\ 
-306 & NA & Size\_DblN\_start\_logit\_WCGBTS(10) & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-307 & NA & Size\_DblN\_end\_logit\_WCGBTS(10) & -8.34072e-01 & -1.01257e+00 & -1.01184e+00 & -9.78021e-01 \\ 
-308 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 4.47041e+01 & 4.58459e+01 & 4.62452e+01 & 4.59007e+01 \\ 
-309 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.76379e+01 & 4.87017e+01 & 5.00576e+01 & 5.01385e+01 \\ 
-310 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.02912e+00 & 5.09914e+00 & 5.19191e+00 & 5.09760e+00 \\ 
-311 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.10396e+00 & 4.22230e+00 & 4.48980e+00 & 4.44257e+00 \\ 
-312 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.65296e+00 & 2.14936e+00 & 1.84140e+00 & 2.11025e+00 \\ 
-313 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.75007e+00 & 2.30022e+00 & -1.79554e-01 & -3.45583e-01 \\ 
-314 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.59153e+00 & -1.06619e+00 & -8.88706e-01 & -1.04414e+00 \\ 
-315 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -9.34231e-01 & -3.38113e-01 & -1.51954e-01 & -2.63932e-01 \\ 
-316 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 4.76726e+01 & 4.86604e+01 & 4.84747e+01 & 5.29816e+01 \\ 
-317 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.31793e+00 & 6.75973e+00 & 6.92856e+00 & 6.93191e+00 \\ 
-318 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.01264e+00 & 2.85897e+00 & 2.92527e+00 & -9.38932e+00 \\ 
-319 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.70248e+00 & -1.16028e+00 & -1.08039e+00 & -9.48125e-01 \\ 
-320 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 4.67715e+01 & 4.73222e+01 & 4.73510e+01 & 4.73748e+01 \\ 
-321 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 4.94908e+01 & 5.00389e+01 & 5.01026e+01 & 5.10296e+01 \\ 
-322 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.04684e+00 & 3.12760e+00 & 3.16296e+00 & 3.14026e+00 \\ 
-323 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.80818e+00 & 3.96900e+00 & 3.98854e+00 & 4.12060e+00 \\ 
-324 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.17429e+00 & 3.14699e+00 & 3.18962e+00 & 3.13260e+00 \\ 
-325 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.32304e+00 & 1.88193e+00 & 1.85516e+00 & -9.26628e+00 \\ 
-326 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.28517e+00 & -1.84212e+00 & -1.75047e+00 & -1.80934e+00 \\ 
-327 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -6.26137e-01 & -1.59614e-01 & -8.14024e-02 & -7.92096e-02 \\ 
-328 & NA & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 1.73552e+01 & 1.72646e+01 & 1.70331e+01 & 1.73096e+01 \\ 
-329 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.08532e+00 & 2.12590e+00 & 2.00878e+00 & 2.15892e+00 \\ 
-330 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.10583e+00 & 5.12889e+00 & 5.16689e+00 & 5.11980e+00 \\ 
-331 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.28739e+00 & -3.50425e+00 & -3.58512e+00 & -3.42806e+00 \\ 
-346 & Derived quantities &  & NA & NA & NA & NA \\ 
-347 & NA & SB0 & 5.64766e+06 & 2.74661e+06 & 2.71459e+06 & 2.66221e+06 \\ 
-348 & NA & SSB\_2025 & 4.92912e+06 & 2.53609e+06 & 2.23685e+06 & 2.43482e+06 \\ 
-349 & NA & Bratio\_2025 & 8.72772e-01 & 9.23352e-01 & 8.24008e-01 & 9.14587e-01 \\ 
-350 & NA & MSY\_SPR & 5.26164e+02 & 2.60020e+02 & 2.61954e+02 & 2.54011e+02 \\ 
-351 & NA & F\_SPR & 3.98202e-02 & 3.95739e-02 & 4.07627e-02 & 3.97470e-02 \\ 
+Survey\_likelihood &  &  &  &  &  \\ 
+ & ALL & -26.81 & -27.30 & -27.44 & -27.28 \\ 
+ & TRIENNIAL & -7.76 & -7.97 & -8.15 & -7.95 \\ 
+ & AK\_SLOPE & -0.53 & -0.56 & -0.55 & -0.56 \\ 
+ & NW\_SLOPE & -1.03 & -1.03 & -1.04 & -1.03 \\ 
+ & WCGBTS & -17.49 & -17.73 & -17.70 & -17.74 \\ 
+Lt\_likelihood &  &  &  &  &  \\ 
+ & ALL & 574.84 & 3,390.72 & 1,911.36 & 9,924.11 \\ 
+ & BOTTOM\_TRAWL & 79.10 & 603.67 & 316.54 & 2,083.61 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 27.15 & 310.71 & 48.27 & 578.49 \\ 
+ & NON\_TRAWL & 179.67 & 580.15 & 301.85 & 1,993.14 \\ 
+ & NON\_TRAWL\_DISCARD & 46.62 & 188.12 & 116.18 & 463.26 \\ 
+ & MIDWATER\_TRAWL & 58.95 & 147.40 & 118.80 & 492.88 \\ 
+ & AT\_SEA\_HAKE & 25.42 & 670.55 & 323.73 & 2,157.88 \\ 
+ & TRIENNIAL & 22.42 & 135.04 & 85.53 & 451.19 \\ 
+ & AK\_SLOPE & 52.30 & 52.49 & 52.48 & 138.45 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 83.19 & 702.60 & 548.00 & 1,565.23 \\ 
+Age\_likelihood &  &  &  &  &  \\ 
+ & ALL & 6,783.49 & 18,052.20 & 6,726.98 & 25,656.00 \\ 
+ & BOTTOM\_TRAWL & 464.25 & 4,116.95 & 1,274.70 & 5,974.62 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NON\_TRAWL & 331.38 & 4,013.75 & 1,089.14 & 5,922.32 \\ 
+ & NON\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & MIDWATER\_TRAWL & 182.47 & 1,186.38 & 559.08 & 1,538.06 \\ 
+ & AT\_SEA\_HAKE & 3,847.50 & 5,317.71 & 1,597.41 & 8,046.53 \\ 
+ & TRIENNIAL & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & AK\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 1,957.88 & 3,417.40 & 2,206.66 & 4,174.46 \\ 
+Parameters &  &  &  &  &  \\ 
+ & NatM\_uniform\_Fem\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Fem\_GP\_1 & -3.10 & -1.88 & -3.27 & -1.77 \\ 
+ & L\_at\_Amax\_Fem\_GP\_1 & 60.08 & 59.82 & 59.23 & 59.76 \\ 
+ & VonBert\_K\_Fem\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & CV\_young\_Fem\_GP\_1 & 0.05 & 0.08 & 0.04 & 0.08 \\ 
+ & CV\_old\_Fem\_GP\_1 & 0.09 & 0.10 & 0.10 & 0.10 \\ 
+ & NatM\_uniform\_Mal\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Mal\_GP\_1 & -2.68 & -0.98 & -2.80 & -0.86 \\ 
+ & L\_at\_Amax\_Mal\_GP\_1 & 57.83 & 57.81 & 57.35 & 57.76 \\ 
+ & VonBert\_K\_Mal\_GP\_1 & 0.08 & 0.08 & 0.09 & 0.08 \\ 
+ & CV\_young\_Mal\_GP\_1 & 0.09 & 0.11 & 0.07 & 0.11 \\ 
+ & CV\_old\_Mal\_GP\_1 & 0.08 & 0.09 & 0.09 & 0.09 \\ 
+ & SR\_LN(R0) & 7.00 & 6.30 & 6.29 & 6.28 \\ 
+ & LnQ\_base\_TRIENNIAL(7) & -1.49 & -1.09 & -0.90 & -1.08 \\ 
+ & LnQ\_base\_AK\_SLOPE(8) & -3.11 & -2.80 & -2.74 & -2.79 \\ 
+ & LnQ\_base\_NW\_SLOPE(9) & -2.04 & -1.74 & -1.68 & -1.73 \\ 
+ & LnQ\_base\_WCGBTS(10) & -2.61 & -1.85 & -1.73 & -1.83 \\ 
+ & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.27 & -2.06 & -1.94 & -2.06 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 49.34 & 49.49 & 49.62 & 49.62 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -11.52 & -11.52 & -11.52 & -11.52 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.57 & 4.75 & 4.76 & 4.76 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.95 & 2.87 & 2.93 & 2.84 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -0.64 & -0.22 & -0.16 & -0.17 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 25.26 & 24.65 & 24.82 & 24.71 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.89 & 4.75 & 4.78 & 4.66 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.84 & 3.80 & 3.80 & 3.75 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.82 & -4.13 & -4.10 & -3.73 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3) & 50.27 & 50.26 & 50.73 & 50.46 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.86 & 4.01 & 4.04 & 4.04 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.60 & 4.60 & 4.60 & 4.60 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 49.94 & 51.33 & 51.43 & 51.62 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.75 & 4.08 & 4.10 & 4.15 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.66 & 1.88 & 1.86 & 1.62 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -0.19 & 0.33 & 0.45 & 0.39 \\ 
+ & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 52.17 & 54.04 & 54.71 & 54.54 \\ 
+ & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.57 & 4.87 & 4.92 & 4.92 \\ 
+ & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 49.71 & 51.29 & 51.71 & 51.45 \\ 
+ & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.59 & 3.85 & 3.93 & 3.87 \\ 
+ & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7) & 21.78 & 21.79 & 21.46 & 21.85 \\ 
+ & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.60 & -8.60 & -8.60 & -8.60 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.52 & 3.56 & 3.46 & 3.57 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.95 & 3.79 & 3.82 & 3.77 \\ 
+ & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.58 & -2.27 & -2.38 & -2.24 \\ 
+ & Size\_DblN\_peak\_AK\_SLOPE(8) & 37.29 & 38.04 & 37.40 & 38.25 \\ 
+ & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.94 & 5.02 & 5.04 & 5.05 \\ 
+ & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.63 & 4.75 & 4.87 & 4.70 \\ 
+ & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -10.49 & -10.15 & -10.05 & -4.10 \\ 
+ & Size\_DblN\_peak\_WCGBTS(10) & 21.08 & 21.45 & 21.56 & 21.50 \\ 
+ & Size\_DblN\_top\_logit\_WCGBTS(10) & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.39 & 3.56 & 3.55 & 3.57 \\ 
+ & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.65 & 4.42 & 4.41 & 4.38 \\ 
+ & Size\_DblN\_start\_logit\_WCGBTS(10) & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_WCGBTS(10) & -0.83 & -1.01 & -1.01 & -0.98 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 44.70 & 45.85 & 46.25 & 45.90 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 47.64 & 48.70 & 50.06 & 50.14 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.03 & 5.10 & 5.19 & 5.10 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.10 & 4.22 & 4.49 & 4.44 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.65 & 2.15 & 1.84 & 2.11 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.75 & 2.30 & -0.18 & -0.35 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.59 & -1.07 & -0.89 & -1.04 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -0.93 & -0.34 & -0.15 & -0.26 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 47.67 & 48.66 & 48.47 & 52.98 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.32 & 6.76 & 6.93 & 6.93 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.01 & 2.86 & 2.93 & -9.39 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.70 & -1.16 & -1.08 & -0.95 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 46.77 & 47.32 & 47.35 & 47.37 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 49.49 & 50.04 & 50.10 & 51.03 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.05 & 3.13 & 3.16 & 3.14 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.81 & 3.97 & 3.99 & 4.12 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.17 & 3.15 & 3.19 & 3.13 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.32 & 1.88 & 1.86 & -9.27 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.29 & -1.84 & -1.75 & -1.81 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -0.63 & -0.16 & -0.08 & -0.08 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 17.36 & 17.26 & 17.03 & 17.31 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.09 & 2.13 & 2.01 & 2.16 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.11 & 5.13 & 5.17 & 5.12 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.29 & -3.50 & -3.59 & -3.43 \\ 
+Derived quantities &  &  &  &  &  \\ 
+ & SB0 & 5,647,660.00 & 2,746,610.00 & 2,714,590.00 & 2,662,210.00 \\ 
+ & SSB\_2025 & 4,929,120.00 & 2,536,090.00 & 2,236,850.00 & 2,434,820.00 \\ 
+ & Bratio\_2025 & 0.87 & 0.92 & 0.82 & 0.91 \\ 
+ & MSY\_SPR & 526.16 & 260.02 & 261.95 & 254.01 \\ 
+ & F\_SPR & 0.04 & 0.04 & 0.04 & 0.04 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{llrrrrrrr}
+
+\caption{\label{tbl-sensitivities-age-error}Likelihood values and
+estimates of key parameters and derived quantities from each ageing
+error sensitivity.}
+
+\tabularnewline
+
+\toprule
+Label & Type & Reference & X1.No.ageing.error & X2..trawl.AE & X3..non.trawl.AE & X4..midwater.AE & X5..ASHOP.AE & X6..WCGBTS.AE \\ 
+\midrule\addlinespace[2.5pt]
+Survey\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & -26.81 & -25.50 & -26.61 & -26.75 & -26.76 & -26.06 & -26.01 \\ 
+ & TRIENNIAL & -7.76 & -6.92 & -7.60 & -7.78 & -7.73 & -7.23 & -7.23 \\ 
+ & AK\_SLOPE & -0.53 & -0.47 & -0.52 & -0.51 & -0.53 & -0.50 & -0.50 \\ 
+ & NW\_SLOPE & -1.03 & -1.01 & -1.03 & -1.02 & -1.03 & -1.02 & -1.02 \\ 
+ & WCGBTS & -17.49 & -17.10 & -17.46 & -17.44 & -17.48 & -17.31 & -17.26 \\ 
+Lt\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & 574.84 & 581.11 & 574.57 & 573.27 & 575.18 & 583.00 & 585.41 \\ 
+ & BOTTOM\_TRAWL & 79.10 & 80.00 & 78.97 & 78.76 & 79.14 & 79.57 & 80.81 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 27.15 & 27.19 & 27.11 & 27.08 & 27.14 & 27.08 & 27.14 \\ 
+ & NON\_TRAWL & 179.67 & 177.09 & 177.88 & 178.32 & 179.87 & 180.01 & 181.55 \\ 
+ & NON\_TRAWL\_DISCARD & 46.62 & 46.60 & 46.44 & 46.49 & 46.64 & 46.91 & 46.90 \\ 
+ & MIDWATER\_TRAWL & 58.95 & 58.49 & 58.74 & 58.49 & 58.92 & 58.83 & 59.16 \\ 
+ & AT\_SEA\_HAKE & 25.42 & 26.72 & 25.16 & 24.85 & 25.50 & 26.86 & 26.56 \\ 
+ & TRIENNIAL & 22.42 & 25.79 & 24.01 & 23.16 & 22.42 & 25.73 & 25.14 \\ 
+ & AK\_SLOPE & 52.30 & 53.38 & 53.01 & 53.06 & 52.29 & 53.04 & 53.29 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 83.19 & 85.85 & 83.25 & 83.05 & 83.26 & 84.98 & 84.87 \\ 
+Age\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & 6,783.49 & 6,641.85 & 6,773.06 & 6,781.03 & 6,785.55 & 6,764.29 & 6,696.85 \\ 
+ & BOTTOM\_TRAWL & 464.25 & 450.06 & 447.40 & 463.74 & 464.91 & 469.79 & 460.45 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NON\_TRAWL & 331.38 & 324.78 & 332.28 & 323.66 & 331.55 & 332.18 & 328.35 \\ 
+ & NON\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & MIDWATER\_TRAWL & 182.47 & 186.06 & 181.89 & 181.81 & 185.22 & 186.59 & 183.16 \\ 
+ & AT\_SEA\_HAKE & 3,847.50 & 3,794.09 & 3,848.04 & 3,847.44 & 3,846.76 & 3,796.20 & 3,852.57 \\ 
+ & TRIENNIAL & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & AK\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 1,957.88 & 1,886.85 & 1,963.45 & 1,964.38 & 1,957.11 & 1,979.54 & 1,872.32 \\ 
+Parameters &  &  &  &  &  &  &  &  \\ 
+ & NatM\_uniform\_Fem\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Fem\_GP\_1 & -3.10 & -2.30 & -2.66 & -2.52 & -3.14 & -3.29 & -1.98 \\ 
+ & L\_at\_Amax\_Fem\_GP\_1 & 60.08 & 59.94 & 60.10 & 60.07 & 60.08 & 59.77 & 60.27 \\ 
+ & VonBert\_K\_Fem\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & CV\_young\_Fem\_GP\_1 & 0.05 & 0.16 & 0.05 & 0.05 & 0.05 & 0.12 & 0.14 \\ 
+ & CV\_old\_Fem\_GP\_1 & 0.09 & 0.10 & 0.09 & 0.10 & 0.09 & 0.09 & 0.09 \\ 
+ & NatM\_uniform\_Mal\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Mal\_GP\_1 & -2.68 & -2.04 & -1.84 & -1.71 & -2.78 & -2.82 & -1.67 \\ 
+ & L\_at\_Amax\_Mal\_GP\_1 & 57.83 & 57.78 & 57.87 & 57.84 & 57.82 & 57.72 & 58.02 \\ 
+ & VonBert\_K\_Mal\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.09 & 0.08 \\ 
+ & CV\_young\_Mal\_GP\_1 & 0.09 & 0.19 & 0.10 & 0.10 & 0.09 & 0.16 & 0.17 \\ 
+ & CV\_old\_Mal\_GP\_1 & 0.08 & 0.09 & 0.09 & 0.09 & 0.08 & 0.09 & 0.08 \\ 
+ & SR\_LN(R0) & 7.00 & 6.42 & 6.79 & 6.73 & 6.98 & 6.92 & 6.56 \\ 
+ & LnQ\_base\_TRIENNIAL(7) & -1.49 & -0.77 & -1.27 & -1.15 & -1.46 & -1.36 & -1.03 \\ 
+ & LnQ\_base\_AK\_SLOPE(8) & -3.11 & -2.35 & -2.90 & -2.84 & -3.08 & -2.93 & -2.58 \\ 
+ & LnQ\_base\_NW\_SLOPE(9) & -2.04 & -1.27 & -1.83 & -1.77 & -2.02 & -1.85 & -1.50 \\ 
+ & LnQ\_base\_WCGBTS(10) & -2.61 & -2.03 & -2.41 & -2.37 & -2.59 & -2.54 & -2.19 \\ 
+ & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.27 & -1.75 & -2.10 & -2.06 & -2.25 & -2.20 & -1.88 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 49.34 & 49.64 & 49.49 & 49.54 & 49.33 & 49.32 & 49.46 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.57 & 4.49 & 4.55 & 4.54 & 4.56 & 4.53 & 4.51 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.95 & 2.97 & 2.95 & 2.92 & 2.95 & 2.97 & 2.95 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -0.64 & -0.68 & -0.61 & -0.59 & -0.64 & -0.71 & -0.69 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 25.26 & 25.81 & 25.31 & 25.36 & 25.33 & 25.60 & 25.77 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.89 & 4.57 & 4.84 & 4.86 & 4.89 & 4.70 & 4.58 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.84 & 3.76 & 3.83 & 3.82 & 3.83 & 3.80 & 3.72 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.82 & -3.63 & -3.73 & -3.68 & -3.81 & -3.78 & -3.76 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3) & 50.27 & 50.71 & 50.49 & 50.62 & 50.27 & 50.35 & 50.17 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.86 & 3.80 & 3.86 & 3.86 & 3.85 & 3.82 & 3.76 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 49.94 & 50.03 & 50.07 & 50.06 & 49.92 & 49.78 & 50.01 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.75 & 3.72 & 3.76 & 3.75 & 3.74 & 3.70 & 3.74 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.66 & 2.69 & 2.64 & 2.64 & 2.67 & 2.72 & 2.66 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -0.19 & -0.25 & -0.16 & -0.14 & -0.20 & -0.29 & -0.26 \\ 
+ & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 52.17 & 52.46 & 52.45 & 52.52 & 52.15 & 52.01 & 52.06 \\ 
+ & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.57 & 4.49 & 4.57 & 4.56 & 4.56 & 4.52 & 4.48 \\ 
+ & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 49.71 & 49.74 & 49.87 & 49.92 & 49.69 & 49.46 & 49.65 \\ 
+ & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.59 & 3.55 & 3.61 & 3.61 & 3.59 & 3.55 & 3.55 \\ 
+ & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7) & 21.78 & 21.95 & 21.96 & 21.91 & 21.78 & 21.97 & 22.01 \\ 
+ & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.52 & 3.61 & 3.60 & 3.58 & 3.52 & 3.61 & 3.61 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.95 & 3.94 & 3.90 & 3.89 & 3.95 & 3.97 & 3.93 \\ 
+ & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.58 & -2.56 & -2.55 & -2.60 & -2.59 & -2.62 & -2.49 \\ 
+ & Size\_DblN\_peak\_AK\_SLOPE(8) & 37.29 & 36.69 & 37.31 & 36.84 & 37.26 & 36.73 & 37.29 \\ 
+ & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.94 & 4.85 & 4.97 & 4.97 & 4.94 & 4.84 & 4.90 \\ 
+ & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.63 & 4.70 & 4.65 & 4.73 & 4.63 & 4.65 & 4.64 \\ 
+ & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -10.49 & -10.28 & -10.39 & -10.54 & -10.49 & -10.35 & -10.47 \\ 
+ & Size\_DblN\_peak\_WCGBTS(10) & 21.08 & 21.57 & 21.33 & 21.37 & 21.07 & 20.79 & 21.39 \\ 
+ & Size\_DblN\_top\_logit\_WCGBTS(10) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.39 & 3.48 & 3.46 & 3.47 & 3.38 & 3.30 & 3.46 \\ 
+ & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.65 & 4.44 & 4.55 & 4.55 & 4.65 & 4.74 & 4.49 \\ 
+ & Size\_DblN\_start\_logit\_WCGBTS(10) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_WCGBTS(10) & -0.83 & -0.49 & -0.73 & -0.68 & -0.83 & -0.78 & -0.59 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 44.70 & 44.60 & 44.88 & 45.18 & 44.69 & 44.10 & 44.76 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 47.64 & 47.61 & 47.72 & 47.65 & 47.62 & 47.45 & 47.70 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.03 & 5.06 & 5.05 & 5.13 & 5.03 & 4.98 & 5.03 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.10 & 4.06 & 4.11 & 4.13 & 4.10 & 4.06 & 4.05 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.65 & 2.64 & 2.56 & 2.41 & 2.66 & 2.88 & 2.59 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.75 & 2.76 & 2.74 & 2.76 & 2.75 & 2.76 & 2.75 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.59 & -1.36 & -1.46 & -1.38 & -1.59 & -1.68 & -1.45 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -0.93 & -0.97 & -0.89 & -0.86 & -0.94 & -1.03 & -0.98 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 47.67 & 47.78 & 47.75 & 47.61 & 47.64 & 47.52 & 48.03 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.32 & 6.33 & 6.29 & 6.23 & 6.32 & 6.35 & 6.39 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.01 & 2.99 & 3.01 & 3.03 & 3.02 & 3.03 & 2.92 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.70 & -1.72 & -1.66 & -1.66 & -1.71 & -1.79 & -1.70 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 46.77 & 46.74 & 46.83 & 46.81 & 46.76 & 46.61 & 46.81 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 49.49 & 49.57 & 49.57 & 49.57 & 49.48 & 49.40 & 49.57 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.05 & 3.02 & 3.06 & 3.07 & 3.05 & 3.01 & 3.02 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.81 & 3.79 & 3.80 & 3.79 & 3.81 & 3.79 & 3.81 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.17 & 3.19 & 3.18 & 3.19 & 3.17 & 3.18 & 3.16 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.32 & 2.39 & 2.31 & 2.29 & 2.33 & 2.40 & 2.35 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.29 & -2.29 & -2.25 & -2.22 & -2.29 & -2.35 & -2.31 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -0.63 & -0.66 & -0.60 & -0.59 & -0.63 & -0.71 & -0.67 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 17.36 & 17.69 & 17.69 & 17.68 & 17.33 & 17.71 & 17.72 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.09 & 2.15 & 2.16 & 2.18 & 2.08 & 2.14 & 2.14 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.11 & 4.86 & 5.01 & 5.04 & 5.10 & 4.92 & 4.94 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.29 & -3.70 & -4.07 & -4.11 & -4.27 & -3.94 & -3.89 \\ 
+Derived quantities &  &  &  &  &  &  &  &  \\ 
+ & SB0 & 5,647,660.00 & 3,078,080.00 & 4,528,730.00 & 4,242,460.00 & 5,550,590.00 & 5,254,360.00 & 3,596,610.00 \\ 
+ & SSB\_2025 & 4,929,120.00 & 2,095,990.00 & 3,728,710.00 & 3,428,260.00 & 4,817,120.00 & 4,392,990.00 & 2,696,790.00 \\ 
+ & Bratio\_2025 & 0.87 & 0.68 & 0.82 & 0.81 & 0.87 & 0.84 & 0.75 \\ 
+ & MSY\_SPR & 526.16 & 299.77 & 425.16 & 399.88 & 517.04 & 501.96 & 340.37 \\ 
+ & F\_SPR & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
+
+\end{landscape}
+
+\newpage{}
+
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{llrrrrrrrrrr}
 
 \caption{\label{tbl-sensitivities-life-history}Summaries of the model
 results for life history parameter sensitivities.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrrrrrrrr}
 \toprule
-X & Label & Type & Reference & X1..Est.female.M & X2..Fixed\_M\_2013 & X3..Lorenzen\_M & X4..Fixed\_Growth\_ext & X5..Prop.fecund & X6..Fxn.mat.age & X7..Fxn.mat.Bspot & X8..Fxn.mat.Reye & X9..Biological.mat \\ 
+Label & Type & Reference & X1..Est.female.M & X2..Fixed\_M\_2013 & X3..Lorenzen\_M & X4..Fixed\_Growth\_ext & X5..Prop.fecund & X6..Fxn.mat.age & X7..Fxn.mat.Bspot & X8..Fxn.mat.Reye & X9..Biological.mat \\ 
 \midrule\addlinespace[2.5pt]
-1 & AIC & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-2 & NA & AIC & 1.509392e+04 & 1.508658e+04 & 1.510372e+04 & 1.512346e+04 & 1.558008e+04 & 1.50939e+04 & 1.50940e+04 & 1.509396e+04 & 1.50939e+04 & 1.50939e+04 \\ 
-3 & NA & deltaAIC & 0.000000e+00 & -7.340000e+00 & 9.800000e+00 & 2.954000e+01 & 4.861600e+02 & -2.00000e-02 & 8.00000e-02 & 4.000000e-02 & -2.00000e-02 & -2.00000e-02 \\ 
-4 & Survey\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-5 & NA & ALL & -2.681360e+01 & -2.707290e+01 & -2.666000e+01 & -2.674760e+01 & -2.701640e+01 & -2.68129e+01 & -2.68150e+01 & -2.681510e+01 & -2.68129e+01 & -2.68126e+01 \\ 
-12 & NA & TRIENNIAL & -7.763380e+00 & -8.050150e+00 & -7.644720e+00 & -7.656880e+00 & -7.980650e+00 & -7.76280e+00 & -7.76444e+00 & -7.764700e+00 & -7.76280e+00 & -7.76244e+00 \\ 
-13 & NA & AK\_SLOPE & -5.297260e-01 & -5.392370e-01 & -5.219060e-01 & -5.226770e-01 & -5.282050e-01 & -5.29696e-01 & -5.29815e-01 & -5.297930e-01 & -5.29690e-01 & -5.29685e-01 \\ 
-14 & NA & NW\_SLOPE & -1.030300e+00 & -1.034810e+00 & -1.027380e+00 & -1.028320e+00 & -1.025240e+00 & -1.03029e+00 & -1.03034e+00 & -1.030330e+00 & -1.03029e+00 & -1.03028e+00 \\ 
-15 & NA & WCGBTS & -1.749020e+01 & -1.744870e+01 & -1.746600e+01 & -1.753970e+01 & -1.748230e+01 & -1.74902e+01 & -1.74905e+01 & -1.749030e+01 & -1.74902e+01 & -1.74902e+01 \\ 
-16 & Survey\_lambda & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-17 & NA & ALL & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-28 & Lt\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-29 & NA & ALL & 5.748360e+02 & 5.731950e+02 & 5.850380e+02 & 5.738340e+02 & 6.057960e+02 & 5.74828e+02 & 5.74858e+02 & 5.748530e+02 & 5.74828e+02 & 5.74827e+02 \\ 
-30 & NA & BOTTOM\_TRAWL & 7.910120e+01 & 7.975240e+01 & 7.830760e+01 & 7.967060e+01 & 8.266550e+01 & 7.91026e+01 & 7.90974e+01 & 7.909810e+01 & 7.91027e+01 & 7.91030e+01 \\ 
-31 & NA & BOTTOM\_TRAWL\_DISCARD & 2.714710e+01 & 2.717950e+01 & 2.724380e+01 & 2.708640e+01 & 2.834830e+01 & 2.71472e+01 & 2.71468e+01 & 2.714660e+01 & 2.71473e+01 & 2.71473e+01 \\ 
-32 & NA & NON\_TRAWL & 1.796660e+02 & 1.781560e+02 & 1.883380e+02 & 1.796200e+02 & 1.945150e+02 & 1.79661e+02 & 1.79678e+02 & 1.796760e+02 & 1.79661e+02 & 1.79660e+02 \\ 
-33 & NA & NON\_TRAWL\_DISCARD & 4.662480e+01 & 4.670740e+01 & 4.716920e+01 & 4.646500e+01 & 4.893020e+01 & 4.66248e+01 & 4.66242e+01 & 4.662440e+01 & 4.66249e+01 & 4.66250e+01 \\ 
-34 & NA & MIDWATER\_TRAWL & 5.895200e+01 & 5.848930e+01 & 5.998000e+01 & 5.882020e+01 & 5.911400e+01 & 5.89499e+01 & 5.89585e+01 & 5.895660e+01 & 5.89495e+01 & 5.89494e+01 \\ 
-35 & NA & AT\_SEA\_HAKE & 2.542400e+01 & 2.503040e+01 & 2.598250e+01 & 2.457590e+01 & 2.350430e+01 & 2.54215e+01 & 2.54337e+01 & 2.542950e+01 & 2.54211e+01 & 2.54211e+01 \\ 
-36 & NA & TRIENNIAL & 2.242480e+01 & 2.239590e+01 & 2.239860e+01 & 2.237780e+01 & 2.537100e+01 & 2.24247e+01 & 2.24244e+01 & 2.242510e+01 & 2.24247e+01 & 2.24244e+01 \\ 
-37 & NA & AK\_SLOPE & 5.230490e+01 & 5.219250e+01 & 5.291740e+01 & 5.185570e+01 & 5.286360e+01 & 5.23048e+01 & 5.23046e+01 & 5.230500e+01 & 5.23048e+01 & 5.23047e+01 \\ 
-38 & NA & NW\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-39 & NA & WCGBTS & 8.319150e+01 & 8.329120e+01 & 8.270180e+01 & 8.336260e+01 & 9.048430e+01 & 8.31916e+01 & 8.31910e+01 & 8.319110e+01 & 8.31919e+01 & 8.31916e+01 \\ 
-52 & Age\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-53 & NA & ALL & 6.783490e+03 & 6.781980e+03 & 6.779340e+03 & 6.795590e+03 & 6.981030e+03 & 6.78349e+03 & 6.78349e+03 & 6.783490e+03 & 6.78349e+03 & 6.78349e+03 \\ 
-54 & NA & BOTTOM\_TRAWL & 4.642540e+02 & 4.637180e+02 & 4.641280e+02 & 4.665390e+02 & 4.626510e+02 & 4.64252e+02 & 4.64256e+02 & 4.642550e+02 & 4.64253e+02 & 4.64252e+02 \\ 
-55 & NA & BOTTOM\_TRAWL\_DISCARD & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-56 & NA & NON\_TRAWL & 3.313770e+02 & 3.306330e+02 & 3.310450e+02 & 3.322740e+02 & 3.316110e+02 & 3.31375e+02 & 3.31385e+02 & 3.313810e+02 & 3.31375e+02 & 3.31375e+02 \\ 
-57 & NA & NON\_TRAWL\_DISCARD & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-58 & NA & MIDWATER\_TRAWL & 1.824720e+02 & 1.824240e+02 & 1.822050e+02 & 1.833360e+02 & 1.837650e+02 & 1.82472e+02 & 1.82473e+02 & 1.824730e+02 & 1.82471e+02 & 1.82471e+02 \\ 
-59 & NA & AT\_SEA\_HAKE & 3.847500e+03 & 3.848160e+03 & 3.843860e+03 & 3.853800e+03 & 3.862560e+03 & 3.84750e+03 & 3.84749e+03 & 3.847500e+03 & 3.84750e+03 & 3.84750e+03 \\ 
-60 & NA & TRIENNIAL & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-61 & NA & AK\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-62 & NA & NW\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-63 & NA & WCGBTS & 1.957880e+03 & 1.957050e+03 & 1.958100e+03 & 1.959640e+03 & 2.140440e+03 & 1.95788e+03 & 1.95789e+03 & 1.957880e+03 & 1.95788e+03 & 1.95789e+03 \\ 
-64 & Age\_lambda & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-65 & NA & ALL & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-76 & Parameters & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-77 & NA & NatM\_uniform\_Fem\_GP\_1 & 3.910320e-02 & 4.323410e-02 & 4.200000e-02 & NA & 3.911210e-02 & 3.91024e-02 & 3.91054e-02 & 3.910440e-02 & 3.91024e-02 & 3.91024e-02 \\ 
-78 & NA & L\_at\_Amin\_Fem\_GP\_1 & -3.097400e+00 & -3.026870e+00 & -3.188100e+00 & -2.637440e+00 & 0.000000e+00 & -3.09712e+00 & -3.09757e+00 & -3.097950e+00 & -3.09707e+00 & -3.09708e+00 \\ 
-79 & NA & L\_at\_Amax\_Fem\_GP\_1 & 6.008000e+01 & 6.008490e+01 & 5.983610e+01 & 6.003570e+01 & 5.903000e+01 & 6.00798e+01 & 6.00809e+01 & 6.008050e+01 & 6.00798e+01 & 6.00797e+01 \\ 
-80 & NA & VonBert\_K\_Fem\_GP\_1 & 7.855070e-02 & 7.833140e-02 & 7.920610e-02 & 7.814420e-02 & 7.000000e-02 & 7.85501e-02 & 7.85499e-02 & 7.855180e-02 & 7.85500e-02 & 7.85500e-02 \\ 
-81 & NA & CV\_young\_Fem\_GP\_1 & 5.129730e-02 & 5.211440e-02 & 5.168100e-02 & 5.347080e-02 & 1.324030e-01 & 5.12946e-02 & 5.12989e-02 & 5.130360e-02 & 5.12943e-02 & 5.12935e-02 \\ 
-82 & NA & CV\_old\_Fem\_GP\_1 & 9.355360e-02 & 9.347580e-02 & 9.294350e-02 & 9.412360e-02 & 9.341820e-02 & 9.35555e-02 & 9.35494e-02 & 9.355010e-02 & 9.35554e-02 & 9.35557e-02 \\ 
-89 & NA & NatM\_uniform\_Mal\_GP\_1 & 3.600000e-02 & 4.104670e-02 & 3.600000e-02 & NA & 3.600000e-02 & 3.60000e-02 & 3.60000e-02 & 3.600000e-02 & 3.60000e-02 & 3.60000e-02 \\ 
-90 & NA & L\_at\_Amin\_Mal\_GP\_1 & -2.675620e+00 & -2.667940e+00 & -2.378770e+00 & -5.108560e+00 & 1.710000e+00 & -2.67514e+00 & -2.67672e+00 & -2.676680e+00 & -2.67503e+00 & -2.67503e+00 \\ 
-91 & NA & L\_at\_Amax\_Mal\_GP\_1 & 5.782920e+01 & 5.776420e+01 & 5.787160e+01 & 5.752180e+01 & 5.669000e+01 & 5.78290e+01 & 5.78301e+01 & 5.782980e+01 & 5.78289e+01 & 5.78289e+01 \\ 
-92 & NA & VonBert\_K\_Mal\_GP\_1 & 8.374090e-02 & 8.378000e-02 & 8.287720e-02 & 8.814980e-02 & 8.000000e-02 & 8.37403e-02 & 8.37417e-02 & 8.374230e-02 & 8.37401e-02 & 8.37401e-02 \\ 
-93 & NA & CV\_young\_Mal\_GP\_1 & 9.114290e-02 & 9.201670e-02 & 9.210300e-02 & 8.528240e-02 & 1.923740e-01 & 9.11475e-02 & 9.11276e-02 & 9.113440e-02 & 9.11479e-02 & 9.11469e-02 \\ 
-94 & NA & CV\_old\_Mal\_GP\_1 & 8.497490e-02 & 8.489630e-02 & 8.579690e-02 & 8.496790e-02 & 7.867860e-02 & 8.49743e-02 & 8.49774e-02 & 8.497580e-02 & 8.49744e-02 & 8.49744e-02 \\ 
-99 & NA & SR\_LN(R0) & 6.995380e+00 & 1.089510e+01 & 6.855320e+00 & 7.394950e+00 & 6.775770e+00 & 6.99371e+00 & 6.99995e+00 & 6.999320e+00 & 6.99335e+00 & 6.99307e+00 \\ 
-100 & NA & SR\_BH\_steep & 7.200000e-01 & 7.200000e-01 & 7.200000e-01 & 7.200000e-01 & 7.200000e-01 & 7.20000e-01 & 7.20000e-01 & 7.200000e-01 & 7.20000e-01 & 7.20000e-01 \\ 
-249 & NA & LnQ\_base\_TRIENNIAL(7) & -1.486080e+00 & -5.307270e+00 & -1.275660e+00 & -1.218530e+00 & -1.570240e+00 & -1.48448e+00 & -1.49043e+00 & -1.489930e+00 & -1.48409e+00 & -1.48382e+00 \\ 
-250 & NA & LnQ\_base\_AK\_SLOPE(8) & -3.109520e+00 & -6.892600e+00 & -2.900690e+00 & -2.731790e+00 & -3.123840e+00 & -3.10796e+00 & -3.11365e+00 & -3.113300e+00 & -3.10759e+00 & -3.10730e+00 \\ 
-251 & NA & LnQ\_base\_NW\_SLOPE(9) & -2.043220e+00 & -5.829500e+00 & -1.831930e+00 & -1.663090e+00 & -2.058180e+00 & -2.04165e+00 & -2.04737e+00 & -2.047010e+00 & -2.04127e+00 & -2.04098e+00 \\ 
-252 & NA & LnQ\_base\_WCGBTS(10) & -2.609050e+00 & -6.463730e+00 & -2.405910e+00 & -2.279080e+00 & -2.568770e+00 & -2.60747e+00 & -2.61332e+00 & -2.612890e+00 & -2.60707e+00 & -2.60679e+00 \\ 
-253 & NA & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.269320e+00 & -6.001360e+00 & -2.088720e+00 & -2.111510e+00 & -2.267080e+00 & -2.26787e+00 & -2.27303e+00 & -2.272830e+00 & -2.26752e+00 & -2.26724e+00 \\ 
-254 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 4.933760e+01 & 4.941580e+01 & 4.949480e+01 & 4.930250e+01 & 5.017410e+01 & 4.93381e+01 & 4.93363e+01 & 4.933630e+01 & 4.93382e+01 & 4.93383e+01 \\ 
-255 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -1.152440e+01 & -1.152440e+01 & -1.152440e+01 & -1.152440e+01 & -1.152440e+01 & -1.15244e+01 & -1.15244e+01 & -1.152440e+01 & -1.15244e+01 & -1.15244e+01 \\ 
-256 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.566740e+00 & 4.558010e+00 & 4.562770e+00 & 4.552020e+00 & 4.647890e+00 & 4.56673e+00 & 4.56679e+00 & 4.566760e+00 & 4.56672e+00 & 4.56673e+00 \\ 
-257 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.950950e+00 & 2.927720e+00 & 2.858870e+00 & 2.929320e+00 & 1.855940e+00 & 2.95081e+00 & 2.95143e+00 & 2.951270e+00 & 2.95078e+00 & 2.95076e+00 \\ 
-258 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-259 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -6.391630e-01 & -5.983950e-01 & -5.325510e-01 & -6.076440e-01 & 2.758540e-01 & -6.38910e-01 & -6.39970e-01 & -6.397540e-01 & -6.38857e-01 & -6.38831e-01 \\ 
-260 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 2.526000e+01 & 2.538590e+01 & 2.537540e+01 & 2.572290e+01 & 2.610320e+01 & 2.52603e+01 & 2.52590e+01 & 2.525950e+01 & 2.52604e+01 & 2.52602e+01 \\ 
-261 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-262 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.887810e+00 & 4.875520e+00 & 4.881660e+00 & 4.751150e+00 & 7.865680e+00 & 4.88780e+00 & 4.88789e+00 & 4.887820e+00 & 4.88779e+00 & 4.88781e+00 \\ 
-263 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.840090e+00 & 3.824950e+00 & 3.817090e+00 & 3.785600e+00 & 3.704280e+00 & 3.84003e+00 & 3.84028e+00 & 3.840210e+00 & 3.84001e+00 & 3.84003e+00 \\ 
-264 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-265 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.816240e+00 & -3.744010e+00 & -3.738920e+00 & -3.690810e+00 & -3.467190e+00 & -3.81599e+00 & -3.81689e+00 & -3.816830e+00 & -3.81592e+00 & -3.81594e+00 \\ 
-266 & NA & Size\_DblN\_peak\_NON\_TRAWL(3) & 5.027190e+01 & 5.038600e+01 & 5.055580e+01 & 5.022420e+01 & 5.168060e+01 & 5.02729e+01 & 5.02695e+01 & 5.026970e+01 & 5.02731e+01 & 5.02733e+01 \\ 
-267 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-268 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.858650e+00 & 3.860100e+00 & 3.874040e+00 & 3.856250e+00 & 4.022570e+00 & 3.85870e+00 & 3.85858e+00 & 3.858540e+00 & 3.85871e+00 & 3.85874e+00 \\ 
-269 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-270 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-271 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.602910e+00 & 4.602910e+00 & 4.602910e+00 & 4.602910e+00 & 4.602910e+00 & 4.60291e+00 & 4.60291e+00 & 4.602910e+00 & 4.60291e+00 & 4.60291e+00 \\ 
-272 & NA & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 4.994480e+01 & 4.998810e+01 & 5.005090e+01 & 4.993530e+01 & 5.110430e+01 & 4.99453e+01 & 4.99438e+01 & 4.994390e+01 & 4.99453e+01 & 4.99454e+01 \\ 
-273 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-274 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.747950e+00 & 3.747840e+00 & 3.754570e+00 & 3.744160e+00 & 3.948600e+00 & 3.74798e+00 & 3.74786e+00 & 3.747880e+00 & 3.74798e+00 & 3.74799e+00 \\ 
-275 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.662240e+00 & 2.642130e+00 & 2.595270e+00 & 2.644840e+00 & 1.710300e+00 & 2.66208e+00 & 2.66271e+00 & 2.662610e+00 & 2.66206e+00 & 2.66204e+00 \\ 
-276 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-277 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -1.918270e-01 & -1.528480e-01 & -9.966500e-02 & -1.434850e-01 & 6.949340e-01 & -1.91571e-01 & -1.92666e-01 & -1.924110e-01 & -1.91521e-01 & -1.91503e-01 \\ 
-278 & NA & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 5.217180e+01 & 5.235500e+01 & 5.263160e+01 & 5.216440e+01 & 5.581530e+01 & 5.21733e+01 & 5.21678e+01 & 5.216840e+01 & 5.21736e+01 & 5.21738e+01 \\ 
-279 & NA & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-280 & NA & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.567390e+00 & 4.570540e+00 & 4.592760e+00 & 4.561670e+00 & 4.893670e+00 & 4.56747e+00 & 4.56718e+00 & 4.567200e+00 & 4.56748e+00 & 4.56749e+00 \\ 
-281 & NA & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-282 & NA & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-283 & NA & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-284 & NA & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 4.970800e+01 & 4.977950e+01 & 4.992100e+01 & 4.980130e+01 & 5.150130e+01 & 4.97087e+01 & 4.97059e+01 & 4.970640e+01 & 4.97089e+01 & 4.97089e+01 \\ 
-285 & NA & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-286 & NA & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.591930e+00 & 3.596590e+00 & 3.613850e+00 & 3.603720e+00 & 3.839220e+00 & 3.59199e+00 & 3.59169e+00 & 3.591780e+00 & 3.59201e+00 & 3.59202e+00 \\ 
-287 & NA & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-288 & NA & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-289 & NA & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-290 & NA & Size\_DblN\_peak\_TRIENNIAL(7) & 2.178450e+01 & 2.188630e+01 & 2.182490e+01 & 2.213690e+01 & 2.270030e+01 & 2.17846e+01 & 2.17843e+01 & 2.178430e+01 & 2.17846e+01 & 2.17846e+01 \\ 
-291 & NA & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.60373e+00 & -8.60373e+00 & -8.603730e+00 & -8.60373e+00 & -8.60373e+00 \\ 
-292 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.524880e+00 & 3.538050e+00 & 3.535390e+00 & 3.517840e+00 & 4.090210e+00 & 3.52490e+00 & 3.52479e+00 & 3.524800e+00 & 3.52492e+00 & 3.52490e+00 \\ 
-293 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.948900e+00 & 3.948610e+00 & 3.931480e+00 & 3.901750e+00 & 3.722370e+00 & 3.94883e+00 & 3.94914e+00 & 3.949070e+00 & 3.94880e+00 & 3.94882e+00 \\ 
-294 & NA & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-295 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.583790e+00 & -2.537560e+00 & -2.547620e+00 & -2.372060e+00 & -2.228230e+00 & -2.58367e+00 & -2.58405e+00 & -2.584030e+00 & -2.58366e+00 & -2.58364e+00 \\ 
-296 & NA & Size\_DblN\_peak\_AK\_SLOPE(8) & 3.728930e+01 & 3.733940e+01 & 3.734450e+01 & 3.779030e+01 & 3.743130e+01 & 3.72895e+01 & 3.72896e+01 & 3.728870e+01 & 3.72896e+01 & 3.72897e+01 \\ 
-297 & NA & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-298 & NA & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.943010e+00 & 4.923980e+00 & 4.945730e+00 & 4.920100e+00 & 4.969530e+00 & 4.94304e+00 & 4.94297e+00 & 4.942930e+00 & 4.94307e+00 & 4.94306e+00 \\ 
-299 & NA & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.631560e+00 & 4.618410e+00 & 4.636500e+00 & 4.606670e+00 & 4.706830e+00 & 4.63160e+00 & 4.63129e+00 & 4.631490e+00 & 4.63159e+00 & 4.63157e+00 \\ 
-300 & NA & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-301 & NA & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -1.048650e+01 & -1.051580e+01 & -1.015310e+01 & -1.048940e+01 & -1.059580e+01 & -1.04844e+01 & -1.04841e+01 & -1.048350e+01 & -1.04840e+01 & -1.04844e+01 \\ 
-302 & NA & Size\_DblN\_peak\_WCGBTS(10) & 2.108470e+01 & 2.128660e+01 & 2.133870e+01 & 2.190750e+01 & 2.202130e+01 & 2.10859e+01 & 2.10817e+01 & 2.108210e+01 & 2.10860e+01 & 2.10862e+01 \\ 
-303 & NA & Size\_DblN\_top\_logit\_WCGBTS(10) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-304 & NA & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.390310e+00 & 3.433550e+00 & 3.452620e+00 & 3.498600e+00 & 4.279920e+00 & 3.39061e+00 & 3.38953e+00 & 3.389630e+00 & 3.39065e+00 & 3.39070e+00 \\ 
-305 & NA & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.647000e+00 & 4.597700e+00 & 4.538610e+00 & 4.549120e+00 & 4.096980e+00 & 4.64651e+00 & 4.64828e+00 & 4.648120e+00 & 4.64642e+00 & 4.64636e+00 \\ 
-306 & NA & Size\_DblN\_start\_logit\_WCGBTS(10) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-307 & NA & Size\_DblN\_end\_logit\_WCGBTS(10) & -8.340720e-01 & -7.292420e-01 & -7.396100e-01 & -6.186860e-01 & -5.678900e-01 & -8.33812e-01 & -8.34772e-01 & -8.346480e-01 & -8.33773e-01 & -8.33750e-01 \\ 
-308 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 4.470410e+01 & 4.438720e+01 & 4.473330e+01 & 4.522840e+01 & 4.541630e+01 & 4.47044e+01 & 4.47031e+01 & 4.470310e+01 & 4.47047e+01 & 4.47046e+01 \\ 
-309 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.763790e+01 & 4.763820e+01 & 4.772600e+01 & 4.771070e+01 & 4.825080e+01 & 4.76383e+01 & 4.76370e+01 & 4.763710e+01 & 4.76384e+01 & 4.76384e+01 \\ 
-310 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.029120e+00 & 4.977890e+00 & 5.026460e+00 & 5.032160e+00 & 5.080080e+00 & 5.02914e+00 & 5.02893e+00 & 5.029040e+00 & 5.02917e+00 & 5.02914e+00 \\ 
-311 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.103960e+00 & 4.093000e+00 & 4.108370e+00 & 4.099100e+00 & 4.107580e+00 & 4.10399e+00 & 4.10384e+00 & 4.103900e+00 & 4.10400e+00 & 4.10399e+00 \\ 
-312 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.652960e+00 & 2.840680e+00 & 2.672900e+00 & 2.241460e+00 & 2.129370e+00 & 2.65273e+00 & 2.65360e+00 & 2.653630e+00 & 2.65257e+00 & 2.65258e+00 \\ 
-313 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.750070e+00 & 2.731580e+00 & 2.682480e+00 & 2.695560e+00 & 1.924590e+00 & 2.74993e+00 & 2.75054e+00 & 2.750420e+00 & 2.74989e+00 & 2.74988e+00 \\ 
-314 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.591530e+00 & -1.789530e+00 & -1.592770e+00 & -1.137670e+00 & -1.114270e+00 & -1.59139e+00 & -1.59215e+00 & -1.591950e+00 & -1.59132e+00 & -1.59135e+00 \\ 
-315 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -9.342310e-01 & -9.165830e-01 & -8.636660e-01 & -8.600990e-01 & -3.258170e-01 & -9.34002e-01 & -9.35035e-01 & -9.347560e-01 & -9.33954e-01 & -9.33954e-01 \\ 
-316 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 4.767260e+01 & 4.774410e+01 & 4.778790e+01 & 4.777060e+01 & 4.858240e+01 & 4.76731e+01 & 4.76718e+01 & 4.767170e+01 & 4.76731e+01 & 4.76732e+01 \\ 
-317 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.317930e+00 & 6.246710e+00 & 6.298060e+00 & 6.164890e+00 & 6.341410e+00 & 6.31789e+00 & 6.31786e+00 & 6.317990e+00 & 6.31789e+00 & 6.31786e+00 \\ 
-318 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.012640e+00 & 2.984780e+00 & 2.979830e+00 & 2.969710e+00 & 2.630150e+00 & 3.01254e+00 & 3.01285e+00 & 3.012840e+00 & 3.01255e+00 & 3.01251e+00 \\ 
-319 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.702480e+00 & -1.679010e+00 & -1.646120e+00 & -1.629090e+00 & -1.078730e+00 & -1.70226e+00 & -1.70319e+00 & -1.702980e+00 & -1.70223e+00 & -1.70221e+00 \\ 
-320 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 4.677150e+01 & 4.675810e+01 & 4.682340e+01 & 4.683690e+01 & 4.707690e+01 & 4.67718e+01 & 4.67709e+01 & 4.677110e+01 & 4.67718e+01 & 4.67718e+01 \\ 
-321 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 4.949080e+01 & 4.953950e+01 & 4.960100e+01 & 4.948790e+01 & 5.099810e+01 & 4.94911e+01 & 4.94900e+01 & 4.949000e+01 & 4.94912e+01 & 4.94913e+01 \\ 
-322 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.046840e+00 & 3.041480e+00 & 3.054470e+00 & 3.053610e+00 & 3.078770e+00 & 3.04688e+00 & 3.04671e+00 & 3.046770e+00 & 3.04688e+00 & 3.04688e+00 \\ 
-323 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.808180e+00 & 3.806910e+00 & 3.814280e+00 & 3.804150e+00 & 4.024150e+00 & 3.80819e+00 & 3.80812e+00 & 3.808150e+00 & 3.80819e+00 & 3.80819e+00 \\ 
-324 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.174290e+00 & 3.176600e+00 & 3.157870e+00 & 3.157790e+00 & 3.010640e+00 & 3.17425e+00 & 3.17439e+00 & 3.174380e+00 & 3.17424e+00 & 3.17423e+00 \\ 
-325 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.323040e+00 & 2.287360e+00 & 2.213230e+00 & 2.285030e+00 & -1.302400e+01 & 2.32283e+00 & 2.32378e+00 & 2.323570e+00 & 2.32278e+00 & 2.32276e+00 \\ 
-326 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.285170e+00 & -2.285350e+00 & -2.229740e+00 & -2.192290e+00 & -1.752100e+00 & -2.28497e+00 & -2.28589e+00 & -2.285640e+00 & -2.28493e+00 & -2.28493e+00 \\ 
-327 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -6.261370e-01 & -5.907300e-01 & -5.421330e-01 & -5.945910e-01 & 3.216210e-02 & -6.25908e-01 & -6.26860e-01 & -6.266640e-01 & -6.25863e-01 & -6.25841e-01 \\ 
-328 & NA & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 1.735520e+01 & 1.749530e+01 & 1.739600e+01 & 1.765800e+01 & 1.719070e+01 & 1.73554e+01 & 1.73550e+01 & 1.735480e+01 & 1.73555e+01 & 1.73556e+01 \\ 
-329 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.085320e+00 & 2.125970e+00 & 2.100430e+00 & 2.164000e+00 & 2.015330e+00 & 2.08538e+00 & 2.08519e+00 & 2.085180e+00 & 2.08541e+00 & 2.08544e+00 \\ 
-330 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.105830e+00 & 5.156200e+00 & 5.077420e+00 & 5.191590e+00 & 5.123280e+00 & 5.10557e+00 & 5.10605e+00 & 5.106360e+00 & 5.10557e+00 & 5.10541e+00 \\ 
-331 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.287390e+00 & -4.464260e+00 & -4.203650e+00 & -4.049910e+00 & -4.041990e+00 & -4.28671e+00 & -4.28868e+00 & -4.288830e+00 & -4.28672e+00 & -4.28639e+00 \\ 
-332 & NA & NatM\_Lorenzen\_Fem\_GP\_1 & NA & NA & NA & 3.900610e-02 & NA & NA & NA & NA & NA & NA \\ 
-333 & NA & NatM\_Lorenzen\_Mal\_GP\_1 & NA & NA & NA & 3.600000e-02 & NA & NA & NA & NA & NA & NA \\ 
-334 & NA & Eggs/kg\_inter\_Fem\_GP\_1 & NA & NA & NA & NA & NA & 1.00000e+00 & NA & NA & NA & NA \\ 
-335 & NA & Eggs/kg\_slope\_wt\_Fem\_GP\_1 & NA & NA & NA & NA & NA & 0.00000e+00 & NA & NA & NA & NA \\ 
-336 & Derived quantities & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-337 & NA & SB0 & 5.647660e+06 & 2.282620e+08 & 4.203990e+06 & 3.672360e+06 & 4.001980e+06 & 1.84346e+04 & 4.95184e+06 & 4.889910e+06 & 6.17698e+06 & 6.06956e+06 \\ 
-338 & NA & SSB\_2025 & 4.929120e+06 & 2.204240e+08 & 3.416730e+06 & 3.065150e+06 & 3.700840e+06 & 1.61819e+04 & 4.28208e+06 & 4.215800e+06 & 5.42542e+06 & 5.34610e+06 \\ 
-339 & NA & Bratio\_2025 & 8.727720e-01 & 9.656620e-01 & 8.127350e-01 & 8.346560e-01 & 9.247540e-01 & 8.77801e-01 & 8.64746e-01 & 8.621430e-01 & 8.78329e-01 & 8.80804e-01 \\ 
-340 & NA & MSY\_SPR & 5.261640e+02 & 2.322870e+04 & 4.502880e+02 & 3.133640e+02 & 4.182060e+02 & 5.39525e+02 & 4.84712e+02 & 5.018160e+02 & 5.40144e+02 & 5.40460e+02 \\ 
-341 & NA & F\_SPR & 3.982020e-02 & 4.589250e-02 & 4.368180e-02 & 3.611480e-02 & 4.264370e-02 & 4.24951e-02 & 3.28012e-02 & 3.540130e-02 & 4.26550e-02 & 4.27462e-02 \\ 
+AIC &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & AIC & 15,093.92 & 15,086.58 & 15,103.72 & 15,123.46 & 15,580.08 & 15,093.90 & 15,094.00 & 15,093.96 & 15,093.90 & 15,093.90 \\ 
+ & deltaAIC & 0.00 & -7.34 & 9.80 & 29.54 & 486.16 & -0.02 & 0.08 & 0.04 & -0.02 & -0.02 \\ 
+Survey\_likelihood &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & ALL & -26.81 & -27.07 & -26.66 & -26.75 & -27.02 & -26.81 & -26.82 & -26.82 & -26.81 & -26.81 \\ 
+ & TRIENNIAL & -7.76 & -8.05 & -7.64 & -7.66 & -7.98 & -7.76 & -7.76 & -7.76 & -7.76 & -7.76 \\ 
+ & AK\_SLOPE & -0.53 & -0.54 & -0.52 & -0.52 & -0.53 & -0.53 & -0.53 & -0.53 & -0.53 & -0.53 \\ 
+ & NW\_SLOPE & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 & -1.03 \\ 
+ & WCGBTS & -17.49 & -17.45 & -17.47 & -17.54 & -17.48 & -17.49 & -17.49 & -17.49 & -17.49 & -17.49 \\ 
+Survey\_lambda &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & ALL &  &  &  &  &  &  &  &  &  &  \\ 
+Lt\_likelihood &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & ALL & 574.84 & 573.20 & 585.04 & 573.83 & 605.80 & 574.83 & 574.86 & 574.85 & 574.83 & 574.83 \\ 
+ & BOTTOM\_TRAWL & 79.10 & 79.75 & 78.31 & 79.67 & 82.67 & 79.10 & 79.10 & 79.10 & 79.10 & 79.10 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 27.15 & 27.18 & 27.24 & 27.09 & 28.35 & 27.15 & 27.15 & 27.15 & 27.15 & 27.15 \\ 
+ & NON\_TRAWL & 179.67 & 178.16 & 188.34 & 179.62 & 194.51 & 179.66 & 179.68 & 179.68 & 179.66 & 179.66 \\ 
+ & NON\_TRAWL\_DISCARD & 46.62 & 46.71 & 47.17 & 46.47 & 48.93 & 46.62 & 46.62 & 46.62 & 46.62 & 46.62 \\ 
+ & MIDWATER\_TRAWL & 58.95 & 58.49 & 59.98 & 58.82 & 59.11 & 58.95 & 58.96 & 58.96 & 58.95 & 58.95 \\ 
+ & AT\_SEA\_HAKE & 25.42 & 25.03 & 25.98 & 24.58 & 23.50 & 25.42 & 25.43 & 25.43 & 25.42 & 25.42 \\ 
+ & TRIENNIAL & 22.42 & 22.40 & 22.40 & 22.38 & 25.37 & 22.42 & 22.42 & 22.43 & 22.42 & 22.42 \\ 
+ & AK\_SLOPE & 52.30 & 52.19 & 52.92 & 51.86 & 52.86 & 52.30 & 52.30 & 52.30 & 52.30 & 52.30 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 83.19 & 83.29 & 82.70 & 83.36 & 90.48 & 83.19 & 83.19 & 83.19 & 83.19 & 83.19 \\ 
+Age\_likelihood &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & ALL & 6,783.49 & 6,781.98 & 6,779.34 & 6,795.59 & 6,981.03 & 6,783.49 & 6,783.49 & 6,783.49 & 6,783.49 & 6,783.49 \\ 
+ & BOTTOM\_TRAWL & 464.25 & 463.72 & 464.13 & 466.54 & 462.65 & 464.25 & 464.26 & 464.25 & 464.25 & 464.25 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NON\_TRAWL & 331.38 & 330.63 & 331.05 & 332.27 & 331.61 & 331.38 & 331.38 & 331.38 & 331.38 & 331.38 \\ 
+ & NON\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & MIDWATER\_TRAWL & 182.47 & 182.42 & 182.21 & 183.34 & 183.76 & 182.47 & 182.47 & 182.47 & 182.47 & 182.47 \\ 
+ & AT\_SEA\_HAKE & 3,847.50 & 3,848.16 & 3,843.86 & 3,853.80 & 3,862.56 & 3,847.50 & 3,847.49 & 3,847.50 & 3,847.50 & 3,847.50 \\ 
+ & TRIENNIAL & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & AK\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 1,957.88 & 1,957.05 & 1,958.10 & 1,959.64 & 2,140.44 & 1,957.88 & 1,957.89 & 1,957.88 & 1,957.88 & 1,957.89 \\ 
+Age\_lambda &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & ALL &  &  &  &  &  &  &  &  &  &  \\ 
+Parameters &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & NatM\_uniform\_Fem\_GP\_1 & 0.04 & 0.04 & 0.04 &  & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Fem\_GP\_1 & -3.10 & -3.03 & -3.19 & -2.64 & 0.00 & -3.10 & -3.10 & -3.10 & -3.10 & -3.10 \\ 
+ & L\_at\_Amax\_Fem\_GP\_1 & 60.08 & 60.08 & 59.84 & 60.04 & 59.03 & 60.08 & 60.08 & 60.08 & 60.08 & 60.08 \\ 
+ & VonBert\_K\_Fem\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.08 & 0.07 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & CV\_young\_Fem\_GP\_1 & 0.05 & 0.05 & 0.05 & 0.05 & 0.13 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ 
+ & CV\_old\_Fem\_GP\_1 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 \\ 
+ & NatM\_uniform\_Mal\_GP\_1 & 0.04 & 0.04 & 0.04 &  & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Mal\_GP\_1 & -2.68 & -2.67 & -2.38 & -5.11 & 1.71 & -2.68 & -2.68 & -2.68 & -2.68 & -2.68 \\ 
+ & L\_at\_Amax\_Mal\_GP\_1 & 57.83 & 57.76 & 57.87 & 57.52 & 56.69 & 57.83 & 57.83 & 57.83 & 57.83 & 57.83 \\ 
+ & VonBert\_K\_Mal\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.09 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & CV\_young\_Mal\_GP\_1 & 0.09 & 0.09 & 0.09 & 0.09 & 0.19 & 0.09 & 0.09 & 0.09 & 0.09 & 0.09 \\ 
+ & CV\_old\_Mal\_GP\_1 & 0.08 & 0.08 & 0.09 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & SR\_LN(R0) & 7.00 & 10.90 & 6.86 & 7.39 & 6.78 & 6.99 & 7.00 & 7.00 & 6.99 & 6.99 \\ 
+ & SR\_BH\_steep & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 & 0.72 \\ 
+ & LnQ\_base\_TRIENNIAL(7) & -1.49 & -5.31 & -1.28 & -1.22 & -1.57 & -1.48 & -1.49 & -1.49 & -1.48 & -1.48 \\ 
+ & LnQ\_base\_AK\_SLOPE(8) & -3.11 & -6.89 & -2.90 & -2.73 & -3.12 & -3.11 & -3.11 & -3.11 & -3.11 & -3.11 \\ 
+ & LnQ\_base\_NW\_SLOPE(9) & -2.04 & -5.83 & -1.83 & -1.66 & -2.06 & -2.04 & -2.05 & -2.05 & -2.04 & -2.04 \\ 
+ & LnQ\_base\_WCGBTS(10) & -2.61 & -6.46 & -2.41 & -2.28 & -2.57 & -2.61 & -2.61 & -2.61 & -2.61 & -2.61 \\ 
+ & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.27 & -6.00 & -2.09 & -2.11 & -2.27 & -2.27 & -2.27 & -2.27 & -2.27 & -2.27 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 49.34 & 49.42 & 49.49 & 49.30 & 50.17 & 49.34 & 49.34 & 49.34 & 49.34 & 49.34 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 & -11.52 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.57 & 4.56 & 4.56 & 4.55 & 4.65 & 4.57 & 4.57 & 4.57 & 4.57 & 4.57 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.95 & 2.93 & 2.86 & 2.93 & 1.86 & 2.95 & 2.95 & 2.95 & 2.95 & 2.95 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -0.64 & -0.60 & -0.53 & -0.61 & 0.28 & -0.64 & -0.64 & -0.64 & -0.64 & -0.64 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 25.26 & 25.39 & 25.38 & 25.72 & 26.10 & 25.26 & 25.26 & 25.26 & 25.26 & 25.26 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.89 & 4.88 & 4.88 & 4.75 & 7.87 & 4.89 & 4.89 & 4.89 & 4.89 & 4.89 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.84 & 3.82 & 3.82 & 3.79 & 3.70 & 3.84 & 3.84 & 3.84 & 3.84 & 3.84 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.82 & -3.74 & -3.74 & -3.69 & -3.47 & -3.82 & -3.82 & -3.82 & -3.82 & -3.82 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3) & 50.27 & 50.39 & 50.56 & 50.22 & 51.68 & 50.27 & 50.27 & 50.27 & 50.27 & 50.27 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.86 & 3.86 & 3.87 & 3.86 & 4.02 & 3.86 & 3.86 & 3.86 & 3.86 & 3.86 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 & 4.60 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 49.94 & 49.99 & 50.05 & 49.94 & 51.10 & 49.95 & 49.94 & 49.94 & 49.95 & 49.95 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.75 & 3.75 & 3.75 & 3.74 & 3.95 & 3.75 & 3.75 & 3.75 & 3.75 & 3.75 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.66 & 2.64 & 2.60 & 2.64 & 1.71 & 2.66 & 2.66 & 2.66 & 2.66 & 2.66 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -0.19 & -0.15 & -0.10 & -0.14 & 0.69 & -0.19 & -0.19 & -0.19 & -0.19 & -0.19 \\ 
+ & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 52.17 & 52.35 & 52.63 & 52.16 & 55.82 & 52.17 & 52.17 & 52.17 & 52.17 & 52.17 \\ 
+ & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.57 & 4.57 & 4.59 & 4.56 & 4.89 & 4.57 & 4.57 & 4.57 & 4.57 & 4.57 \\ 
+ & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 49.71 & 49.78 & 49.92 & 49.80 & 51.50 & 49.71 & 49.71 & 49.71 & 49.71 & 49.71 \\ 
+ & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.59 & 3.60 & 3.61 & 3.60 & 3.84 & 3.59 & 3.59 & 3.59 & 3.59 & 3.59 \\ 
+ & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7) & 21.78 & 21.89 & 21.82 & 22.14 & 22.70 & 21.78 & 21.78 & 21.78 & 21.78 & 21.78 \\ 
+ & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.52 & 3.54 & 3.54 & 3.52 & 4.09 & 3.52 & 3.52 & 3.52 & 3.52 & 3.52 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.95 & 3.95 & 3.93 & 3.90 & 3.72 & 3.95 & 3.95 & 3.95 & 3.95 & 3.95 \\ 
+ & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.58 & -2.54 & -2.55 & -2.37 & -2.23 & -2.58 & -2.58 & -2.58 & -2.58 & -2.58 \\ 
+ & Size\_DblN\_peak\_AK\_SLOPE(8) & 37.29 & 37.34 & 37.34 & 37.79 & 37.43 & 37.29 & 37.29 & 37.29 & 37.29 & 37.29 \\ 
+ & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.94 & 4.92 & 4.95 & 4.92 & 4.97 & 4.94 & 4.94 & 4.94 & 4.94 & 4.94 \\ 
+ & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.63 & 4.62 & 4.64 & 4.61 & 4.71 & 4.63 & 4.63 & 4.63 & 4.63 & 4.63 \\ 
+ & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -10.49 & -10.52 & -10.15 & -10.49 & -10.60 & -10.48 & -10.48 & -10.48 & -10.48 & -10.48 \\ 
+ & Size\_DblN\_peak\_WCGBTS(10) & 21.08 & 21.29 & 21.34 & 21.91 & 22.02 & 21.09 & 21.08 & 21.08 & 21.09 & 21.09 \\ 
+ & Size\_DblN\_top\_logit\_WCGBTS(10) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.39 & 3.43 & 3.45 & 3.50 & 4.28 & 3.39 & 3.39 & 3.39 & 3.39 & 3.39 \\ 
+ & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.65 & 4.60 & 4.54 & 4.55 & 4.10 & 4.65 & 4.65 & 4.65 & 4.65 & 4.65 \\ 
+ & Size\_DblN\_start\_logit\_WCGBTS(10) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_WCGBTS(10) & -0.83 & -0.73 & -0.74 & -0.62 & -0.57 & -0.83 & -0.83 & -0.83 & -0.83 & -0.83 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 44.70 & 44.39 & 44.73 & 45.23 & 45.42 & 44.70 & 44.70 & 44.70 & 44.70 & 44.70 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 47.64 & 47.64 & 47.73 & 47.71 & 48.25 & 47.64 & 47.64 & 47.64 & 47.64 & 47.64 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.03 & 4.98 & 5.03 & 5.03 & 5.08 & 5.03 & 5.03 & 5.03 & 5.03 & 5.03 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.10 & 4.09 & 4.11 & 4.10 & 4.11 & 4.10 & 4.10 & 4.10 & 4.10 & 4.10 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.65 & 2.84 & 2.67 & 2.24 & 2.13 & 2.65 & 2.65 & 2.65 & 2.65 & 2.65 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.75 & 2.73 & 2.68 & 2.70 & 1.92 & 2.75 & 2.75 & 2.75 & 2.75 & 2.75 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.59 & -1.79 & -1.59 & -1.14 & -1.11 & -1.59 & -1.59 & -1.59 & -1.59 & -1.59 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -0.93 & -0.92 & -0.86 & -0.86 & -0.33 & -0.93 & -0.94 & -0.93 & -0.93 & -0.93 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 47.67 & 47.74 & 47.79 & 47.77 & 48.58 & 47.67 & 47.67 & 47.67 & 47.67 & 47.67 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.32 & 6.25 & 6.30 & 6.16 & 6.34 & 6.32 & 6.32 & 6.32 & 6.32 & 6.32 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.01 & 2.98 & 2.98 & 2.97 & 2.63 & 3.01 & 3.01 & 3.01 & 3.01 & 3.01 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.70 & -1.68 & -1.65 & -1.63 & -1.08 & -1.70 & -1.70 & -1.70 & -1.70 & -1.70 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 46.77 & 46.76 & 46.82 & 46.84 & 47.08 & 46.77 & 46.77 & 46.77 & 46.77 & 46.77 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 49.49 & 49.54 & 49.60 & 49.49 & 51.00 & 49.49 & 49.49 & 49.49 & 49.49 & 49.49 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.05 & 3.04 & 3.05 & 3.05 & 3.08 & 3.05 & 3.05 & 3.05 & 3.05 & 3.05 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.81 & 3.81 & 3.81 & 3.80 & 4.02 & 3.81 & 3.81 & 3.81 & 3.81 & 3.81 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.17 & 3.18 & 3.16 & 3.16 & 3.01 & 3.17 & 3.17 & 3.17 & 3.17 & 3.17 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.32 & 2.29 & 2.21 & 2.29 & -13.02 & 2.32 & 2.32 & 2.32 & 2.32 & 2.32 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.29 & -2.29 & -2.23 & -2.19 & -1.75 & -2.28 & -2.29 & -2.29 & -2.28 & -2.28 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -0.63 & -0.59 & -0.54 & -0.59 & 0.03 & -0.63 & -0.63 & -0.63 & -0.63 & -0.63 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 17.36 & 17.50 & 17.40 & 17.66 & 17.19 & 17.36 & 17.36 & 17.35 & 17.36 & 17.36 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.09 & 2.13 & 2.10 & 2.16 & 2.02 & 2.09 & 2.09 & 2.09 & 2.09 & 2.09 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.11 & 5.16 & 5.08 & 5.19 & 5.12 & 5.11 & 5.11 & 5.11 & 5.11 & 5.11 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.29 & -4.46 & -4.20 & -4.05 & -4.04 & -4.29 & -4.29 & -4.29 & -4.29 & -4.29 \\ 
+ & NatM\_Lorenzen\_Fem\_GP\_1 &  &  &  & 0.04 &  &  &  &  &  &  \\ 
+ & NatM\_Lorenzen\_Mal\_GP\_1 &  &  &  & 0.04 &  &  &  &  &  &  \\ 
+ & Eggs/kg\_inter\_Fem\_GP\_1 &  &  &  &  &  & 1.00 &  &  &  &  \\ 
+ & Eggs/kg\_slope\_wt\_Fem\_GP\_1 &  &  &  &  &  & 0.00 &  &  &  &  \\ 
+Derived quantities &  &  &  &  &  &  &  &  &  &  &  \\ 
+ & SB0 & 5,647,660.00 & 228,262,000.00 & 4,203,990.00 & 3,672,360.00 & 4,001,980.00 & 18,434.60 & 4,951,840.00 & 4,889,910.00 & 6,176,980.00 & 6,069,560.00 \\ 
+ & SSB\_2025 & 4,929,120.00 & 220,424,000.00 & 3,416,730.00 & 3,065,150.00 & 3,700,840.00 & 16,181.90 & 4,282,080.00 & 4,215,800.00 & 5,425,420.00 & 5,346,100.00 \\ 
+ & Bratio\_2025 & 0.87 & 0.97 & 0.81 & 0.83 & 0.92 & 0.88 & 0.86 & 0.86 & 0.88 & 0.88 \\ 
+ & MSY\_SPR & 526.16 & 23,228.70 & 450.29 & 313.36 & 418.21 & 539.52 & 484.71 & 501.82 & 540.14 & 540.46 \\ 
+ & F\_SPR & 0.04 & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 & 0.03 & 0.04 & 0.04 & 0.04 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
 
 \newpage{}
 
-\begin{table}
+\begin{landscape}
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{llrrrrrrr}
 
 \caption{\label{tbl-sensitivities-sel-rec}Likelihood values and
 estimates of key parameters and derived quantities from each recruitment
 and selectivity sensitivity.}
 
-\centering{
+\tabularnewline
 
-\fontsize{12.0pt}{14.4pt}\selectfont
-\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rllrrrrrrr}
 \toprule
-X & Label & Type & Reference & X13.No.rec.devs & X14.1940.recdevs & X15.1980.recdevs & X16.Logistic.fisheries & X17.Logistic.btrawl & X18.Logistic.nontrawl \\ 
+Label & Type & Reference & X13.No.rec.devs & X14.1940.recdevs & X15.1980.recdevs & X16.Logistic.fisheries & X17.Logistic.btrawl & X18.Logistic.nontrawl \\ 
 \midrule\addlinespace[2.5pt]
-1 & AIC & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-2 & NA & AIC & 1.509392e+04 & 1.489982e+04 & 1.503828e+04 & 1.496668e+04 & 1.539356e+04 & 1.51851e+04 & 1.53579e+04 \\ 
-3 & NA & deltaAIC & 0.000000e+00 & -1.941000e+02 & -5.564000e+01 & -1.272400e+02 & 2.996400e+02 & 9.11800e+01 & 2.63980e+02 \\ 
-4 & Survey\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-5 & NA & ALL & -2.681360e+01 & -2.662900e+01 & -2.672610e+01 & -2.705820e+01 & -2.718200e+01 & -2.67260e+01 & -2.67392e+01 \\ 
-12 & NA & TRIENNIAL & -7.763380e+00 & -7.454890e+00 & -7.674290e+00 & -8.003440e+00 & -8.221050e+00 & -7.74885e+00 & -7.79605e+00 \\ 
-13 & NA & AK\_SLOPE & -5.297260e-01 & -5.210340e-01 & -5.233490e-01 & -5.455120e-01 & -5.363320e-01 & -5.21403e-01 & -5.22419e-01 \\ 
-14 & NA & NW\_SLOPE & -1.030300e+00 & -1.018850e+00 & -1.027890e+00 & -1.036030e+00 & -1.029160e+00 & -1.02687e+00 & -1.02278e+00 \\ 
-15 & NA & WCGBTS & -1.749020e+01 & -1.763420e+01 & -1.750060e+01 & -1.747320e+01 & -1.739550e+01 & -1.74289e+01 & -1.73980e+01 \\ 
-28 & Lt\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-29 & NA & ALL & 5.748360e+02 & 5.905810e+02 & 5.746410e+02 & 5.768950e+02 & 7.021570e+02 & 6.17531e+02 & 6.83715e+02 \\ 
-30 & NA & BOTTOM\_TRAWL & 7.910120e+01 & 8.013180e+01 & 8.366570e+01 & 8.328580e+01 & 1.060090e+02 & 1.23644e+02 & 8.25870e+01 \\ 
-31 & NA & BOTTOM\_TRAWL\_DISCARD & 2.714710e+01 & 2.813080e+01 & 2.896630e+01 & 2.896290e+01 & 2.768170e+01 & 2.73077e+01 & 2.76540e+01 \\ 
-32 & NA & NON\_TRAWL & 1.796660e+02 & 1.797450e+02 & 1.719960e+02 & 1.734230e+02 & 2.760110e+02 & 1.81880e+02 & 2.82826e+02 \\ 
-33 & NA & NON\_TRAWL\_DISCARD & 4.662480e+01 & 4.701550e+01 & 4.618780e+01 & 4.623780e+01 & 4.994630e+01 & 4.75587e+01 & 4.94753e+01 \\ 
-34 & NA & MIDWATER\_TRAWL & 5.895200e+01 & 6.049430e+01 & 5.737320e+01 & 5.787390e+01 & 5.858810e+01 & 5.73668e+01 & 5.83616e+01 \\ 
-35 & NA & AT\_SEA\_HAKE & 2.542400e+01 & 2.705920e+01 & 3.009730e+01 & 3.070910e+01 & 2.493900e+01 & 2.24518e+01 & 2.43721e+01 \\ 
-36 & NA & TRIENNIAL & 2.242480e+01 & 2.829230e+01 & 2.208890e+01 & 2.209080e+01 & 2.172600e+01 & 2.19749e+01 & 2.17228e+01 \\ 
-37 & NA & AK\_SLOPE & 5.230490e+01 & 5.304950e+01 & 5.236000e+01 & 5.238460e+01 & 5.256900e+01 & 5.23934e+01 & 5.25428e+01 \\ 
-38 & NA & NW\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-39 & NA & WCGBTS & 8.319150e+01 & 8.666290e+01 & 8.190590e+01 & 8.192780e+01 & 8.468600e+01 & 8.29533e+01 & 8.41736e+01 \\ 
-52 & Age\_likelihood & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-53 & NA & ALL & 6.783490e+03 & 6.817810e+03 & 6.803700e+03 & 6.808000e+03 & 6.818060e+03 & 6.79311e+03 & 6.81224e+03 \\ 
-54 & NA & BOTTOM\_TRAWL & 4.642540e+02 & 4.649670e+02 & 4.643450e+02 & 4.641660e+02 & 4.628730e+02 & 4.63816e+02 & 4.62829e+02 \\ 
-55 & NA & BOTTOM\_TRAWL\_DISCARD & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-56 & NA & NON\_TRAWL & 3.313770e+02 & 3.350140e+02 & 3.310390e+02 & 3.312990e+02 & 3.334600e+02 & 3.31623e+02 & 3.33095e+02 \\ 
-57 & NA & NON\_TRAWL\_DISCARD & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-58 & NA & MIDWATER\_TRAWL & 1.824720e+02 & 1.820460e+02 & 1.818310e+02 & 1.815940e+02 & 1.808790e+02 & 1.81844e+02 & 1.80978e+02 \\ 
-59 & NA & AT\_SEA\_HAKE & 3.847500e+03 & 3.860070e+03 & 3.845560e+03 & 3.849930e+03 & 3.884810e+03 & 3.85847e+03 & 3.87872e+03 \\ 
-60 & NA & TRIENNIAL & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-61 & NA & AK\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-62 & NA & NW\_SLOPE & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.000000e+00 & 0.00000e+00 & 0.00000e+00 \\ 
-63 & NA & WCGBTS & 1.957880e+03 & 1.975710e+03 & 1.980920e+03 & 1.981010e+03 & 1.956050e+03 & 1.95736e+03 & 1.95662e+03 \\ 
-76 & Parameters & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-77 & NA & NatM\_uniform\_Fem\_GP\_1 & 3.910320e-02 & 3.940770e-02 & 3.964800e-02 & 3.973040e-02 & 3.994790e-02 & 3.95250e-02 & 4.01421e-02 \\ 
-78 & NA & L\_at\_Amin\_Fem\_GP\_1 & -3.097400e+00 & -3.344670e+00 & -3.244980e+00 & -3.303880e+00 & -3.434840e+00 & -3.13209e+00 & -3.35402e+00 \\ 
-79 & NA & L\_at\_Amax\_Fem\_GP\_1 & 6.008000e+01 & 6.010810e+01 & 5.977400e+01 & 5.980550e+01 & 5.758880e+01 & 5.91624e+01 & 5.78427e+01 \\ 
-80 & NA & VonBert\_K\_Fem\_GP\_1 & 7.855070e-02 & 7.903060e-02 & 7.947650e-02 & 7.964710e-02 & 8.409390e-02 & 8.02052e-02 & 8.33222e-02 \\ 
-81 & NA & CV\_young\_Fem\_GP\_1 & 5.129730e-02 & 3.691760e-02 & 5.105940e-02 & 5.206760e-02 & 3.163420e-02 & 4.32323e-02 & 3.31681e-02 \\ 
-82 & NA & CV\_old\_Fem\_GP\_1 & 9.355360e-02 & 9.398960e-02 & 9.314480e-02 & 9.244300e-02 & 9.759770e-02 & 9.57241e-02 & 9.76085e-02 \\ 
-89 & NA & NatM\_uniform\_Mal\_GP\_1 & 3.600000e-02 & 3.600000e-02 & 3.600000e-02 & 3.600000e-02 & 3.600000e-02 & 3.60000e-02 & 3.60000e-02 \\ 
-90 & NA & L\_at\_Amin\_Mal\_GP\_1 & -2.675620e+00 & -3.630830e+00 & -2.948920e+00 & -3.035590e+00 & -4.067670e+00 & -2.95244e+00 & -3.84030e+00 \\ 
-91 & NA & L\_at\_Amax\_Mal\_GP\_1 & 5.782920e+01 & 5.782150e+01 & 5.756130e+01 & 5.763840e+01 & 5.522780e+01 & 5.69099e+01 & 5.54975e+01 \\ 
-92 & NA & VonBert\_K\_Mal\_GP\_1 & 8.374090e-02 & 8.559450e-02 & 8.494850e-02 & 8.501370e-02 & 9.295010e-02 & 8.62036e-02 & 9.16407e-02 \\ 
-93 & NA & CV\_young\_Mal\_GP\_1 & 9.114290e-02 & 5.605680e-02 & 9.042850e-02 & 9.026460e-02 & 4.939950e-02 & 8.02271e-02 & 5.44003e-02 \\ 
-94 & NA & CV\_old\_Mal\_GP\_1 & 8.497490e-02 & 8.718600e-02 & 8.410920e-02 & 8.411100e-02 & 8.915150e-02 & 8.62407e-02 & 8.87418e-02 \\ 
-99 & NA & SR\_LN(R0) & 6.995380e+00 & 8.286620e+00 & 6.712670e+00 & 7.913650e+00 & 6.068660e+00 & 6.20712e+00 & 6.05406e+00 \\ 
-249 & NA & LnQ\_base\_TRIENNIAL(7) & -1.486080e+00 & -2.834090e+00 & -1.189610e+00 & -2.433810e+00 & -3.486150e-01 & -5.45417e-01 & -3.44019e-01 \\ 
-250 & NA & LnQ\_base\_AK\_SLOPE(8) & -3.109520e+00 & -4.279270e+00 & -2.834480e+00 & -4.055000e+00 & -2.149030e+00 & -2.24874e+00 & -2.11072e+00 \\ 
-251 & NA & LnQ\_base\_NW\_SLOPE(9) & -2.043220e+00 & -3.212260e+00 & -1.766140e+00 & -2.993900e+00 & -1.085020e+00 & -1.17972e+00 & -1.04254e+00 \\ 
-252 & NA & LnQ\_base\_WCGBTS(10) & -2.609050e+00 & -3.810620e+00 & -2.297770e+00 & -3.559420e+00 & -1.460880e+00 & -1.67097e+00 & -1.44044e+00 \\ 
-253 & NA & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.269320e+00 & -3.478010e+00 & -2.009180e+00 & -3.146270e+00 & -1.084000e+00 & -1.34375e+00 & -1.16398e+00 \\ 
-254 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 4.933760e+01 & 4.932030e+01 & 4.943260e+01 & 4.928780e+01 & 5.078000e+01 & 4.91455e+01 & 5.22724e+01 \\ 
-255 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -1.152440e+01 & -1.152440e+01 & -1.152440e+01 & -1.152440e+01 & -1.500000e+01 & -1.50000e+01 & -1.15244e+01 \\ 
-256 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.566740e+00 & 4.661990e+00 & 4.577010e+00 & 4.581750e+00 & 4.638000e+00 & 4.51924e+00 & 4.84210e+00 \\ 
-257 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.950950e+00 & 3.037250e+00 & 2.816720e+00 & 2.842610e+00 & 2.000000e+01 & 2.00000e+01 & -1.20217e+00 \\ 
-258 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-259 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -6.391630e-01 & -6.764730e-01 & -4.762020e-01 & -5.302410e-01 & -9.990000e+02 & -9.99000e+02 & 9.56091e-01 \\ 
-260 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 2.526000e+01 & 2.361050e+01 & 2.528100e+01 & 2.521110e+01 & 2.545540e+01 & 2.54479e+01 & 2.55035e+01 \\ 
-261 & NA & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-262 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.887810e+00 & 4.822880e+00 & 4.891800e+00 & 4.902630e+00 & 5.043660e+00 & 4.91734e+00 & 5.02907e+00 \\ 
-263 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.840090e+00 & 4.069580e+00 & 3.825020e+00 & 3.841490e+00 & 3.728710e+00 & 3.77750e+00 & 3.72043e+00 \\ 
-264 & NA & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-265 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.816240e+00 & -4.058040e+00 & -3.788930e+00 & -3.845460e+00 & -3.399710e+00 & -3.57449e+00 & -3.40948e+00 \\ 
-266 & NA & Size\_DblN\_peak\_NON\_TRAWL(3) & 5.027190e+01 & 5.019900e+01 & 5.054410e+01 & 5.027830e+01 & 5.416120e+01 & 5.16128e+01 & 5.37469e+01 \\ 
-267 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-268 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.858650e+00 & 4.003590e+00 & 3.890260e+00 & 3.879270e+00 & 4.245430e+00 & 3.95696e+00 & 4.19377e+00 \\ 
-269 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-270 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-271 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.602910e+00 & 4.602910e+00 & 4.602910e+00 & 4.602910e+00 & -9.990000e+02 & 4.60291e+00 & -9.99000e+02 \\ 
-272 & NA & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 4.994480e+01 & 5.007740e+01 & 5.000810e+01 & 4.989270e+01 & 5.161550e+01 & 5.10811e+01 & 5.15936e+01 \\ 
-273 & NA & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-274 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.747950e+00 & 3.785680e+00 & 3.759200e+00 & 3.751290e+00 & 3.978090e+00 & 3.94454e+00 & 3.97641e+00 \\ 
-275 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.662240e+00 & 2.649170e+00 & 2.569740e+00 & 2.604060e+00 & 1.248620e+00 & 1.93871e+00 & 1.31552e+00 \\ 
-276 & NA & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-277 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -1.918270e-01 & -2.403050e-01 & -3.202850e-02 & -8.586860e-02 & 2.230930e+00 & 4.19920e-01 & 1.73878e+00 \\ 
-278 & NA & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 5.217180e+01 & 5.216530e+01 & 5.273310e+01 & 5.234670e+01 & 6.239420e+01 & 5.50136e+01 & 6.04875e+01 \\ 
-279 & NA & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-280 & NA & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.567390e+00 & 4.655500e+00 & 4.621980e+00 & 4.604480e+00 & 5.330540e+00 & 4.78556e+00 & 5.19288e+00 \\ 
-281 & NA & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-282 & NA & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-283 & NA & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-284 & NA & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 4.970800e+01 & 4.956330e+01 & 4.933590e+01 & 4.920610e+01 & 5.429440e+01 & 5.11779e+01 & 5.36613e+01 \\ 
-285 & NA & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-286 & NA & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.591930e+00 & 3.578720e+00 & 3.568810e+00 & 3.565870e+00 & 4.220090e+00 & 3.79337e+00 & 4.13107e+00 \\ 
-287 & NA & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.000000e+01 & 2.00000e+01 & 2.00000e+01 \\ 
-288 & NA & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-289 & NA & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-290 & NA & Size\_DblN\_peak\_TRIENNIAL(7) & 2.178450e+01 & 2.207370e+01 & 2.177900e+01 & 2.179770e+01 & 2.181770e+01 & 2.18210e+01 & 2.18221e+01 \\ 
-291 & NA & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.603730e+00 & -8.60373e+00 & -8.60373e+00 \\ 
-292 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.524880e+00 & 3.578710e+00 & 3.523040e+00 & 3.520300e+00 & 3.532400e+00 & 3.53860e+00 & 3.53647e+00 \\ 
-293 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.948900e+00 & 3.993560e+00 & 3.936690e+00 & 3.956400e+00 & 3.801100e+00 & 3.87029e+00 & 3.80886e+00 \\ 
-294 & NA & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-295 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.583790e+00 & -2.559680e+00 & -2.566520e+00 & -2.574630e+00 & -2.343710e+00 & -2.47165e+00 & -2.33726e+00 \\ 
-296 & NA & Size\_DblN\_peak\_AK\_SLOPE(8) & 3.728930e+01 & 3.646340e+01 & 3.721500e+01 & 3.719750e+01 & 3.702610e+01 & 3.72952e+01 & 3.72048e+01 \\ 
-297 & NA & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-298 & NA & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.943010e+00 & 4.682730e+00 & 4.940170e+00 & 4.925750e+00 & 4.960280e+00 & 4.96776e+00 & 4.96619e+00 \\ 
-299 & NA & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.631560e+00 & 4.649380e+00 & 4.652100e+00 & 4.635700e+00 & 4.849960e+00 & 4.71178e+00 & 4.81107e+00 \\ 
-300 & NA & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-301 & NA & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -1.048650e+01 & -1.007730e+01 & -1.055770e+01 & -1.048200e+01 & -1.030740e+01 & -1.05071e+01 & -1.03353e+01 \\ 
-302 & NA & Size\_DblN\_peak\_WCGBTS(10) & 2.108470e+01 & 2.065230e+01 & 2.120280e+01 & 2.098720e+01 & 2.149400e+01 & 2.16028e+01 & 2.15140e+01 \\ 
-303 & NA & Size\_DblN\_top\_logit\_WCGBTS(10) & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.500000e+01 & -1.50000e+01 & -1.50000e+01 \\ 
-304 & NA & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.390310e+00 & 3.240420e+00 & 3.420960e+00 & 3.365570e+00 & 3.489060e+00 & 3.51725e+00 & 3.49559e+00 \\ 
-305 & NA & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.647000e+00 & 4.693170e+00 & 4.572570e+00 & 4.670200e+00 & 4.145810e+00 & 4.31006e+00 & 4.14909e+00 \\ 
-306 & NA & Size\_DblN\_start\_logit\_WCGBTS(10) & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.990000e+02 & -9.99000e+02 & -9.99000e+02 \\ 
-307 & NA & Size\_DblN\_end\_logit\_WCGBTS(10) & -8.340720e-01 & -1.047810e+00 & -8.076350e-01 & -8.669740e-01 & -4.421220e-01 & -5.88434e-01 & -4.36944e-01 \\ 
-308 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 4.470410e+01 & 4.293780e+01 & 4.487000e+01 & 4.452910e+01 & NA & NA & 4.56986e+01 \\ 
-309 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.763790e+01 & 4.751200e+01 & 4.899720e+01 & 4.899710e+01 & NA & NA & 4.99173e+01 \\ 
-310 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.029120e+00 & 4.773370e+00 & 5.053870e+00 & 5.012920e+00 & NA & NA & 5.13276e+00 \\ 
-311 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.103960e+00 & 4.013430e+00 & 4.292440e+00 & 4.299260e+00 & NA & NA & 4.44013e+00 \\ 
-312 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.652960e+00 & 3.356630e+00 & 2.523290e+00 & 2.727560e+00 & NA & NA & 1.71507e+00 \\ 
-313 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.750070e+00 & 2.750910e+00 & -1.239430e+01 & -1.232530e+01 & NA & NA & -1.95649e-01 \\ 
-314 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.591530e+00 & -1.864830e+00 & -1.419820e+00 & -1.629950e+00 & NA & NA & -7.53364e-01 \\ 
-315 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -9.342310e-01 & -1.053470e+00 & -6.212650e-01 & -6.703660e-01 & NA & NA & 1.30515e-01 \\ 
-316 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 4.767260e+01 & 4.788450e+01 & 5.096060e+01 & 5.095930e+01 & 4.870190e+01 & 4.81181e+01 & 4.86911e+01 \\ 
-317 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.317930e+00 & 6.240400e+00 & 6.587920e+00 & 6.584730e+00 & 6.366560e+00 & 6.33518e+00 & 6.35733e+00 \\ 
-318 & NA & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.012640e+00 & 2.932960e+00 & -8.186920e+00 & -8.115900e+00 & 2.598990e+00 & 2.87359e+00 & 2.63358e+00 \\ 
-319 & NA & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.702480e+00 & -1.758020e+00 & -1.167320e+00 & -1.213370e+00 & -6.507530e-01 & -1.30071e+00 & -7.49842e-01 \\ 
-320 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 4.677150e+01 & 4.660980e+01 & 4.681590e+01 & 4.674780e+01 & 4.582950e+01 & 4.70464e+01 & 4.57454e+01 \\ 
-321 & NA & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 4.949080e+01 & 4.961530e+01 & 4.959430e+01 & 4.951120e+01 & 5.002000e+01 & 5.00218e+01 & 4.98351e+01 \\ 
-322 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.046840e+00 & 2.974920e+00 & 3.059630e+00 & 3.048000e+00 & 2.979620e+00 & 3.10744e+00 & 2.95949e+00 \\ 
-323 & NA & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.808180e+00 & 3.831110e+00 & 3.825770e+00 & 3.824470e+00 & 3.909190e+00 & 3.86504e+00 & 3.88468e+00 \\ 
-324 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.174290e+00 & 3.184710e+00 & 3.144460e+00 & 3.156050e+00 & NA & 3.09958e+00 & NA \\ 
-325 & NA & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.323040e+00 & 2.348120e+00 & 2.150640e+00 & 2.195430e+00 & NA & 1.72625e+00 & NA \\ 
-326 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.285170e+00 & -2.389510e+00 & -2.170160e+00 & -2.226190e+00 & NA & -1.87660e+00 & NA \\ 
-327 & NA & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -6.261370e-01 & -6.440420e-01 & -4.948040e-01 & -5.428430e-01 & NA & -9.82155e-02 & NA \\ 
-328 & NA & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 1.735520e+01 & 1.715160e+01 & 1.730570e+01 & 1.737490e+01 & 1.693740e+01 & 1.73146e+01 & 1.69494e+01 \\ 
-329 & NA & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.085320e+00 & 1.944550e+00 & 2.068330e+00 & 2.087510e+00 & 1.880120e+00 & 2.06269e+00 & 1.89877e+00 \\ 
-330 & NA & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.105830e+00 & 5.069000e+00 & 5.096920e+00 & 5.138280e+00 & 5.167470e+00 & 5.09110e+00 & 5.13320e+00 \\ 
-331 & NA & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.287390e+00 & -4.200440e+00 & -4.241290e+00 & -4.395940e+00 & -4.736770e+00 & -4.43209e+00 & -4.41938e+00 \\ 
-332 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK2repl\_1892 & NA & NA & NA & NA & 4.793720e+01 & 4.65957e+01 & NA \\ 
-333 & NA & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK2repl\_2011 & NA & NA & NA & NA & 5.106810e+01 & 4.91472e+01 & NA \\ 
-334 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK2repl\_1892 & NA & NA & NA & NA & 4.894090e+00 & 4.84223e+00 & NA \\ 
-335 & NA & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK2repl\_2011 & NA & NA & NA & NA & 4.790430e+00 & 4.68259e+00 & NA \\ 
-336 & Derived quantities & NA & NA & NA & NA & NA & NA & NA & NA \\ 
-337 & NA & SB0 & 5.647660e+06 & 2.034210e+07 & 4.072700e+06 & 1.353220e+07 & 1.817430e+06 & 2.36582e+06 & 1.80409e+06 \\ 
-338 & NA & SSB\_2025 & 4.929120e+06 & 1.932310e+07 & 3.426350e+06 & 1.300270e+07 & 1.028680e+06 & 1.50104e+06 & 1.00381e+06 \\ 
-339 & NA & Bratio\_2025 & 8.727720e-01 & 9.499080e-01 & 8.412970e-01 & 9.608750e-01 & 5.660060e-01 & 6.34467e-01 & 5.56406e-01 \\ 
-340 & NA & MSY\_SPR & 5.261640e+02 & 1.906710e+03 & 3.943150e+02 & 1.309060e+03 & 2.066320e+02 & 2.39026e+02 & 2.03051e+02 \\ 
-341 & NA & F\_SPR & 3.982020e-02 & 3.994820e-02 & 2.160980e-02 & 2.158870e-02 & 4.547840e-02 & 4.21119e-02 & 4.52165e-02 \\ 
+AIC &  &  &  &  &  &  &  &  \\ 
+ & AIC & 15,093.92 & 14,899.82 & 15,038.28 & 14,966.68 & 15,393.56 & 15,185.10 & 15,357.90 \\ 
+ & deltaAIC & 0.00 & -194.10 & -55.64 & -127.24 & 299.64 & 91.18 & 263.98 \\ 
+Survey\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & -26.81 & -26.63 & -26.73 & -27.06 & -27.18 & -26.73 & -26.74 \\ 
+ & TRIENNIAL & -7.76 & -7.45 & -7.67 & -8.00 & -8.22 & -7.75 & -7.80 \\ 
+ & AK\_SLOPE & -0.53 & -0.52 & -0.52 & -0.55 & -0.54 & -0.52 & -0.52 \\ 
+ & NW\_SLOPE & -1.03 & -1.02 & -1.03 & -1.04 & -1.03 & -1.03 & -1.02 \\ 
+ & WCGBTS & -17.49 & -17.63 & -17.50 & -17.47 & -17.40 & -17.43 & -17.40 \\ 
+Lt\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & 574.84 & 590.58 & 574.64 & 576.89 & 702.16 & 617.53 & 683.72 \\ 
+ & BOTTOM\_TRAWL & 79.10 & 80.13 & 83.67 & 83.29 & 106.01 & 123.64 & 82.59 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 27.15 & 28.13 & 28.97 & 28.96 & 27.68 & 27.31 & 27.65 \\ 
+ & NON\_TRAWL & 179.67 & 179.75 & 172.00 & 173.42 & 276.01 & 181.88 & 282.83 \\ 
+ & NON\_TRAWL\_DISCARD & 46.62 & 47.02 & 46.19 & 46.24 & 49.95 & 47.56 & 49.48 \\ 
+ & MIDWATER\_TRAWL & 58.95 & 60.49 & 57.37 & 57.87 & 58.59 & 57.37 & 58.36 \\ 
+ & AT\_SEA\_HAKE & 25.42 & 27.06 & 30.10 & 30.71 & 24.94 & 22.45 & 24.37 \\ 
+ & TRIENNIAL & 22.42 & 28.29 & 22.09 & 22.09 & 21.73 & 21.97 & 21.72 \\ 
+ & AK\_SLOPE & 52.30 & 53.05 & 52.36 & 52.38 & 52.57 & 52.39 & 52.54 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 83.19 & 86.66 & 81.91 & 81.93 & 84.69 & 82.95 & 84.17 \\ 
+Age\_likelihood &  &  &  &  &  &  &  &  \\ 
+ & ALL & 6,783.49 & 6,817.81 & 6,803.70 & 6,808.00 & 6,818.06 & 6,793.11 & 6,812.24 \\ 
+ & BOTTOM\_TRAWL & 464.25 & 464.97 & 464.35 & 464.17 & 462.87 & 463.82 & 462.83 \\ 
+ & BOTTOM\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NON\_TRAWL & 331.38 & 335.01 & 331.04 & 331.30 & 333.46 & 331.62 & 333.10 \\ 
+ & NON\_TRAWL\_DISCARD & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & MIDWATER\_TRAWL & 182.47 & 182.05 & 181.83 & 181.59 & 180.88 & 181.84 & 180.98 \\ 
+ & AT\_SEA\_HAKE & 3,847.50 & 3,860.07 & 3,845.56 & 3,849.93 & 3,884.81 & 3,858.47 & 3,878.72 \\ 
+ & TRIENNIAL & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & AK\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & NW\_SLOPE & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\ 
+ & WCGBTS & 1,957.88 & 1,975.71 & 1,980.92 & 1,981.01 & 1,956.05 & 1,957.36 & 1,956.62 \\ 
+Parameters &  &  &  &  &  &  &  &  \\ 
+ & NatM\_uniform\_Fem\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Fem\_GP\_1 & -3.10 & -3.34 & -3.24 & -3.30 & -3.43 & -3.13 & -3.35 \\ 
+ & L\_at\_Amax\_Fem\_GP\_1 & 60.08 & 60.11 & 59.77 & 59.81 & 57.59 & 59.16 & 57.84 \\ 
+ & VonBert\_K\_Fem\_GP\_1 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 & 0.08 \\ 
+ & CV\_young\_Fem\_GP\_1 & 0.05 & 0.04 & 0.05 & 0.05 & 0.03 & 0.04 & 0.03 \\ 
+ & CV\_old\_Fem\_GP\_1 & 0.09 & 0.09 & 0.09 & 0.09 & 0.10 & 0.10 & 0.10 \\ 
+ & NatM\_uniform\_Mal\_GP\_1 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ 
+ & L\_at\_Amin\_Mal\_GP\_1 & -2.68 & -3.63 & -2.95 & -3.04 & -4.07 & -2.95 & -3.84 \\ 
+ & L\_at\_Amax\_Mal\_GP\_1 & 57.83 & 57.82 & 57.56 & 57.64 & 55.23 & 56.91 & 55.50 \\ 
+ & VonBert\_K\_Mal\_GP\_1 & 0.08 & 0.09 & 0.08 & 0.09 & 0.09 & 0.09 & 0.09 \\ 
+ & CV\_young\_Mal\_GP\_1 & 0.09 & 0.06 & 0.09 & 0.09 & 0.05 & 0.08 & 0.05 \\ 
+ & CV\_old\_Mal\_GP\_1 & 0.08 & 0.09 & 0.08 & 0.08 & 0.09 & 0.09 & 0.09 \\ 
+ & SR\_LN(R0) & 7.00 & 8.29 & 6.71 & 7.91 & 6.07 & 6.21 & 6.05 \\ 
+ & LnQ\_base\_TRIENNIAL(7) & -1.49 & -2.83 & -1.19 & -2.43 & -0.35 & -0.55 & -0.34 \\ 
+ & LnQ\_base\_AK\_SLOPE(8) & -3.11 & -4.28 & -2.83 & -4.05 & -2.15 & -2.25 & -2.11 \\ 
+ & LnQ\_base\_NW\_SLOPE(9) & -2.04 & -3.21 & -1.77 & -2.99 & -1.09 & -1.18 & -1.04 \\ 
+ & LnQ\_base\_WCGBTS(10) & -2.61 & -3.81 & -2.30 & -3.56 & -1.46 & -1.67 & -1.44 \\ 
+ & LnQ\_base\_TRIENNIAL(7)\_BLK3repl\_1892 & -2.27 & -3.48 & -2.01 & -3.15 & -1.08 & -1.34 & -1.16 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1) & 49.34 & 49.32 & 49.43 & 49.29 & 50.78 & 49.15 & 52.27 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL(1) & -11.52 & -11.52 & -11.52 & -11.52 & -15.00 & -15.00 & -11.52 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1) & 4.57 & 4.66 & 4.58 & 4.58 & 4.64 & 4.52 & 4.84 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1) & 2.95 & 3.04 & 2.82 & 2.84 & 20.00 & 20.00 & -1.20 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL(1) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1) & -0.64 & -0.68 & -0.48 & -0.53 & -999.00 & -999.00 & 0.96 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2) & 25.26 & 23.61 & 25.28 & 25.21 & 25.46 & 25.45 & 25.50 \\ 
+ & Size\_DblN\_top\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 4.89 & 4.82 & 4.89 & 4.90 & 5.04 & 4.92 & 5.03 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2) & 3.84 & 4.07 & 3.83 & 3.84 & 3.73 & 3.78 & 3.72 \\ 
+ & Size\_DblN\_start\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2) & -3.82 & -4.06 & -3.79 & -3.85 & -3.40 & -3.57 & -3.41 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3) & 50.27 & 50.20 & 50.54 & 50.28 & 54.16 & 51.61 & 53.75 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL(3) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3) & 3.86 & 4.00 & 3.89 & 3.88 & 4.25 & 3.96 & 4.19 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL(3) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3) & 4.60 & 4.60 & 4.60 & 4.60 & -999.00 & 4.60 & -999.00 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL\_DISCARD(4) & 49.94 & 50.08 & 50.01 & 49.89 & 51.62 & 51.08 & 51.59 \\ 
+ & Size\_DblN\_top\_logit\_NON\_TRAWL\_DISCARD(4) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL\_DISCARD(4) & 3.75 & 3.79 & 3.76 & 3.75 & 3.98 & 3.94 & 3.98 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL\_DISCARD(4) & 2.66 & 2.65 & 2.57 & 2.60 & 1.25 & 1.94 & 1.32 \\ 
+ & Size\_DblN\_start\_logit\_NON\_TRAWL\_DISCARD(4) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL\_DISCARD(4) & -0.19 & -0.24 & -0.03 & -0.09 & 2.23 & 0.42 & 1.74 \\ 
+ & Size\_DblN\_peak\_MIDWATER\_TRAWL(5) & 52.17 & 52.17 & 52.73 & 52.35 & 62.39 & 55.01 & 60.49 \\ 
+ & Size\_DblN\_top\_logit\_MIDWATER\_TRAWL(5) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_MIDWATER\_TRAWL(5) & 4.57 & 4.66 & 4.62 & 4.60 & 5.33 & 4.79 & 5.19 \\ 
+ & Size\_DblN\_descend\_se\_MIDWATER\_TRAWL(5) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_MIDWATER\_TRAWL(5) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_AT\_SEA\_HAKE(6) & 49.71 & 49.56 & 49.34 & 49.21 & 54.29 & 51.18 & 53.66 \\ 
+ & Size\_DblN\_top\_logit\_AT\_SEA\_HAKE(6) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AT\_SEA\_HAKE(6) & 3.59 & 3.58 & 3.57 & 3.57 & 4.22 & 3.79 & 4.13 \\ 
+ & Size\_DblN\_descend\_se\_AT\_SEA\_HAKE(6) & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 & 20.00 \\ 
+ & Size\_DblN\_start\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AT\_SEA\_HAKE(6) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7) & 21.78 & 22.07 & 21.78 & 21.80 & 21.82 & 21.82 & 21.82 \\ 
+ & Size\_DblN\_top\_logit\_TRIENNIAL(7) & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 & -8.60 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7) & 3.52 & 3.58 & 3.52 & 3.52 & 3.53 & 3.54 & 3.54 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7) & 3.95 & 3.99 & 3.94 & 3.96 & 3.80 & 3.87 & 3.81 \\ 
+ & Size\_DblN\_start\_logit\_TRIENNIAL(7) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7) & -2.58 & -2.56 & -2.57 & -2.57 & -2.34 & -2.47 & -2.34 \\ 
+ & Size\_DblN\_peak\_AK\_SLOPE(8) & 37.29 & 36.46 & 37.22 & 37.20 & 37.03 & 37.30 & 37.20 \\ 
+ & Size\_DblN\_top\_logit\_AK\_SLOPE(8) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_AK\_SLOPE(8) & 4.94 & 4.68 & 4.94 & 4.93 & 4.96 & 4.97 & 4.97 \\ 
+ & Size\_DblN\_descend\_se\_AK\_SLOPE(8) & 4.63 & 4.65 & 4.65 & 4.64 & 4.85 & 4.71 & 4.81 \\ 
+ & Size\_DblN\_start\_logit\_AK\_SLOPE(8) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_AK\_SLOPE(8) & -10.49 & -10.08 & -10.56 & -10.48 & -10.31 & -10.51 & -10.34 \\ 
+ & Size\_DblN\_peak\_WCGBTS(10) & 21.08 & 20.65 & 21.20 & 20.99 & 21.49 & 21.60 & 21.51 \\ 
+ & Size\_DblN\_top\_logit\_WCGBTS(10) & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 & -15.00 \\ 
+ & Size\_DblN\_ascend\_se\_WCGBTS(10) & 3.39 & 3.24 & 3.42 & 3.37 & 3.49 & 3.52 & 3.50 \\ 
+ & Size\_DblN\_descend\_se\_WCGBTS(10) & 4.65 & 4.69 & 4.57 & 4.67 & 4.15 & 4.31 & 4.15 \\ 
+ & Size\_DblN\_start\_logit\_WCGBTS(10) & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 & -999.00 \\ 
+ & Size\_DblN\_end\_logit\_WCGBTS(10) & -0.83 & -1.05 & -0.81 & -0.87 & -0.44 & -0.59 & -0.44 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 44.70 & 42.94 & 44.87 & 44.53 &  &  & 45.70 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 47.64 & 47.51 & 49.00 & 49.00 &  &  & 49.92 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 5.03 & 4.77 & 5.05 & 5.01 &  &  & 5.13 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 4.10 & 4.01 & 4.29 & 4.30 &  &  & 4.44 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & 2.65 & 3.36 & 2.52 & 2.73 &  &  & 1.72 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & 2.75 & 2.75 & -12.39 & -12.33 &  &  & -0.20 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_1892 & -1.59 & -1.86 & -1.42 & -1.63 &  &  & -0.75 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL(1)\_BLK4repl\_2002 & -0.93 & -1.05 & -0.62 & -0.67 &  &  & 0.13 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 47.67 & 47.88 & 50.96 & 50.96 & 48.70 & 48.12 & 48.69 \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 6.32 & 6.24 & 6.59 & 6.58 & 6.37 & 6.34 & 6.36 \\ 
+ & Size\_DblN\_descend\_se\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & 3.01 & 2.93 & -8.19 & -8.12 & 2.60 & 2.87 & 2.63 \\ 
+ & Size\_DblN\_end\_logit\_BOTTOM\_TRAWL\_DISCARD(2)\_BLK1repl\_1892 & -1.70 & -1.76 & -1.17 & -1.21 & -0.65 & -1.30 & -0.75 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_1892 & 46.77 & 46.61 & 46.82 & 46.75 & 45.83 & 47.05 & 45.75 \\ 
+ & Size\_DblN\_peak\_NON\_TRAWL(3)\_BLK2repl\_2011 & 49.49 & 49.62 & 49.59 & 49.51 & 50.02 & 50.02 & 49.84 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.05 & 2.97 & 3.06 & 3.05 & 2.98 & 3.11 & 2.96 \\ 
+ & Size\_DblN\_ascend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 3.81 & 3.83 & 3.83 & 3.82 & 3.91 & 3.87 & 3.88 \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_1892 & 3.17 & 3.18 & 3.14 & 3.16 &  & 3.10 &  \\ 
+ & Size\_DblN\_descend\_se\_NON\_TRAWL(3)\_BLK2repl\_2011 & 2.32 & 2.35 & 2.15 & 2.20 &  & 1.73 &  \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_1892 & -2.29 & -2.39 & -2.17 & -2.23 &  & -1.88 &  \\ 
+ & Size\_DblN\_end\_logit\_NON\_TRAWL(3)\_BLK2repl\_2011 & -0.63 & -0.64 & -0.49 & -0.54 &  & -0.10 &  \\ 
+ & Size\_DblN\_peak\_TRIENNIAL(7)\_BLK3repl\_1892 & 17.36 & 17.15 & 17.31 & 17.37 & 16.94 & 17.31 & 16.95 \\ 
+ & Size\_DblN\_ascend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 2.09 & 1.94 & 2.07 & 2.09 & 1.88 & 2.06 & 1.90 \\ 
+ & Size\_DblN\_descend\_se\_TRIENNIAL(7)\_BLK3repl\_1892 & 5.11 & 5.07 & 5.10 & 5.14 & 5.17 & 5.09 & 5.13 \\ 
+ & Size\_DblN\_end\_logit\_TRIENNIAL(7)\_BLK3repl\_1892 & -4.29 & -4.20 & -4.24 & -4.40 & -4.74 & -4.43 & -4.42 \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK2repl\_1892 &  &  &  &  & 47.94 & 46.60 &  \\ 
+ & Size\_DblN\_peak\_BOTTOM\_TRAWL(1)\_BLK2repl\_2011 &  &  &  &  & 51.07 & 49.15 &  \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK2repl\_1892 &  &  &  &  & 4.89 & 4.84 &  \\ 
+ & Size\_DblN\_ascend\_se\_BOTTOM\_TRAWL(1)\_BLK2repl\_2011 &  &  &  &  & 4.79 & 4.68 &  \\ 
+Derived quantities &  &  &  &  &  &  &  &  \\ 
+ & SB0 & 5,647,660.00 & 20,342,100.00 & 4,072,700.00 & 13,532,200.00 & 1,817,430.00 & 2,365,820.00 & 1,804,090.00 \\ 
+ & SSB\_2025 & 4,929,120.00 & 19,323,100.00 & 3,426,350.00 & 13,002,700.00 & 1,028,680.00 & 1,501,040.00 & 1,003,810.00 \\ 
+ & Bratio\_2025 & 0.87 & 0.95 & 0.84 & 0.96 & 0.57 & 0.63 & 0.56 \\ 
+ & MSY\_SPR & 526.16 & 1,906.71 & 394.31 & 1,309.06 & 206.63 & 239.03 & 203.05 \\ 
+ & F\_SPR & 0.04 & 0.04 & 0.02 & 0.02 & 0.05 & 0.04 & 0.05 \\ 
 \bottomrule
-\end{tabular*}
 
-}
+\end{longtable}
 
-\end{table}%
+\endgroup
+
+\end{landscape}
+
+\newpage{}
+
+\begingroup
+\fontsize{9.0pt}{10.8pt}\selectfont
+
+\begin{longtable}{llll}
+
+\caption{\label{tbl-uncertainty_summary}PLACEHOLDER.}
+
+\tabularnewline
+
+\toprule
+Source & Change & Scale & Status \\ 
+\midrule\addlinespace[2.5pt]
+Nautral mortlality & Increase & Up & Up \\ 
+Bottom Trawl Selectivity &  &  &  \\ 
+Logistic &  & Down & Down \\ 
+Dome-shaped &  & Up & Up \\ 
+Ageing Error & Less bias and imprecision & Down & Same \\ 
+Data weighting &  &  &  \\ 
+Lengths & Higher weight & Down & Down \\ 
+Ages & Higher weight & Up & Up \\ 
+ &  &  &  \\ 
+Recruitment estimation & estimate fewer years & Up & Up \\ 
+\bottomrule
+
+\end{longtable}
+
+\endgroup
 
 \newpage{}
 
@@ -8328,7 +8518,7 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \centering{
 
-\includegraphics{SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf}
+\pandocbounded{\includegraphics[keepaspectratio]{SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf}}
 
 }
 
@@ -8340,7 +8530,7 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \centering{
 
-\includegraphics{plots_4_doc/SB_comps.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/SB_comps.png}}
 
 }
 
@@ -8356,7 +8546,7 @@ stock assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Status_comp.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Status_comp.png}}
 
 }
 
@@ -8375,7 +8565,7 @@ stock assessment.}
 
 \centering{
 
-\includegraphics{ref_model/plots/data_plot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/data_plot.png}}
 
 }
 
@@ -8387,7 +8577,7 @@ stock assessment.}
 
 \centering{
 
-\includegraphics{ref_model/plots/catch2_landings_stacked.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/catch2_landings_stacked.png}}
 
 }
 
@@ -8399,7 +8589,7 @@ stock assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_comp_all.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_all.png}}
 
 }
 
@@ -8413,7 +8603,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_comp_CA.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_CA.png}}
 
 }
 
@@ -8427,7 +8617,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_comp_OR.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_OR.png}}
 
 }
 
@@ -8441,7 +8631,7 @@ the 2025 stock assessment model.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_comp_WA.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_WA.png}}
 
 }
 
@@ -8455,7 +8645,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt1mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt1mkt0_page1.png}}
 
 }
 
@@ -8468,7 +8658,7 @@ trawl fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt1mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt1mkt0_page2.png}}
 
 }
 
@@ -8481,7 +8671,7 @@ trawl fleet, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt2mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt2mkt0.png}}
 
 }
 
@@ -8494,7 +8684,7 @@ discard fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt3mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt3mkt0_page1.png}}
 
 }
 
@@ -8507,7 +8697,7 @@ fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt3mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt3mkt0_page2.png}}
 
 }
 
@@ -8520,7 +8710,7 @@ fleet, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt4mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt4mkt0.png}}
 
 }
 
@@ -8533,7 +8723,7 @@ discard fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt5mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt5mkt0.png}}
 
 }
 
@@ -8546,7 +8736,7 @@ trawl fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt6mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt6mkt0.png}}
 
 }
 
@@ -8559,7 +8749,7 @@ fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt10mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt10mkt0.png}}
 
 }
 
@@ -8571,7 +8761,7 @@ fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt7mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt7mkt0.png}}
 
 }
 
@@ -8584,7 +8774,7 @@ Survey.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lendat_flt8mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt8mkt0.png}}
 
 }
 
@@ -8597,7 +8787,7 @@ Survey.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}}
 
 }
 
@@ -8610,7 +8800,7 @@ fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}}
 
 }
 
@@ -8623,7 +8813,7 @@ fleet, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png}}
 
 }
 
@@ -8636,7 +8826,7 @@ data for non-trawl fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png}}
 
 }
 
@@ -8649,7 +8839,7 @@ data for non-trawl fleet, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt5mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt5mkt0.png}}
 
 }
 
@@ -8662,7 +8852,7 @@ data for Midwater trawl fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png}}
 
 }
 
@@ -8675,7 +8865,7 @@ data for At-Sea Hake fleet.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png}}
 
 }
 
@@ -8688,7 +8878,7 @@ data for At-Sea Hake fleet, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png}}
 
 }
 
@@ -8701,7 +8891,7 @@ data for WCGBTS.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png}}
 
 }
 
@@ -8714,7 +8904,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png}}
 
 }
 
@@ -8727,7 +8917,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\includegraphics{ref_model/plots/index9_standcpueall.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index9_standcpueall.png}}
 
 }
 
@@ -8739,7 +8929,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\includegraphics{plots_4_doc/WCGBTS_comps.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/WCGBTS_comps.png}}
 
 }
 
@@ -8754,7 +8944,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\includegraphics{ref_model/plots/index1_cpuedata_WCGBTS.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_WCGBTS.png}}
 
 }
 
@@ -8766,7 +8956,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\includegraphics{ref_model/plots/index1_cpuedata_TRIENNIAL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_TRIENNIAL.png}}
 
 }
 
@@ -8778,7 +8968,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\includegraphics{ref_model/plots/index1_cpuedata_AK_SLOPE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_AK_SLOPE.png}}
 
 }
 
@@ -8790,7 +8980,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\includegraphics{ref_model/plots/index1_cpuedata_NW_SLOPE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_NW_SLOPE.png}}
 
 }
 
@@ -8802,7 +8992,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\includegraphics{plots_4_doc/compare1_spawnbio_updatedCt.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare1_spawnbio_updatedCt.png}}
 
 }
 
@@ -8816,7 +9006,7 @@ Rockfishes assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/compare3_Bratio_updatedCt.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare3_Bratio_updatedCt.png}}
 
 }
 
@@ -8832,7 +9022,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/1v2sex_spawnbio.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/1v2sex_spawnbio.png}}
 
 }
 
@@ -8847,7 +9037,7 @@ double the biomass because it includes both females and males.}
 
 \centering{
 
-\includegraphics{plots_4_doc/1v2sex_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/1v2sex_Bratio_uncertainty.png}}
 
 }
 
@@ -8861,7 +9051,7 @@ Rougheye/Blackspotted Rockfishes assessment data.}
 
 \centering{
 
-\includegraphics{plots_4_doc/M_values.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/M_values.png}}
 
 }
 
@@ -8876,7 +9066,7 @@ ages using the equation from Hamel and Cope 2022.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_curve_plot_FM.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM.png}}
 
 }
 
@@ -8892,7 +9082,7 @@ equal to the estimate of an aggregate total mortality (Z).}
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_100.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM_21_100.png}}
 
 }
 
@@ -8909,7 +9099,7 @@ linear model is equal to the estimate of an aggregate total mortality
 
 \centering{
 
-\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_80.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM_21_80.png}}
 
 }
 
@@ -8926,7 +9116,7 @@ linear model is equal to the estimate of an aggregate total mortality
 
 \centering{
 
-\includegraphics{plots_4_doc/Age_length_plot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Age_length_plot.png}}
 
 }
 
@@ -8941,7 +9131,7 @@ provided.}
 
 \centering{
 
-\includegraphics{plots_4_doc/Lt_age_CV_FM.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Lt_age_CV_FM.png}}
 
 }
 
@@ -8956,7 +9146,7 @@ also indicated by size of the point. The line is a smoothed loess
 
 \centering{
 
-\includegraphics{plots_4_doc/AE_matrix_plot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_matrix_plot.png}}
 
 }
 
@@ -8971,7 +9161,7 @@ is a combination of all commercial fleets.}
 
 \centering{
 
-\includegraphics{plots_4_doc/AE_Bias.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_Bias.png}}
 
 }
 
@@ -8984,7 +9174,7 @@ ageing error matrices.}
 
 \centering{
 
-\includegraphics{plots_4_doc/AE_SD.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_SD.png}}
 
 }
 
@@ -8999,7 +9189,7 @@ deviation) used for each of the seven ageing error matrices.}
 
 \centering{
 
-\includegraphics{plots_4_doc/L_W_plots.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/L_W_plots.png}}
 
 }
 
@@ -9012,7 +9202,7 @@ source. Lines are the power function fits by data source.}
 
 \centering{
 
-\includegraphics{plots_4_doc/F_M_ltwt_plot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/F_M_ltwt_plot.png}}
 
 }
 
@@ -9027,7 +9217,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\includegraphics{plots_4_doc/bio_fxn_maturity.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bio_fxn_maturity.png}}
 
 }
 
@@ -9039,7 +9229,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\includegraphics{plots_4_doc/l50_both_species.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/l50_both_species.png}}
 
 }
 
@@ -9051,7 +9241,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\includegraphics{plots_4_doc/a50_both_species.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/a50_both_species.png}}
 
 }
 
@@ -9059,11 +9249,13 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \end{figure}%
 
+\newpage
+
 \begin{figure}[H]
 
 \centering{
 
-\includegraphics{plots_4_doc/Bimodal_lengths_Peter_Frey.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Bimodal_lengths_Peter_Frey.png}}
 
 }
 
@@ -9077,7 +9269,7 @@ Rockfish and Blackspotted Rockfish identified to species using genetics
 
 \centering{
 
-\includegraphics{plots_4_doc/compare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare4_Bratio_uncertainty.png}}
 
 }
 
@@ -9093,7 +9285,7 @@ compared to the using the same data in the newest version of SS3
 
 \centering{
 
-\includegraphics{plots_4_doc/compare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -9109,7 +9301,7 @@ denotes 95\% confidence intervals.}
 
 \centering{
 
-\includegraphics{plots_4_doc/compare1_spawnbio__discard_fleets.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare1_spawnbio__discard_fleets.png}}
 
 }
 
@@ -9123,7 +9315,7 @@ Rockfishes assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/compare3_Bratio_discard_fleets.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare3_Bratio_discard_fleets.png}}
 
 }
 
@@ -9137,7 +9329,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \centering{
 
-\includegraphics{plots_4_doc/bridging_compare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bridging_compare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -9150,7 +9342,7 @@ for briding analysis.}
 
 \centering{
 
-\includegraphics{plots_4_doc/bridging_compare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bridging_compare4_Bratio_uncertainty.png}}
 
 }
 
@@ -9165,7 +9357,7 @@ spawning output for briding analysis.}
 
 \centering{
 
-\includegraphics{plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png}}
 
 }
 
@@ -9180,7 +9372,7 @@ likelihoods used to establish a fixed value for male natural mortality.}
 
 \centering{
 
-\includegraphics{plots_4_doc/pairs_plot_fast.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/pairs_plot_fast.png}}
 
 }
 
@@ -9196,7 +9388,7 @@ efficiency.}
 
 \centering{
 
-\includegraphics{ref_model/Jitter Results_0.01/jitterplot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/Jitter Results_0.01/jitterplot.png}}
 
 }
 
@@ -9213,7 +9405,7 @@ better fit to the reference model was found.}
 
 \centering{
 
-\includegraphics{ref_model/Jitter Results_0.05/jitterplot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/Jitter Results_0.05/jitterplot.png}}
 
 }
 
@@ -9230,7 +9422,7 @@ better fit to the reference model was found.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit__aggregated_across_time.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__aggregated_across_time.png}}
 
 }
 
@@ -9243,7 +9435,7 @@ all years.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt1mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt1mkt0_page1.png}}
 
 }
 
@@ -9260,7 +9452,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt1mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt1mkt0_page2.png}}
 
 }
 
@@ -9277,7 +9469,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt2mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt2mkt0.png}}
 
 }
 
@@ -9294,7 +9486,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt3mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt3mkt0_page1.png}}
 
 }
 
@@ -9311,7 +9503,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt3mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt3mkt0_page2.png}}
 
 }
 
@@ -9328,7 +9520,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt4mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt4mkt0.png}}
 
 }
 
@@ -9344,7 +9536,7 @@ effective sample size used in the McAllister-Ianelli tuning method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt5mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt5mkt0.png}}
 
 }
 
@@ -9361,7 +9553,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt6mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt6mkt0.png}}
 
 }
 
@@ -9378,7 +9570,7 @@ method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt7mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt7mkt0.png}}
 
 }
 
@@ -9395,7 +9587,7 @@ tuning method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt8mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt8mkt0.png}}
 
 }
 
@@ -9412,7 +9604,7 @@ McAllister-Ianelli tuning method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_flt10mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt10mkt0.png}}
 
 }
 
@@ -9429,7 +9621,7 @@ McAllister-Ianelli tuning method.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png}}
 
 }
 
@@ -9444,7 +9636,7 @@ residuals (observed \textless{} expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png}}
 
 }
 
@@ -9459,7 +9651,7 @@ fits for each survey. Closed bubble are positive residuals (observed
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png}}
 
 }
 
@@ -9473,7 +9665,7 @@ and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png}}
 
 }
 
@@ -9487,7 +9679,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png}}
 
 }
 
@@ -9501,7 +9693,7 @@ data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png}}
 
 }
 
@@ -9515,7 +9707,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png}}
 
 }
 
@@ -9529,7 +9721,7 @@ and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png}}
 
 }
 
@@ -9543,7 +9735,7 @@ sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png}}
 
 }
 
@@ -9557,7 +9749,7 @@ data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png}}
 
 }
 
@@ -9571,7 +9763,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png}}
 
 }
 
@@ -9587,7 +9779,7 @@ intervals based on sample sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}}
 
 }
 
@@ -9603,7 +9795,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}}
 
 }
 
@@ -9619,7 +9811,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png}}
 
 }
 
@@ -9635,7 +9827,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png}}
 
 }
 
@@ -9651,7 +9843,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt5mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt5mkt0.png}}
 
 }
 
@@ -9666,7 +9858,7 @@ open bubbles are negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png}}
 
 }
 
@@ -9682,7 +9874,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png}}
 
 }
 
@@ -9698,7 +9890,7 @@ expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png}}
 
 }
 
@@ -9714,7 +9906,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png}}
 
 }
 
@@ -9730,7 +9922,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png}}
 
 }
 
@@ -9746,7 +9938,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png}}
 
 }
 
@@ -9760,7 +9952,7 @@ based on current samples sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png}}
 
 }
 
@@ -9774,7 +9966,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png}}
 
 }
 
@@ -9788,7 +9980,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png}}
 
 }
 
@@ -9802,7 +9994,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png}}
 
 }
 
@@ -9817,7 +10009,7 @@ weighting.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png}}
 
 }
 
@@ -9834,7 +10026,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png}}
 
 }
 
@@ -9851,7 +10043,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png}}
 
 }
 
@@ -9868,7 +10060,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png}}
 
 }
 
@@ -9885,7 +10077,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png}}
 
 }
 
@@ -9902,7 +10094,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png}}
 
 }
 
@@ -9919,7 +10111,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png}}
 
 }
 
@@ -9936,7 +10128,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png}}
 
 }
 
@@ -9953,7 +10145,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png}}
 
 }
 
@@ -9970,7 +10162,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png}}
 
 }
 
@@ -9987,7 +10179,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png}}
 
 }
 
@@ -10004,7 +10196,7 @@ chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png}}
 
 }
 
@@ -10021,7 +10213,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png}}
 
 }
 
@@ -10038,7 +10230,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png}}
 
 }
 
@@ -10055,7 +10247,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png}}
 
 }
 
@@ -10072,7 +10264,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png}}
 
 }
 
@@ -10089,7 +10281,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png}}
 
 }
 
@@ -10106,7 +10298,7 @@ on the chi-square distribution.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_gstagefit_flt1mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt1mkt0.png}}
 
 }
 
@@ -10119,7 +10311,7 @@ composition data (density) for the bottom trawl fishery.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_gstagefit_flt3mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt3mkt0.png}}
 
 }
 
@@ -10132,7 +10324,7 @@ composition data (density) for the non-trawl fishery.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_gstagefit_flt5mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt5mkt0.png}}
 
 }
 
@@ -10145,7 +10337,7 @@ age composition data (density) for the midwater trawl fishery.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_gstagefit_flt6mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt6mkt0.png}}
 
 }
 
@@ -10158,7 +10350,7 @@ age composition data (density) for the at-sea-hake fishery.}
 
 \centering{
 
-\includegraphics{ref_model/plots/comp_gstagefit_flt10mkt0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt10mkt0.png}}
 
 }
 
@@ -10172,7 +10364,7 @@ Trawl survey.}
 
 \centering{
 
-\includegraphics{ref_model/plots/index2_cpuefit_TRIENNIAL.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_TRIENNIAL.png}}
 
 }
 
@@ -10186,7 +10378,7 @@ the assumption of lognormal error.}
 
 \centering{
 
-\includegraphics{ref_model/plots/index2_cpuefit_AK_SLOPE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_AK_SLOPE.png}}
 
 }
 
@@ -10200,7 +10392,7 @@ based on the assumption of lognormal error.}
 
 \centering{
 
-\includegraphics{ref_model/plots/index2_cpuefit_NW_SLOPE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_NW_SLOPE.png}}
 
 }
 
@@ -10215,7 +10407,7 @@ error.}
 
 \centering{
 
-\includegraphics{ref_model/plots/index2_cpuefit_WCGBTS.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_WCGBTS.png}}
 
 }
 
@@ -10229,7 +10421,7 @@ around index values based on the assumption of lognormal error.}
 
 \centering{
 
-\includegraphics{ref_model/plots/bio1_sizeatage.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/bio1_sizeatage.png}}
 
 }
 
@@ -10243,7 +10435,7 @@ age around estimated growth curve.}
 
 \centering{
 
-\includegraphics{ref_model/plots/sel01_multiple_fleets_length1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/sel01_multiple_fleets_length1.png}}
 
 }
 
@@ -10256,12 +10448,12 @@ fishery and survey.}
 
 \centering{
 
-\includegraphics{ref_model/plots/All_selectivityPlot.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/selectivityPlot_fisheries.png}}
 
 }
 
-\caption{\label{fig-sel-tv-comp}Time-varying selectivity for each fleet
-and survey with time blocks.}
+\caption{\label{fig-sel-tv-fisheries}Time-varying selectivity for
+fishery fleets with time blocks.}
 
 \end{figure}%
 
@@ -10269,7 +10461,20 @@ and survey with time blocks.}
 
 \centering{
 
-\includegraphics{ref_model/plots/sel02_multiple_fleets_age2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/selectivityPlot_surveys.png}}
+
+}
+
+\caption{\label{fig-sel-tv-surveys}Time-varying selectivity for surveys
+with time blocks.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/sel02_multiple_fleets_age2.png}}
 
 }
 
@@ -10282,7 +10487,7 @@ lengths for each fishery and survey.}
 
 \centering{
 
-\includegraphics{plots_4_doc/lnR0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/lnR0.png}}
 
 }
 
@@ -10295,7 +10500,7 @@ several assessed shelf and slope rockfishes.}
 
 \centering{
 
-\includegraphics{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}}
 
 }
 
@@ -10308,7 +10513,7 @@ several assessed shelf and slope rockfishes.}
 
 \centering{
 
-\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
 
 }
 
@@ -10321,7 +10526,7 @@ spawning output for the reference model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/recdevs2_withbars.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recdevs2_withbars.png}}
 
 }
 
@@ -10334,7 +10539,7 @@ deviations for the base model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/recruit_fit_bias_adjust.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recruit_fit_bias_adjust.png}}
 
 }
 
@@ -10348,7 +10553,7 @@ assumed variance of recruitment.}
 
 \centering{
 
-\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}}
 
 }
 
@@ -10361,7 +10566,7 @@ the base model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/SR_curve2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SR_curve2.png}}
 
 }
 
@@ -10378,7 +10583,7 @@ colors in showing later years.}
 
 \centering{
 
-\includegraphics{Retros/compare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Retros/compare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -10392,7 +10597,7 @@ sequentially.}
 
 \centering{
 
-\includegraphics{Retros/compare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Retros/compare4_Bratio_uncertainty.png}}
 
 }
 
@@ -10408,7 +10613,7 @@ sequentially.}
 
 \centering{
 
-\includegraphics{Sensis/output/indicescompare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/indicescompare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -10421,7 +10626,7 @@ eggs) across data removal sensitivities (indices).}
 
 \centering{
 
-\includegraphics{Sensis/output/indicescompare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/indicescompare4_Bratio_uncertainty.png}}
 
 }
 
@@ -10434,7 +10639,7 @@ eggs) across data removal sensitivities (indices).}
 
 \centering{
 
-\includegraphics{Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -10447,7 +10652,7 @@ across data removal sensitivities (length compositions by fleet).}
 
 \centering{
 
-\includegraphics{Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png}}
 
 }
 
@@ -10461,7 +10666,7 @@ fleet).}
 
 \centering{
 
-\includegraphics{Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -10474,7 +10679,7 @@ across data removal sensitivities (length compositions by source).}
 
 \centering{
 
-\includegraphics{Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png}}
 
 }
 
@@ -10488,7 +10693,7 @@ source).}
 
 \centering{
 
-\includegraphics{Sensis/output/age_compscompare2_spawnbio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/age_compscompare2_spawnbio_uncertainty.png}}
 
 }
 
@@ -10501,7 +10706,7 @@ across data removal sensitivities (age compositions by fleet).}
 
 \centering{
 
-\includegraphics{Sensis/output/age_compscompare4_Bratio_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/age_compscompare4_Bratio_uncertainty.png}}
 
 }
 
@@ -10515,7 +10720,7 @@ fleet).}
 
 \centering{
 
-\includegraphics{Sensis/output/sens_summary.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/sens_summary.png}}
 
 }
 
@@ -10529,7 +10734,7 @@ sources).}
 
 \centering{
 
-\includegraphics{Sensis/data_sensitivities/Data weighting.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Data weighting.png}}
 
 }
 
@@ -10544,7 +10749,7 @@ reference model uses the Francis method.}
 
 \centering{
 
-\includegraphics{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_DataWt.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_DataWt.png}}
 
 }
 
@@ -10560,7 +10765,7 @@ more details on each scenario.}
 
 \centering{
 
-\includegraphics{Sensis/data_sensitivities/Ageing error_uncertainty.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Ageing error_uncertainty.png}}
 
 }
 
@@ -10576,7 +10781,7 @@ sources.}
 
 \centering{
 
-\includegraphics{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_AE.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_AE.png}}
 
 }
 
@@ -10592,7 +10797,7 @@ more details on each scenario.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/M_Gr_Reproduction.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/M_Gr_Reproduction.png}}
 
 }
 
@@ -10607,7 +10812,7 @@ reproductive biology scenarios.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png}}
 
 }
 
@@ -10623,7 +10828,7 @@ See `Sensitivity Analysis' section for more details on each scenario.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/compare1_spawnbio_MGrRepro.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/compare1_spawnbio_MGrRepro.png}}
 
 }
 
@@ -10638,7 +10843,7 @@ mortality, as the scale goes extremely high.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/Sel_Rec.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sel_Rec.png}}
 
 }
 
@@ -10653,7 +10858,7 @@ scenarios.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png}}
 
 }
 
@@ -10669,7 +10874,7 @@ Analysis' section for more details on each scenario.}
 
 \centering{
 
-\includegraphics{Sensis/model_specs/comp_lenfit__aggregated_across_time_logsel.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/comp_lenfit__aggregated_across_time_logsel.png}}
 
 }
 
@@ -10685,7 +10890,7 @@ fisheries and time blocks.}
 
 \centering{
 
-\includegraphics{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}}
 
 }
 
@@ -10700,7 +10905,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\includegraphics{Like_profiles/lnR0/piner_panel_SR_LN(R0).png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/piner_panel_SR_LN(R0).png}}
 
 }
 
@@ -10713,7 +10918,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\includegraphics{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}}
 
 }
 
@@ -10728,7 +10933,7 @@ significance level in likelihood difference.}
 
 \centering{
 
-\includegraphics{Like_profiles/Steepness/piner_panel_SR_BH_steep.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/piner_panel_SR_BH_steep.png}}
 
 }
 
@@ -10741,7 +10946,7 @@ profile for each of the likelihood components.}
 
 \centering{
 
-\includegraphics{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}}
 
 }
 
@@ -10756,7 +10961,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\includegraphics{Like_profiles/Male_M/M_sex.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/M_sex.png}}
 
 }
 
@@ -10769,7 +10974,7 @@ mortality (\(M\)) by sex.}
 
 \centering{
 
-\includegraphics{Like_profiles/Male_M/piner_panel_NatM_uniform_Mal_GP_1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/piner_panel_NatM_uniform_Mal_GP_1.png}}
 
 }
 
@@ -10782,7 +10987,7 @@ likelihood profile for each of the likelihood components.}
 
 \centering{
 
-\includegraphics{Sensis/statesofnature/StatesofNature.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/statesofnature/StatesofNature.png}}
 
 }
 
@@ -10797,7 +11002,7 @@ nature.}
 
 \centering{
 
-\includegraphics{Sensis/statesofnature/Ensemble_Bratio.png}
+\pandocbounded{\includegraphics[keepaspectratio]{Sensis/statesofnature/Ensemble_Bratio.png}}
 
 }
 
@@ -10814,7 +11019,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
 
 }
 
@@ -10826,7 +11031,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\includegraphics{ref_model/plots/SPR3_ratiointerval.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
 
 }
 
@@ -10838,7 +11043,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\includegraphics{ref_model/plots/yield2_yield_curve_with_refpoints.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/yield2_yield_curve_with_refpoints.png}}
 
 }
 
@@ -10850,7 +11055,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\includegraphics{ref_model/plots/SPR4_phase.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
 
 }
 
@@ -10862,7 +11067,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\includegraphics{ref_model/plots/SPR3_ratiointerval.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
 
 }
 
@@ -10875,7 +11080,7 @@ the base model.}
 
 \centering{
 
-\includegraphics{ref_model/plots/ts_DynamicB0.png}
+\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts_DynamicB0.png}}
 
 }
 
