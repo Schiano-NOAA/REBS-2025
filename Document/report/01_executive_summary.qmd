@@ -117,7 +117,7 @@ ssb_es_table |>
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimated time series of spawning output (trillions of eggs) for the base model."
+#| fig-cap: "Estimated time series of spawning output (millions of eggs) for the base model."
 #| fig-alt: "See table 26 for values."
 #| fig-pos: H
 
