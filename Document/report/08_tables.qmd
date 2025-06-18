@@ -550,13 +550,23 @@ parcount_table |>
 #    width = c(2, 0.5, 0.5, 1.5, 0.5, 0.5, 2.5)
 #  ) 
 
+cat("\\begin{landscape}\n")
+
 par_table |>
   gt::gt() |>
   gt::tab_options(
     table.font.size = 12,
-    latex.use_longtable = TRUE
+    latex.use_longtable = TRUE 
+  ) |>
+  gt::cols_align(
+    align = "left"
+  ) |>
+  gt::cols_width(
+    everything() ~ px(75)  
   ) |>
   gt::as_latex()
+
+cat("\n\\end{landscape}\n") 
 
 ```
 
@@ -630,7 +640,7 @@ reference_points_table |>
 ```
 
  {{< pagebreak >}} 
-
+ 
 ```{r, results = "asis"}
 #| label: tbl-ts
 #| warning: false
@@ -653,19 +663,23 @@ reference_points_table |>
 #    width = "0.5in"
 #  )
 
+cat("\\begin{landscape}\n")
+
 time_series_table |>
   gt::gt() |>
   gt::tab_options(
     table.font.size = 12,
-    latex.use_longtable = TRUE
+    latex.use_longtable = TRUE 
   ) |>
   gt::cols_align(
-    align = "center"
+    align = "left"
   ) |>
   gt::cols_width(
-    tidyselect::everything() ~ px(75)
+    everything() ~ px(75)  
   ) |>
   gt::as_latex()
+
+cat("\n\\end{landscape}\n") 
 
 ```
 
@@ -821,7 +835,7 @@ age_error_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensi
 
 age_error_sens <- age_error_sens[, -1]
 
-colnames(age_error_sens) <-   c("Label", "Type", "Reference", "No ageing error", "- trawl AE", "- non-trawl AE", "- midwater AE", "- ASHOP AE", "- WCGBTS AE")
+colnames(age_error_sens) <-   c("Label", "Type", "Reference", "No ageing error", "No trawl AE", "No non-trawl AE", "No midwater AE", "No ASHOP AE", "No WCGBTS AE")
 
 age_error_sens <- age_error_sens |>
   dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " "))
@@ -868,14 +882,14 @@ life_history_sens <- life_history_sens[, -1]
 colnames(life_history_sens) <-   c("Label", "Type", "Reference", "Est female M", "Fixed_M_2013", "Lorenzen M", "Fixed growth ext", "Prop fecund", "Fxn mat age", "Fxn mat Bspot", "Fxn mat Reye", "Biological mat")
 
 life_history_sens <- life_history_sens |>
-  dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " "))
+  dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " ")) 
 
 life_history_sens |>
   gt() |>
   gt::fmt_missing(everything(), missing_text = "") |>
   gt::fmt_number(everything(), decimals = 2) |>
   gt::tab_options(
-    table.font.size = 12,
+    table.font.size = 8,
     latex.use_longtable = TRUE 
   ) |>
   gt::cols_align(
@@ -912,7 +926,7 @@ sel_rec_sens <- sel_rec_sens[, -1]
 colnames(sel_rec_sens) <- c("Label", "Type", "Reference", "No recdevs", "1940 recdevs", "1980 recdevs", "Logistic fisheries", "Logistic btrawl", "Logistic nontrawl")
 
 sel_rec_sens <- sel_rec_sens |>
-  dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " "))
+  dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " ")) 
 
 sel_rec_sens |>
   gt() |>
