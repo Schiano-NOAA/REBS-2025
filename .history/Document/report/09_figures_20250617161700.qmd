@@ -2343,7 +2343,7 @@ knitr::include_graphics(
 #| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for the reference model and high and low states of nature."
 #
 knitr::include_graphics(
-    file.path(sens_dir,"statesofnature", "StatesofNature.png")
+    file.path(like_dir,"Male_M", "piner_panel_NatM_uniform_Mal_GP_1.png")
 )
 ```
 
@@ -2352,10 +2352,10 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Ensemble relative stock status for the reference model and two states of nature."
+#| fig-cap: "Ensemble derived outputs for the reference model and two states of nature."
 #
 knitr::include_graphics(
-    file.path(sens_dir,"statesofnature", "Ensemble_Bratio.png")
+    file.path(like_dir,"Male_M", "piner_panel_NatM_uniform_Mal_GP_1.png")
 )
 ```
 

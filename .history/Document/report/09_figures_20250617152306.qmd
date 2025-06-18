@@ -2312,18 +2312,6 @@ knitr::include_graphics(
 ```
 
 ```{r}
-#| label: fig-likeprof-M-sex
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Likelihood differences by natural mortality ($M$) by sex."
-#
-knitr::include_graphics(
-    file.path(like_dir,"Male_M", "M_sex.png")
-)
-```
-
-```{r}
 #| label: fig-likeprof-M-components
 #| echo: false
 #| warning: false
@@ -2336,26 +2324,14 @@ knitr::include_graphics(
 ```
 
 ```{r}
-#| label: fig-states-of-nature
+#| label: fig-likeprof-M-sex
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for the reference model and high and low states of nature."
+#| fig-cap: "Likelihood differences by natural mortality ($M$) by sex."
 #
 knitr::include_graphics(
-    file.path(sens_dir,"statesofnature", "StatesofNature.png")
-)
-```
-
-```{r}
-#| label: fig-ensemble
-#| echo: false
-#| warning: false
-#| eval: true
-#| fig-cap: "Ensemble relative stock status for the reference model and two states of nature."
-#
-knitr::include_graphics(
-    file.path(sens_dir,"statesofnature", "Ensemble_Bratio.png")
+    file.path(like_dir,"Male_M", "piner_panel_NatM_uniform_Mal_GP_1.png")
 )
 ```
 

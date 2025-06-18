@@ -757,142 +757,20 @@ cat("\n\\end{landscape}\n")
 ```
 
  {{< pagebreak >}} 
- 
-```{r}
-#| label: tbl-sensitivities-data-weighting
-#| echo: false
-#| message: false
-#| warning: false
-#| results: "asis"
-#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity."
-#| 
-cat("\\begin{landscape}\n")
 
-data_weighting_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_DATAWT.csv"))
-
-data_weighting_sens <- data_weighting_sens[, -1]
-
-data_weighting_sens |>
-  gt() |>
-  fmt_missing(everything(), missing_text = "") |>
-  fmt_number(decimals = 2) |>
-  tab_options(
-    table.font.size = 12,
-    latex.use_longtable = TRUE
-  ) |>
-  as_latex()
-
-cat("\n\\end{landscape}\n") 
-
-```
-
- {{< pagebreak >}} 
- 
-```{r}
-#| label: tbl-sensitivities-age-error
-#| echo: false
-#| message: false
-#| warning: false
-#| results: "asis"
-#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each ageing error sensitivity."
-
-cat("\\begin{landscape}\n")
-
-age_error_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_AgeError.csv"))
-
-age_error_sens <- age_error_sens[, -1]
-
-age_error_sens |>
-  gt() |>
-  fmt_missing(everything(), missing_text = "") |>
-  fmt_number(decimals = 2) |>
-  tab_options(
-    table.font.size = 12,
-    latex.use_longtable = TRUE
-  ) |>
-  as_latex()
-
-cat("\n\\end{landscape}\n") 
-
-```
-
- {{< pagebreak >}} 
-
-```{r}
-#| label: tbl-sensitivities-life-history
-#| echo: false
-#| message: false
-#| warning: false
-#| results: "asis"
-#| tbl-cap: "Summaries of the model results for life history parameter sensitivities."
-
-
-cat("\\begin{landscape}\n")
-
-life_history_sens <- read.csv(here::here("Document","report", "Sensis", "model_specs", "Likes_parms_devquants_table_simple_MGrRep.csv"))
-
-life_history_sens <- life_history_sens[, -1]
-
-life_history_sens |>
-  gt() |>
-  fmt_missing(everything(), missing_text = "") |>
-  fmt_number(decimals = 2) |>
-  tab_options(
-    table.font.size = 12,
-    latex.use_longtable = TRUE
-  ) |>
-  as_latex()
-
-cat("\n\\end{landscape}\n") 
-
-```
-
- {{< pagebreak >}} 
-
-```{r}
-#| label: tbl-sensitivities-sel-rec
-#| echo: false
-#| message: false
-#| warning: false
-#| results: "asis"
-#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each recruitment and selectivity sensitivity."
-
-cat("\\begin{landscape}\n")
-
-sel_rec_sens <- read.csv(here::here("Document","report", "Sensis", "model_specs", "Likes_parms_devquants_table_simple_Sel_rec.csv"))
-
-sel_rec_sens <- sel_rec_sens[, -1]
-
-sel_rec_sens |>
-  gt() |>
-  fmt_missing(everything(), missing_text = "") |>
-  fmt_number(decimals = 2) |>
-  tab_options(
-    table.font.size = 12,
-    latex.use_longtable = TRUE
-  ) |>
-  as_latex()
-
-cat("\n\\end{landscape}\n") 
-
-```
-
- {{< pagebreak >}}  
- 
 ```{r}
 #| label: tbl-uncertainty_summary
-#| echo: false
-#| message: false
 #| warning: false
-#| results: "asis"
-#| tbl-cap: "PLACEHOLDER."
+#| echo: false
+#| tbl-cap: "Summary of major sources of uncertainty and how they influence the scale and stock status."
 
-uncertainty_sum <- read.csv(here::here("Document","report", "tables_4_doc", "Uncertainty_summary.csv"))
+Uncertainty_summary <- read.csv(
+  here::here("Document/report/tables_4_doc/Uncertainty_summary.csv"),
+  header = TRUE
+)
 
-uncertainty_sum |>
+Uncertainty_summary |>
   gt() |>
-  fmt_missing(everything(), missing_text = "") |>
-  fmt_number(decimals = 2) |>
   tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE
@@ -901,9 +779,9 @@ uncertainty_sum |>
 
 ```
 
- {{< pagebreak >}}  
- 
- <!-- projections -->
+ {{< pagebreak >}} 
+
+<!-- projections -->
 
 <!-- management-->
 
