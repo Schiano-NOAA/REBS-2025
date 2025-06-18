@@ -204,7 +204,7 @@ The estimated index is shown in @fig-Triennial_index. The index exhibits an incr
 #### Length Compositions
  @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt7 shows Triennial Survey length frequencies by year,
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
 The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
@@ -227,7 +227,7 @@ The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is shor
 #### Length Compositions
 @tbl-survey_length_samples shows the number of lengths taken by the survey. 
 
-Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in Table XX. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
+Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
 The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
