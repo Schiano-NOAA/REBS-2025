@@ -439,3 +439,32 @@ There are many areas of research that would benefit the understanding and assess
 
 * Historical landings and discards, including investigation of fisheries selectivity:  The substantial progress has been made in reconstructing historical landings of rockfishes on the U.S. West Coast, including those for `r Spp`. This assessment highlighted the importance of understanding of fishery selectivity assumptions associated with removals and how fishery selectivity changes throughout the years. Further understanding of this area would help reduce uncertainty in estimated scale of the stock.
 
+## Risk table{-}
+```{r, tbl-risk, results = "asis"}
+#| label: tbl-risk
+#| echo: false
+#| warning: false
+#| tbl-cap: "‘Risk Table’ for northern yellowtail rockfish to document ecosystem and environmental factors potentially affecting stock productivity and uncertainty or other concerns arising from the stock assessment (see text). Level 1 is a favorable ranking, Level 2 neutral, and Level 3 unfavorable"
+
+
+risk <-read.csv(here::here("Document","report", "tables_4_doc", "RiskTable_20250618.csv"))
+risk|>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::cols_label(
+    Ecosystem.and.environmental.conditions = "Ecosystem and environmental conditions",
+    Assessment.data.inputs = "Assessment data inputs",
+    Assessment.model.fits.and.structural.uncertainty = "Assessment model fits and structural uncertainty"
+  ) |>
+  gt::cols_width(
+    everything() ~ px(200)
+  ) |>
+  gt::as_latex()
+```
+
+To understand the impact of ecosystem and environmental conditions on `r spp`, we evaluated recent trends in drivers of recruitment, predators, and prey, along with context from the climate vulnerability assessment (CVA) of @mcclure2023. We did not consider non-fisheries human activities during this evaluation.  In considering ecosystem and environmental conditions, we focus on recent trends over the last 5 years; we assume that long term trends are implicitly represented in the stock assessment and do not represent notable changes that warrant inclusion in the risk table. 
+
+Overall we consider ecosystem and environmental conditions to be neutral (Level 2) with medium confidence based on high agreement among indicators and medium evidence, and no apparent concerns. We use this, plus information related to the stock assessment, to fill out the ‘risk table’ in @tbl-risk, based on the framework outlined by the California Current Integrated Ecosystem Assessment (CCIEA) team [@Golden2024].
