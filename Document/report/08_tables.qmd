@@ -183,6 +183,8 @@ BT_landings <- read.csv(
   header = TRUE
 )
 
+colnames(BT_landings) <- c("Year", "California", "Oregon", "Washington", "POP Fishery Bycatch", "Total")
+
 BT_landings |>
   gt() |>
   tab_options(
@@ -205,6 +207,8 @@ NT_landings <- read.csv(
   here::here("Document/report/tables_4_doc/NT_landings_by_state.csv"),
   header = TRUE
 )
+
+colnames(NT_landings) <- c("Year", "California", "Oregon", "Washington", "Total")
 
 NT_landings |>
   gt() |>
@@ -251,6 +255,8 @@ BT_lengths_sample_sizes <- read.csv(
   here::here("Document/report/tables_4_doc/BT_lengths_sample_sizes.csv"),
   header = TRUE
 )
+
+colnames(BT_lengths_sample_sizes) <- c("Year", "N Trips CA", "N Fish CA", "N Trips OR", "N Fish OR", "N Trips WA", "N Fish WA", "Input N")
 
 BT_lengths_sample_sizes |>
   gt() |>
