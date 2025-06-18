@@ -38,6 +38,10 @@ A wide range of prey items make up the diet of `r Spp`.  Crangid and pandalid sh
 
 ## Ecosystem Considerations
 
+Rougheye rockfish are one of the larger species of rockfishes and occupy shelf areas when they are young and move into deeper slope waters with age. As they age, they tend to become more solitary, but may form aggregations during the spawning season [@love_certainly_2011]. Due to a paucity of life-history data for rougheye rockfish, most ecosystem considerations are implied from the understanding of rockfishes in general. Recruitment drivers of `r Spp` are not well understood. Patterns in abundance of young-of-year rockfish often covary through time across species of rockfish [@field_2021] indicating shared responses to ocenaographic and ecological conditions which could inform patterns in recruitment for species that are rarley caught in juvenile surveys, such as `r Spp`. For species that are primarily located north of Cape Mendocino 2021 and 2023 indicate good recruitment [@gasbarro_2025], although it is uncertain how well this trend applies to `r Spp`. The specific pathways through which environmental conditions exert influence on `r Spp` dynamics are unclear, however, changes in water temperature and currents, the amount and timing of upwelling, and source water variability are all possible drivers.
+
+The largest components of `r Spp` diet in Alaska is pandalis and hippolytid shrimp, amphipods and krill are particularly important for smaller fish [@love_certainly_2011]. Based on Ecopath foodweb modeling, the highest sources of predation mortality on the functional group Slope Rockfish from greatest to least are: sablefish, skates, northern fur seals and California sea lions.
+
 ## Historical and Current Fishery Information
 `r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when captured.  They are often caught in bottom trawl, mid-water trawl, and longline fisheries.  Small numbers have been observed in pot, shrimp, and recreational fisheries.
 
