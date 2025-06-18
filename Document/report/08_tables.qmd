@@ -542,8 +542,6 @@ parcount_table |>
 #| eval: !expr eval_tables 
 #| tbl-cap: !expr if(eval_tables) par_cap 
 
-cat("\\begin{landscape}\n")
-
 #par_table |>
 #  flextable::flextable() |>
 #  flextable::fontsize(size = 8) |>
@@ -559,8 +557,6 @@ par_table |>
     latex.use_longtable = TRUE
   ) |>
   gt::as_latex()
-
-cat("\n\\end{landscape}\n") 
 
 ```
 
@@ -641,22 +637,29 @@ reference_points_table |>
 #| echo: false
 #| eval: !expr eval_tables 
 #| tbl-cap: !expr if(eval_tables) time_series_cap 
-#| tbl-pos: H
+
+#time_series_table |>
+#kableExtra::kable(
+#  format = "latex", 
+#  longtable = TRUE,
+#  booktabs = TRUE,
+#  caption = "Time series of population estimates from the base model.",
+#  linesep = "") |>
+#  kableExtra::kable_styling(
+#    latex_options = "repeat_header",
+#    font_size = 8) |>
+#  kableExtra::column_spec(
+#    column = 1:9,
+#    width = "0.5in"
+#  )
 
 time_series_table |>
-kableExtra::kable(
-  format = "latex", 
-  longtable = TRUE,
-  booktabs = TRUE,
-  caption = "Time series of population estimates from the base model.",
-  linesep = "") |>
-  kableExtra::kable_styling(
-    latex_options = "repeat_header",
-    font_size = 8) |>
-  kableExtra::column_spec(
-    column = 1:9,
-    width = "0.5in"
-  )
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
 
 ```
 
