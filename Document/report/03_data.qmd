@@ -138,7 +138,7 @@ The surveys temporal and spatial coverage is summarized in @tbl-survey_coverage.
 
 Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age frequency distributions (WCGBTS). 
 
-Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop new indices of abundance. 
+Only the WCGBTS has new data for this assessment, but new methods were applied to all surveys to develop indices of abundance. 
 
 In this assessment, geostatistical models of biomass density were fit to survey data using the R package \gls{sdmtmb} [@Anderson:2022:SRP]. These models can account for latent spatial factors with a constant spatial Gaussian random field and spatiotemporal deviations to evolve as a random walk Guassian random
 field [@thorson_geostatistical_2015]. Tweedie, delta-binomial, delta-gamma, and mixture distributions, which allow for extreme catch events, were investigated. Results are only shown for the distribution that led to the best model diagnostics, e.g., similar distributions of theoretical normal quantiles and model quantiles, high precision, lack of extreme predictions that are incompatible with the life history, and low \gls{aic}. Estimates of biomass from this best model were predicted using a grid based on available survey locations. The {indexwc} R package [@johnson_indexwc_2025] was used to conduct the analysis and code to reproduce the analysis is available at https://pfmc-assessments.github.io/indexwc/.
