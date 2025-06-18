@@ -1851,6 +1851,36 @@ knitr::include_graphics(
 
 
 ```{r} 
+#| label: fig-sel-tv-fisheries
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time-varying selectivity for fishery fleets with time blocks."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "selectivityPlot_fisheries.png")
+)
+```
+
+
+```{r} 
+#| label: fig-sel-tv-surveys
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Time-varying selectivity for surveys with time blocks."
+#| fig-alt: "Values are provided in the Report.sso file."
+#| fig-pos: H
+
+knitr::include_graphics(
+  file.path(model_dir, "selectivityPlot_surveys.png")
+)
+```
+
+
+```{r} 
 #| label: fig-sel-tv-comp
 #| echo: false 
 #| warning: false 
