@@ -990,7 +990,7 @@ cat("\n\\end{landscape}\n")
 #| message: false
 #| warning: false
 #| results: "asis"
-#| tbl-cap: "PLACEHOLDER."
+#| tbl-cap: "Summary of uncertainty sources and how they influence stock scale and relative status."
 
 uncertainty_sum <- read.csv(here::here("Document","report", "tables_4_doc", "Uncertainty_summary.csv"))
 
