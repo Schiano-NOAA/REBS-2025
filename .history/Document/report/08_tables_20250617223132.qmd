@@ -1,0 +1,991 @@
+# Tables 
+
+```{r}
+#| label: tbl-management_summary
+#| warning: false
+#| echo: false
+#| tbl-cap: "Major management actions since 2000 that have impacted the management of the Rougheye/Blackspotted complex."
+
+management_summary <- read.csv(
+  here::here("Document/report/tables_4_doc/management-summary.csv"),
+  fileEncoding = "latin1"
+)
+
+management_summary[] <- lapply(management_summary, function(x) {
+  x <- gsub("°", "\\\\textdegree{}", x, fixed = TRUE)
+  enc2utf8(as.character(x))
+})
+
+management_summary |>
+  gt::gt() |>
+  gt::cols_label(
+    `Year` = "Year",
+    `Management_action` = "Management Action"
+  ) |>
+  gt::cols_width(
+    Management_action ~ gt::px(400)
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
+
+
+```
+
+\pagebreak
+
+```{r}
+#| label: tbl-management-performance
+#| echo: false
+#| warning: false
+#| message: false
+#| results: asis
+#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt). Specifications are combined across north and south of 40'10."
+
+cat("\\begin{landscape}")
+
+# Read in CSV, skipping the first 2 header rows
+GMT_filtII<- read.csv(here::here("Document","report", "tables_4_doc", "management-performance_es.csv"))
+
+recent_management_tableII <- recent_management_table |>
+  full_join(GMT_filtII, by = "Year") |>
+  select('Year', `OFL..mt.`, `ABC..mt.`, `ACL..mt.`, `Catch (mt)`) |>
+  rename(`OFL (mt)` = `OFL..mt.`,
+         `ABC (mt)` = `ABC..mt.`,
+         `ACL (mt)` = `ACL..mt.`) |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = `Catch (mt)`,
+    decimals = 1 
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  )
+
+recent_management_tableII
+
+cat("\\end{landscape}")
+
+```
+
+\pagebreak
+
+```{r}
+#| label: tbl-landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings in metric tons (mt) by year for each fleet."
+
+landings <- model_output[["catch"]] |>
+  tibble::as_tibble() |>
+   dplyr::select(Fleet_Name, Yr, ret_bio) |>
+   dplyr::group_by(Yr) |>
+   dplyr::mutate(
+     ret_bio = round(ret_bio, 0),
+     `Total (mt)` = sum(ret_bio)
+   ) |>
+   tidyr::pivot_wider(
+     names_from = Fleet_Name,
+     values_from = ret_bio
+   ) |>
+   dplyr::rename(
+     Year = Yr,
+     `Trawl (mt)` = BOTTOM_TRAWL,
+     `Trawl Discard (mt)` = BOTTOM_TRAWL_DISCARD,
+     `Non-trawl (mt)` = NON_TRAWL,
+     `Non-trawl discard (mt)` = NON_TRAWL_DISCARD,
+      `Midwater trawl (mt)` = MIDWATER_TRAWL,
+     `At-sea-Hake (mt)` = AT_SEA_HAKE
+   ) |>
+   dplyr::ungroup()
+kableExtra::kable(
+  landings, 
+  format = "latex", 
+  longtable = TRUE,
+  booktabs = TRUE,
+  caption = "Landings in metric tons (mt) by year for each fleet.",
+  linesep = "") |>
+  kableExtra::kable_styling(
+    latex_options = "repeat_header",
+    font_size = 8)
+#knitr::kable(landings)
+    
+```
+
+\pagebreak
+
+
+<!-- data-->
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-BT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for botton trawl fleet by state and bycatch within POP historcial fishery."
+
+BT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_landings_by_source2.csv"),
+  header = TRUE
+)
+
+BT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-NT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for non-trawl fleet by state."
+
+NT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/NT_landings_by_state.csv"),
+  header = TRUE
+)
+
+NT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-MDT_landings
+#| warning: false
+#| echo: false
+#| tbl-cap: "Landings (metric tons) for mid-water trawl fleet by state."
+
+MDT_landings <- read.csv(
+  here::here("Document/report/tables_4_doc/MDT_landings_by_state.csv"),
+  header = TRUE
+)
+
+MDT_landings |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-BT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the bottom trawl fleet."
+
+BT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/BT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+BT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-NT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the non-trawl fleet."
+
+NT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/NT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+NT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-MDT_lengths_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create length frequency distributions of the mid-water trawl fleet."
+
+MDT_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/MDT_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+MDT_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-Fishery_age_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips and fish sampled) by state used to create conditional ages-at-length compositions."
+
+Fishery_age_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/Fishery_age_sample_sizes.csv"),
+  header = TRUE
+)
+
+Fishery_age_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-discard_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of trips, number of hauls and fish sampled) used to create length frequency distributions of discard fleets."
+
+discard_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/Discard_length_sample_sizes.csv"),
+  header = TRUE
+)
+
+discard_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-ashop_sample_sizes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of fishery sampling effort (number of hauls and fish sampled) used to create length frequency distributions and CAAL of At-sea Hake fleet."
+
+ashop_lengths_sample_sizes <- read.csv(
+  here::here("Document/report/tables_4_doc/ashop_sample_sizes.csv"),
+  header = TRUE
+)
+
+ashop_lengths_sample_sizes |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_strata
+#| warning: false
+#| echo: false
+#| tbl-cap: "Stratifications used for generate survey length compositions."
+
+survey_strata <- read.csv(
+  here::here("Document/report/tables_4_doc/Strata_for_survey_length_expansion.csv"),
+  header = TRUE
+)
+
+survey_strata |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_coverage
+#| warning: false
+#| echo: false
+#| tbl-cap: "Stratifications used for generate survey length compositions."
+
+survey_coverage <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_coverage.csv"),
+  header = TRUE
+)
+
+survey_coverage |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+{{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_length_samples
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of surveys' sampling effort (number of hauls and fish sampled) used to create length frequency distributions."
+
+survey_length_samples <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_lengths_sample_sizes.csv"),
+  header = TRUE
+)
+
+survey_length_samples |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+{{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-survey_age_samples
+#| warning: false
+#| echo: false
+#| tbl-cap: "Summary of WCGBTS sampling effort (number of hauls and fish sampled) used to create conditional ages-at-length distributions."
+
+survey_age_samples <- read.csv(
+  here::here("Document/report/tables_4_doc/Survey_age_sample_sizes.csv"),
+  header = TRUE
+)
+
+survey_age_samples |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-maturity_estimates
+#| warning: false
+#| echo: false
+#| tbl-cap: "Length and age at biological (L50_bio, A50_bio) and functional maturity (L50_fxn, A50_fxn) for the Rougheye and Blackspotted rockfish complex (RE/BS), and genetically confirmed Rougheye and Blackspotted separately. Only certain maturity determinations were used in this analysis."
+
+maturity_estimates <- read.csv(
+  here::here("Document/report/tables_4_doc/maturity_estimates.csv"),
+  header = TRUE
+)
+
+maturity_estimates |>
+  gt() |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+```
+ 
+ {{< pagebreak >}} 
+
+<!-- model-->
+
+```{r}
+#| label: tbl-model-config
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) config_cap
+
+config_table |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-n-param
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) parcount_cap
+
+parcount_table |>
+  gt::gt() |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-param
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) par_cap 
+
+cat("\\begin{landscape}\n")
+
+par_table |>
+  flextable::flextable() |>
+  flextable::fontsize(size = 8) |>
+  flextable::width(
+    j = c(1, 2, 3, 4, 5, 6, 7),
+    width = c(2, 0.5, 0.5, 1.5, 0.5, 0.5, 2.5)
+  ) 
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-likes
+#| warning: false
+#| echo: false
+#| tbl-cap: "Likelihood components by source."
+
+table <- dplyr::bind_cols(
+  data.frame(Label = gsub("_", " ", rownames(model_output$likelihoods_used) )), 
+  data.frame(Total = model_output$likelihoods_used[,1])
+)
+table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = 2,
+    decimals = 1
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  gt::as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
+```{r, results = "asis"}
+#| label: tbl-ref-points
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) reference_points_cap 
+#| tbl-pos: H
+
+reference_points_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(1:4, 7, 10, 12, 15, 17, 20),
+    decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(5, 8, 9, 13:14, 18:19),
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>  
+  gt::tab_style(
+    style = list(
+      gt::cell_text(style = "italic")
+    ),
+    locations = gt::cells_body(
+      columns = "Reference Point",
+      rows = tidyselect::starts_with("Reference")
+    )
+  ) |>
+  gt::sub_missing(
+    columns = tidyselect::everything(),
+    missing_text = "---"
+  ) |>
+  gt::as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
+```{r, results = "asis"}
+#| label: tbl-ts
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) time_series_cap 
+#| tbl-pos: H
+
+time_series_table |>
+kableExtra::kable(
+  format = "latex", 
+  longtable = TRUE,
+  booktabs = TRUE,
+  caption = "Time series of population estimates from the base model.",
+  linesep = "") |>
+  kableExtra::kable_styling(
+    latex_options = "repeat_header",
+    font_size = 8) |>
+  kableExtra::column_spec(
+    column = 1:9,
+    width = "0.5in"
+  )
+
+```
+
+ {{< pagebreak >}} 
+
+<!-- sensitivities-->
+
+```{r}
+#| label: tbl-sensitivities-like-indices
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Base model sensitivity to the removal of data sources (indices)."
+
+cat("\\begin{landscape}\n")
+
+source(here::here("Rcode/table_sens.R"))
+indices <- read.csv(here::here("Document","report", "Sensis", "output", "indices_table.csv"))
+
+names(indices) <- c("Label","Base","- Triennial","- AK Slope","-NW slope","- WCGBTS","No indices")
+
+table_sens(indices)
+
+cat("\n\\end{landscape}\n") 
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-like-lens1
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Base model sensitivity to the removal of data sources (length compositions by fleet)."
+
+cat("\\begin{landscape}\n")
+
+source(here::here("Rcode/table_sens.R"))
+lens1 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_fleet_table.csv"))
+
+names(lens1) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- Triennial","- AK slope","- NW slope","- WCGBTS")
+
+table_sens(lens1)
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-like-lens2
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Base model sensitivity to the removal of data sources (length compositions by source)."
+
+cat("\\begin{landscape}\n")
+
+source(here::here("Rcode/table_sens.R"))
+lens2 <- read.csv(here::here("Document","report", "Sensis", "output", "length_comps_all_table.csv"))
+
+names(lens2) <- c("Label","Base","- fishery","- survey","no lengths")
+
+table_sens(lens2)
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-like-age
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Base model sensitivity to the removal of data sources (age compositions by fleet)."
+
+cat("\\begin{landscape}\n")
+
+source(here::here("Rcode/table_sens.R"))
+ages <- read.csv(here::here("Document","report", "Sensis", "output", "age_comps_table.csv"))
+
+names(ages) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- WGCBTS","- fishery","no ages")
+
+table_sens(ages)
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-sensitivities-data-weighting
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each data weighting sensitivity."
+#| 
+cat("\\begin{landscape}\n")
+
+data_weighting_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_DATAWT.csv"))
+
+data_weighting_sens <- data_weighting_sens[, -1]
+
+data_weighting_sens |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r}
+#| label: tbl-sensitivities-age-error
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each ageing error sensitivity."
+
+cat("\\begin{landscape}\n")
+
+age_error_sens <- read.csv(here::here("Document","report", "Sensis", "data_sensitivities", "Likes_parms_devquants_table_simple_AgeError.csv"))
+
+age_error_sens <- age_error_sens[, -1]
+
+age_error_sens |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-life-history
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Summaries of the model results for life history parameter sensitivities."
+
+
+cat("\\begin{landscape}\n")
+
+life_history_sens <- read.csv(here::here("Document","report", "Sensis", "model_specs", "Likes_parms_devquants_table_simple_MGrRep.csv"))
+
+life_history_sens <- life_history_sens[, -1]
+
+life_history_sens |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-sel-rec
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each recruitment and selectivity sensitivity."
+
+cat("\\begin{landscape}\n")
+
+sel_rec_sens <- read.csv(here::here("Document","report", "Sensis", "model_specs", "Likes_parms_devquants_table_simple_Sel_rec.csv"))
+
+sel_rec_sens <- sel_rec_sens[, -1]
+
+sel_rec_sens |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}}  
+ 
+```{r}
+#| label: tbl-uncertainty_summary
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "PLACEHOLDER."
+
+uncertainty_sum <- read.csv(here::here("Document","report", "tables_4_doc", "Uncertainty_summary.csv"))
+
+uncertainty_sum |>
+  gt() |>
+  fmt_missing(everything(), missing_text = "") |>
+  fmt_number(decimals = 2) |>
+  tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE
+  ) |>
+  as_latex()
+
+```
+
+ {{< pagebreak >}}  
+ 
+ <!-- projections -->
+
+<!-- management-->
+
+```{r, results = "asis"}
+#| label: tbl-man-ref-points
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) reference_points_cap 
+#| tbl-pos: H
+
+reference_points_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(2:4, 7, 10, 12, 15, 17, 20),
+    decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = 1,
+    decimals = 1
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(5, 8, 9, 13:14, 18:19),
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>  
+  gt::tab_style(
+    style = list(
+      gt::cell_text(style = "italic")
+    ),
+    locations = gt::cells_body(
+      columns = "Reference Point",
+      rows = dplyr::starts_with("Reference")
+    )
+  ) |>
+  gt::sub_missing(
+    columns = tidyselect::everything(),
+    missing_text = "---"
+  ) |>
+  gt::as_latex()
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-man-timeseries
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) time_series_cap 
+
+cat("\\begin{landscape}\n")
+
+time_series_table |>
+  gt() |>
+  tab_options(
+    table.font.size = 12) |>
+  as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
+ 
+```{r, results = "asis"}
+#| label: tbl-man-management
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: "Recent trend in the overfishing limits (OFL), the acceptable biological catches (ABCs), the annual catch limits (ACLs), and the total dead catch (landings + discards) all in metric tons (mt). Specifications are combined across north and south of 40'10."
+#| tbl-pos: H
+
+# had to use GMT015 table (because REBS is part of slope RF) and used combined spex for the executive summary only
+# but bonus this way - catch should update if needed
+
+GMT_filt<- read.csv(here::here("Document","report", "tables_4_doc", "management-performance_es.csv"))
+
+recent_management_table_es <- recent_management_table |>
+  full_join(GMT_filt, by = "Year") |>
+  select('Year', `OFL..mt.`, `ABC..mt.`, `ACL..mt.`, `Catch (mt)`) |>
+  rename(`OFL (mt)` = `OFL..mt.`,
+         `ABC (mt)` = `ABC..mt.`,
+         `ACL (mt)` = `ACL..mt.`) |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = `Catch (mt)`,
+    decimals = 1 
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  )
+
+recent_management_table_es
+
+```
+
+ {{< pagebreak >}} 
+
+```{r, results = "asis"}
+#| label: tbl-man-projections
+#| warning: false
+#| echo: false
+#| eval: !expr eval_tables 
+#| tbl-cap: !expr if(eval_tables) projections_cap 
+#| tbl-pos: H
+
+cat("\\begin{landscape}\n")
+
+projections_table |>
+  gt::gt() |>
+  gt::fmt_number(
+    columns = c(2:5, 7:8),
+    decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = c(6, 9:10),
+    decimals = 3
+  ) |>
+  gt::tab_options(
+    table.font.size = 12,
+    latex.use_longtable = TRUE 
+  ) |>
+  gt::sub_missing(
+    columns = tidyselect::everything(),
+    missing_text = "---"
+  ) |>
+  gt::cols_align(
+    align = "center"
+  ) |>
+  gt::cols_width(
+    everything() ~ px(75)
+  ) |>
+  gt::as_latex()
+
+cat("\n\\end{landscape}\n") 
+
+```
+
+ {{< pagebreak >}} 
