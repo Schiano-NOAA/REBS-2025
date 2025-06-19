@@ -306,6 +306,8 @@ MDT_lengths_sample_sizes <- read.csv(
   header = TRUE
 )
 
+colnames(MDT_lengths_sample_sizes) <- c("Year", "N Trips OR", "N Fish OR", "Input N")
+
 MDT_lengths_sample_sizes |>
   gt() |>
   tab_options(
@@ -328,6 +330,8 @@ Fishery_age_sample_sizes <- read.csv(
   here::here("Document/report/tables_4_doc/Fishery_age_sample_sizes.csv"),
   header = TRUE
 )
+
+colnames(Fishery_age_sample_sizes) <- c("Year", "Fleet", "N Trips OR", "N Fish OR", "N Trips WA", "N Fish WA")
 
 Fishery_age_sample_sizes |>
   gt() |>
@@ -352,6 +356,8 @@ discard_lengths_sample_sizes <- read.csv(
   header = TRUE
 )
 
+colnames(discard_lengths_sample_sizes) <- c("Year", "Fleet", "N Fish", "N Hauls", "N Trips", "Input N")
+
 discard_lengths_sample_sizes |>
   gt() |>
   tab_options(
@@ -374,6 +380,9 @@ ashop_lengths_sample_sizes <- read.csv(
   here::here("Document/report/tables_4_doc/ashop_sample_sizes.csv"),
   header = TRUE
 )
+
+colnames(ashop_lengths_sample_sizes) <- c("Year", "N Hauls", "N Lengths", "N Ages")
+
 
 ashop_lengths_sample_sizes |>
   gt() |>
@@ -398,6 +407,8 @@ survey_strata <- read.csv(
   header = TRUE
 )
 
+colnames(survey_strata) <- c("Survey", "Stratum Name", "Depth Low", "Depth High", "Latitude Low", "Latitude High")
+
 survey_strata |>
   gt() |>
   tab_options(
@@ -420,6 +431,8 @@ survey_coverage <- read.csv(
   here::here("Document/report/tables_4_doc/Survey_coverage.csv"),
   header = TRUE
 )
+
+colnames(survey_coverage) <- c("Survey", "Year", "Latitudes", "Depth (fathoms)", "Depth (meters)")
 
 survey_coverage |>
   gt() |>
@@ -444,6 +457,8 @@ survey_length_samples <- read.csv(
   header = TRUE
 )
 
+colnames(survey_length_samples) <- c("Year", "Survey", "N Hauls", "N Fish", "Input N")
+
 survey_length_samples |>
   gt() |>
   tab_options(
@@ -466,6 +481,8 @@ survey_age_samples <- read.csv(
   here::here("Document/report/tables_4_doc/Survey_age_sample_sizes.csv"),
   header = TRUE
 )
+
+colnames(survey_age_samples) <- c("Year", "Survey", "N Hauls", "N Fish", "Input N")
 
 survey_age_samples |>
   gt() |>
