@@ -39,7 +39,7 @@ author:
 date: today
 lang: en 
 keep-tex: true 
-cover: 
+cover: REBS.png
 pdf-engine: lualatex
 format: 
   pdf: 
