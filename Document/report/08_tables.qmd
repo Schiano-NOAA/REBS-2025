@@ -428,9 +428,11 @@ survey_strata |>
 #| tbl-cap: "Spatial and temporal coverage of surveys used in this assessment."
 
 survey_coverage <- read.csv(
-  here::here("Document/report/tables_4_doc/Survey_coverage_newest.csv"),
+  here::here("Document/report/tables_4_doc/Survey_coverage.csv"),
   header = TRUE
 )
+
+colnames(survey_coverage) <- c("Survey", "Year", "Latitudes", "Depths (fathoms)", "Depths (meters)")
 
 survey_coverage |>
   gt() |>
