@@ -100,9 +100,10 @@ The initial input values for length compositions in this assessment were calcula
 
 \begin{centering}
 
-Input effN = $N_{\text{trips}} + 0.138 * N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
+Input N = $N_{\text{trips}} + 0.138 \cdot \ N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
 
-Input effN = $7.06 * N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
+Input N = $7.06 \cdot \ N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
+
 
 \end{centering}
 
