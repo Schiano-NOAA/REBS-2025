@@ -31,6 +31,7 @@ if (file.exists(table_dir)) {
   
   reference_points_table <- reference_points$table
   reference_points_cap <- reference_points$cap
+  reference_points_cap<-"Summary of reference points and management quantities, including estimates of the 95 percent confidence intervals. SO is spawning output (in millions of eggs), SPR is the spawning potential ratio, and MSY is maximum sustainable yield."
   rm(reference_points)
   
   recent_management_table <- recent_management$table
@@ -38,6 +39,8 @@ if (file.exists(table_dir)) {
   rm(recent_management)
     
   projections_table <- projections$table
+  projections_table[1,2:3]<-c(238,189)
+  projections_table[2,2:3]<-c(237,187)
   projections_cap <- projections$cap
   rm(projections)
   
