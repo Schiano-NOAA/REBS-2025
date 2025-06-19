@@ -281,6 +281,8 @@ NT_lengths_sample_sizes <- read.csv(
   header = TRUE
 )
 
+colnames(NT_lengths_sample_sizes) <- c("Year", "N Trips CA", "N Fish CA", "N Trips OR", "N Fish OR", "N Trips WA", "N Fish WA", "Input N")
+
 NT_lengths_sample_sizes |>
   gt() |>
   tab_options(
