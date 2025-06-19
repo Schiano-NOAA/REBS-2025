@@ -79,7 +79,9 @@ This is a sex-specific model. Females and males have separate growth curves and 
 ## Stock Output and Dynamics {-}
 The model estimates that the stock complex currently is in a healthy state, well above management target (@fig-es-sb, @fig-es-depl). Approximate confidence intervals based on the asymptotic variance estimates show that the uncertainty in the estimated spawning output is high. Estimates of spawning biomass in most recent decade are shown in @tbl-es-sb. 
 
-Fraction unfished shows slight decline between 1940s and the 1960s, also also gradual decline since early-1980s, which correspond to catch history. 
+Fraction unfished shows slight decline between 1940s and the 1960s, also also gradual decline since early-1980s, which correspond to catch history.
+
+\newpage
 
 ```{r, results = "asis"}
 #| label: tbl-es-sb
@@ -262,7 +264,6 @@ The 2025 spawning biomass relative to unfished equilibrium spawning biomass, bas
 The relative biomass and the ratio of the estimated SPR to the management target ($\text{SPR}_{50\%}$) across all model years are shown in @fig-es-kobe where cooler colors (purple) represent early years and warmer colors (yellow) represent recent years. The stock staus has not decreased below the target relative biomass, and fishing intensity (except for in 1995) has been below the target fishing intensity based on $\text{SPR}_{50\%}$.
 
 
-\clearpage
 
 ```{r, results = "asis"}
 #| label: tbl-ref-points-es
@@ -339,6 +340,8 @@ knitr::include_graphics(file.path(model_dir,"plots/yield2_yield_curve_with_refpo
 
 ## Management Performance {-}
 In the last ten years total dead catches of `r Spp` have been below the annual catch limit. The last ten years total dead catches for `r Spp` against the overfishing limits (OFLs), the acceptable biological catches (ABCs), the annual catch limits (ACLs) are shown in @tbl-es-management. 
+
+\newpage
 
 ```{r, results = "asis"}
 #| label: tbl-es-management
@@ -444,12 +447,20 @@ There are many areas of research that would benefit the understanding and assess
 
 * Historical landings and discards, including investigation of fisheries selectivity:  The substantial progress has been made in reconstructing historical landings of rockfishes on the U.S. West Coast, including those for `r Spp`. This assessment highlighted the importance of understanding of fishery selectivity assumptions associated with removals and how fishery selectivity changes throughout the years. Further understanding of this area would help reduce uncertainty in estimated scale of the stock.
 
+\newpage
+
 ## Risk table{-}
+To understand the impact of ecosystem and environmental conditions on `r spp`, we evaluated recent trends in drivers of recruitment, predators, and prey, along with context from the climate vulnerability assessment (CVA) of @mcclure2023. We did not consider non-fisheries human activities during this evaluation.  In considering ecosystem and environmental conditions, we focus on recent trends over the last 5 years; we assume that long term trends are implicitly represented in the stock assessment and do not represent notable changes that warrant inclusion in the risk table. 
+
+Overall we consider ecosystem and environmental conditions to be neutral (Level 2) with medium confidence based on high agreement among indicators and medium evidence, and no apparent concerns. We use this, plus information related to the stock assessment, to fill out the ‘risk table’ in @tbl-risk, based on the framework outlined by the California Current Integrated Ecosystem Assessment (CCIEA) team [@Golden2024].
+
+\newpage
+
 ```{r, tbl-risk, results = "asis"}
 #| label: tbl-risk
 #| echo: false
 #| warning: false
-#| tbl-cap: "‘Risk Table’ for northern yellowtail rockfish to document ecosystem and environmental factors potentially affecting stock productivity and uncertainty or other concerns arising from the stock assessment (see text). Level 1 is a favorable ranking, Level 2 neutral, and Level 3 unfavorable"
+#| tbl-cap: "‘Risk Table’ for northern yellowtail rockfish to document ecosystem and environmental factors potentially affecting stock productivity and uncertainty or other concerns arising from the stock assessment (see text). Level 1 is a favorable ranking, Level 2 neutral, and Level 3 unfavorable."
 
 
 risk <-read.csv(here::here("Document","report", "tables_4_doc", "RiskTable_20250618.csv"))
@@ -469,7 +480,3 @@ risk|>
   ) |>
   gt::as_latex()
 ```
-
-To understand the impact of ecosystem and environmental conditions on `r spp`, we evaluated recent trends in drivers of recruitment, predators, and prey, along with context from the climate vulnerability assessment (CVA) of @mcclure2023. We did not consider non-fisheries human activities during this evaluation.  In considering ecosystem and environmental conditions, we focus on recent trends over the last 5 years; we assume that long term trends are implicitly represented in the stock assessment and do not represent notable changes that warrant inclusion in the risk table. 
-
-Overall we consider ecosystem and environmental conditions to be neutral (Level 2) with medium confidence based on high agreement among indicators and medium evidence, and no apparent concerns. We use this, plus information related to the stock assessment, to fill out the ‘risk table’ in @tbl-risk, based on the framework outlined by the California Current Integrated Ecosystem Assessment (CCIEA) team [@Golden2024].

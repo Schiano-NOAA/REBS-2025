@@ -255,7 +255,7 @@ cat(a, sep = '\n')
 \renewcommand{\thefigure}{\arabic{figure}}
 \setcounter{figure}{0}
 \renewcommand{\thetable}{\arabic{table}}
-\setcounter{table}{0}
+\setcounter{table}{-1}
 
 
 ```{r, results='asis'}

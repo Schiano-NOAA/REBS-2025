@@ -23,7 +23,7 @@ The fits to the 4 available indices of abundance demonstrate little information 
 
 #### Lengths
 
-Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@fig-agg-len-fit). One noticeable behavior is the trade-off in fit between the fit in the bottom trawl fishery versus the fit in the at-sea-hake (ASHOP) fishery. This current model specification was the best trade off of fits between the two. 
+Fits to the length data are examined based on the Pearson residuals-at-length, the annual mean lengths, and aggregated length composition data for the commercial and recreational fleets. The aggregate fit to each length composition demonstrates acceptable fits to each fleet and survey source (@fig-agg-len-fit). One noticeable behavior is the trade-off in fit between the fit in the bottom trawl fishery versus the fit in the at-sea hake fishery. This current model specification was the best trade off of fits between the two. 
 
 Fits to the annual length composition are provided for the following fisheries and surveys:
 
@@ -34,7 +34,7 @@ Fits to the annual length composition are provided for the following fisheries a
 * Non-trawl (@fig-len-fit-nt-1 and @fig-len-fit-nt-2)
 * Non-trawl discard (@fig-len-fit-ntdis)
 * Midwater trawl (@fig-len-fit-midt)
-* At-sea-hake (@fig-len-fit-ashop)
+* At-sea hake (@fig-len-fit-ashop)
 
 <u>Surveys</u>
 
@@ -52,7 +52,7 @@ Model fits to the mean lengths, assuming Francis data-weighting of 1 and blockin
 
 ##### Conditional Age at Length
 
-Fits to the sex-specific conditional age at length data are examined based on the age-at-length Pearson residuals, the annual mean ages, and mean age at length by year for the four fishery and one survey source. Pearson residuals were of reasonable size with no distinct patterns (@fig-peasrson-resids-age-bt1 to @fig-peasrson-resids-age-wcgbts3), as most of the residuals were small and not noteworthy and demonstrate the expected shape of the growth curve. There is more contrast in the age data compared to the length data (@fig-trawl-mean-caal to @fig-wcgbts-mean-caal). While the mean age for fisheries varied by gear selectivity (25-35 years for bottom trawl; 30-40 years for non-trawl; ~40 for midwater trawl; 40-50 years for the at-sea-hake fishery), one commonality was the increase in mean age in the last year of the model. This consistent increase in mean age across fisheries with different selectivities is important to remember when interpreting the retrospective pattern of the model. Mean age for the West Coast Groundfish Bottom Trawl survey, which catch much smaller and less larger individuals, fluctuated around 20 and did not show an mean age increase in the final year. Fits to the mean ages by length bins show acceptable fits consistent with model expectations (@fig-call-plot-bt1 to @fig-call-plot-wcgbts6).
+Fits to the sex-specific conditional age at length data are examined based on the age-at-length Pearson residuals, the annual mean ages, and mean age at length by year for the four fishery and one survey source. Pearson residuals were of reasonable size with no distinct patterns (@fig-peasrson-resids-age-bt1 to @fig-peasrson-resids-age-wcgbts3), as most of the residuals were small and not noteworthy and demonstrate the expected shape of the growth curve. There is more contrast in the age data compared to the length data (@fig-trawl-mean-caal to @fig-wcgbts-mean-caal). While the mean age for fisheries varied by gear selectivity (25-35 years for bottom trawl; 30-40 years for non-trawl; ~40 for midwater trawl; 40-50 years for the at-sea hake fishery), one commonality was the increase in mean age in the last year of the model. This consistent increase in mean age across fisheries with different selectivities is important to remember when interpreting the retrospective pattern of the model. Mean age for the West Coast Groundfish Bottom Trawl survey, which catch much smaller and less larger individuals, fluctuated around 20 and did not show an mean age increase in the final year. Fits to the mean ages by length bins show acceptable fits consistent with model expectations (@fig-call-plot-bt1 to @fig-call-plot-wcgbts6).
 
 ##### Marginal Age
 

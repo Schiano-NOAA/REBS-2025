@@ -53,6 +53,20 @@ text(-119.5, 37, "California")
 text(-115.5, 32.1, "Mexico")
 ``` 
 
+
+```{r} 
+#| label: fig-cpue-map
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Rougheye/Blackspotted Rockfishes cpue map, 2003-2024 WCGBTS data."
+#| fig-alt: "Rougheye/Blackspotted Rockfishes cpue map, 2003-2024 WCGBTS data."
+
+knitr::include_graphics(
+  file.path(plot_dir, "cpue_map.png")
+)
+``` 
+
 ```{r} 
 #| label: fig-SO_comp
 #| echo: false 
