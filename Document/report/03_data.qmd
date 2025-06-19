@@ -171,7 +171,7 @@ Age distributions were included in the model as CAAL observations. The marginal 
 
 @fig-length_flt10 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
 
-The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
@@ -206,7 +206,7 @@ The estimated index is shown in @fig-Triennial_index. The index exhibits an incr
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the Triennial Survey.
 
@@ -229,7 +229,7 @@ The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is shor
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the AFSC Slope Survey.
 
