@@ -56,7 +56,7 @@ The historical discard information comes from @pikitch_evaluation_1988, often re
 
 There are no mid-water trawl records of `r Spp`in the @pikitch_evaluation_1988, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
 
-#### Recent Discard
+#### Recent Discard {#sec-recent_discard}
 With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for `r Spp`in bottom trawl and non-trawl fisheries. 
 
 In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
@@ -100,9 +100,16 @@ The initial input values for length compositions in this assessment were calcula
 
 \begin{centering}
 
+<<<<<<< HEAD
 Input effN = $N_{\text{trips}} + 0.138 \cdot N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
 
 Input effN = $7.06 \cdot N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
+=======
+Input N = $N_{\text{trips}} + 0.138 \cdot \ N_{\text{fish}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $<$ 44
+
+Input N = $7.06 \cdot \ N_{\text{trips}}$ if $N_{\text{fish}}/N_{\text{trips}}$ is $\geq$ 44
+
+>>>>>>> 0a4a63c98ec3a960f741caa0e9e8142a6e30f2aa
 
 \end{centering}
 
@@ -170,7 +177,7 @@ Age distributions were included in the model as CAAL observations. The marginal 
 
 @fig-length_flt10 shows WCGBTS length frequencies by year, and @fig-caal_flt10_1 through @fig-caal_flt10_3 show the WCGBTS length and CAAL distributions by year. 
 
-The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 The input sample size of CAAL data was set at the number of fish at each length by sex and by year. 
 
@@ -205,7 +212,7 @@ The estimated index is shown in @fig-Triennial_index. The index exhibits an incr
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt7 shows Triennial Survey length frequencies by year,
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the Triennial Survey.
 
@@ -228,7 +235,7 @@ The AFSC Slope Survey index is shown in @fig-AFSC_Slope_index. The index is shor
 
 Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R [@nwfscSurvey_package_2025]. The stratification for length data expansions are provided in @tbl-survey_strata. @fig-length_flt8 shows AFSC Slope Survey length frequencies by year.
 
-The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43*N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
+The input sample sizes for length composition data for all fishery-independent surveys were calculated based on @stewart_bootstrapping_2014 as $\text{Input N}_{y} = 2.43\cdot \ N_{tow}$ where the 2.43 value was estimated for a group of shelf and slope rockfish species.
 
 There are no `r spp` age data from the AFSC Slope Survey.
 

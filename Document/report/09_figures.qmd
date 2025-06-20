@@ -862,8 +862,34 @@ knitr::include_graphics(
 )
 ``` 
 
-\newpage
 
+```{r} 
+#| label: fig-NT-lengths-for-blocks
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Comparison of length compositions between non-trawl and non-trawl discard fleets, sexes combined."
+#| fig-alt: "Comparison of length compositions between non-trawl and non-trawl discard fleets, sexes combined."
+
+knitr::include_graphics(
+  file.path(plot_dir, "HKL_landings_discard_comparisons.png")
+)
+``` 
+
+```{r} 
+#| label: fig-BT-lengths-for-blocks
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Comparison of length compositions between trawl and trawl discard fleets, sexes combined."
+#| fig-alt: "Comparison of length compositions between trawl and trawl discard fleets, sexes combined."
+
+knitr::include_graphics(
+  file.path(plot_dir, "Trawl_landings_discard_comparisons.png")
+)
+``` 
+
+\newpage
 
 <!-- Model diagnostics -->
 

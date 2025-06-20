@@ -407,7 +407,7 @@ survey_strata <- read.csv(
   header = TRUE
 )
 
-colnames(survey_strata) <- c("Survey", "Stratum Name", "Depth Low", "Depth High", "Latitude Low", "Latitude High")
+colnames(survey_strata) <- c("Survey", "Stratum Name", "Depth Low (m)", "Depth High (m)", "Latitude Low (° N)", "Latitude High (° N)")
 
 survey_strata |>
   gt() |>
@@ -428,11 +428,12 @@ survey_strata |>
 #| tbl-cap: "Spatial and temporal coverage of surveys used in this assessment."
 
 survey_coverage <- read.csv(
-  here::here("Document/report/tables_4_doc/Survey_coverage.csv"),
-  header = TRUE
+  here::here("Document/report/tables_4_doc/Survey_coverage_new.csv"),
+  header = TRUE,
+  fileEncoding = "latin1"
 )
 
-colnames(survey_coverage) <- c("Survey", "Year", "Latitudes", "Depths (fathoms)", "Depths (meters)")
+colnames(survey_coverage) <- c("Survey", "Year", "Latitudes Low", "Latitude High", "Depths Low (m)", "Depths High (m)")
 
 survey_coverage |>
   gt() |>
