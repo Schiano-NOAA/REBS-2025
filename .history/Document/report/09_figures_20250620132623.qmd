@@ -2189,7 +2189,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs; left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different data weighting scenarios. The reference model uses the Francis method."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different data weighting scenarios. The reference model uses the Francis method."
 #
 knitr::include_graphics(
     file.path(sens_dir, "data_sensitivities","Data weighting.png")
@@ -2213,7 +2213,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs; left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different ageing error scenarios. The reference model uses ageing error matrices for all age sources."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different ageing error scenarios. The reference model uses ageing error matrices for all age sources."
 #
 knitr::include_graphics(
     file.path(sens_dir, "data_sensitivities","Ageing error_uncertainty.png")
@@ -2237,7 +2237,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs; left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different natural mortality, growth and reproductive biology scenarios."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different natural mortality, growth and reproductive biology scenarios."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","M_Gr_Reproduction.png")
@@ -2261,7 +2261,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs) for models under different natural mortality, growth and reproductive biology scenarios. This comparison excludes the model estimating natural mortality, as the scale goes extremely high."
+#| fig-cap: "Comparison of spawning output for models under different natural mortality, growth and reproductive biology scenarios. This comparison excludes the model estimating natural mortality, as the scale goes extremely high."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","compare1_spawnbio_MGrRepro.png")
@@ -2273,7 +2273,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs; left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different recruitment and selectivity scenarios."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for models under different recruitment and selectivity scenarios."
 #
 knitr::include_graphics(
     file.path(sens_dir, "model_specs","Sel_Rec.png")
@@ -2397,7 +2397,7 @@ knitr::include_graphics(
 #| echo: false
 #| warning: false
 #| eval: true
-#| fig-cap: "Comparison of spawning output (in millions of eggs; left panel), relative stock status (middle panel) and recruitment estimation (right panel) for the reference model and high and low states of nature."
+#| fig-cap: "Comparison of spawning output (left panel), relative stock status (middle panel) and recruitment estimation (right panel) for the reference model and high and low states of nature."
 #
 knitr::include_graphics(
     file.path(sens_dir,"statesofnature", "StatesofNature.png")
@@ -2505,7 +2505,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Dynamic B0 plot. The lower line shows the time series of estimated spawning output (in millions of eggs) in the presence of fishing mortality. The upper line shows the time series that could occur under the same dynamics (including deviations in recruitment), but without fishing. The point at the left represents the unfished equilibrium."
+#| fig-cap: "Dynamic B0 plot. The lower line shows the time series of estimated spawning output in the presence of fishing mortality. The upper line shows the time series that could occur under the same dynamics (including deviations in recruitment), but without fishing. The point at the left represents the unfished equilibrium."
 #| fig-alt: "Values are provided in the Report.sso file."
 #| fig-pos: H
 
