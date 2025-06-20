@@ -56,7 +56,7 @@ The historical discard information comes from @pikitch_evaluation_1988, often re
 
 There are no mid-water trawl records of `r Spp`in the @pikitch_evaluation_1988, and only few fish records of bottom trawl catches, based on which  discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.
 
-#### Recent Discard
+#### Recent Discard {#sec-recent_discard}
 With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for `r Spp`in bottom trawl and non-trawl fisheries. 
 
 In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery. 
