@@ -171,4 +171,4 @@ The biggest uncertainty was in the treatment of sex-specific $M$ and the selecti
 
 General attributes of the reference model are that indices of abundance are assumed to have lognormal measurement errors. Length compositions and conditional age at length samples are all assumed to follow a multinomial sampling distribution, where the sample size is fixed at the input sample size calculated during compositional example, and where this input sample size is subsequently reweighted to account for additional sources of overdispersion (see below). Recruitment deviations were also estimated are assumed to follow a lognormal distribution, where the standard deviation of this distribution is tuned as noted above.
 
-Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natural mortality) were used to explore uncertainty in the above model specifications and are reported in the "Characterizing uncertainty" section. 
+Sensitivity scenarios and likelihood profiles (on $lnR_0$, steepness, and natural mortality) were used to explore uncertainty in the above model specifications and are reported in @sec-uncertainty. 
