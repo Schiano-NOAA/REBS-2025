@@ -908,6 +908,21 @@ knitr::include_graphics(
 
 \newpage
 
+```{r} 
+#| label: fig-LAO-mod-comps
+#| echo: false 
+#| warning: false 
+#| eval: true 
+#| fig-cap: "Log relative change (log((Model_sensi-Model_ref)/Model_ref)) in length and/or age only scenarios for relative stock status. Box indicates 95 percent confidence interval of the reference model."
+
+knitr::include_graphics(
+  file.path(plot_dir, "Sensi_logREplot_status_LAO.png")
+)
+``` 
+
+\newpage
+
+
 <!-- Model convergence and fits to data -->
 
 ```{r} 
