@@ -872,7 +872,7 @@ knitr::include_graphics(
 #| fig-alt: "Comparison of length compositions between non-trawl and non-trawl discard fleets, sexes combined."
 
 knitr::include_graphics(
-  file.path(plot_dir, "HKL_landings_discard_comparisons.png")
+  file.path(plot_dir, "NT_length_vs_discard.png")
 )
 ``` 
 
