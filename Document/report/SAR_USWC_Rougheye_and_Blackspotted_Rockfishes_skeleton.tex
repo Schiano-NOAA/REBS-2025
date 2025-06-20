@@ -1806,7 +1806,7 @@ records of bottom trawl catches, based on which discard rate (discard
 weight over total weight) for bottom trawl was just 0.09\%. Therefore,
 no historical discard was assumed in the model.
 
-\paragraph{Recent Discard}\label{recent-discard}
+\paragraph{Recent Discard}\label{sec-recent_discard}
 
 With the introduction of trip limits for rockfish in early 2000, limited
 discard has been observed for Rougheye/Blackspotted Rockfishesin bottom
@@ -3194,15 +3194,46 @@ so the full time series estimation was retained.
 \subsubsection{Selectivity Assumptions}\label{selectivity-assumptions}
 
 The selectivity of all fisheries and surveys were estimated either as
-logistic or dome-shaped selectivity. Blocks were also added as described
-in the data section. In the attempt to fit the biological data, it was
-found that bottom trawl fisheries, just as the trawl surveys were
-treated, only fit the data if the selectivity was domed. All fisheries
-that had final dome-shaped selectivity were given the flexibility to be
-logistic if it led to a better fit. The midwater, at-sea hake and the
-final block of the non-trawl fisheries all required logistic selectivity
-to fit the data. The use of dome-shaped selectivity for the bottom trawl
-was a major difference from the previous stock assessment. The choice of
+logistic or dome-shaped selectivity. Blocks were also added to bottom
+trawl, non-trawl and bottom trawl discard fleets, as well as to
+Triennial Survey selectivity curves.
+
+Bottom trawl fleet selectivity was allowed to change in 2002, when
+discard of Rougheye/Blackspotted Rockfishes first started, with the
+introduction of trip limits for rockfish, and size composition of landed
+catch changed, and in 2011, with the start of the IFQ fishery, when
+bottom trawl discard dropped to minimal level, and was comprised of
+smaller fish. Bottom trawl discard fleet was also allowed to change in
+2011, to reflect a change in size composition of discarded fish with the
+start of the IFQ program (Section~\ref{sec-recent_discard}).
+
+Non-trawl fleet selectivity was allowed to change in 2011 (also to
+account for a change associated with the start of the IFQ fishery), and
+also in 2020, since mean length of captured fish exhibited noticeable
+increase from 2020 forward (Figure~\ref{fig-meanlt-nt}). Large portion
+of non-trawl catches of Rougheye/Blackspotted Rockfishes comes from
+non-catch share program, and the available length composition data for
+non-trawl discard fleet does not show a clear signal of a change
+associated with the start of the IFQ fishery in 2011
+(Figure~\ref{fig-meanlt-ntdis}). Putting a block on non-trawl discard
+selectivity in 2011 resulted in virtually identical selectivity curves
+being estimated in both periods, and no block assumption for non-trawl
+discard fleet was retained for the reference model
+(Figure~\ref{fig-sel-tv-fisheries}).
+
+Also, we explored blocking non-trawl selectivity curve in 2002, similar
+to bottom trawl fleet, but selectivity curves were estimated the same in
+non-trawl and non-trawl discard fleet, as lengths in compositions in
+both fleets are very similar (Figure~\ref{fig-NT-lengths-for-blocks}).
+
+In the attempt to fit the biological data, it was found that bottom
+trawl fisheries, just as the trawl surveys were treated, only fit the
+data if the selectivity was domed. All fisheries that had final
+dome-shaped selectivity were given the flexibility to be logistic if it
+led to a better fit. The midwater, at-sea hake and the final block of
+the non-trawl fisheries all required logistic selectivity to fit the
+data. The use of dome-shaped selectivity for the bottom trawl was a
+major difference from the previous stock assessment. The choice of
 selectivity for the bottom trawl survey changed the scale and status of
 the stock and therefore a major source of sensitivity.
 
@@ -5617,7 +5648,7 @@ AFSC Slope & Shallow & 183 & 549 & 42 & 46 \\
 \begingroup
 \fontsize{9.0pt}{10.8pt}\selectfont
 
-\begin{longtable}{lrlrr}
+\begin{longtable}{lrllrr}
 
 \caption{\label{tbl-survey_coverage}Spatial and temporal coverage of
 surveys used in this assessment.}
@@ -5625,35 +5656,54 @@ surveys used in this assessment.}
 \tabularnewline
 
 \toprule
-Survey & Year & Latitudes & Depths (fathoms) & Depths (meters) \\ 
+Survey & Year & Latitudes Low & Latitude High & Depths Low & Depths High \\ 
 \midrule\addlinespace[2.5pt]
-WCGBTS & 2003 - 2019 & 32o 34'- 48o 27' & 30-700 & 55-1,280 \\ 
- & 2020 - 2024 & 32o 34'- 48o 27' & 30-700 & 55-1,280 \\ 
-AFSC/NWFSC Triennial & 1977 & 34o 00'- Canadian border & 50-250 & 91-457 \\ 
- & 1980 & 36o 48'- 49o 15' & 30-200 & 55-366 \\ 
- & 1983 & 36o 48'- 49o 15' & 30-200 & 55-366 \\ 
- & 1986 & 36o 48'- Border & 30-200 & 55-366 \\ 
- & 1989 & 34o 30'- 49o 40' & 30-200 & 55-366 \\ 
- & 1992 & 34o 30'- 49o 40' & 30-200 & 55-366 \\ 
- & 1995 & 34o 30'- 49o 40' & 30-275 & 55-500 \\ 
- & 1998 & 34o 30'- 49o 40' & 30-275 & 55-500 \\ 
- & 2001 & 34o 30'- 49o 40' & 30-275 & 55-500 \\ 
- & 2004 & 34o 30'- Canadian border & 30-275 & 55-500 \\ 
-AFSC Slope & 1988 & 44o 05'- 45o 30' & 100-700 & 182-1,280 \\ 
- & 1990 & 44o 30'- 40o 30' & 100-700 & 182-1,280 \\ 
- & 1991 & 38o 20'- 40o 30' & 100-700 & 182-1,280 \\ 
- & 1992 & 45o 30'- Border & 100-700 & 182-1,280 \\ 
- & 1993 & 43o 00'- 45o 30' & 100-700 & 182-1,280 \\ 
- & 1995 & 40o 30'- 43o 00' & 100-700 & 182-1,280 \\ 
- & 1996 & 43o 00'- Canadian border & 100-700 & 182-1,280 \\ 
- & 1997 & 34o 00'- Canadian border & 100-700 & 182-1,280 \\ 
- & 1999 & 34o 00'- Canadian border & 100-700 & 182-1,280 \\ 
- & 2000 & 34o 00'- Canadian border & 100-700 & 182-1,280 \\ 
- & 2001 & 34o 00'- Canadian border & 100-700 & 182-1,280 \\ 
-NWFSC Slope & 1999 & 34o 50'- 48o 10' & 100-700 & 182-1,280 \\ 
- & 2000 & 34o 50'- 48o 10' & 100-700 & 182-1,280 \\ 
- & 2001 & 34o 50'- 48o 10' & 100-700 & 182-1,280 \\ 
- & 2002 & 34o 50'- 48o 10' & 100-700 & 182-1,280 \\ 
+WCGBTS & 2003 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2004 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2005 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2006 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2007 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2008 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2009 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2010 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2011 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2012 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2013 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2014 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2015 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2016 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2017 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2018 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2019 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2021 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2022 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2023 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+WCGBTS & 2024 &  32° 34 N & 48° 27 N & 55 & 1,280 \\ 
+AFSC/NWFSC Triennial & 1977 &  34° 00 N & Canadian border & 91 & 457 \\ 
+AFSC/NWFSC Triennial & 1980 &  36° 48 N & 49° 15 N  & 55 & 366 \\ 
+AFSC/NWFSC Triennial & 1983 &  36° 48 N & 49° 15 N  & 55 & 366 \\ 
+AFSC/NWFSC Triennial & 1986 &  36° 48 N & Canadian border & 55 & 366 \\ 
+AFSC/NWFSC Triennial & 1989 &  36° 30 N &  49° 40 N  & 55 & 366 \\ 
+AFSC/NWFSC Triennial & 1992 &  36° 30 N &  49° 40 N  & 55 & 366 \\ 
+AFSC/NWFSC Triennial & 1995 &  36° 30 N &  49° 40 N  & 55 & 500 \\ 
+AFSC/NWFSC Triennial & 1998 &  36° 30 N &  49° 40 N  & 55 & 500 \\ 
+AFSC/NWFSC Triennial & 2001 &  36° 30 N &  49° 40 N  & 55 & 500 \\ 
+AFSC/NWFSC Triennial & 2004 & 34° 30 N & Canadian border & 55 & 500 \\ 
+AFSC Slope & 1988 &  44° 05 N &  45° 30 N & 182 & 1,280 \\ 
+AFSC Slope & 1990 &  44° 30 N & 40° 30 N & 182 & 1,280 \\ 
+AFSC Slope & 1991 &  38° 20 N & 40° 30 N  & 182 & 1,280 \\ 
+AFSC Slope & 1992 &  45° 30 N & Canadian border & 182 & 1,280 \\ 
+AFSC Slope & 1993 &  43° 00 N & 45° 30 N & 182 & 1,280 \\ 
+AFSC Slope & 1995 &  40° 30 N & 43° 00 N & 182 & 1,280 \\ 
+AFSC Slope & 1996 &  43° 00 N & Canadian border & 182 & 1,280 \\ 
+AFSC Slope & 1997 &  34° 00 N & Canadian border & 182 & 1,280 \\ 
+AFSC Slope & 1999 &  34° 00 N & Canadian border & 182 & 1,280 \\ 
+AFSC Slope & 2000 &  34° 00 N & Canadian border & 182 & 1,280 \\ 
+AFSC Slope & 2001 &  34° 00 N & Canadian border & 182 & 1,280 \\ 
+NWFSC Slope & 1999 &  34° 50 N & 48° 10 N & 182 & 1,280 \\ 
+NWFSC Slope & 2000 &  34° 50 N & 48° 10 N & 182 & 1,280 \\ 
+NWFSC Slope & 2001 &  34° 50 N & 48° 10 N & 182 & 1,280 \\ 
+NWFSC Slope & 2002 &  34° 50 N & 48° 10 N & 182 & 1,280 \\ 
 \bottomrule
 
 \end{longtable}
@@ -8336,6 +8386,20 @@ for briding analysis.}
 
 \caption{\label{fig-Bratio_Bridging}Time series of fraction of unfished
 spawning output for briding analysis.}
+
+\end{figure}%
+
+\begin{figure}[H]
+
+\centering{
+
+\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/HKL_landings_discard_comparisons.png}}
+
+}
+
+\caption{\label{fig-NT-lengths-for-blocks}Comparison of length
+compositions between non-trawl and non-trawl discard fleets, sexes
+combined.}
 
 \end{figure}%
 
