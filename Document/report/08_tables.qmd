@@ -407,7 +407,7 @@ survey_strata <- read.csv(
   header = TRUE
 )
 
-colnames(survey_strata) <- c("Survey", "Stratum Name", "Depth Low", "Depth High", "Latitude Low", "Latitude High")
+colnames(survey_strata) <- c("Survey", "Stratum Name", "Depth Low (m)", "Depth High (m)", "Latitude Low (° N)", "Latitude High (° N)")
 
 survey_strata |>
   gt() |>
