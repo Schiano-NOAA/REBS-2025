@@ -18,18 +18,26 @@ if (file.exists(table_dir)) {
   rm(catches_es)
   
   ssb_es_table <- ssb_es$table
+  ssb_es_table$`Lower Interval (mt)`[ssb_es_table$`Lower Interval (mt)`<0]<-"<1"
+  colnames(ssb_es_table)[2]<-"Spawning output (millions of eggs)"
   ssb_es_cap <- ssb_es$cap
   rm(ssb_es)
   
-  spr_es_table <- spr_es$table
-  spr_es_cap <- spr_es$cap
-  rm(spr_es)
-  
   recr_es_table <- recr_es$table
+  recr_es_table$`Lower Interval`[recr_es_table$`Lower Interval`<0]<-"<1"
   recr_es_cap <- recr_es$cap
   rm(recr_es)
   
+  spr_es_table <- spr_es$table
+  spr_es_table$`Lower Interval (SPR)`[spr_es_table$`Lower Interval (SPR)`<0]<-"<0.001"
+  spr_es_table$`Lower Interval (Rate)`[spr_es_table$`Lower Interval (Rate)`<0]<-"<0.001"
+  spr_es_cap <- spr_es$cap
+  rm(spr_es)
+  
+  
   reference_points_table <- reference_points$table
+  reference_points_table$`Lower Interval`[reference_points_table$`Lower Interval`<0]<-"<1"
+  reference_points_table$`Lower Interval`[reference_points_table$`Lower Interval`!="<1"&!is.na(reference_points_table$`Lower Interval`)]<-round(as.numeric(reference_points_table$`Lower Interval`[reference_points_table$`Lower Interval`!="<1"&!is.na(reference_points_table$`Lower Interval`)]),3)
   reference_points_cap <- reference_points$cap
   reference_points_cap<-"Summary of reference points and management quantities, including estimates of the 95 percent confidence intervals. SO is spawning output (in millions of eggs), SPR is the spawning potential ratio, and MSY is maximum sustainable yield."
   rm(reference_points)
