@@ -127,8 +127,8 @@ window.Quarto = {
 <p>The historical discard information comes from <span class="citation" data-cites="pikitch_evaluation_1988">@pikitch_evaluation_1988</span>, often referred to as the Pikitch study. The Pikitch study was conducted between 1985 and 1987 between 48°42’ and 42°60’ N. latitude <span class="citation" data-cites="pikitch_evaluation_1988">[@pikitch_evaluation_1988]</span>. Participation in the study was voluntary and included vessels using bottom, mid-water and shrimp trawl gears. Observers of normal fishing operations on commercial vessels collected the data, estimated the total weight of the catch by tow, and recorded the weight of species retained and discarded in the sample.</p>
 <p>There are no mid-water trawl records of <code>r Spp</code>in the <span class="citation" data-cites="pikitch_evaluation_1988">@pikitch_evaluation_1988</span>, and only few fish records of bottom trawl catches, based on which discard rate (discard weight over total weight) for bottom trawl was just 0.09%. Therefore, no historical discard was assumed in the model.</p>
 </section>
-<section id="recent-discard" class="level4">
-<h4 class="anchored" data-anchor-id="recent-discard">Recent Discard</h4>
+<section id="sec-recent_discard" class="level4">
+<h4 class="anchored" data-anchor-id="sec-recent_discard">Recent Discard</h4>
 <p>With the introduction of trip limits for rockfish in early 2000, limited discard has been observed for <code>r Spp</code>in bottom trawl and non-trawl fisheries.</p>
 <p>In 2002, the West Coast Groundfish Observer Program (WCGOP) was implemented on the West Coast of the United States, which began with gathering bycatch and discard information for the limited entry trawl and fixed gear fleets. Observer coverage has expanded to include the California halibut trawl, the nearshore fixed gear and pink shrimp trawl fisheries. Since 2011, trawl fisheries have been managed with catch shares under a system of annual individual fishing quotas (IFQs) for the shoreside sector (i.e., vessels delivering to shoreside processors) and harvest cooperatives for the at-sea hake sectors (catcher-processors who catch and process hake at sea; and Motherships, factory processors that take delivery of hake from catcher vessels at sea). Constant monitoring of catch using observers or electronic monitoring (EM) is required to participate in the trawl catch share fishery.</p>
 <p>The discard amounts of <code>r Spp</code> for the period between 2002 and 2023 were obtained from WCGOP by year and fleet (bottom trawl, mid-water trawl and non-trawl), for both the catch share and the non-catch share sector. The discarding amounts of <code>r Spp</code> within bottom trawl and non-trawl fleets were included in the model as separate fleets.</p>
@@ -151,8 +151,6 @@ window.Quarto = {
 <p>The fishery length and age data for bottom trawl, non-trawl and mid-water trawl fleets, based on samples collected by port samplers, were obtained from the PacFIN Biological Data System (BDS) database and extracted on April 24, 2025. The number of trips and fish sampled for lengths and ages by state and year are summarized in <strong>?@tbl-BT_lengths_sample_sizes</strong> through <strong>?@tbl-Fishery_age_sample_sizes</strong>, by fishing fleet.</p>
 <p>Commercial length-frequency distributions were developed for each fleet and year, for which observations were available</p>
 <p>Females and males distributions were treated separately, to track sex-specific differences. For each fleet, the raw observations were expanded to the trip level, to account for differences in samples sizes relative catch weights among trips (first stage expansion). The expanded length observations were then further expanded to state level, to account for differences in sampling intensity of <code>r Spp</code> landings among states combined into a single fleet (second stage expansion). The expansion algorithm can be illustrated with the following equation:</p>
-<p>Input N = <span class="math inline">\(7.06 ^ N_{\text{trips}}\)</span> if <span class="math inline">\(N_{\text{fish}}/N_{\text{trips}}\)</span> is <span class="math inline">\(\geq\)</span> 44</p>
-<p>$N_{input} =$7.06 _{fish} $ when left() = 44</p>
 <p>Where <span class="math inline">\(N_{b,j,y}\)</span> is the number of lengths in each length bin (<span class="math inline">\(b\)</span>) by sex (<span class="math inline">\(j\)</span>) and year (<span class="math inline">\(y\)</span>) within each fleet. <span class="math inline">\(L_{b,j,t}\)</span> represents an individual length sample by bin (<span class="math inline">\(b\)</span>) and sex (<span class="math inline">\(j\)</span>) within an individual fishing trip (<span class="math inline">\(t\)</span>). In the first stage expansion, <span class="math inline">\(L_{b,j,t}\)</span> was multiplied by the ratio of landed catch (<span class="math inline">\(LC_t\)</span>) within that trip (<span class="math inline">\(t\)</span>) to a portion of catch sampled for lengths (<span class="math inline">\(SC_t\)</span>) within the same trip (<span class="math inline">\(t\)</span>). In the second stage expansion, the individual length sample (<span class="math inline">\(L_{b,j,t}\)</span>) was multiplied by the ratio of landed catch (<span class="math inline">\(LC_{s,y}\)</span>) within individual state (<span class="math inline">\(s\)</span>) and year (<span class="math inline">\(y\)</span>) to catch weights sampled for lengths (<span class="math inline">\(SC_{s,y}\)</span>) within the same state (<span class="math inline">\(s\)</span>) and year (<span class="math inline">\(y\)</span>). As the final step, the expanded length samples from the same size bin and sex were summed across all trips and states (combined into a single fleet) within a single year, to obtain the total number of lengths in each length bin by sex, year and fleet (<span class="math inline">\(N_{b,j,y}\)</span>). The same calculations were repeated for each length bin, to develop sex specific length frequencies for each fishing fleet by year.</p>
 <p>Age distributions were included in the model as conditional-ages-at-length (CAAL) observations. The marginal age compositions were also included, but only for evaluating the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.</p>
 <p>The filtering and processing of the PacFIN length and age composition data were conducted using the package in R <span class="citation" data-cites="nwfscSurvey_package_2025">[@nwfscSurvey_package_2025]</span>. The filtering steps included removing samples with missing vital information.</p>
@@ -180,11 +178,14 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="sec-surveys">Fishery-independent data</h2>
 <p>Data from four fishery-independent surveys were used in this assessment:</p>
 <ul>
-<li>Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)</li>
-<li>Survey 2: Triennial (every three years) Survey (1980-2004)<br>
-</li>
-<li>Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)</li>
-<li>Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)</li>
+<li><p>Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS; 2003-2024)</p></li>
+<li><p>Survey 2: Triennial (every three years) Survey (1980-2004)</p></li>
+<li><p>Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)</p></li>
+<li><p>Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)</p></li>
+<li><p>Survey 2: Triennial (every three years) Survey (1980-2004)<br>
+</p></li>
+<li><p>Survey 3: Alaska Fishery Science Center (AFSC) Slope Survey (1997-2001)</p></li>
+<li><p>Survey 4: Northwest Fisheries Science Center (NWFSC) Slope Survey (1999-2001)</p></li>
 </ul>
 <p>The surveys temporal and spatial coverage is summarized in <strong>?@tbl-survey_coverage</strong>.</p>
 <p>Information produced by these surveys included indices of relative abundance (all four surveys), length-frequency distributions (WCGBTS and Triennial survey), and age frequency distributions (WCGBTS).</p>
@@ -211,7 +212,7 @@ window.Quarto = {
 <p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="nwfscSurvey_package_2025">[@nwfscSurvey_package_2025]</span>. The stratification for length data expansions are provided in <strong>?@tbl-survey_strata</strong>.</p>
 <p>Age distributions were included in the model as CAAL observations. The marginal age compositions were only used for comparing the implied fits, while the CAAL data were used in the likelihood. The CAAL data were not expanded and were binned according to length, age, sex, and year.</p>
 <p><strong>?@fig-length_flt10</strong> shows WCGBTS length frequencies by year, and <strong>?@fig-caal_flt10_1</strong> through <strong>?@fig-caal_flt10_3</strong> show the WCGBTS length and CAAL distributions by year.</p>
-<p>The input sample sizes for length composition data were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>The input sample sizes for length composition data were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43\cdot \ N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
 <p>The input sample size of CAAL data was set at the number of fish at each length by sex and by year.</p>
 </section>
 </section>
@@ -237,7 +238,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="length-compositions">Length Compositions</h4>
 <p><strong>?@tbl-survey_length_samples</strong> shows the number of lengths taken by the survey.</p>
 <p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="nwfscSurvey_package_2025">[@nwfscSurvey_package_2025]</span>. The stratification for length data expansions are provided in <strong>?@tbl-survey_strata</strong>. <strong>?@fig-length_flt7</strong> shows Triennial Survey length frequencies by year,</p>
-<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43\cdot \ N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
 <p>There are no <code>r spp</code> age data from the Triennial Survey.</p>
 </section>
 </section>
@@ -258,7 +259,7 @@ window.Quarto = {
 <h4 class="anchored" data-anchor-id="length-compositions-1">Length Compositions</h4>
 <p><strong>?@tbl-survey_length_samples</strong> shows the number of lengths taken by the survey.</p>
 <p>Length compositions were separated into males and females. These length compositions were expanded to account for difference in catch among tows, with further expansion based upon the stratification by depth and latitude using the {nwfscSurvey} package in R <span class="citation" data-cites="nwfscSurvey_package_2025">[@nwfscSurvey_package_2025]</span>. The stratification for length data expansions are provided in <strong>?@tbl-survey_strata</strong>. <strong>?@fig-length_flt8</strong> shows AFSC Slope Survey length frequencies by year.</p>
-<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43*N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
+<p>The input sample sizes for length composition data for all fishery-independent surveys were calculated based on <span class="citation" data-cites="stewart_bootstrapping_2014">@stewart_bootstrapping_2014</span> as <span class="math inline">\(\text{Input N}_{y} = 2.43\cdot \ N_{tow}\)</span> where the 2.43 value was estimated for a group of shelf and slope rockfish species.</p>
 <p>There are no <code>r spp</code> age data from the AFSC Slope Survey.</p>
 </section>
 </section>
