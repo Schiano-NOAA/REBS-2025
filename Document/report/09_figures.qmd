@@ -1840,12 +1840,12 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimated age and growth relatioship in the reference model .Shaded area indicates 95% distribution of length at age around estimated growth curve."
+#| fig-cap: "Estimated age and growth relatioship in the reference model .Shaded area indicates 95% distribution of length at age around estimated growth curve. Black curve is the estimated growth curve from the 2013 model."
 #| fig-alt: "Values for the growth curve are provided in the Report.sso file."
 #| fig-pos: H
 
 knitr::include_graphics(
-  file.path(model_dir, "plots", "bio1_sizeatage.png")
+  file.path(plot_dir, "Growth_curve_comparison.png")
 )
 ```
 
