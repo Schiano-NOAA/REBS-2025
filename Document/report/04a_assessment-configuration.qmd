@@ -157,7 +157,7 @@ Stock scale was comparable once removal history was included, and demonstrates a
 
 Numerous exploratory models that included all data types and a variety of model specifications were subsequently explored and too numerous to fully report. In summary, the estimation of which life history parameters to estimate and fix was liberally explored.
 
-The following is a list of things that were explored, typically in combination with one another
+A list of configurations explored, typically in combination with one another, is provided below:
 
 - Estimate or fix $M$
 - Estimate or fix any of the three growth parameter for each sex
