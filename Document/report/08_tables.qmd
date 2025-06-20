@@ -433,7 +433,7 @@ survey_coverage <- read.csv(
   fileEncoding = "latin1"
 )
 
-colnames(survey_coverage) <- c("Survey", "Year", "Latitudes Low", "Latitude High", "Depths Low", "Depths High")
+colnames(survey_coverage) <- c("Survey", "Year", "Latitudes Low", "Latitude High", "Depths Low (m)", "Depths High (m)")
 
 survey_coverage |>
   gt() |>
