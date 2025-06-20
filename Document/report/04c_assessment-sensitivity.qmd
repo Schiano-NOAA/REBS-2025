@@ -1,4 +1,4 @@
-## Characterizing uncertainty {#sec-uncertainty}
+## Characterizing uncertainty
 
 ### Sensitivity Analyses {#sec-assmt-sens}
 
