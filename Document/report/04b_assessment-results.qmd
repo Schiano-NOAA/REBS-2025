@@ -1,7 +1,7 @@
 ## Model Diagnostics
 
 
-### Model Convergence and Acceptability {#model-convergence}
+### Model Convergence and Acceptability {#sec-model-convergence}
 
 While there is no definitive measure of model convergence, several measures are routinely applied. These criteria include a low maximum gradient (`r model_output$maximum_gradient_component`), inversion of the Hessian (passed), acceptable fits to data (passed), and reasonable parameter values (passed). 
 
