@@ -78,17 +78,15 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Set default figure placement to htbp
+\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 % definitions for citeproc citations
@@ -239,7 +237,7 @@
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
 \ifLuaTeX
-  \usepackage[english]{selnolig} % disable illegal ligatures
+  \usepackage{selnolig}  % disable illegal ligatures
 \fi
 \usepackage{bookmark}
 
@@ -524,7 +522,7 @@ Year & Trawl & Trawl
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/catch2_landings_stacked.png}}
+\includegraphics{ref_model/plots/catch2_landings_stacked.png}
 
 }
 
@@ -583,8 +581,8 @@ The model estimates that the stock complex currently is in a healthy
 state, well above management target (Figure~\ref{fig-es-sb},
 Figure~\ref{fig-es-depl}). Approximate confidence intervals based on the
 asymptotic variance estimates show that the uncertainty in the estimated
-spawning output is high. Estimates of spawning biomass in most recent
-decade are shown in Table~\ref{tbl-es-sb}.
+spawning output is high. Estimates of spawning output (in millions of
+eggs) in most recent decade are shown in Table~\ref{tbl-es-sb}.
 
 Fraction unfished shows slight decline between 1940s and the 1960s, also
 also gradual decline since early-1980s, which correspond to catch
@@ -626,7 +624,7 @@ Year & Spawning output (millions of eggs) & Lower Interval (mt) & Upper Interval
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}}
+\includegraphics{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}
 
 }
 
@@ -639,7 +637,7 @@ Year & Spawning output (millions of eggs) & Lower Interval (mt) & Upper Interval
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
+\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
 
 }
 
@@ -699,7 +697,7 @@ Year & Recruitment (1,000s) & Lower Interval (1,000s) & Upper Interval (1,000s) 
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}}
+\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
 
 }
 
@@ -712,7 +710,7 @@ for the base model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recdevs2_withbars.png}}
+\includegraphics{ref_model/plots/recdevs2_withbars.png}
 
 }
 
@@ -778,7 +776,7 @@ Year & 1-SPR & Lower Interval (SPR) & Upper Interval (SPR) & Exploitation Rate &
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
+\includegraphics{ref_model/plots/SPR3_ratiointerval.png}
 
 }
 
@@ -834,8 +832,8 @@ to 40\% of the unfished spawning output (\(\text{SO}_{40\%}\))
 calculated using the SPR target (\(\text{SPR}_{50\%}\)) was 2519730
 millions of eggs.
 
-The 2025 spawning biomass relative to unfished equilibrium spawning
-biomass, based on the 2024 fishing year, is 87\%, above the management
+The 2025 spawning output relative to unfished equilibrium spawning
+output, based on the 2024 fishing year, is 87\%, above the management
 target of 40\% of unfished spawning output (Figure~\ref{fig-es-depl}).
 The fishing intensity, \(1-SPR\), was below or just slightly above
 harvest rate limit (\(SPR_{50\%}\)) from the mid-1980s through the
@@ -902,7 +900,7 @@ MSY (mt) & 592 & <1 & 1,311 \\
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
+\includegraphics{ref_model/plots/SPR4_phase.png}
 
 }
 
@@ -915,7 +913,7 @@ fraction unfished.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/yield2_yield_curve_with_refpoints.png}}
+\includegraphics{ref_model/plots/yield2_yield_curve_with_refpoints.png}
 
 }
 
@@ -1004,21 +1002,22 @@ a substantial increase of stock scale.
 Stock scale is also sensitive to assumptions about natural mortality.
 Rougheye/Blackspotted Rockfishes is one of the longest lived species of
 rockfish on the West Coast, with maximum ages of 169 years in this
-assessment. Individuals as old as 205 years are reported in literature.
-It is therefore likely that natural mortality for Rougheye/Blackspotted
-Rockfishes is lower than for other rockfish species. With length and age
-data available only for years after 1994, there is limited ability to
-monitor the long-term changes of aging cohorts. Therefore, estimates of
-natural mortality are uncertain. This assessment attempts to capture
-uncertainty in this parameter and integrate it into the derived biomass
-estimates by estimating natural mortality for females, while fixing the
-male natural mortality at the value from meta-analytical study.
+assessment. Individuals as old as 205 years are reported in Munk
+(\citeproc{ref-munkMaximumAgesGroundfishes2001}{2001}). It is therefore
+likely that natural mortality for Rougheye/Blackspotted Rockfishes is
+lower than for other rockfish species. With length and age data
+available only for years after 1994, there is limited ability to monitor
+the long-term changes of aging cohorts. Therefore, estimates of natural
+mortality are uncertain. This assessment attempts to capture uncertainty
+in this parameter and integrate it into the derived biomass estimates by
+estimating natural mortality for females, while fixing the male natural
+mortality at the value from meta-analytical study.
 
 \subsection*{Scientific Uncertainty}\label{scientific-uncertainty}
 \addcontentsline{toc}{subsection}{Scientific Uncertainty}
 
 The model estimated uncertainty (\(\sigma\)) around the 2025 spawning
-output for is 0.77. The uncertainty around the OFL is 0.67. These values
+output for is 0.68. The uncertainty around the OFL is 0.67. These values
 underestimate the overall uncertainty as they do not incorporate the
 model structural uncertainty and do not account for any time-varying
 dynamics other than recruitment. The estimated uncertainty values are
@@ -1096,23 +1095,23 @@ several of them that we consider particularly important.
   disproportionate risk of overfishing relative to the other. Additional
   research that will provide insight into the distribution, life
   history, biological characteristics, and catch and discard profiles of
-  the two species is recommended. Such an endeavor would like require
+  the two species is recommended. Such an endeavor would likely require
   the efforts of at sea observers in all fleets, biologists aboard
   fishery-independent surveys, and port samplers along the entire West
   Coast requiring broad, inter-agency collaboration.
 \item
-  Understanding of coatwide stock structure, connectivity, and
+  Understanding of coastwide stock structure, connectivity, and
   distribution: This is a stock assessment for Rougheye/Blackspotted
   Rockfishes off of the west coast of the U.S. and does not consider
   data from British Columbia or Alaska. Further investigating and
   comparing the data and predictions from British Columbia and Alaska to
   determine if there are similarities with the U.S. West Coast
-  observations would help to define the connectivity between rougheye
-  rockfish north of the U.S.-Canada border.
+  observations would help to define the connectivity between Rougheye
+  Rockfish north of the U.S.-Canada border.
 \item
   Natural mortality: Uncertainty in natural mortality translates into
   uncertain estimates of status and sustainable fishing levels for
-  Rougheye/Blackspotted Rockfishes. Assessment model was able to
+  Rougheye/Blackspotted Rockfishes. The assessment model was able to
   estimate female natural mortality, consistent with maximum age based
   meta-analytical prior, but male natural mortality was fixed in the
   model. The collection of additional age data and further research of
@@ -1120,12 +1119,12 @@ several of them that we consider particularly important.
   understanding of Rougheye/Blackspotted Rockfishes natural mortality.
 \item
   Historical landings and discards, including investigation of fisheries
-  selectivity: The substantial progress has been made in reconstructing
+  selectivity: Substantial progress has been made in reconstructing
   historical landings of rockfishes on the U.S. West Coast, including
   those for Rougheye/Blackspotted Rockfishes. This assessment
-  highlighted the importance of understanding of fishery selectivity
+  highlighted the importance of understanding fishery selectivity
   assumptions associated with removals and how fishery selectivity
-  changes throughout the years. Further understanding of this area would
+  changes throughout the years. Further understanding in this area would
   help reduce uncertainty in estimated scale of the stock.
 \end{itemize}
 
@@ -1353,10 +1352,11 @@ and throughout Alaska and into Japan
 \citeproc{ref-orr_species_2008}{Orr and Hawkins 2008}). Both are
 long-lived (\textgreater100 years), with Rougheye Rockfish having the
 distinction of the oldest ever aged \emph{Sebastes} species at 205 years
-old. They both greatly overlap in latitude and depth (shallower than 100
-m to at least 439 m), and are generally considered slope rockfish, with
-an ontogenetic shift from shallower to deeper, and adults commonly found
-at 360 m (around 200 fathoms). Rougheye seems to be proportionally more
+old (\citeproc{ref-munkMaximumAgesGroundfishes2001}{Munk 2001}). They
+both greatly overlap in latitude and depth (shallower than 100 m to at
+least 439 m), and are generally considered slope rockfish, with an
+ontogenetic shift from shallower to deeper, and adults commonly found at
+360 m (around 200 fathoms). Rougheye seems to be proportionally more
 abundant when survey samples are genetically identified, and
 Blackspotted Rockfish tend to be found, on average, deeper than Rougheye
 Rockfish (\citeproc{ref-hawkins_genetic_2005}{S. L. Hawkins et al.
@@ -2011,7 +2011,7 @@ Data from four fishery-independent surveys were used in this assessment:
 \tightlist
 \item
   Survey 1: West Coast Groundfish Bottom Trawl Survey (WCGBTS;
-  2003-2024).
+  20023-2024).
 \item
   Survey 2: Triennial (every three years) Survey (1980-2004).
 \item
@@ -3375,7 +3375,7 @@ scale and status estimates, the choice of treatments are based on the
 common challenge of balancing information content (i.e., what should the
 data be informing in the stock assessment) in the data within an
 integrated statistical frameworks. Those explorations are also provided
-in Section~\ref{sec-uncertainty}.
+in Characterizing uncertainty section.
 
 General attributes of the reference model are that indices of abundance
 are assumed to have lognormal measurement errors. Length compositions
@@ -3390,7 +3390,8 @@ above.
 
 Sensitivity scenarios and likelihood profiles (on \(lnR_0\), steepness,
 and natural mortality) were used to explore uncertainty in the above
-model specifications and are reported in Section~\ref{sec-uncertainty}.
+model specifications and are reported in Characterizing uncertainty
+section.
 
 \newpage{}
 
@@ -3666,7 +3667,8 @@ signal.
 
 \newpage{}
 
-\subsection{Characterizing uncertainty}\label{sec-uncertainty}
+\subsection{Characterizing
+uncertainty}\label{characterizing-uncertainty}
 
 \subsubsection{Sensitivity Analyses}\label{sec-assmt-sens}
 
@@ -4090,8 +4092,8 @@ to 40\% of the unfished spawning output (\(\text{SO}_{40\%}\))
 calculated using the SPR target (\(\text{SPR}_{50\%}\)) was 2519730
 millions of eggs.
 
-The 2025 spawning biomass relative to unfished equilibrium spawning
-biomass, based on the 2024 fishing year, is 87\%, above the management
+The 2025 spawning output relative to unfished equilibrium spawning
+output, based on the 2024 fishing year, is 87\%, above the management
 target of 40\% of unfished spawning output
 (Figure~\ref{fig-management-depletion}). The fishing intensity,
 \(1-SPR\), was below or just slightly above harvest rate limit
@@ -4144,14 +4146,13 @@ No decision table needed in draft assessments undergoing review.
 \subsection{Evaluation of Scientific Uncertainty}\label{sec-uncertainty}
 
 The model estimated uncertainty (\(\sigma\)) around the 2025 spawning
-output for is 0.77. The uncertainty around the OFL is 0.67. These values
-underestimate the overall uncertainty as they do not incorporate the
-model structural uncertainty and do not account for any time-varying
-dynamics other than recruitment. The estimated uncertainty values are
-higher than the Category 1 default of 0.5, so all projections will use
-the estimated (\(\sigma\)). The alternative states of nature used to
-bracket uncertainty in the decision table assist with encapsulating
-model structure uncertainty.
+output for is 0.68. These values underestimate the overall uncertainty
+as they do not incorporate the model structural uncertainty and do not
+account for any time-varying dynamics other than recruitment. The
+estimated uncertainty values are higher than the Category 1 default of
+0.5, so all projections will use the estimated (\(\sigma\)). The
+alternative states of nature used to bracket uncertainty in the decision
+table assist with encapsulating model structure uncertainty.
 
 \newpage{}
 
@@ -4246,79 +4247,80 @@ considerations}\label{distribution-and-habitat-considerations}
 
 Stock Distribution
 
-The distribution of Rougheye/Blackspotted rockfishes biomass was
+The distribution of Rougheye/Blackspotted Rockfishes biomass was
 examined using data from the WCGBTS and species distribution modeling
 (sdm) using sdmTMB. The sdmTMB model included spatial autocorrelation
 and a spatiotemporal field modeled as a random walk. The model did not
 include depth, and was fit as a delta-lognormal model and fit to data
 north of 42 °N. We did not see obvious changes in spatial distribution
-in Rougheye/Blackspotted biomass. Consistent with this lack of
-variability in the spatial distribution of rougheye, the center of
-gravity of Rougheye/Blackspotted biomass north of 42 °N showed little
-variation, increasing by less than 0.5 °N from 2003 to 2024. Juvenile
-Rougheye/Blackspotted distributions (\textless26 cm and 6.5 years old)
-have been fairly stable through time but with interannual fluctuations.
+in Rougheye/Blackspotted Rockfishes biomass. Consistent with this lack
+of variability in the spatial distribution of Rougheye Rockfish, the
+center of gravity of Rougheye/Blackspotted Rockfihes biomass north of 42
+°N showed little variation, increasing by less than 0.5 °N from 2003 to
+2024. Juvenile Rougheye/Blackspotted Rockfishes distributions
+(\textless26 cm and 6.5 years old) have been fairly stable through time
+but with interannual fluctuations.
 
 \subparagraph{Predators and Prey and Trophic overlap with
 competitors}\label{predators-and-prey-and-trophic-overlap-with-competitors}
 
 Given the diet importance of euphausiids (krill) and pandalid shrimp
-(including pink shrimp) for rougheye/blackspotted rockfish, recent
+(including pink shrimp) for Rougheye/Blackspotted Rockfishes, recent
 trends in abundance of these invertebrate prey groups are relevant. The
 RREAS survey suggests average to above-average abundance of most forage
 groups, including krill, for Central California, and typical conditions
 for krill at the northern sites. Krill abundance at the Newport
 hydrographic line (J. Fisher and K. Jacobson, pers.comm. 4/25/2025)
 suggest that krill was at typical levels over the last five years, but
-with high abundance of juvenile E. pacifica in October 2023 and of
-juvenile T. spinifera in July 2023. Additionally, krill length and
-biomass indices from the Trinidad Head survey line were near average for
-most of 2024. The coastwide krill abundance index, derived from acoustic
-data, was not available in 2024, but the 2023 values for this index in
-the relevant INPFC Vancouver and Columbia areas was moderate, and for
-example not as low as 2015. Though shrimp are important prey of
-rougheye/blackspotted rockfish, survey time series of shrimp abundance
+with high abundance of juvenile \emph{E. pacifica} in October 2023 and
+of juvenile \emph{T. spinifera} in July 2023. Additionally, krill length
+and biomass indices from the Trinidad Head survey line were near average
+for most of 2024. The coastwide krill abundance index, derived from
+acoustic data, was not available in 2024, but the 2023 values for this
+index in the relevant INPFC Vancouver and Columbia areas was moderate,
+and for example not as low as 2015. Though shrimp are important prey of
+Rougheye/Blackspotted Rockfishes, survey time series of shrimp abundance
 in US waters are lacking. However, commercial pink shrimp landings
 increased by 17\% in 2024, though with no clear trend over the last 5
 years. Overall, there is evidence for stable or slightly increasing
 forage (euphausiid and pink shrimp) in the last year.
 
 Predators that impose the largest amounts of predation mortality on
-Rougheye/Blackspotted rockfishes can be identified from Ecopath food web
+Rougheye/Blackspotted Rockfishes can be identified from Ecopath food web
 modeling. The Ecopath models of Field (2006) and Koehn et al.~(2016)
 were recently revised (C. Best-Otubu, P.Y. Hernvann, N. Lezama Ochoa, I.
 Kaplan, pers. comm.). The Ecopath model includes the functional group
-Slope Rockfish, which includes rougheye/blackspotted. The highest
-sources of predation mortality on Slope Rockfish, from greatest to
-least, derive from sablefish, skates, northern fur seals, and California
-sea lions. Recent population increases (in the last 5 years) of
-sablefish may impose some increased predation pressure on
-rougheye/blackspotted rockfish, but the linkage to rougheye/blackspotted
-is uncertain and can can only be inferred from `unidentified rockfish'
-found in sablefish stomachs. Predation by the other three predators
-(skates, fur seals, and California sea lions) is unlikely to have
-changed much in recent years, based on stable recent population dynamics
-(at least through recent assessments in 2019, 2013, and 2014 for these
-species, respectively).
+Slope Rockfish, which includes Rougheye/Blackspotted Rockfishes. The
+highest sources of predation mortality on Slope Rockfish, from greatest
+to least, derive from Sablefish, skates, northern fur seals, and
+California sea lions. Recent population increases (in the last 5 years)
+of Sablefish may impose some increased predation pressure on
+Rougheye/Blackspotted Rockfishes, but the linkage to
+Rougheye/Blackspotted Rockfishes is uncertain and can can only be
+inferred from `unidentified rockfish' found in Sablefish stomachs.
+Predation by the other three predators (skates, fur seals, and
+California sea lions) is unlikely to have changed much in recent years,
+based on stable recent population dynamics (at least through recent
+assessments in 2019, 2013, and 2014 for these species, respectively).
 
 Trophic overlap
 
 Major predators on krill (euphausiids) and pandalid shrimp can be
 identified via Ecopath modeling, to point to potential competitors for
-Rougheye and Blackspotted rockfishes. The recently revised Ecopath model
+Rougheye and Blackspotted Rockfishes. The recently revised Ecopath model
 suggests that the highest sources of predation mortality (from greatest
-to less) on euphausiids are Carnivorous zooplankton, Pacific hake, Large
+to less) on euphausiids are Carnivorous zooplankton, Pacific Hake, Large
 jellyfish, and Mesopelagic fish. Similarly, the highest sources of
-predation on pandalid shrimp are Juvenile rockfish, Pacific Hake, Other
-cephalopods, Greenstriped rockish, and Benthic fish. Though we can't
-quantitatively determine that forage abundance is limiting for rougheye
-and blackspotted rockfish, there is some potential for competition by
-hake and rougheye/blackspotted rockfish for prey (euphausiids and
-pandalid shrimp). Based on the 2025 hake stock assessment, hake total
-biomass in 2025 is 72\% higher in 2025 than in 2006, which was the base
-year for the Ecopath calculations. Further research could identify if
-such trophic overlap with hake limits Rougheye, Blackspotted and other
-species.
+predation on pandalid shrimp are juvenile rockfish, Pacific Hake, Other
+cephalopods, Greenstriped Rockish, and Benthic fish. Though we cannot
+quantitatively determine that forage abundance is limiting for Rougheye
+and Blackspotted Rockfishes, there is some potential for competition by
+Pacific Hake and Rougheye/Blackspotted Rockfishes for prey (euphausiids
+and pandalid shrimp). Based on the 2025 Pacific Hake stock assessment,
+Pacific Hake total biomass in 2025 is 72\% higher in 2025 than in 2006,
+which was the base year for the Ecopath calculations. Further research
+could identify if such trophic overlap with Pacific Hake limits Rougheye
+and Blackspotted Rockfishes and other species.
 
 \subparagraph{Climate Vulnerability Assessment
 rank}\label{climate-vulnerability-assessment-rank}
@@ -4361,34 +4363,35 @@ we identify several of them that we consider particularly important.
   fishery-independent surveys, and port samplers along the entire West
   Coast requiring broad, inter-agency collaboration.
 \item
-  Understanding of coatwide stock structure, connectivity, and
+  Understanding of coastwide stock structure, connectivity, and
   distribution: This is a stock assessment for Rougheye/Blackspotted
   Rockfishes off of the west coast of the U.S. and does not consider
   data from British Columbia or Alaska. Further investigating and
   comparing the data and predictions from British Columbia and Alaska to
   determine if there are similarities with the U.S. West Coast
-  observations would help to define the connectivity between rougheye
-  rockfish north of the U.S.-Canada border.
+  observations would help to define the connectivity between Rougheye
+  Rockfish north of the U.S.-Canada border.
 \item
   Natural mortality: Uncertainty in natural mortality translates into
   uncertain estimates of status and sustainable fishing levels for
   Rougheye/Blackspotted Rockfishes. Rougheye/Blackspotted Rockfishes are
   one of the longest lived species of rockfish (with maximum age as old
-  as 205 years reported in the literature). Assessment model was able to
-  estimate female natural mortality, consistent with maximum age based
-  meta-analytical prior, but with male natural mortality fixed at the
-  median of the prior. The collection of additional age data and further
-  research of the life-history of Rougheye/Blackspotted Rockfishes may
-  improve our understanding of Rougheye/Blackspotted Rockfishes natural
-  mortality.
+  as 205 years reported in Munk
+  (\citeproc{ref-munkMaximumAgesGroundfishes2001}{2001})). Assessment
+  model was able to estimate female natural mortality, consistent with
+  maximum age based meta-analytical prior, but with male natural
+  mortality fixed at the median of the prior. The collection of
+  additional age data and further research of the life-history of
+  Rougheye/Blackspotted Rockfishes may improve our understanding of
+  Rougheye/Blackspotted Rockfishes natural mortality.
 \item
   Historical landings and discards, including investigation of fisheries
-  selectivity: The substantial progress has been made in reconstructing
+  selectivity: Substantial progress has been made in reconstructing
   historical landings of rockfishes on the U.S. West Coast, including
   those for Rougheye/Blackspotted Rockfishes. This assessment
-  highlighted the importance of understanding of fishery selectivity
+  highlighted the importance of understanding fishery selectivity
   assumptions associated with removals and how fishery selectivity
-  changes throughout the years. Further understanding of this area would
+  changes throughout the years. Further understanding in this area would
   help reduce uncertainty in estimated scale of the stock.
 \end{itemize}
 
@@ -4622,6 +4625,11 @@ Cody S Szuwalski. 2019. {``Overcoming Long Bayesian Run Times in
 Integrated Fisheries Stock Assessments.''} \emph{{ICES} Journal of
 Marine Science} 76 (6): 1477--88.
 \url{https://doi.org/10.1093/icesjms/fsz059}.
+
+\bibitem[\citeproctext]{ref-munkMaximumAgesGroundfishes2001}
+Munk, Kristen M. 2001. {``Maximum {Ages} of {Groundfishes} in {Waters}
+Off {Alaska} and {British Columbia} and {Considerations} of {Age
+Determination}.''} \emph{Alaska Fishery Research Bulletin} 8 (1): 16.
 
 \bibitem[\citeproctext]{ref-niska_species_1976}
 Niska, Edwin L. 1976. {``Species {Compositionof} Rockfish in Catches by
@@ -7574,7 +7582,7 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf}}
+\includegraphics{SAR_USWC_Rougheye_and_Blackspotted_Rockfishes_skeleton_files/figure-pdf/fig-map-1.pdf}
 
 }
 
@@ -7586,7 +7594,7 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/cpue_map.png}}
+\includegraphics{plots_4_doc/cpue_map.png}
 
 }
 
@@ -7599,7 +7607,7 @@ Year & Adopted OFL (mt) & Adopted ACL (mt) & Assumed Catch (mt) & OFL (mt) & Buf
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/SB_comps.png}}
+\includegraphics{plots_4_doc/SB_comps.png}
 
 }
 
@@ -7615,7 +7623,7 @@ stock assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Status_comp.png}}
+\includegraphics{plots_4_doc/Status_comp.png}
 
 }
 
@@ -7634,7 +7642,7 @@ stock assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/data_plot.png}}
+\includegraphics{ref_model/plots/data_plot.png}
 
 }
 
@@ -7646,7 +7654,7 @@ stock assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/catch2_landings_stacked.png}}
+\includegraphics{ref_model/plots/catch2_landings_stacked.png}
 
 }
 
@@ -7658,7 +7666,7 @@ stock assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_all.png}}
+\includegraphics{plots_4_doc/Catch_comp_all.png}
 
 }
 
@@ -7672,7 +7680,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_CA.png}}
+\includegraphics{plots_4_doc/Catch_comp_CA.png}
 
 }
 
@@ -7686,7 +7694,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_OR.png}}
+\includegraphics{plots_4_doc/Catch_comp_OR.png}
 
 }
 
@@ -7700,7 +7708,7 @@ the 2025 stock assessment model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_comp_WA.png}}
+\includegraphics{plots_4_doc/Catch_comp_WA.png}
 
 }
 
@@ -7714,7 +7722,7 @@ landings for the 2025 stock assessment model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt1mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt1mkt0_page1.png}
 
 }
 
@@ -7727,7 +7735,7 @@ trawl fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt1mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt1mkt0_page2.png}
 
 }
 
@@ -7740,7 +7748,7 @@ trawl fleet, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt2mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt2mkt0.png}
 
 }
 
@@ -7753,7 +7761,7 @@ discard fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt3mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt3mkt0_page1.png}
 
 }
 
@@ -7766,7 +7774,7 @@ fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt3mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt3mkt0_page2.png}
 
 }
 
@@ -7779,7 +7787,7 @@ fleet, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt4mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt4mkt0.png}
 
 }
 
@@ -7792,7 +7800,7 @@ discard fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt5mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt5mkt0.png}
 
 }
 
@@ -7805,7 +7813,7 @@ trawl fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt6mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt6mkt0.png}
 
 }
 
@@ -7818,7 +7826,7 @@ fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt10mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt10mkt0.png}
 
 }
 
@@ -7830,7 +7838,7 @@ fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt7mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt7mkt0.png}
 
 }
 
@@ -7843,7 +7851,7 @@ Survey.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lendat_flt8mkt0.png}}
+\includegraphics{ref_model/plots/comp_lendat_flt8mkt0.png}
 
 }
 
@@ -7856,7 +7864,7 @@ Survey.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}
 
 }
 
@@ -7869,7 +7877,7 @@ fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}
 
 }
 
@@ -7882,7 +7890,7 @@ fleet, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt3mkt0_page1.png}
 
 }
 
@@ -7895,7 +7903,7 @@ data for non-trawl fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt3mkt0_page2.png}
 
 }
 
@@ -7908,7 +7916,7 @@ data for non-trawl fleet, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt5mkt0.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt5mkt0.png}
 
 }
 
@@ -7921,7 +7929,7 @@ data for Midwater trawl fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt6mkt0_page1.png}
 
 }
 
@@ -7934,7 +7942,7 @@ data for At-Sea Hake fleet.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt6mkt0_page2.png}
 
 }
 
@@ -7947,7 +7955,7 @@ data for At-Sea Hake fleet, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page1.png}
 
 }
 
@@ -7960,7 +7968,7 @@ data for WCGBTS.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page2.png}
 
 }
 
@@ -7973,7 +7981,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt10mkt0_page3.png}
 
 }
 
@@ -7986,7 +7994,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index9_standcpueall.png}}
+\includegraphics{ref_model/plots/index9_standcpueall.png}
 
 }
 
@@ -7998,7 +8006,7 @@ data for WCGBTS, continued.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/WCGBTS_comps.png}}
+\includegraphics{plots_4_doc/WCGBTS_comps.png}
 
 }
 
@@ -8013,7 +8021,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_WCGBTS.png}}
+\includegraphics{ref_model/plots/index1_cpuedata_WCGBTS.png}
 
 }
 
@@ -8025,7 +8033,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_TRIENNIAL.png}}
+\includegraphics{ref_model/plots/index1_cpuedata_TRIENNIAL.png}
 
 }
 
@@ -8037,7 +8045,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_AK_SLOPE.png}}
+\includegraphics{ref_model/plots/index1_cpuedata_AK_SLOPE.png}
 
 }
 
@@ -8049,7 +8057,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index1_cpuedata_NW_SLOPE.png}}
+\includegraphics{ref_model/plots/index1_cpuedata_NW_SLOPE.png}
 
 }
 
@@ -8061,7 +8069,7 @@ assessment (sdmTMB, lognormal distribution).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare1_spawnbio_updatedCt.png}}
+\includegraphics{plots_4_doc/compare1_spawnbio_updatedCt.png}
 
 }
 
@@ -8075,7 +8083,7 @@ Rockfishes assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare3_Bratio_updatedCt.png}}
+\includegraphics{plots_4_doc/compare3_Bratio_updatedCt.png}
 
 }
 
@@ -8091,7 +8099,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/1v2sex_spawnbio.png}}
+\includegraphics{plots_4_doc/1v2sex_spawnbio.png}
 
 }
 
@@ -8106,7 +8114,7 @@ double the biomass because it includes both females and males.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/1v2sex_Bratio_uncertainty.png}}
+\includegraphics{plots_4_doc/1v2sex_Bratio_uncertainty.png}
 
 }
 
@@ -8120,7 +8128,7 @@ Rougheye/Blackspotted Rockfishes assessment data.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/M_values.png}}
+\includegraphics{plots_4_doc/M_values.png}
 
 }
 
@@ -8135,7 +8143,7 @@ ages using the equation from Hamel and Cope 2022.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM.png}}
+\includegraphics{plots_4_doc/Catch_curve_plot_FM.png}
 
 }
 
@@ -8151,7 +8159,7 @@ equal to the estimate of an aggregate total mortality (Z).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM_21_100.png}}
+\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_100.png}
 
 }
 
@@ -8168,7 +8176,7 @@ linear model is equal to the estimate of an aggregate total mortality
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Catch_curve_plot_FM_21_80.png}}
+\includegraphics{plots_4_doc/Catch_curve_plot_FM_21_80.png}
 
 }
 
@@ -8185,7 +8193,7 @@ linear model is equal to the estimate of an aggregate total mortality
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Age_length_plot.png}}
+\includegraphics{plots_4_doc/Age_length_plot.png}
 
 }
 
@@ -8200,7 +8208,7 @@ provided.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Lt_age_CV_FM.png}}
+\includegraphics{plots_4_doc/Lt_age_CV_FM.png}
 
 }
 
@@ -8215,7 +8223,7 @@ also indicated by size of the point. The line is a smoothed loess
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_matrix_plot.png}}
+\includegraphics{plots_4_doc/AE_matrix_plot.png}
 
 }
 
@@ -8230,7 +8238,7 @@ is a combination of all commercial fleets.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_Bias.png}}
+\includegraphics{plots_4_doc/AE_Bias.png}
 
 }
 
@@ -8243,7 +8251,7 @@ ageing error matrices.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/AE_SD.png}}
+\includegraphics{plots_4_doc/AE_SD.png}
 
 }
 
@@ -8258,7 +8266,7 @@ deviation) used for each of the seven ageing error matrices.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/L_W_plots.png}}
+\includegraphics{plots_4_doc/L_W_plots.png}
 
 }
 
@@ -8271,7 +8279,7 @@ source. Lines are the power function fits by data source.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/F_M_ltwt_plot.png}}
+\includegraphics{plots_4_doc/F_M_ltwt_plot.png}
 
 }
 
@@ -8286,7 +8294,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bio_fxn_maturity.png}}
+\includegraphics{plots_4_doc/bio_fxn_maturity.png}
 
 }
 
@@ -8298,7 +8306,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/l50_both_species.png}}
+\includegraphics{plots_4_doc/l50_both_species.png}
 
 }
 
@@ -8310,7 +8318,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/a50_both_species.png}}
+\includegraphics{plots_4_doc/a50_both_species.png}
 
 }
 
@@ -8324,7 +8332,7 @@ female and male Rougheye/Blackspotted Rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Bimodal_lengths_Peter_Frey.png}}
+\includegraphics{plots_4_doc/Bimodal_lengths_Peter_Frey.png}
 
 }
 
@@ -8338,7 +8346,7 @@ Rockfish and Blackspotted Rockfish identified to species using genetics
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare4_Bratio_uncertainty.png}}
+\includegraphics{plots_4_doc/compare4_Bratio_uncertainty.png}
 
 }
 
@@ -8354,7 +8362,7 @@ compared to the using the same data in the newest version of SS3
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare2_spawnbio_uncertainty.png}}
+\includegraphics{plots_4_doc/compare2_spawnbio_uncertainty.png}
 
 }
 
@@ -8370,7 +8378,7 @@ denotes 95\% confidence intervals.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare1_spawnbio__discard_fleets.png}}
+\includegraphics{plots_4_doc/compare1_spawnbio__discard_fleets.png}
 
 }
 
@@ -8384,7 +8392,7 @@ Rockfishes assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/compare3_Bratio_discard_fleets.png}}
+\includegraphics{plots_4_doc/compare3_Bratio_discard_fleets.png}
 
 }
 
@@ -8398,7 +8406,7 @@ Rougheye/Blackspotted Rockfishes assessment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bridging_compare2_spawnbio_uncertainty.png}}
+\includegraphics{plots_4_doc/bridging_compare2_spawnbio_uncertainty.png}
 
 }
 
@@ -8411,7 +8419,7 @@ for bridging analysis.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/bridging_compare4_Bratio_uncertainty.png}}
+\includegraphics{plots_4_doc/bridging_compare4_Bratio_uncertainty.png}
 
 }
 
@@ -8424,7 +8432,7 @@ spawning output for bridging analysis.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/NT_length_vs_discard.png}}
+\includegraphics{plots_4_doc/NT_length_vs_discard.png}
 
 }
 
@@ -8438,7 +8446,7 @@ combined.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Trawl_landings_discard_comparisons.png}}
+\includegraphics{plots_4_doc/Trawl_landings_discard_comparisons.png}
 
 }
 
@@ -8453,7 +8461,7 @@ compositions between trawl and trawl discard fleets, sexes combined.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png}}
+\includegraphics{plots_4_doc/piner_panel_NatM_uniform_Mal_GP_1.png}
 
 }
 
@@ -8468,7 +8476,7 @@ likelihoods used to establish a fixed value for male natural mortality.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Sensi_logREplot_status_LAO.png}}
+\includegraphics{plots_4_doc/Sensi_logREplot_status_LAO.png}
 
 }
 
@@ -8485,7 +8493,7 @@ interval of the reference model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/pairs_plot_fast.png}}
+\includegraphics{plots_4_doc/pairs_plot_fast.png}
 
 }
 
@@ -8501,7 +8509,7 @@ efficiency.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/Jitter Results_0.01/jitterplot.png}}
+\includegraphics{ref_model/Jitter Results_0.01/jitterplot.png}
 
 }
 
@@ -8518,7 +8526,7 @@ better fit to the reference model was found.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/Jitter Results_0.05/jitterplot.png}}
+\includegraphics{ref_model/Jitter Results_0.05/jitterplot.png}
 
 }
 
@@ -8535,7 +8543,7 @@ better fit to the reference model was found.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__aggregated_across_time.png}}
+\includegraphics{ref_model/plots/comp_lenfit__aggregated_across_time.png}
 
 }
 
@@ -8548,7 +8556,7 @@ all years.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt1mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt1mkt0_page1.png}
 
 }
 
@@ -8565,7 +8573,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt1mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt1mkt0_page2.png}
 
 }
 
@@ -8582,7 +8590,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt2mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt2mkt0.png}
 
 }
 
@@ -8599,7 +8607,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt3mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt3mkt0_page1.png}
 
 }
 
@@ -8616,7 +8624,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt3mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt3mkt0_page2.png}
 
 }
 
@@ -8633,7 +8641,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt4mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt4mkt0.png}
 
 }
 
@@ -8649,7 +8657,7 @@ effective sample size used in the McAllister-Ianelli tuning method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt5mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt5mkt0.png}
 
 }
 
@@ -8666,7 +8674,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt6mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt6mkt0.png}
 
 }
 
@@ -8683,7 +8691,7 @@ method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt7mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt7mkt0.png}
 
 }
 
@@ -8700,7 +8708,7 @@ tuning method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt8mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt8mkt0.png}
 
 }
 
@@ -8717,7 +8725,7 @@ McAllister-Ianelli tuning method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_flt10mkt0.png}}
+\includegraphics{ref_model/plots/comp_lenfit_flt10mkt0.png}
 
 }
 
@@ -8734,7 +8742,7 @@ McAllister-Ianelli tuning method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png}}
+\includegraphics{ref_model/plots/comp_lenfit__page1_multi-fleet_comparison.png}
 
 }
 
@@ -8749,7 +8757,7 @@ residuals (observed \textless{} expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png}}
+\includegraphics{ref_model/plots/comp_lenfit__page2_multi-fleet_comparison.png}
 
 }
 
@@ -8764,7 +8772,7 @@ fits for each survey. Closed bubble are positive residuals (observed
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL.png}
 
 }
 
@@ -8778,7 +8786,7 @@ and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_BOTTOM_TRAWL_DISCARD.png}
 
 }
 
@@ -8792,7 +8800,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL.png}
 
 }
 
@@ -8806,7 +8814,7 @@ data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_NON_TRAWL_DISCARD.png}
 
 }
 
@@ -8820,7 +8828,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_MIDWATER_TRAWL.png}
 
 }
 
@@ -8834,7 +8842,7 @@ and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AT_SEA_HAKE.png}
 
 }
 
@@ -8848,7 +8856,7 @@ sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_TRIENNIAL.png}
 
 }
 
@@ -8862,7 +8870,7 @@ data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_AK_SLOPE.png}
 
 }
 
@@ -8876,7 +8884,7 @@ sample sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png}}
+\includegraphics{ref_model/plots/comp_lenfit_data_weighting_TA1-8_WCGBTS.png}
 
 }
 
@@ -8892,7 +8900,7 @@ intervals based on sample sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page1.png}
 
 }
 
@@ -8908,7 +8916,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALdat_bubflt1mkt0_page2.png}
 
 }
 
@@ -8924,7 +8932,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page1.png}
 
 }
 
@@ -8940,7 +8948,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt3mkt0_page2.png}
 
 }
 
@@ -8956,7 +8964,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt5mkt0.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt5mkt0.png}
 
 }
 
@@ -8971,7 +8979,7 @@ open bubbles are negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page1.png}
 
 }
 
@@ -8987,7 +8995,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt6mkt0_page2.png}
 
 }
 
@@ -9003,7 +9011,7 @@ expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page1.png}
 
 }
 
@@ -9019,7 +9027,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page2.png}
 
 }
 
@@ -9035,7 +9043,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_residsflt10mkt0_page3.png}
 
 }
 
@@ -9051,7 +9059,7 @@ negative residuals (observed \textless{} expected).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeBOTTOM_TRAWL.png}
 
 }
 
@@ -9065,7 +9073,7 @@ based on current samples sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeNON_TRAWL.png}
 
 }
 
@@ -9079,7 +9087,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeMIDWATER_TRAWL.png}
 
 }
 
@@ -9093,7 +9101,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeAT_SEA_HAKE.png}
 
 }
 
@@ -9107,7 +9115,7 @@ intervals based on current samples sizes and data weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_data_weighting_TA1-8_condAgeWCGBTS.png}
 
 }
 
@@ -9122,7 +9130,7 @@ weighting.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page1.png}
 
 }
 
@@ -9139,7 +9147,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page2.png}
 
 }
 
@@ -9156,7 +9164,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt1mkt0_page3.png}
 
 }
 
@@ -9173,7 +9181,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page1.png}
 
 }
 
@@ -9190,7 +9198,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page2.png}
 
 }
 
@@ -9207,7 +9215,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt3mkt0_page3.png}
 
 }
 
@@ -9224,7 +9232,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page1.png}
 
 }
 
@@ -9241,7 +9249,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt5mkt0_page2.png}
 
 }
 
@@ -9258,7 +9266,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page1.png}
 
 }
 
@@ -9275,7 +9283,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page2.png}
 
 }
 
@@ -9292,7 +9300,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt6mkt0_page3.png}
 
 }
 
@@ -9309,7 +9317,7 @@ chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page1.png}
 
 }
 
@@ -9326,7 +9334,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page2.png}
 
 }
 
@@ -9343,7 +9351,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page3.png}
 
 }
 
@@ -9360,7 +9368,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page4.png}
 
 }
 
@@ -9377,7 +9385,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page5.png}
 
 }
 
@@ -9394,7 +9402,7 @@ panels and the standard error of mean age at length (obs. and exp.) with
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png}}
+\includegraphics{ref_model/plots/comp_condAALfit_Andre_plotsflt10mkt0_page6.png}
 
 }
 
@@ -9411,7 +9419,7 @@ on the chi-square distribution.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt1mkt0.png}}
+\includegraphics{ref_model/plots/comp_gstagefit_flt1mkt0.png}
 
 }
 
@@ -9424,7 +9432,7 @@ composition data (density) for the bottom trawl fishery.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt3mkt0.png}}
+\includegraphics{ref_model/plots/comp_gstagefit_flt3mkt0.png}
 
 }
 
@@ -9437,7 +9445,7 @@ composition data (density) for the non-trawl fishery.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt5mkt0.png}}
+\includegraphics{ref_model/plots/comp_gstagefit_flt5mkt0.png}
 
 }
 
@@ -9450,7 +9458,7 @@ age composition data (density) for the midwater trawl fishery.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt6mkt0.png}}
+\includegraphics{ref_model/plots/comp_gstagefit_flt6mkt0.png}
 
 }
 
@@ -9463,7 +9471,7 @@ age composition data (density) for the at-sea-hake fishery.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/comp_gstagefit_flt10mkt0.png}}
+\includegraphics{ref_model/plots/comp_gstagefit_flt10mkt0.png}
 
 }
 
@@ -9477,7 +9485,7 @@ Trawl survey.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_TRIENNIAL.png}}
+\includegraphics{ref_model/plots/index2_cpuefit_TRIENNIAL.png}
 
 }
 
@@ -9491,7 +9499,7 @@ the assumption of lognormal error.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_AK_SLOPE.png}}
+\includegraphics{ref_model/plots/index2_cpuefit_AK_SLOPE.png}
 
 }
 
@@ -9505,7 +9513,7 @@ based on the assumption of lognormal error.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_NW_SLOPE.png}}
+\includegraphics{ref_model/plots/index2_cpuefit_NW_SLOPE.png}
 
 }
 
@@ -9520,7 +9528,7 @@ error.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/index2_cpuefit_WCGBTS.png}}
+\includegraphics{ref_model/plots/index2_cpuefit_WCGBTS.png}
 
 }
 
@@ -9534,7 +9542,7 @@ around index values based on the assumption of lognormal error.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/Growth_curve_comparison.png}}
+\includegraphics{plots_4_doc/Growth_curve_comparison.png}
 
 }
 
@@ -9549,7 +9557,7 @@ curve from the 2013 model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/sel01_multiple_fleets_length1.png}}
+\includegraphics{ref_model/plots/sel01_multiple_fleets_length1.png}
 
 }
 
@@ -9562,7 +9570,7 @@ fishery and survey.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/selectivityPlot_fisheries.png}}
+\includegraphics{plots_4_doc/selectivityPlot_fisheries.png}
 
 }
 
@@ -9575,7 +9583,7 @@ fishery fleets with time blocks.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/selectivityPlot_surveys.png}}
+\includegraphics{plots_4_doc/selectivityPlot_surveys.png}
 
 }
 
@@ -9588,7 +9596,7 @@ with time blocks.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/sel02_multiple_fleets_age2.png}}
+\includegraphics{ref_model/plots/sel02_multiple_fleets_age2.png}
 
 }
 
@@ -9601,7 +9609,7 @@ lengths for each fishery and survey.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{plots_4_doc/lnR0.png}}
+\includegraphics{plots_4_doc/lnR0.png}
 
 }
 
@@ -9614,7 +9622,7 @@ several assessed shelf and slope rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}}
+\includegraphics{ref_model/plots/ts7_Spawning_output_with_95_intervals.png}
 
 }
 
@@ -9627,7 +9635,7 @@ several assessed shelf and slope rockfishes.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
+\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
 
 }
 
@@ -9640,7 +9648,7 @@ spawning output for the reference model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recdevs2_withbars.png}}
+\includegraphics{ref_model/plots/recdevs2_withbars.png}
 
 }
 
@@ -9653,7 +9661,7 @@ deviations for the base model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/recruit_fit_bias_adjust.png}}
+\includegraphics{ref_model/plots/recruit_fit_bias_adjust.png}
 
 }
 
@@ -9667,7 +9675,7 @@ assumed variance of recruitment.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}}
+\includegraphics{ref_model/plots/ts11_Age-0_recruits_(1000s)_with_95_asymptotic_intervals.png}
 
 }
 
@@ -9680,7 +9688,7 @@ the base model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SR_curve2.png}}
+\includegraphics{ref_model/plots/SR_curve2.png}
 
 }
 
@@ -9697,7 +9705,7 @@ colors in showing later years.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Retros/compare2_spawnbio_uncertainty.png}}
+\includegraphics{Retros/compare2_spawnbio_uncertainty.png}
 
 }
 
@@ -9711,7 +9719,7 @@ sequentially.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Retros/compare4_Bratio_uncertainty.png}}
+\includegraphics{Retros/compare4_Bratio_uncertainty.png}
 
 }
 
@@ -9727,7 +9735,7 @@ sequentially.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/indicescompare2_spawnbio_uncertainty.png}}
+\includegraphics{Sensis/output/indicescompare2_spawnbio_uncertainty.png}
 
 }
 
@@ -9740,7 +9748,7 @@ eggs) across data removal sensitivities (indices).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/indicescompare4_Bratio_uncertainty.png}}
+\includegraphics{Sensis/output/indicescompare4_Bratio_uncertainty.png}
 
 }
 
@@ -9753,7 +9761,7 @@ eggs) across data removal sensitivities (indices).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png}}
+\includegraphics{Sensis/output/length_comps_fleetcompare2_spawnbio_uncertainty.png}
 
 }
 
@@ -9766,7 +9774,7 @@ across data removal sensitivities (length compositions by fleet).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png}}
+\includegraphics{Sensis/output/length_comps_fleetcompare4_Bratio_uncertainty.png}
 
 }
 
@@ -9780,7 +9788,7 @@ fleet).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png}}
+\includegraphics{Sensis/output/length_comps_allcompare2_spawnbio_uncertainty.png}
 
 }
 
@@ -9793,7 +9801,7 @@ across data removal sensitivities (length compositions by source).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png}}
+\includegraphics{Sensis/output/length_comps_allcompare4_Bratio_uncertainty.png}
 
 }
 
@@ -9807,7 +9815,7 @@ source).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/age_compscompare2_spawnbio_uncertainty.png}}
+\includegraphics{Sensis/output/age_compscompare2_spawnbio_uncertainty.png}
 
 }
 
@@ -9820,7 +9828,7 @@ across data removal sensitivities (age compositions by fleet).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/age_compscompare4_Bratio_uncertainty.png}}
+\includegraphics{Sensis/output/age_compscompare4_Bratio_uncertainty.png}
 
 }
 
@@ -9834,7 +9842,7 @@ fleet).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/output/sens_summary.png}}
+\includegraphics{Sensis/output/sens_summary.png}
 
 }
 
@@ -9848,7 +9856,7 @@ sources).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Data weighting.png}}
+\includegraphics{Sensis/data_sensitivities/Data weighting.png}
 
 }
 
@@ -9863,7 +9871,7 @@ weighting scenarios. The reference model uses the Francis method.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_DataWt.png}}
+\includegraphics{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_DataWt.png}
 
 }
 
@@ -9879,7 +9887,7 @@ more details on each scenario.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Ageing error_uncertainty.png}}
+\includegraphics{Sensis/data_sensitivities/Ageing error_uncertainty.png}
 
 }
 
@@ -9895,7 +9903,7 @@ age sources.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_AE.png}}
+\includegraphics{Sensis/data_sensitivities/Sensi_logREplot_SB_Dep_F_Yield_AE.png}
 
 }
 
@@ -9911,7 +9919,7 @@ more details on each scenario.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/M_Gr_Reproduction.png}}
+\includegraphics{Sensis/model_specs/M_Gr_Reproduction.png}
 
 }
 
@@ -9926,7 +9934,7 @@ mortality, growth and reproductive biology scenarios.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png}}
+\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_MGrRep.png}
 
 }
 
@@ -9942,7 +9950,7 @@ See `Sensitivity Analysis' section for more details on each scenario.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/compare1_spawnbio_MGrRepro.png}}
+\includegraphics{Sensis/model_specs/compare1_spawnbio_MGrRepro.png}
 
 }
 
@@ -9957,7 +9965,7 @@ estimating natural mortality, as the scale goes extremely high.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sel_Rec.png}}
+\includegraphics{Sensis/model_specs/Sel_Rec.png}
 
 }
 
@@ -9972,7 +9980,7 @@ recruitment and selectivity scenarios.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png}}
+\includegraphics{Sensis/model_specs/Sensi_logREplot_SB_Dep_F_Yield_Sel_Rec.png}
 
 }
 
@@ -9988,7 +9996,7 @@ Analysis' section for more details on each scenario.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/model_specs/comp_lenfit__aggregated_across_time_logsel.png}}
+\includegraphics{Sensis/model_specs/comp_lenfit__aggregated_across_time_logsel.png}
 
 }
 
@@ -10004,7 +10012,7 @@ fisheries and time blocks.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}}
+\includegraphics{Like_profiles/lnR0/parameter_panel_SR_LN(R0).png}
 
 }
 
@@ -10019,7 +10027,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/lnR0/piner_panel_SR_LN(R0).png}}
+\includegraphics{Like_profiles/lnR0/piner_panel_SR_LN(R0).png}
 
 }
 
@@ -10032,7 +10040,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}}
+\includegraphics{Like_profiles/Steepness/parameter_panel_SR_BH_steep.png}
 
 }
 
@@ -10047,7 +10055,7 @@ significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Steepness/piner_panel_SR_BH_steep.png}}
+\includegraphics{Like_profiles/Steepness/piner_panel_SR_BH_steep.png}
 
 }
 
@@ -10060,7 +10068,7 @@ profile for each of the likelihood components.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}}
+\includegraphics{Like_profiles/Male_M/parameter_panel_NatM_uniform_Mal_GP_1.png}
 
 }
 
@@ -10075,7 +10083,7 @@ figure indicates the significance level in likelihood difference.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/M_sex.png}}
+\includegraphics{Like_profiles/Male_M/M_sex.png}
 
 }
 
@@ -10088,7 +10096,7 @@ mortality (\(M\)) by sex.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Like_profiles/Male_M/piner_panel_NatM_uniform_Mal_GP_1.png}}
+\includegraphics{Like_profiles/Male_M/piner_panel_NatM_uniform_Mal_GP_1.png}
 
 }
 
@@ -10101,7 +10109,7 @@ likelihood profile for each of the likelihood components.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/statesofnature/StatesofNature.png}}
+\includegraphics{Sensis/statesofnature/StatesofNature.png}
 
 }
 
@@ -10116,7 +10124,7 @@ and low states of nature.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{Sensis/statesofnature/Ensemble_Bratio.png}}
+\includegraphics{Sensis/statesofnature/Ensemble_Bratio.png}
 
 }
 
@@ -10133,7 +10141,7 @@ reference model and two states of nature.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/ts9_Relative_spawning_output_intervals.png}}
+\includegraphics{ref_model/plots/ts9_Relative_spawning_output_intervals.png}
 
 }
 
@@ -10146,7 +10154,7 @@ fraction of unfished spawning output for the base model.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR3_ratiointerval.png}}
+\includegraphics{ref_model/plots/SPR3_ratiointerval.png}
 
 }
 
@@ -10163,7 +10171,7 @@ population).}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/yield2_yield_curve_with_refpoints.png}}
+\includegraphics{ref_model/plots/yield2_yield_curve_with_refpoints.png}
 
 }
 
@@ -10177,7 +10185,7 @@ selectivities and retention curves and with steepness fixed at 0.72.}
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio]{ref_model/plots/SPR4_phase.png}}
+\includegraphics{ref_model/plots/SPR4_phase.png}
 
 }
 
@@ -10188,11 +10196,7 @@ versus fraction unfished.}
 
 \newpage{}
 
-\section{Notes}\label{notes}
-
 \newpage{}
-
-\section{Appendices}\label{sec-appendix}
 
 
 
