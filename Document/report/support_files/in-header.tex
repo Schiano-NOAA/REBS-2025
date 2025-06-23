@@ -35,3 +35,21 @@
 \ModifyLayer[addvoffset=-.6ex]{plain.scrheadings.foot.above.line}
 \setkomafont{pageheadfoot}{\small}
 
+\DeclareNewLayer[
+  background,
+  rightmargin,
+  contents={%
+    \parbox[b][\layerheight][c]{\dimexpr\footskip+\footheight\relax}{%
+      \hfill\rotatebox{90}{\pagemark}}}
+]{lscape.foot}
+\DeclareNewLayer[
+  background,
+  textarea,
+  addhoffset=\dimexpr-\headheight\relax,
+  width=\dimexpr\headsep+\headheight\relax,
+  contents={
+  % \rule{\paperwidth}{0.4pt}
+  \vspace{0.5em}
+  \hfill\rotatebox{90}{\headmark}\hspace*{\headsep}}
+]{lscape.head}
+\DeclareNewPageStyleByLayers{lscape}{lscape.foot,lscape.head}
