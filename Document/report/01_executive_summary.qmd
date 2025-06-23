@@ -377,7 +377,7 @@ recent_management_table_es
 ```
 
 
-## Unresolved problems and major uncertainties {-}
+## Unresolved Problems and Major Uncertainties {-}
 `r spp`  is a relatively lightly exploited stock. The maximum annual catch amount over the entire time period of exploitation was 744 metric tons observed in 1995, and the average removals is slightly over 100 metric tons. For comparison, Widow Rockfish catches in recent years were over 12,000 metric tons, and in the early 1980s they exceeded 28,000 metric tons a year.  
 
 Most likely, catches of `r spp`  were not substantial because `r spp`  is associated with steep slopes and boulder habitats, difficult habitat to access with bottom trawl gears. Plus, it occurs in the northern part of the assessed area (off Oregon and Washington), and is only rarely taken by fisheries in California. Given this relatively light exploitation, the scale of `r spp` is uncertain, as we did not observe large contrasts in the stock dynamics. Such contrasts between periods of depletion, followed by recovery (a.k.a. “two-way trips”) provide more information about carrying capacity, the intrinsic growth rate as well as scale of the population.
