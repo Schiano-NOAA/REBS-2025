@@ -976,7 +976,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Aggregated length (cm) compositions over all years."
+#| fig-cap: "Model fit to aggregated length (cm) compositions over all years."
 #| fig-alt: "Each panel shows the expected and observed aggregate lengths for each fishery and survey. The expectations mostly follow the expected distributions for all length composition sources."
 #| fig-pos: H
 
