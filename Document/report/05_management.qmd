@@ -24,7 +24,7 @@ The model estimated uncertainty ($\sigma$) around the 2025 spawning output for i
 
 {{< pagebreak >}}
 
-### Risk Table
+## Risk Table
 
 Below is a risk table for `r Spp` to document 1) ecosystem and environmental factors, 2) stock assessment data inputs, and 3) assessment model fits and structural factors that could potentially affect stock productivity and/or uncertainty arising from the stock assessment (see text). Level 1 is favorable/less uncertain, Level 2 neutral, and Level 3 unfavorable/more uncertain
 
