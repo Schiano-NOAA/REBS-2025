@@ -527,8 +527,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
+#| fig-cap: "Comparison of spawning biomass between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
+#| fig-alt: "Spawning biomass comparison using different historical catches."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
@@ -540,7 +540,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of fraction unfished between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
 #| fig-alt: "Relative stock status comparison using different historical catches."
 
 knitr::include_graphics(
@@ -560,7 +560,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
+#| fig-cap: "Comparison of spawning biomass using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
 #| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
@@ -573,7 +573,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
+#| fig-cap: "Comparison of fraction unfished using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
 #| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
