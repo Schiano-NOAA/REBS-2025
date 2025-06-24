@@ -312,7 +312,7 @@ The resultant sex-specific length-weight relationships are given in @fig-LW2, wi
 
 These values are very similar to the previous assessment that used a combine sex value of a=0.0000096 and b=3.12000 (@fig-LW2).
 
-### Maturity
+### Maturity {#sec-maturity}
 
 Maturity for the Rougheye/Blackspotted Rockfish complex was estimated using 473 maturity samples collected from 2015 to 2024 on \gls{odfw} and \gls{wdfw} surveys and the gls\{indexwc} in California, Oregon, and Washington waters (M. Head, pers. comm.). The samples included 194 samples genetically assigned as Rougheye Rockfish, 71 samples genetically assigned as Blackspotted Rockfish, and 208 samples with no genetic assignment. The maturity schedule was assumed to be length-based, as in the 2013 benchmark assessment. This assessment used the functional classification of maturity to describe the maturity schedule, which not only identifies the individuals that are physiologically capable of producing yolk (those that are biologically mature), but also accounts for the occurrence of abortive maturation and skipped spawning, so the functional maturity classification is a more accurate representation of the individuals that may actually spawn in a given year. This is a difference from the 2013 benchmark assessment, which did not explicitly estimate functional maturity, and instead assumed the biological classification of maturity.
 

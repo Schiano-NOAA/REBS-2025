@@ -87,7 +87,7 @@ Likelihood values and estimates of key parameters and derived quantities from ea
 The model is much more sensitive to the assumption that fishery selectivity for the bottom trawl and/or non-trawl are logistic. These produce the most sensitive of all the explored alternative models scenarios in both scale (lower) and stock status. In all of these instances, the uncertainty is outside that of the reference model @fig-sensi-RE-SelRec. The reason these are less likely scenarios can be seen in the notably degraded fits to the bottom trawl and/or non-trawl length compositions (@fig-sensi-logsel_fits). This supports the choice for the change in the reference model from the previous stock assessment to consider dome-shaped selectivity for those two fisheries. Given the only scenarios to fall below the low uncertainty treat the bottom trawl as logistic selectivity, it is a good candidate for a lower state of nature (and not a risk neutral model).
 
 
-### Likelihood profiles
+### Likelihood profiles {#sec-profiles}
 
 Likelihood profiles were conducted for the the log of initial recruitment (ln($R_0$)), steepness ($h$), and female male natural mortality ($M$) with female natural mortality estimated. Likelihood profiles were conducted by fixing the featured parameter(s) at specific values across a range of values and estimating all remaining parameters. A likelihood profile offers insight into model sensitivity to changing model parameter values, while providing an additional way to describe uncertainty in the parameter by identifying the range of parameters within 1.96 likelihood units of the reference model.
 
