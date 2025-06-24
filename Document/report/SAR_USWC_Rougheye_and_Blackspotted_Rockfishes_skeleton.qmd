@@ -18,7 +18,7 @@ author:
   - name: 'R. Claire Rosemond'
     affiliations:
       - name: 'NOAA Fisheries Northwest Fisheries Science Center'
-        address: '2032 SE Osu Drive'
+        address: '2032 SE OSU Drive'
         city: 'Newport'
         state: 'OR'
         postal-code: '97365-5275'
@@ -91,6 +91,7 @@ library(here)
 
 spp <- "Rougheye/Blackspotted Rockfishes"
 Spp <- "Rougheye/Blackspotted Rockfishes"
+Spp_short<- "RE/BS"
 
 #Main model directory
 #model_dir <- here::here("model", "_bridging", model_name)
@@ -201,7 +202,7 @@ model_output <- r4ss::SS_output(model_dir,verbose=FALSE,printstats=FALSE)
 
 Please cite this publication as: 
 
-Cope, J.M., V. Gertseva, R.C. Rosemond, A.D. Whitman, and F.P. Caltabellotta. (2025) Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025. Pacific Fishery Management Council. [] pp.
+Cope, J.M., V. Gertseva, R.C. Rosemond, A.D. Whitman, and F.P. Caltabellotta. (2025) Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025. Pacific Fishery Management Council. 347 pp.
 
  {{< pagebreak >}} 
  
