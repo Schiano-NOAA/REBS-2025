@@ -1,5 +1,5 @@
 #C file created using an r4ss function
-#C file write time: 2025-06-20  09:55:43
+#C file write time: 2025-06-24  14:18:18
 #
 2025_rougheye_data.ss #_datfile
 2025_rougheye_control.ss #_ctlfile
