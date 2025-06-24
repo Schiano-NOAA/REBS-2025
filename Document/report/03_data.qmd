@@ -2,7 +2,7 @@
 Data from a wide range of sources were evaluated within this assessment. Data sources included in the assessment model are summarized in @fig-data. Description of each data source used in the model is provided below.
 
 ## Fishery-Dependent Data {#sec-fishery_data}
-`r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. They are also commonly bycaught within the at-sea Hake fishery. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment. 
+`r Spp` are not targeted by a specific fishery, but are desirable and marketable, thus are typically retained when caught. They are often captured in bottom trawl, mid-water trawl, and longline fisheries. They are also commonly bycaught within the at-sea hake fishery. Small numbers have been observed in pot and shrimp trawl. Recreational catch is inconsequential and not accounted for in this assessment. 
 
 `r Spp` fishery-dependent data in this assessment are divided among six fleets, which include:
 
@@ -11,7 +11,7 @@ Data from a wide range of sources were evaluated within this assessment. Data so
 * Fleet 3: Commercial non-trawl (mainly the long-line) fishery.
 * Fleet 4: Dead discard from non-trawl fishery.
 * Fleet 5: Contemporary mid-water trawl fishery.
-* Fleet 6: At-sea Hake fishery bycatch.
+* Fleet 6: At-sea hake fishery bycatch.
 
 For details on fleet structure, please refer to @sec-fleet. 
 
@@ -118,7 +118,7 @@ The initial input values for length compositions were calculated via the Stewart
 
 No age data were available for discarded fish.
 
-##### At-sea hake Fishery Length and Age Compositions
+##### At-Sea Hake Fishery Length and Age Compositions
 The sex-specific length and age data for at-sea hake fleet were collected by the at-sea hake observer program (a-shop) and available through NORPAC database (@fig-length_flt2 and @fig-length_flt4). Age distributions were included in the model as CAAL observations, binned according to length, age, sex, and year (@fig-caal_flt6_1 through @fig-caal_flt6_2). 
 
 The number of hauls and fish sampled by year and used to create length frequency and CAAL distributions are summarized in @tbl-ashop_sample_sizes. 
