@@ -24,7 +24,7 @@ if (file.exists(table_dir)) {
   rm(ssb_es)
   
   recr_es_table <- recr_es$table
-  recr_es_table$`Lower Interval`[recr_es_table$`Lower Interval`<0]<-"<1"
+  #recr_es_table$`Lower Interval`[recr_es_table$`Lower Interval`<0]<-"<1"
   recr_es_cap <- recr_es$cap
   rm(recr_es)
   
