@@ -59,8 +59,8 @@ text(-115.5, 32.1, "Mexico")
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Rougheye/Blackspotted Rockfishes cpue map, 2003-2024 WCGBTS data."
-#| fig-alt: "Rougheye/Blackspotted Rockfishes cpue map, 2003-2024 WCGBTS data."
+#| fig-cap: "Rougheye/Blackspotted Rockfishes 2003-2024 WCGBTS CPUE map."
+#| fig-alt: "Rougheye/Blackspotted Rockfishes 2003-2024 WCGBTS CPUE map."
 
 knitr::include_graphics(
   file.path(plot_dir, "cpue_map.png")
@@ -103,8 +103,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Data used in the base model."
-#| fig-alt: "Data used in the base model."
+#| fig-cap: "Data sources by year used in the assessment."
+#| fig-alt: "Data sources by year used in the assessment."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "data_plot.png")
@@ -116,8 +116,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Landings by fleet."
-#| fig-alt: "Landings by fleet."
+#| fig-cap: "Time series of catches by fleet."
+#| fig-alt: "Time series of catches by fleet."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "catch2_landings_stacked.png")
@@ -168,7 +168,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "WA. Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
+#| fig-cap: "Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
 #| fig-alt: "Landings comparisons for Washington between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
@@ -272,8 +272,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Length composition data for At-sea Hake fleet."
-#| fig-alt: "Length composition data for At-sea Hake fleet."
+#| fig-cap: "Length composition data for at-sea hake fleet."
+#| fig-alt: "Length composition data for at-sea hake fleet."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_lendat_flt6mkt0.png")
@@ -284,8 +284,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Length composition data for WCGBTS."
-#| fig-alt: "Length composition data for WCGBTS."
+#| fig-cap: "Length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS)."
+#| fig-alt: "Length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS)."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_lendat_flt10mkt0.png")
@@ -388,8 +388,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Conditional ages-at-length composition data for At-Sea Hake fleet."
-#| fig-alt: "Conditional ages-at-length composition data for At-Sea Hake fleet."
+#| fig-cap: "Conditional ages-at-length composition data for at-sea hake fleet."
+#| fig-alt: "Conditional ages-at-length composition data for at-sea hake fleet."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page1.png")
@@ -401,8 +401,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Conditional ages-at-length composition data for At-Sea Hake fleet, continued."
-#| fig-alt: "Conditional ages-at-length composition data for At-Sea Hake fleet, continued."
+#| fig-cap: "Conditional ages-at-length composition data for at-sea hake fleet, continued."
+#| fig-alt: "Conditional ages-at-length composition data for at-sea hake fleet, continued."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt6mkt0_page2.png")
@@ -413,8 +413,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Conditional ages-at-length composition data for WCGBTS."
-#| fig-alt: "Conditional ages-at-length composition data for WCGBTS."
+#| fig-cap: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS)."
+#| fig-alt: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS)."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page1.png")
@@ -425,8 +425,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Conditional ages-at-length composition data for WCGBTS, continued."
-#| fig-alt: "Conditional ages-at-length composition data for WCGBTS, continued."
+#| fig-cap: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS), continued."
+#| fig-alt: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS), continued."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page2.png")
@@ -437,8 +437,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Conditional ages-at-length composition data for WCGBTS, continued."
-#| fig-alt: "Conditional ages-at-length composition data for WCGBTS, continued."
+#| fig-cap: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS), continued."
+#| fig-alt: "Conditional ages-at-length composition data for the West Coast Groundfish Bottom Trawl Survey (WCGBTS), continued."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "comp_condAALdat_bubflt10mkt0_page3.png")
@@ -449,8 +449,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Standardized indices."
-#| fig-alt: "Standardized indices."
+#| fig-cap: "Standardized survey indices used in the assessment."
+#| fig-alt: "Standardized survey indices used in the assessment."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "index9_standcpueall.png")
@@ -475,8 +475,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "WCGBTS index."
-#| fig-alt: "WCGBTS index."
+#| fig-cap: "West Coast Groundfish Bottom Trawl Survey (WCGBTS) index."
+#| fig-alt: "West Coast Groundfish Bottom Trawl Survey (WCGBTS) index."
 
 knitr::include_graphics(
   file.path(model_dir, "plots", "index1_cpuedata_WCGBTS.png")
@@ -527,8 +527,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
+#| fig-cap: "Comparison of spawning biomass between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
+#| fig-alt: "Spawning biomass comparison using different historical catches."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
@@ -540,7 +540,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of fraction unfished between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
 #| fig-alt: "Relative stock status comparison using different historical catches."
 
 knitr::include_graphics(
@@ -560,7 +560,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
+#| fig-cap: "Comparison of spawning biomass using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
 #| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
@@ -573,7 +573,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
+#| fig-cap: "Comparison of fraction unfished using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
 #| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
@@ -777,8 +777,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
-#| fig-alt: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
+#| fig-cap: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Frey, NWFSC)."
+#| fig-alt: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Frey, NWFSC)."
 
 knitr::include_graphics(
   file.path(plot_dir, "Bimodal_lengths_Peter_Frey.png")
@@ -2490,7 +2490,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
+#| fig-cap: "Phase plot of fishing intensity versus fraction unfished. Each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Cooler colors (purple) represent early years and warmer colors (yellow) represent recent years. Lines through the final point show 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlation between the two quantities."
 #| fig-pos: H
 
 knitr::include_graphics(
