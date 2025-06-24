@@ -792,7 +792,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of relative stock size (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the using the same data in the newest version of SS3 (3.30.22.1)."
+#| fig-cap: "Estimates of relative stock size (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the using the same data in the newest version of SS3 (3.30.22.2)."
 #| fig-alt: "Comparing relative spawning biomass in the 2013 version of SS3 with the newest SS3 version."
 
 knitr::include_graphics(
@@ -804,8 +804,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of spawning output for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.30.22.1). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
-#| fig-alt: "Comparing spawning output in the 2013 version of SS3 with the newest SS3 version."
+#| fig-cap: "Estimates of spawning biomass for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.30.22.2). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
+#| fig-alt: "Comparing spawning biomass in the 2013 version of SS3 with the newest SS3 version."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare2_spawnbio_uncertainty.png")
@@ -816,8 +816,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Comparing spawning output in the 2013 assessment using retention curves vs. separate discard fleets."
+#| fig-cap: "Comparison of spawning biomass using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-alt: "Comparing spawning biomass in the 2013 assessment using retention curves vs. separate discard fleets."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare1_spawnbio__discard_fleets.png")
@@ -828,7 +828,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of relative spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of fraction unfished (relative spawning biomass) using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
 #| fig-alt: "Comparing relative stock size in the 2013 assessment using retention curves vs. separate discard fleets."
 
 knitr::include_graphics(
