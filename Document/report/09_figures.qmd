@@ -527,8 +527,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Spawning output comparison using different historical catches."
+#| fig-cap: "Comparison of spawning biomass between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
+#| fig-alt: "Spawning biomass comparison using different historical catches."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare1_spawnbio_updatedCt.png")
@@ -540,7 +540,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of relative spawning output using updated catches vs using catches from the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of fraction unfished between 2013 Rougheye/Blackspotted Rockfishes assessment model and model with updated/extended catches used in 2025 assessment."
 #| fig-alt: "Relative stock status comparison using different historical catches."
 
 knitr::include_graphics(
@@ -560,7 +560,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
+#| fig-cap: "Comparison of spawning biomass using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data. The 1 sex model has double the biomass because it includes both females and males."
 #| fig-alt: "Comparing spawning output with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
@@ -573,7 +573,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
+#| fig-cap: "Comparison of fraction unfished using the 1 sex and 2 sexes set to equal values models based on the 2013 Rougheye/Blackspotted Rockfishes assessment data."
 #| fig-alt: "Comparing relative stock status with 1 and 2 sex model specifications."
 
 knitr::include_graphics(
@@ -734,8 +734,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Placeholder."
-#| fig-alt: "Placeholder."
+#| fig-cap: "Proportion of mature fish by length when using biological versus functional maturity criteria."
+#| fig-alt: "Proportion of mature fish by length when using biological versus functional maturity criteria."
 
 knitr::include_graphics(
   file.path(plot_dir, "bio_fxn_maturity.png")
@@ -748,8 +748,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Placeholder."
-#| fig-alt: "Placeholder."
+#| fig-cap: "Proportion of mature fish by length for Rougheye/Blackspotted Rockfishes complex and by species."
+#| fig-alt: "Proportion of mature fish by length for Rougheye/Blackspotted Rockfishes complex and by species."
 
 knitr::include_graphics(
   file.path(plot_dir, "l50_both_species.png")
@@ -762,8 +762,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Placeholder."
-#| fig-alt: "Placeholder."
+#| fig-cap: "Proportion of mature fish by age for Rougheye/Blackspotted Rockfishes complex and by species."
+#| fig-alt: "Proportion of mature fish by age for Rougheye/Blackspotted Rockfishes complex and by species."
 
 knitr::include_graphics(
   file.path(plot_dir, "a50_both_species.png")
@@ -777,8 +777,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
-#| fig-alt: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Prey, NWFSC)."
+#| fig-cap: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Frey, NWFSC)."
+#| fig-alt: "Length distribution of Rougheye Rockfish and Blackspotted Rockfish identified to species using genetics (pers. comm. P. Frey, NWFSC)."
 
 knitr::include_graphics(
   file.path(plot_dir, "Bimodal_lengths_Peter_Frey.png")
@@ -792,7 +792,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of relative stock size (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the using the same data in the newest version of SS3 (3.30.22.1)."
+#| fig-cap: "Estimates of relative stock size (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the using the same data in the newest version of SS3 (3.30.22.2)."
 #| fig-alt: "Comparing relative spawning biomass in the 2013 version of SS3 with the newest SS3 version."
 
 knitr::include_graphics(
@@ -804,8 +804,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of spawning output for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.30.22.1). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
-#| fig-alt: "Comparing spawning output in the 2013 version of SS3 with the newest SS3 version."
+#| fig-cap: "Estimates of spawning biomass for the Rougheye/Blackspotted rockfish complex in U.S. west coast waters from the 2013 assessment, and compared to the same data in the newest version of SS3 (3.30.22.2). Shading denotes 95% confidence intervals. Shading denotes 95% confidence intervals."
+#| fig-alt: "Comparing spawning biomass in the 2013 version of SS3 with the newest SS3 version."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare2_spawnbio_uncertainty.png")
@@ -816,8 +816,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
-#| fig-alt: "Comparing spawning output in the 2013 assessment using retention curves vs. separate discard fleets."
+#| fig-cap: "Comparison of spawning biomass using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-alt: "Comparing spawning biomass in the 2013 assessment using retention curves vs. separate discard fleets."
 
 knitr::include_graphics(
   file.path(plot_dir, "compare1_spawnbio__discard_fleets.png")
@@ -828,7 +828,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Comparison of relative spawning output using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
+#| fig-cap: "Comparison of fraction unfished (relative spawning biomass) using retention curves or discard fleets using the 2013 Rougheye/Blackspotted Rockfishes assessment."
 #| fig-alt: "Comparing relative stock size in the 2013 assessment using retention curves vs. separate discard fleets."
 
 knitr::include_graphics(
@@ -976,7 +976,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Aggregated length (cm) compositions over all years."
+#| fig-cap: "Model fit to aggregated length (cm) compositions over all years."
 #| fig-alt: "Each panel shows the expected and observed aggregate lengths for each fishery and survey. The expectations mostly follow the expected distributions for all length composition sources."
 #| fig-pos: H
 
