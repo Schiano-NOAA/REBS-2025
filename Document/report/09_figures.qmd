@@ -2490,7 +2490,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Phase plot of fishing intensity versus fraction unfished."
+#| fig-cap: "Phase plot of fishing intensity versus fraction unfished. Each point represents the biomass ratio at the start of the year and the relative fishing intensity in that same year. Cooler colors (purple) represent early years and warmer colors (yellow) represent recent years. Lines through the final point show 95% intervals based on the asymptotic uncertainty for each dimension. The shaded ellipse is a 95% region which accounts for the estimated correlation between the two quantities."
 #| fig-pos: H
 
 knitr::include_graphics(
