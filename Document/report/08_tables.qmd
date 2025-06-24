@@ -176,7 +176,7 @@ landings |>
 #| label: tbl-BT_landings
 #| warning: false
 #| echo: false
-#| tbl-cap: "Landings (metric tons) for botton trawl fleet by state and bycatch within POP historcial fishery."
+#| tbl-cap: "Landings in metric tons for botton trawl fleet by state and bycatch within POP historcial fishery."
 
 BT_landings <- read.csv(
   here::here("Document/report/tables_4_doc/BT_landings_by_source2.csv"),
@@ -201,7 +201,7 @@ BT_landings |>
 #| label: tbl-NT_landings
 #| warning: false
 #| echo: false
-#| tbl-cap: "Landings (metric tons) for non-trawl fleet by state."
+#| tbl-cap: "Landings in metric tons for non-trawl fleet by state."
 
 NT_landings <- read.csv(
   here::here("Document/report/tables_4_doc/NT_landings_by_state.csv"),
@@ -226,7 +226,7 @@ NT_landings |>
 #| label: tbl-MDT_landings
 #| warning: false
 #| echo: false
-#| tbl-cap: "Landings (metric tons) for mid-water trawl fleet by state."
+#| tbl-cap: "Landings in metric tons for mid-water trawl fleet by state."
 
 MDT_landings <- read.csv(
   here::here("Document/report/tables_4_doc/MDT_landings_by_state.csv"),
