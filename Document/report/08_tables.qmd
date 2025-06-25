@@ -638,8 +638,13 @@ reference_points_table |>
   gt::gt() |>
   gt::fmt_number(
     columns = 2:4,
-    rows = c(1:4, 7, 10, 12, 15, 17, 20),
+    rows = c(2:3, 10, 15, 20),
     decimals = 0
+  ) |>
+  gt::fmt_number(
+    columns = 2:4,
+    rows = c(1,4,7,12,17),
+    decimals = 3
   ) |>
   gt::fmt_number(
     columns = 2:4,
@@ -695,7 +700,11 @@ cat("\\begin{landscape}\n")
 
 time_series_table |>
   gt::gt() |>
-  gt::tab_options(
+   gt::fmt_number(
+    columns = 3,
+    decimals = 3
+  ) |>
+ gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
   ) |>
