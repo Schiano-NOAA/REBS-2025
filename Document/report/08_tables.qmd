@@ -878,7 +878,18 @@ colnames(data_weighting_sens) <-   c("Label", "Type", "Reference", "No data weig
 data_weighting_sens <- data_weighting_sens |>
   dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " "))
 
-data_weighting_sens |>
+df <- data_weighting_sens
+
+spawning <- df |>
+  dplyr::filter(Type == c("SB0", "SSB_2025")) |>
+  dplyr::mutate(across(3:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Type != c("SB0", "SSB_2025") | is.na(Type))
+
+df <- rbind(df_not_spawning, spawning)
+
+df |>
   gt() |>
   gt::fmt_missing(everything(), missing_text = "") |>
   gt::fmt_number(everything(), decimals = 2) |>
@@ -921,7 +932,18 @@ colnames(age_error_sens) <-   c("Label", "Type", "Reference", "No ageing error",
 age_error_sens <- age_error_sens |>
   dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " "))
 
-age_error_sens |>
+df <- age_error_sens
+
+spawning <- df |>
+  dplyr::filter(Type == c("SB0", "SSB_2025")) |>
+  dplyr::mutate(across(3:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Type != c("SB0", "SSB_2025") | is.na(Type))
+
+df <- rbind(df_not_spawning, spawning)
+
+df |>
   gt() |>
   gt::fmt_missing(everything(), missing_text = "") |>
   gt::fmt_number(everything(), decimals = 2) |>
@@ -946,12 +968,12 @@ cat("\n\\end{landscape}\n")
  {{< pagebreak >}} 
 
 ```{r}
-#| label: tbl-sensitivities-life-history
+#| label: tbl-sensitivities-life-history_1
 #| echo: false
 #| message: false
 #| warning: false
 #| results: "asis"
-#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each life history parameter sensitivity."
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each life history parameter sensitivity (natural mortality and growth)."
 #| tbl-pos: H
 
 cat("\\begin{landscape}\n")
@@ -965,8 +987,19 @@ colnames(life_history_sens) <-   c("Label", "Type", "Reference", "Est female M",
 life_history_sens <- life_history_sens |>
   dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " ")) 
 
+df <- life_history_sens
+
+spawning <- df |>
+  dplyr::filter(Type == c("SB0", "SSB_2025")) |>
+  dplyr::mutate(across(3:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Type != c("SB0", "SSB_2025")| is.na(Type))
+
+df <- rbind(df_not_spawning, spawning)
+
 # ---- TABLE 1 ----
-table_1 <- life_history_sens |> dplyr::select(1:7)
+table_1 <- df |> dplyr::select(1:7)
 
 table_1 |>
   gt() |>
@@ -985,10 +1018,45 @@ table_1 |>
   as_latex() |>
   cat()
 
-cat("\n\\newpage\n")
+cat("\n\\end{landscape}\n")
+
+```
+
+ {{< pagebreak >}} 
+
+```{r}
+#| label: tbl-sensitivities-life-history_2
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "asis"
+#| tbl-cap: "Likelihood values and estimates of key parameters and derived quantities from each life history parameter sensitivity (reproductive biology)."
+#| tbl-pos: H
+
+cat("\\begin{landscape}\n")
+
+life_history_sens <- read.csv(here::here("Document","report", "Sensis", "model_specs", "Likes_parms_devquants_table_simple_MGrRep.csv"))
+
+life_history_sens <- life_history_sens[, -1]
+
+colnames(life_history_sens) <-   c("Label", "Type", "Reference", "Est female M", "Fixed M 2013", "Lorenzen M", "Fixed growth ext", "Prop fecund", "Fxn mat age", "Fxn mat Bspot", "Fxn mat Reye", "Biological mat")
+
+life_history_sens <- life_history_sens |>
+  dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " ")) 
+
+df <- life_history_sens
+
+spawning <- df |>
+  dplyr::filter(Type == c("SB0", "SSB_2025")) |>
+  dplyr::mutate(across(3:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Type != c("SB0", "SSB_2025") | is.na(Type))
+
+df <- rbind(df_not_spawning, spawning)
 
 # ---- TABLE 2 ----
-table_2 <- life_history_sens |> dplyr::select(1:3, 8:12)
+table_2 <- df |> dplyr::select(1:3, 8:12)
 
 table_2 |>
   gt() |>
@@ -1033,7 +1101,16 @@ colnames(sel_rec_sens) <- c("Label", "Type", "Reference", "No recdevs", "1940 re
 sel_rec_sens <- sel_rec_sens |>
   dplyr::mutate(Label = stringr::str_replace_all(Label, "_", " ")) 
 
-sel_rec_sens |>
+df <- sel_rec_sens
+
+spawning <- df[c(136,137),] |> #i don't know why i have to do it this way here
+  dplyr::mutate(across(3:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df[-c(136,137),] #i don't know why i have to do it this way here
+
+df <- rbind(df_not_spawning, spawning)
+
+df |>
   gt() |>
   gt::fmt_missing(everything(), missing_text = "") |>
   gt::fmt_number(everything(), decimals = 2) |>
