@@ -89,8 +89,8 @@ cat(a, sep = '\n')
 
 library(here)
 
-spp <- "Rougheye/Blackspotted Rockfishes"
-Spp <- "Rougheye/Blackspotted Rockfishes"
+spp <- "Rougheye/Blackspotted rockfishes"
+Spp <- "Rougheye/Blackspotted rockfishes"
 Spp_short<- "RE/BS"
 
 #Main model directory
