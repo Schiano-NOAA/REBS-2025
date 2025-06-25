@@ -238,6 +238,19 @@ cat(a, sep = '\n')
 
 
 ```{r, results='asis'}
+#| label: 'visual_summary'
+#| eval: true
+#| echo: false
+#| warning: false
+a <- knitr::knit_child('003_visual_summary.qmd', quiet = TRUE)
+cat(a, sep = '\n')
+```
+
+
+ {{< pagebreak >}} 
+
+
+```{r, results='asis'}
 #| label: 'executive_summary'
 #| eval: true
 #| echo: false
