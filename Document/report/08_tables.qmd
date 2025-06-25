@@ -739,7 +739,18 @@ indices <- read.csv(here::here("Document","report", "Sensis", "output", "indices
 
 names(indices) <- c("Label","Base","- Triennial","- AK Slope","-NW slope","- WCGBTS","No indices")
 
-table_sens(indices)
+df <- indices
+
+spawning <- df |>
+  dplyr::filter(Label == c("SSB_Virgin", "SSB_2025")) |>
+  dplyr::mutate(across(2:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Label != c("SSB_Virgin", "SSB_2025"))
+
+df <- rbind(df_not_spawning, spawning)
+
+table_sens(df)
 
 cat("\n\\end{landscape}\n") 
 ```
@@ -761,7 +772,18 @@ lens1 <- read.csv(here::here("Document","report", "Sensis", "output", "length_co
 
 names(lens1) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- Triennial","- AK slope","- NW slope","- WCGBTS")
 
-table_sens(lens1)
+df <- lens1
+
+spawning <- df |>
+  dplyr::filter(Label == c("SSB_Virgin", "SSB_2025")) |>
+  dplyr::mutate(across(2:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Label != c("SSB_Virgin", "SSB_2025"))
+
+df <- rbind(df_not_spawning, spawning)
+
+table_sens(df)
 
 cat("\n\\end{landscape}\n") 
 
@@ -784,7 +806,18 @@ lens2 <- read.csv(here::here("Document","report", "Sensis", "output", "length_co
 
 names(lens2) <- c("Label","Base","- fishery","- survey","no lengths")
 
-table_sens(lens2)
+df <- lens2
+
+spawning <- df |>
+  dplyr::filter(Label == c("SSB_Virgin", "SSB_2025")) |>
+  dplyr::mutate(across(2:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Label != c("SSB_Virgin", "SSB_2025"))
+
+df <- rbind(df_not_spawning, spawning)
+
+table_sens(df)
 
 cat("\n\\end{landscape}\n") 
 
@@ -807,7 +840,18 @@ ages <- read.csv(here::here("Document","report", "Sensis", "output", "age_comps_
 
 names(ages) <- c("Label","Base","- bottom trawl","- non-trawl","- mid-water trawl","- ASHOP","- WGCBTS","- fishery","no ages")
 
-table_sens(ages)
+df <- ages
+
+spawning <- df |>
+  dplyr::filter(Label == c("SSB_Virgin", "SSB_2025")) |>
+  dplyr::mutate(across(2:ncol(df), ~ .x / 1000000))
+
+df_not_spawning <- df |>
+ dplyr::filter(Label != c("SSB_Virgin", "SSB_2025"))
+
+df <- rbind(df_not_spawning, spawning)
+
+table_sens(df)
 
 cat("\n\\end{landscape}\n") 
 
