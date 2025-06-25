@@ -72,7 +72,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of spawning biomass (current spawning output/unfished spawning output) for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aleutian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment."
+#| fig-cap: "Estimates of spawning biomass for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aleutian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment."
 #| fig-alt: "Comparing absolute spawning biomass from current Alaska assessments with the 2013 west coast assessment."
 
 knitr::include_graphics(
@@ -85,7 +85,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimates of relative stock size (current spawning output/unfished spawning output) relative to 1977 (the common year in all stock assessments compared) for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aleutian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment."
+#| fig-cap: "Estimates of fraction unfished relative to 1977 (the common year in all stock assessments compared) for the Rougheye/Blackspotted rockfish complex from the two most recent Alaska (Bering Sea/Aleutian Islands (BSAI) and Gulf of Alaska (GOA)) and the 2013 U.S. west coast stock assessment."
 #| fig-alt: "Comparing relative spawning biomass from current Alaska assessments with the 2013 west coast assessment."
 
 knitr::include_graphics(
