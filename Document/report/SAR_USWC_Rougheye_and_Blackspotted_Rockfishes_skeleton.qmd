@@ -202,7 +202,7 @@ model_output <- r4ss::SS_output(model_dir,verbose=FALSE,printstats=FALSE)
 
 Please cite this publication as: 
 
-Cope, J.M., V. Gertseva, R.C. Rosemond, A.D. Whitman, and F.P. Caltabellotta. (2025) Status of the Rougheye and Blackspotted Rockfishes stock off the U.S. West Coast in 2025. Pacific Fishery Management Council. 347 pp.
+Cope, J.M., V. Gertseva, R.C. Rosemond, A.D. Whitman, and F.P. Caltabellotta. (2025) Status of the Rougheye and Blackspotted rockfishes stock off the U.S. West Coast in 2025. Pacific Fishery Management Council. 347 pp.
 
  {{< pagebreak >}} 
  
