@@ -351,7 +351,7 @@ recent_management_table_es <- recent_management_table |>
          `ACL (mt)` = `ACL..mt.`) |>
   gt::gt() |>
   gt::fmt_number(
-    columns = c(`ABC (mt)`,`ACL (mt)`,`Catch (mt)`),
+    columns = `Catch (mt)`,
     decimals = 0 
   ) |>
   gt::tab_options(

@@ -700,11 +700,7 @@ cat("\\begin{landscape}\n")
 
 time_series_table |>
   gt::gt() |>
-   gt::fmt_number(
-    columns = 3,
-    decimals = 3
-  ) |>
- gt::tab_options(
+  gt::tab_options(
     table.font.size = 12,
     latex.use_longtable = TRUE 
   ) |>
