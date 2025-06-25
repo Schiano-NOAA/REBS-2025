@@ -443,7 +443,7 @@ Overall we consider ecosystem and environmental conditions to be neutral (Level 
 #| label: tbl-risk
 #| echo: false
 #| warning: false
-#| tbl-cap: "Risk Table for Rougheye/Blackspotted rockfishes to document ecosystem and environmental factors potentially affecting stock productivity and uncertainty or other concerns arising from the stock assessment (see text). Level 1 is a favorable ranking, Level 2 neutral, and Level 3 unfavorable."
+#| tbl-cap: "Risk Table for Rougheye/Blackspotted Rockfishes to document ecosystem and environmental factors potentially affecting stock productivity and uncertainty or other concerns arising from the stock assessment (see text). Level 1 is a favorable ranking, Level 2 neutral, and Level 3 unfavorable."
 
 
 risk <-read.csv(here::here("Document","report", "tables_4_doc", "RiskTable_20250618.csv"))
