@@ -12,7 +12,7 @@ The relative biomass and the ratio of the estimated SPR to the management target
 
 In the last ten years total dead catches of `r Spp_short` have been below the annual catch limit. The last ten years total dead catches for `r Spp_short` against he overfishing limits (OFLs), the acceptable biological catches (ABCs), the annual catch limits (ACLs) are shown in @tbl-man-management. 
 
-## Harvest Projections and Decision Tables
+## Harvest Projections and Decision Table
 
 The `r Spp_short` assessment is being considered as a category 1 assessment with a $P^*$ = 0.45, $\sigma$ = `r round(model_output$OFL_sigma,2)` (estimated within the model, see @sec-uncertainty) and a time-varying buffer applied to set the ABC below the OFL. These multipliers are also combined with the rockfish MSY proxy of SPR\textsubscript{50} and the 40-10 harvest control rule to calculate OFLs and ACLs. Projections of the overfishing limit, acceptable biological catch, and annual catch limit, all based on a $P^*$ of 0.45 and a log-space standard deviation of the overfishing limit ($\sigma$) of `r round(model_output$OFL_sigma,2)` are included in @tbl-man-projections. Assumed catches for 2025 and 2026 for this projection were provided by the PFMC Groundfish Management Team, and catches from 2027 onward assume full attainment of the acceptable biological catch.
 
@@ -20,7 +20,7 @@ No decision table needed in draft assessments undergoing review.
 
 ## Evaluation of Scientific Uncertainty {#sec-uncertainty}
 
-The model estimated uncertainty ($\sigma$) around the 2025 spawning output for is `r round(model_output$Pstar_sigma,2)`. These values underestimate the overall uncertainty as they do not incorporate the model structural uncertainty and do not account for any time-varying dynamics other than recruitment. The estimated uncertainty values are higher than the Category 1 default of 0.5, so all projections will use the estimated ($\sigma$). The alternative states of nature used to bracket uncertainty in the decision table assist with encapsulating model structure uncertainty.
+The model estimated uncertainty ($\sigma$) around the 2025 spawning output for is `r round(model_output$Pstar_sigma,2)`. These values underestimate the overall uncertainty as they do not incorporate the model structural uncertainty and do not account for any time-varying dynamics other than recruitment. The estimated uncertainty values are higher than the Category 1 default of 0.5, so all projections will use the estimated $\sigma$. The alternative states of nature used to bracket uncertainty in the decision table assist with encapsulating model structure uncertainty.
 
 {{< pagebreak >}}
 
