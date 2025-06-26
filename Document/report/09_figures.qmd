@@ -129,8 +129,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Landings across all states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons between landings used in 2013 to updated landings."
+#| fig-cap: "Landings (metric tons) across all states for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
+#| fig-alt: "Landings (metrci tons) comparisons between landings used in 2013 to updated landings."
 
 knitr::include_graphics(
   file.path(plot_dir, "Catch_comp_all.png")
@@ -142,8 +142,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "California state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for California between landings used in 2013 to updated landings."
+#| fig-cap: "California state landings (metric tons) for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
+#| fig-alt: "Landings comparisons for California between landings (metric tons) used in 2013 to updated landings."
 
 knitr::include_graphics(
   file.path(plot_dir, "Catch_comp_CA.png")
@@ -155,8 +155,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Oregon state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Oregon between landings used in 2013 to updated landings."
+#| fig-cap: "Oregon state landings (metric tons) for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
+#| fig-alt: "Landings comparisons for Oregon between landings (metric tons) used in 2013 to updated landings."
 
 knitr::include_graphics(
   file.path(plot_dir, "Catch_comp_OR.png")
@@ -168,8 +168,8 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Washington state landings for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
-#| fig-alt: "Landings comparisons for Washington between landings used in 2013 to updated landings."
+#| fig-cap: "Washington state landings (metric tons) for non-trawl and trawl fisheries compared between the 2013 assessment and updated landings for the 2025 stock assessment model."
+#| fig-alt: "Landings comparisons for Washington between landings (metric tons) used in 2013 to updated landings."
 
 knitr::include_graphics(
   file.path(plot_dir, "Catch_comp_WA.png")
@@ -1881,7 +1881,7 @@ knitr::include_graphics(
 #| echo: false 
 #| warning: false 
 #| eval: true 
-#| fig-cap: "Estimated age and growth relatioship in the reference model .Shaded area indicates 95% distribution of length at age around estimated growth curve. Black curve is the estimated growth curve from the 2013 model."
+#| fig-cap: "Estimated age and growth relatioship in the reference model. Shaded area indicates 95% distribution of length at age around estimated growth curve. Black curve is the estimated growth curve from the 2013 model."
 #| fig-alt: "Values for the growth curve are provided in the Report.sso file."
 #| fig-pos: H
 
